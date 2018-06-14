@@ -23,7 +23,14 @@ foreach ($raw_img_list as $path) {
         continue;
     }
     $path = substr($path, $pos + 9);
-    $img_list[] = $path;
+
+    $dpath = dirname($path);
+    $filename = basename($path);
+
+    if(!\key_exists($dpath, $img_list)){
+        $img_list[$dpath] = [];
+    }
+    $img_list[$dpath][] = $filename;
 }
 
-file_put_contents('list.json', json_encode($img_list, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT));
+file_put_contents('list.json', json_encode($img_list, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES));
