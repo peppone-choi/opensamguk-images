@@ -21,8 +21,6 @@ exec("git ls-files -z ../icons", $raw_img_list);
 $raw_img_list = explode("\x00", $raw_img_list[0]);
 $img_list = [];
 
-$tmp_img_list = [];
-
 foreach ($raw_img_list as $path) {
     $pos = strpos($path, '../icons/');
     if($pos === false){
@@ -30,7 +28,6 @@ foreach ($raw_img_list as $path) {
     }
     $path = substr($path, $pos + 9);
 
-    $tmp_img_list[] = $path;
 
     $pathinfo = pathinfo($path);
     $dpath = $pathinfo['dirname'];
@@ -44,5 +41,4 @@ foreach ($raw_img_list as $path) {
 
 }
 
-file_put_contents('tmp.txt', json_encode($tmp_img_list));
 file_put_contents('list.json', json_encode($img_list));
