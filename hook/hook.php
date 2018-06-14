@@ -3,7 +3,7 @@
 namespace sammo\img_service;
 
 
-setlocale(LC_ALL, "ko-KR.UTF-8");
+setlocale(LC_ALL, 'ko_KR.UTF-8');
 
 include(__DIR__.'/gogs_key.php');
 
