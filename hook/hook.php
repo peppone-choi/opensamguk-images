@@ -2,6 +2,9 @@
 
 namespace sammo\img_service;
 
+
+setlocale(LC_ALL, "ko-KR.UTF-8");
+
 include(__DIR__.'/gogs_key.php');
 
 $raw_payload = $_POST['payload']??'false';
@@ -17,6 +20,7 @@ exec("git pull -q 2>&1", $output);
 exec("git ls-files -z ../icons", $raw_img_list);
 $raw_img_list = explode("\x00", $raw_img_list[0]);
 $img_list = [];
+
 foreach ($raw_img_list as $path) {
     $pos = strpos($path, '../icons/');
     if($pos === false){
@@ -24,13 +28,18 @@ foreach ($raw_img_list as $path) {
     }
     $path = substr($path, $pos + 9);
 
-    $dpath = dirname($path);
-    $filename = basename($path);
+    $pathinfo = pathinfo($path);
+    $dpath = $pathinfo['dirname'];
+    $basename = $pathinfo['basename'];
+    $filename = $pathinfo['filename'];
 
     if(!\key_exists($dpath, $img_list)){
         $img_list[$dpath] = [];
     }
-    $img_list[$dpath][] = $filename;
+
+    $img_list[$dpath][$filename] = $basename;
 }
 
-file_put_contents('list.json', json_encode($img_list, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES));
+file_put_contents('tmp.txt', json_encode($raw_img_list));
+
+file_put_contents('list.json', json_encode($img_list));
