@@ -45,5 +45,4 @@ foreach ($raw_img_list as $path) {
 }
 
 file_put_contents('tmp.txt', json_encode($tmp_img_list));
-
 file_put_contents('list.json', json_encode($img_list));
