@@ -26,4 +26,4 @@ foreach ($raw_img_list as $path) {
     $img_list[] = $path;
 }
 
-file_put_contents('list.json', json_encode($img_list,JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT));
+file_put_contents('list.json', json_encode($img_list, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT));
