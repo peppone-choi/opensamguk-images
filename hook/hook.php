@@ -40,9 +40,8 @@ foreach ($raw_img_list as $path) {
     if(!\key_exists($dpath, $img_list)){
         $img_list[$dpath] = [];
     }
-
     $img_list[$dpath][$filename] = $basename;
-    
+
 }
 
 file_put_contents('tmp.txt', json_encode($tmp_img_list));
