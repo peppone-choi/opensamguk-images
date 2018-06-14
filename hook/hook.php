@@ -42,6 +42,7 @@ foreach ($raw_img_list as $path) {
     }
 
     $img_list[$dpath][$filename] = $basename;
+    
 }
 
 file_put_contents('tmp.txt', json_encode($tmp_img_list));
