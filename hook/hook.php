@@ -2,10 +2,10 @@
 
 namespace sammo\img_service;
 
+include(__DIR__.'/gogs_key.php');
+
 
 setlocale(LC_ALL, 'ko_KR.UTF-8');
-
-include(__DIR__.'/gogs_key.php');
 
 $raw_payload = $_POST['payload']??'false';
 $valid_hmac = $_SERVER['HTTP_X_GOGS_SIGNATURE']??'';
