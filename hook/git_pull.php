@@ -1,7 +1,7 @@
 <?php
 namespace sammo\img_service;
 
-include(__DIR__.'/gogs_key.php');
+include(__DIR__.'/HashKey.php');
 
 header('Content-Type: application/json');
 
