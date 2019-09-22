@@ -24,10 +24,14 @@ function getVersion($target=null){
     
 }
 
+function isCommandLineInterface()
+{
+    return (php_sapi_name() === 'cli');
+}
+
 header('Content-Type: application/json');
 
-$req_hash = $_REQUEST['req']??'';
-$req_time = $_REQUEST['time']??0;
+
 
 $json_response = [
     'result'=>false,
@@ -35,33 +39,38 @@ $json_response = [
     'version'=>null,
 ];
 
-if(!$req_hash){
-    $json_response['reason'] = 'no req';
-    die(json_encode($json_response));
-}
-if(!$req_time || !is_numeric($req_time)){
-    $json_response['reason'] = 'invalid time';
-    die(json_encode($json_response));
-}
+if (!isCommandLineInterface()) {
+    $req_hash = $_REQUEST['req']??'';
+    $req_time = $_REQUEST['time']??0;
 
-$key = HashKey::KEY;
-if(strlen($key)<16){
-    $json_response['reason'] = 'key is too short';
-    die(json_encode($json_response));
-}
+    if (!$req_hash) {
+        $json_response['reason'] = 'no req';
+        die(json_encode($json_response));
+    }
+    if (!$req_time || !is_numeric($req_time)) {
+        $json_response['reason'] = 'invalid time';
+        die(json_encode($json_response));
+    }
 
-$timestamp = time();
+    $key = HashKey::KEY;
+    if (strlen($key)<16) {
+        $json_response['reason'] = 'key is too short';
+        die(json_encode($json_response));
+    }
 
-if(abs($timestamp - $req_time) > 300){
-    $json_response['reason'] = 'time difference';
-    die(json_encode($json_response));
-}
+    $timestamp = time();
 
-$ans_hash = hashPassword(sprintf("%016x", $req_time), $key);
+    if (abs($timestamp - $req_time) > 300) {
+        $json_response['reason'] = 'time difference';
+        die(json_encode($json_response));
+    }
 
-if($ans_hash != $req_hash){
-    $json_response['reason'] = 'hash mismatch';
-    die(json_encode($json_response));
+    $ans_hash = hashPassword(sprintf("%016x", $req_time), $key);
+
+    if ($ans_hash != $req_hash) {
+        $json_response['reason'] = 'hash mismatch';
+        die(json_encode($json_response));
+    }
 }
 
 exec("git pull -q 2>&1", $output);
