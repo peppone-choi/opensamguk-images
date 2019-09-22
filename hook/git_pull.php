@@ -3,19 +3,36 @@ namespace sammo\img_service;
 
 include(__DIR__.'/HashKey.php');
 
-header('Content-Type: application/json');
-
 function hashPassword($salt, $password)
 {
     return hash('sha512', $salt.$password.$salt);
 }
+
+
+function getVersion($target=null){
+    if($target){
+        $command = sprintf('git describe %s --long --tags', escapeshellarg($target));
+    }
+    else{
+        $command = 'git describe --long --tags';
+    }
+    exec($command, $output);
+    if(is_array($output)){
+        $output = join('', $output);
+    }
+    return trim($output);
+    
+}
+
+header('Content-Type: application/json');
 
 $req_hash = $_REQUEST['req']??'';
 $req_time = $_REQUEST['time']??0;
 
 $json_response = [
     'result'=>false,
-    'reason'=>'Unknown'
+    'reason'=>'Unknown',
+    'version'=>null,
 ];
 
 if(!$req_hash){
@@ -74,3 +91,10 @@ foreach ($raw_img_list as $path) {
 }
 
 file_put_contents('list.json', json_encode($img_list));
+
+
+
+$json_response['result'] = true;
+$json_response['reason'] = 'success';
+$json_response['version'] = getVersion();
+die(json_encode($json_response));
