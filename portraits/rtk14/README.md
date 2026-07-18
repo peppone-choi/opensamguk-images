@@ -32,9 +32,10 @@ opensamguk 장수 초상 에셋. 삼국지14(RTK14) 인물 일러스트를 원�
   검수 증적 `qc/`(qc-v3-worst12-vertical·qc-v3-worst12-icon)를 함께 보관한다.
 - **`face-icon-96/`** — **얼굴 아이콘** 96×96 PNG. 확정치 **얼굴 높이 ×2.0 · y 50%**.
   파일명은 얼굴 크롭과 동일한 `<sha16>.png`. `report.tsv` 포함.
-- **`serving/`** — id 키 서빙 사본(`officer-id-registry.tsv`의 id↔face_crop_file 조인).
+- **`serving/`** — id 키 서빙 사본(`officer-id-registry.tsv` 조인).
   - `serving/portrait/<id>.png` — face-crop-148x210(v3) 사본
   - `serving/icon/<id>.png` — face-icon-96 사본
+  - `serving/original/<id>.jpg` — 원본 JPEG 무변환 바이트 사본(원본이 JPEG 소스라 PNG 변환 없이 보존)
   - id 범위 **10001-11000**(레거시 0-9xxx 아이콘 풀과 분리). 라이브 컷오버 시 고정.
 - **`officer-id-registry.tsv`** — id ↔ name_kanji ↔ reading ↔ face_crop/full_frame/original
   파일 조인키(파생 문서, 원천층 아님). id는 name_kanji 유니코드 코드포인트 정렬로 10001부터 부여.
