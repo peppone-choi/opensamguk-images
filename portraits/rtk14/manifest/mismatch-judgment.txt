@@ -1,0 +1,7 @@
+李衡 (enc=%E6%9D%8E%E8%A1%A1) MISMATCH judgment
+reading-derived  [DISCARD]  https://cdn.wikiwiki.jp/to/w/sangokushi14/%E6%9D%8E%E8%A1%A1/::attach/%E3%83%AA%E3%82%B3%E3%82%A6.jpg
+    orig 68319B sha256:4652d5dbdeba31ef  png /private/tmp/claude-501/-Users-apple-Desktop--------opensamguk/fef7c651-1d05-4890-9ef4-35a91bc40974/scratchpad/rtk-faces/out/162e2df056477ef7.png
+page ::attach    [ADOPT]    https://cdn.wikiwiki.jp/to/w/sangokushi14/%E6%9D%8E%E8%A1%A1/::attach/%E3%83%AA%E3%82%B3%E3%82%A62.jpg
+    orig 53907B sha256:1529e231538d5c31  png /private/tmp/claude-501/-Users-apple-Desktop--------opensamguk/fef7c651-1d05-4890-9ef4-35a91bc40974/scratchpad/rtk-faces/out/96df2eb33ba018a0.png
+comparison: different files -> sha256 4652d5dbdeba31ef != 1529e231538d5c31, size 68319B vs 53907B
+decision: page-mode リコウ2.jpg adopted as canonical; reading-mode リコウ.jpg discarded. reading filename derivation (リコウ.jpg) resolved to a DIFFERENT image than the officer's own page attachment (リコウ2.jpg) — the identity risk page mode was promoted to fix.
