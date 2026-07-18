@@ -1,0 +1,90 @@
+{
+  "entries": [
+    {
+      "canonical_url": "https://cdn.wikiwiki.jp/to/w/sangokushi14/%E4%B8%81%E5%84%80/::attach/%E3%83%86%E3%82%A4%E3%82%AE.jpg",
+      "name": "丁儀",
+      "output": {
+        "file": "f404758f85eaac13.png",
+        "fingerprint": "a6184444a6283b5c1eafda91eef6eb6bf2bf5fe1facec34946ab3528f72b0c8b",
+        "format": "png",
+        "height": 210,
+        "width": 148
+      },
+      "page_url": null,
+      "reason": "ok",
+      "resize": {
+        "max_height": 210,
+        "max_width": 156
+      },
+      "source_bytes": 53351,
+      "source_fingerprint": "85c7f382b48e7fccabf9369561d31e9b116c58b9083f5b962924d5eef90ad0fe",
+      "source_size": {
+        "height": 900,
+        "width": 633
+      },
+      "status": "OK"
+    },
+    {
+      "canonical_url": "https://cdn.wikiwiki.jp/to/w/sangokushi14/%E4%B8%81%E5%8E%9F/::attach/%E3%83%86%E3%82%A4%E3%82%B2%E3%83%B3.jpg",
+      "name": "丁原",
+      "output": {
+        "file": "a0855dbd3d92793a.png",
+        "fingerprint": "9d5bf33f4e5f1c3a3b1a951e8cd77bcb9a2cb94245837d1de96f599873731bb6",
+        "format": "png",
+        "height": 210,
+        "width": 148
+      },
+      "page_url": null,
+      "reason": "ok",
+      "resize": {
+        "max_height": 210,
+        "max_width": 156
+      },
+      "source_bytes": 78706,
+      "source_fingerprint": "c60fab432bf4756e54438e80abf19ca6de93368baff3b6b91eeb93efa36b2046",
+      "source_size": {
+        "height": 900,
+        "width": 633
+      },
+      "status": "OK"
+    },
+    {
+      "canonical_url": "https://cdn.wikiwiki.jp/to/w/sangokushi14/%E4%B8%81%E5%9B%BA/::attach/%E3%83%86%E3%82%A4%E3%82%B3.jpg",
+      "name": "丁固",
+      "output": {
+        "file": "37c09d2bdccb74f2.png",
+        "fingerprint": "025953af2ed5c6a5b6b5dec64947109815adec973720e93c21885e3fc241a006",
+        "format": "png",
+        "height": 210,
+        "width": 148
+      },
+      "page_url": null,
+      "reason": "ok",
+      "resize": {
+        "max_height": 210,
+        "max_width": 156
+      },
+      "source_bytes": 44398,
+      "source_fingerprint": "83ced127682f39e90c1d8a08272795af7abae81eee0168880b296569c007d370",
+      "source_size": {
+        "height": 900,
+        "width": 633
+      },
+      "status": "OK"
+    }
+  ],
+  "meta": {
+    "counts": {
+      "FAIL": 0,
+      "OK": 3
+    },
+    "resize_bounds": {
+      "max_height": 210,
+      "max_width": 156
+    },
+    "source": "rtk14/wikiwiki",
+    "tool": "opensamguk-rtk-faces",
+    "tool_version": "1.2",
+    "total": 3
+  }
+}

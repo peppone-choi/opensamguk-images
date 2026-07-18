@@ -1,0 +1,462 @@
+{
+  "entries": [
+    {
+      "canonical_url": "https://cdn.wikiwiki.jp/to/w/sangokushi14/%E5%8A%89%E5%82%99/::attach/%E3%83%AA%E3%83%A5%E3%82%A6%E3%83%93.jpg",
+      "name": "劉備",
+      "output": {
+        "file": "34edb0d381d0b562.png",
+        "fingerprint": "0246475c55499c97e3b574afb3b9bd7a62ba9b1c1a580d32091d6f5a7ec58170",
+        "format": "png",
+        "height": 210,
+        "width": 148
+      },
+      "page_url": null,
+      "reason": "ok",
+      "resize": {
+        "max_height": 210,
+        "max_width": 156
+      },
+      "source_bytes": 91044,
+      "source_fingerprint": "54bff9900e7d414949bd65e86f93ecc3372e8551ade48aaad55e08ff48ec8765",
+      "source_size": {
+        "height": 900,
+        "width": 633
+      },
+      "status": "OK"
+    },
+    {
+      "canonical_url": "https://cdn.wikiwiki.jp/to/w/sangokushi14/%E5%8F%B8%E9%A6%AC%E6%87%BF/::attach/%E3%82%B7%E3%83%90%E3%82%A4.jpg",
+      "name": "司馬懿",
+      "output": {
+        "file": "46b35a9979ebbe19.png",
+        "fingerprint": "2e69dbe7e9bce5503309e208034ed2b63bffe2dfdb9ee56c33a44d32da83162b",
+        "format": "png",
+        "height": 210,
+        "width": 148
+      },
+      "page_url": null,
+      "reason": "ok",
+      "resize": {
+        "max_height": 210,
+        "max_width": 156
+      },
+      "source_bytes": 83831,
+      "source_fingerprint": "6a8ad0d91a08860ec24dc18d297fa82697325a7a104464d8382656fe9705d1ee",
+      "source_size": {
+        "height": 900,
+        "width": 633
+      },
+      "status": "OK"
+    },
+    {
+      "canonical_url": "https://cdn.wikiwiki.jp/to/w/sangokushi14/%E5%91%82%E5%B8%83/::attach/%E3%83%AA%E3%83%A7%E3%83%95.jpg",
+      "name": "呂布",
+      "output": {
+        "file": "592a471bcf2ac874.png",
+        "fingerprint": "e732a3bc007f2dae0d7f6bc6908d7ee037bded85afaa5e13632b515fec69d40e",
+        "format": "png",
+        "height": 210,
+        "width": 148
+      },
+      "page_url": null,
+      "reason": "ok",
+      "resize": {
+        "max_height": 210,
+        "max_width": 156
+      },
+      "source_bytes": 87928,
+      "source_fingerprint": "0bcbd7a37acca7b4faedfb8d502862de89b05c352844e9463ce879a4da2e0979",
+      "source_size": {
+        "height": 900,
+        "width": 633
+      },
+      "status": "OK"
+    },
+    {
+      "canonical_url": "https://cdn.wikiwiki.jp/to/w/sangokushi14/%E5%91%A8%E7%91%9C/::attach/%E3%82%B7%E3%83%A5%E3%82%A6%E3%83%A6.jpg",
+      "name": "周瑜",
+      "output": {
+        "file": "f8c433bb613dcc9b.png",
+        "fingerprint": "30e299b7a990b586f5c1363d8d6724f35d2159861990bcca4a64da5c43ae86ec",
+        "format": "png",
+        "height": 210,
+        "width": 148
+      },
+      "page_url": null,
+      "reason": "ok",
+      "resize": {
+        "max_height": 210,
+        "max_width": 156
+      },
+      "source_bytes": 102616,
+      "source_fingerprint": "143f16f1a631f83d3761871acd3bb5352f262116c16c1bc747d78f76610f647b",
+      "source_size": {
+        "height": 900,
+        "width": 633
+      },
+      "status": "OK"
+    },
+    {
+      "canonical_url": "https://cdn.wikiwiki.jp/to/w/sangokushi14/%E5%A4%8F%E4%BE%AF%E6%83%87/::attach/%E3%82%AB%E3%82%B3%E3%82%A6%E3%83%88%E3%83%B3.jpg",
+      "name": "夏侯惇",
+      "output": {
+        "file": "1664f65f8c536c5f.png",
+        "fingerprint": "80b6cd7bbf207917460aa66b50f877289dfb4a9679ffda33f001513df26516f0",
+        "format": "png",
+        "height": 210,
+        "width": 148
+      },
+      "page_url": null,
+      "reason": "ok",
+      "resize": {
+        "max_height": 210,
+        "max_width": 156
+      },
+      "source_bytes": 99104,
+      "source_fingerprint": "355124109eae839e95a915319d689626d71cf4a59487269b9a1299c1d4c5d55a",
+      "source_size": {
+        "height": 900,
+        "width": 633
+      },
+      "status": "OK"
+    },
+    {
+      "canonical_url": "https://cdn.wikiwiki.jp/to/w/sangokushi14/%E5%A4%AA%E5%8F%B2%E6%85%88/::attach/%E3%82%BF%E3%82%A4%E3%82%B7%E3%82%B8.jpg",
+      "name": "太史慈",
+      "output": {
+        "file": "f25861933e510148.png",
+        "fingerprint": "2ca7049e61610e5bd18d68f6a4e5c655b3071ce4a13cdb063d16d931f4f45c2b",
+        "format": "png",
+        "height": 210,
+        "width": 148
+      },
+      "page_url": null,
+      "reason": "ok",
+      "resize": {
+        "max_height": 210,
+        "max_width": 156
+      },
+      "source_bytes": 110599,
+      "source_fingerprint": "e69d3e5bfb9de861da5244f795ee22d18c33746e4efb78028a81c2e271abdfff",
+      "source_size": {
+        "height": 900,
+        "width": 633
+      },
+      "status": "OK"
+    },
+    {
+      "canonical_url": "https://cdn.wikiwiki.jp/to/w/sangokushi14/%E5%A7%9C%E7%B6%AD/::attach/%E3%82%AD%E3%83%A7%E3%82%A6%E3%82%A4.jpg",
+      "name": "姜維",
+      "output": {
+        "file": "8e23e6900eedab95.png",
+        "fingerprint": "1a944a866122a08db64a83009e82de76426207d59faadd035be0620c143fc9d8",
+        "format": "png",
+        "height": 210,
+        "width": 148
+      },
+      "page_url": null,
+      "reason": "ok",
+      "resize": {
+        "max_height": 210,
+        "max_width": 156
+      },
+      "source_bytes": 89179,
+      "source_fingerprint": "51a71acf050e8b4281413fcaa1b514e2b7dc0dd58141fcc9d442f6b9f6cae31c",
+      "source_size": {
+        "height": 900,
+        "width": 633
+      },
+      "status": "OK"
+    },
+    {
+      "canonical_url": "https://cdn.wikiwiki.jp/to/w/sangokushi14/%E5%AD%AB%E6%A8%A9/::attach/%E3%82%BD%E3%83%B3%E3%82%B1%E3%83%B3.jpg",
+      "name": "孫権",
+      "output": null,
+      "page_url": null,
+      "reason": "http_404",
+      "resize": null,
+      "source_bytes": null,
+      "source_fingerprint": null,
+      "source_size": null,
+      "status": "FAIL"
+    },
+    {
+      "canonical_url": "https://cdn.wikiwiki.jp/to/w/sangokushi14/%E5%BC%B5%E9%A3%9B/::attach/%E3%83%81%E3%83%A7%E3%82%A6%E3%83%92.jpg",
+      "name": "張飛",
+      "output": null,
+      "page_url": null,
+      "reason": "http_404",
+      "resize": null,
+      "source_bytes": null,
+      "source_fingerprint": null,
+      "source_size": null,
+      "status": "FAIL"
+    },
+    {
+      "canonical_url": "https://cdn.wikiwiki.jp/to/w/sangokushi14/%E6%9B%B9%E6%93%8D/::attach/%E3%82%BD%E3%82%A6%E3%82%BD%E3%82%A6.jpg",
+      "name": "曹操",
+      "output": {
+        "file": "d8c1e4790eec2415.png",
+        "fingerprint": "26a83a806e79bd72cd41fe175ac8c8f54ccd5fa1bb1e1d99bb9037c133f28ae4",
+        "format": "png",
+        "height": 210,
+        "width": 148
+      },
+      "page_url": null,
+      "reason": "ok",
+      "resize": {
+        "max_height": 210,
+        "max_width": 156
+      },
+      "source_bytes": 100100,
+      "source_fingerprint": "90b623fdb0868d2629565afb88ff13ba98faa2bfb4f0e448de7eeae33ab69dd1",
+      "source_size": {
+        "height": 900,
+        "width": 633
+      },
+      "status": "OK"
+    },
+    {
+      "canonical_url": "https://cdn.wikiwiki.jp/to/w/sangokushi14/%E7%94%98%E5%AF%A7/::attach/%E3%82%AB%E3%83%B3%E3%83%8D%E3%82%A4.jpg",
+      "name": "甘寧",
+      "output": {
+        "file": "227d56252d454790.png",
+        "fingerprint": "97edec2606342b64c88a78a829ba5ff26d3603bfd113d2740c846d0556100de1",
+        "format": "png",
+        "height": 210,
+        "width": 148
+      },
+      "page_url": null,
+      "reason": "ok",
+      "resize": {
+        "max_height": 210,
+        "max_width": 156
+      },
+      "source_bytes": 105721,
+      "source_fingerprint": "81871ca70dbc1c25a3aef06450ff691c67af7b3d7b697ba0a984741406039308",
+      "source_size": {
+        "height": 900,
+        "width": 633
+      },
+      "status": "OK"
+    },
+    {
+      "canonical_url": "https://cdn.wikiwiki.jp/to/w/sangokushi14/%E8%91%A3%E5%8D%93/::attach/%E3%83%88%E3%82%A6%E3%82%BF%E3%82%AF.jpg",
+      "name": "董卓",
+      "output": {
+        "file": "1a783cca936427b0.png",
+        "fingerprint": "2d9d81e0c6903cf63b6080839095c2b4df90d9345a70c9a0e421a609c6164fec",
+        "format": "png",
+        "height": 210,
+        "width": 148
+      },
+      "page_url": null,
+      "reason": "ok",
+      "resize": {
+        "max_height": 210,
+        "max_width": 156
+      },
+      "source_bytes": 81748,
+      "source_fingerprint": "0a61bc80bde8d55f9d5dd42b0580fcc86c50d70409d3f31f6394a427d7c52a40",
+      "source_size": {
+        "height": 900,
+        "width": 633
+      },
+      "status": "OK"
+    },
+    {
+      "canonical_url": "https://cdn.wikiwiki.jp/to/w/sangokushi14/%E8%A2%81%E7%B4%B9/::attach/%E3%82%A8%E3%83%B3%E3%82%B7%E3%83%A7%E3%82%A6.jpg",
+      "name": "袁紹",
+      "output": {
+        "file": "017da52af44b2de4.png",
+        "fingerprint": "ba8888920e1c1e85f978a120f85086ce78028dc11e20036342b3ba5d67e71004",
+        "format": "png",
+        "height": 210,
+        "width": 148
+      },
+      "page_url": null,
+      "reason": "ok",
+      "resize": {
+        "max_height": 210,
+        "max_width": 156
+      },
+      "source_bytes": 107969,
+      "source_fingerprint": "8370d00a5b82712bda07b801eeffe1e89147976d7bbfef557ca2844e7f12a0db",
+      "source_size": {
+        "height": 900,
+        "width": 633
+      },
+      "status": "OK"
+    },
+    {
+      "canonical_url": "https://cdn.wikiwiki.jp/to/w/sangokushi14/%E8%A8%B1%E3%83%81%E3%83%A7/::attach/%E3%82%AD%E3%83%A7%E3%83%81%E3%83%A7.jpg",
+      "name": "許褚",
+      "output": {
+        "file": "b936ef86c0f74c5d.png",
+        "fingerprint": "d9639e4fdee8500b00b0748e5668cb4a671777378f26313daf135e0f046dbd5a",
+        "format": "png",
+        "height": 210,
+        "width": 148
+      },
+      "page_url": null,
+      "reason": "ok",
+      "resize": {
+        "max_height": 210,
+        "max_width": 156
+      },
+      "source_bytes": 108165,
+      "source_fingerprint": "5cf0780b0e2578c8feba524d5978304d634a743745ab067e511767f822c44ed9",
+      "source_size": {
+        "height": 900,
+        "width": 633
+      },
+      "status": "OK"
+    },
+    {
+      "canonical_url": "https://cdn.wikiwiki.jp/to/w/sangokushi14/%E8%AB%B8%E8%91%9B%E4%BA%AE/::attach/%E3%82%B7%E3%83%A7%E3%82%AB%E3%83%84%E3%83%AA%E3%83%A7%E3%82%A6.jpg",
+      "name": "諸葛亮",
+      "output": {
+        "file": "4cca4e39c68b570a.png",
+        "fingerprint": "0496bd233646a56d18b3d968900c496d42e535766b5db3b33a6ae932a9d2bde8",
+        "format": "png",
+        "height": 210,
+        "width": 148
+      },
+      "page_url": null,
+      "reason": "ok",
+      "resize": {
+        "max_height": 210,
+        "max_width": 156
+      },
+      "source_bytes": 87945,
+      "source_fingerprint": "93afd2b724c40064413c8c70caaacd2696c13c17dee04d923314dfba20f2fc70",
+      "source_size": {
+        "height": 900,
+        "width": 633
+      },
+      "status": "OK"
+    },
+    {
+      "canonical_url": "https://cdn.wikiwiki.jp/to/w/sangokushi14/%E8%B6%99%E9%9B%B2/::attach/%E3%83%81%E3%83%A7%E3%82%A6%E3%82%A6%E3%83%B3.jpg",
+      "name": "趙雲",
+      "output": null,
+      "page_url": null,
+      "reason": "http_404",
+      "resize": null,
+      "source_bytes": null,
+      "source_fingerprint": null,
+      "source_size": null,
+      "status": "FAIL"
+    },
+    {
+      "canonical_url": "https://cdn.wikiwiki.jp/to/w/sangokushi14/%E9%96%A2%E7%BE%BD/::attach/%E3%82%AB%E3%83%B3%E3%82%A6.jpg",
+      "name": "関羽",
+      "output": {
+        "file": "0b13f2f2c248406c.png",
+        "fingerprint": "fb3814bb9cca728d796f1dd6b5748594c986238ff2b36414f2a543fb1f3c6e74",
+        "format": "png",
+        "height": 210,
+        "width": 148
+      },
+      "page_url": null,
+      "reason": "ok",
+      "resize": {
+        "max_height": 210,
+        "max_width": 156
+      },
+      "source_bytes": 109910,
+      "source_fingerprint": "2df7c01c4ae4009b2fd66037b5ab0de643eadc812bc1fcb0c753778adbc24e59",
+      "source_size": {
+        "height": 900,
+        "width": 633
+      },
+      "status": "OK"
+    },
+    {
+      "canonical_url": "https://cdn.wikiwiki.jp/to/w/sangokushi14/%E9%99%B8%E9%81%9C/::attach/%E3%83%AA%E3%82%AF%E3%82%BD%E3%83%B3.jpg",
+      "name": "陸遜",
+      "output": {
+        "file": "b329329498b30830.png",
+        "fingerprint": "f7ffd53011b290feb250e01305c0d4f97141baaeb3749b50a03977feca4b1c1e",
+        "format": "png",
+        "height": 210,
+        "width": 148
+      },
+      "page_url": null,
+      "reason": "ok",
+      "resize": {
+        "max_height": 210,
+        "max_width": 156
+      },
+      "source_bytes": 94419,
+      "source_fingerprint": "defc60d1ca496011f2ab7f41e19317e2bdbd39a4bfa8717dffde6a79da61b56f",
+      "source_size": {
+        "height": 900,
+        "width": 633
+      },
+      "status": "OK"
+    },
+    {
+      "canonical_url": "https://cdn.wikiwiki.jp/to/w/sangokushi14/%E9%A6%AC%E8%B6%85/::attach/%E3%83%90%E3%83%81%E3%83%A7%E3%82%A6.jpg",
+      "name": "馬超",
+      "output": {
+        "file": "18dcf604ab01ce35.png",
+        "fingerprint": "216ed13f9c7a5d3e9ed00d3b0e9eee7afef2d7117a1b2c049b20173ce6537d44",
+        "format": "png",
+        "height": 210,
+        "width": 148
+      },
+      "page_url": null,
+      "reason": "ok",
+      "resize": {
+        "max_height": 210,
+        "max_width": 156
+      },
+      "source_bytes": 95056,
+      "source_fingerprint": "9ea3a9a9328ef40ac4c157526144e625e24c21b182f15db3862e6334435a7398",
+      "source_size": {
+        "height": 900,
+        "width": 633
+      },
+      "status": "OK"
+    },
+    {
+      "canonical_url": "https://cdn.wikiwiki.jp/to/w/sangokushi14/%E9%BB%84%E5%BF%A0/::attach/%E3%82%B3%E3%82%A6%E3%83%81%E3%83%A5%E3%82%A6.jpg",
+      "name": "黄忠",
+      "output": {
+        "file": "739768cfbf5947fa.png",
+        "fingerprint": "fca631229604be92338f83023045bff79e0f3a916bccab7be87e6a557bf1584d",
+        "format": "png",
+        "height": 210,
+        "width": 148
+      },
+      "page_url": null,
+      "reason": "ok",
+      "resize": {
+        "max_height": 210,
+        "max_width": 156
+      },
+      "source_bytes": 120056,
+      "source_fingerprint": "65b60400d66c066c9bc1292c3d06025f4328a89f4ce6f4ba9964b58bdf59287c",
+      "source_size": {
+        "height": 900,
+        "width": 633
+      },
+      "status": "OK"
+    }
+  ],
+  "meta": {
+    "counts": {
+      "FAIL": 3,
+      "OK": 17
+    },
+    "resize_bounds": {
+      "max_height": 210,
+      "max_width": 156
+    },
+    "source": "rtk14/wikiwiki",
+    "tool": "opensamguk-rtk-faces",
+    "tool_version": "1.2",
+    "total": 20
+  }
+}

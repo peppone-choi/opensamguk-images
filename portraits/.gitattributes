@@ -1,0 +1,5 @@
+# RTK14 초상 에셋은 바이너리 — autocrlf(EOL) 정규화 금지
+*.bin binary
+*.png binary
+*.jpg binary
+*.jpeg binary

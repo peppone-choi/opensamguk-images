@@ -1,0 +1,74 @@
+[
+  {
+    "canonical_url": "https://cdn.wikiwiki.jp/to/w/sangokushi14/%E5%AD%AB%E6%A8%A9/::attach/%EF%BD%BF%EF%BE%9D%EF%BD%B9%EF%BE%9D.jpg",
+    "name": "孫権",
+    "output": {
+      "file": "784d2d8fb974f693.png",
+      "fingerprint": "16ce239386103d54fbcdba1f7b08438741721fd9073f5d2547eb3b116c70fa90",
+      "format": "png",
+      "height": 210,
+      "width": 148
+    },
+    "page_url": "https://wikiwiki.jp/sangokushi14/%E5%AD%AB%E6%A8%A9",
+    "reason": "ok",
+    "resize": {
+      "max_height": 210,
+      "max_width": 156
+    },
+    "source_bytes": 158199,
+    "source_fingerprint": "efcc6fec6b1ea5c9bf3d889b8fdf6f0f0ef9f93a5772dbf3c5fcd0685714e236",
+    "source_size": {
+      "height": 900,
+      "width": 633
+    },
+    "status": "OK"
+  },
+  {
+    "canonical_url": "https://cdn.wikiwiki.jp/to/w/sangokushi14/%E5%BC%B5%E9%A3%9B/::attach/%EF%BE%81%EF%BD%AE%EF%BD%B3%EF%BE%8B_0.jpg",
+    "name": "張飛",
+    "output": {
+      "file": "be476e31b56edb06.png",
+      "fingerprint": "e84cd0d348a2567e272db42ea8c7943b4a67772eb57eabb912f692f2a5ac3adf",
+      "format": "png",
+      "height": 210,
+      "width": 148
+    },
+    "page_url": "https://wikiwiki.jp/sangokushi14/%E5%BC%B5%E9%A3%9B",
+    "reason": "ok",
+    "resize": {
+      "max_height": 210,
+      "max_width": 156
+    },
+    "source_bytes": 387415,
+    "source_fingerprint": "5189349d531152d6d7b90d87fef707d1c62f753cac9639565d89be7167775d86",
+    "source_size": {
+      "height": 900,
+      "width": 633
+    },
+    "status": "OK"
+  },
+  {
+    "canonical_url": "https://cdn.wikiwiki.jp/to/w/sangokushi14/%E8%B6%99%E9%9B%B2/::attach/%EF%BE%81%EF%BD%AE%EF%BD%B3%EF%BD%B3%EF%BE%9D.jpg",
+    "name": "趙雲",
+    "output": {
+      "file": "eaa840bf099062eb.png",
+      "fingerprint": "b2a9332968fbf73bbf243ff7066d6ddbbfa4c9caba6d851cee46c0566bc57674",
+      "format": "png",
+      "height": 210,
+      "width": 148
+    },
+    "page_url": "https://wikiwiki.jp/sangokushi14/%E8%B6%99%E9%9B%B2",
+    "reason": "ok",
+    "resize": {
+      "max_height": 210,
+      "max_width": 156
+    },
+    "source_bytes": 195682,
+    "source_fingerprint": "679e2d38326d6c2c7622767593c4d9c6a327e5cf83a728f72f99e4cc7446fa6a",
+    "source_size": {
+      "height": 900,
+      "width": 636
+    },
+    "status": "OK"
+  }
+]
