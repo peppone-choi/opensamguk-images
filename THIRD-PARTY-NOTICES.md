@@ -45,24 +45,14 @@ granted for any path under `icons/`.
 
 | Path | Origin as observed | Status |
 | --- | --- | --- |
-| `icons/*.jpg` (1842 numbered files at the top of `icons/`) | Legacy 삼국지 모의전투 (devsam / HiDCHe) general-portrait pool inherited with the game. Individual provenance is not recorded in this repository; portraits in this pool are widely Koei Tecmo *Romance of the Three Kingdoms* series derived. | UNKNOWN → treated as third-party |
-| `icons/삼국지6/` | *Romance of the Three Kingdoms VI* (Koei Tecmo Games Co., Ltd.) character art | Third-party |
-| `icons/포켓몬스터/` | *Pokémon* — The Pokémon Company / Nintendo / Game Freak / Creatures Inc. | Third-party |
-| `icons/롤시나리오/` | *League of Legends* champion art and esports player photographs — Riot Games, Inc.; photograph rights holders unidentified | Third-party |
-| `icons/쿠키런킹덤/` | *Cookie Run: Kingdom* — Devsisters Corp. | Third-party |
-| `icons/환상향/` | *Touhou Project* (東方Project) — Team Shanghai Alice (ZUN) and fan-artwork derivatives; individual artists unidentified | Third-party |
-| `icons/걸그룹/` | Photographs of real, identifiable K-pop performers. Photographers and rights holders unidentified; publicity/personality rights of the depicted individuals also apply. | Third-party |
-| `icons/스타1프로게이머/` | Photographs of real, identifiable StarCraft professional players. Photographers and rights holders unidentified; publicity/personality rights of the depicted individuals also apply. | Third-party |
-| `icons/루드라사움/` | Community scenario icon set; original authorship not recorded in this repository | UNKNOWN → treated as third-party |
-| `icons/강서유서월드/` | Community scenario icon set; original authorship not recorded in this repository | UNKNOWN → treated as third-party |
-| `icons/삼모시네마틱유니버스/` | Community scenario icon set; original authorship not recorded in this repository | UNKNOWN → treated as third-party |
+| `icons/*.jpg` (1833 numbered files at the top of `icons/`) | Legacy 삼국지 모의전투 (devsam / HiDCHe) general-portrait pool inherited with the game. Individual provenance is not recorded in this repository; portraits in this pool are widely Koei Tecmo *Romance of the Three Kingdoms* series derived. | UNKNOWN → treated as third-party |
 
 ## `game/` — game UI, map, and unit assets
 
 | Item | Detail |
 | --- | --- |
 | Paths | `game/*` (backgrounds, banners, color chips, GIFs), `game/map/*`, `game/src/*` |
-| Origin as observed | Assets inherited from the legacy 삼국지 모의전투 (devsam / HiDCHe) PHP game. `game/src/*.jpg` are unit-type illustrations (보병, 궁병, 기병, 충차 …) of the kind used by the Koei Tecmo *Romance of the Three Kingdoms* series; `game/map/` holds scenario map art for che / chess / cr / ludo_rathowm / pokemon_v1. Original authorship is not recorded in this repository. |
+| Origin as observed | Assets inherited from the legacy 삼국지 모의전투 (devsam / HiDCHe) PHP game. `game/src/*.jpg` are unit-type illustrations (보병, 궁병, 기병, 충차 …) of the kind used by the Koei Tecmo *Romance of the Three Kingdoms* series; `game/map/` holds scenario map art for che / chess / cr / ludo_rathowm. Original authorship is not recorded in this repository. |
 | Current state | Served unchanged as game assets. `game/src/코드.txt` is a unit-code table (text). |
 | Status | UNKNOWN → treated as third-party. No license granted by this repository. |
 
@@ -81,3 +71,32 @@ granted for any path under `icons/`.
 
 If you are a rights holder for any of the above and want a path removed or its
 entry corrected, open an issue on this repository.
+
+### 2026-08-17 — 선택 시나리오 아이콘 세트 전량 제거
+
+아래 10개 세트(총 2,335장)와 그에 딸린 `game/map/pokemon_v1/`을 **히스토리까지** 제거했다
+(`git filter-repo` + force push). 이 리포는 공개 저장소이고, 해당 세트는 실존 인물의 사진
+또는 제3자가 권리를 보유한 캐릭터 아트였다.
+
+| 제거된 경로 | 장수 | 제거 사유 |
+| --- | --- | --- |
+| `icons/걸그룹/` | 530 | 실존 인물 사진 — 사진 저작권 + 초상권(퍼블리시티권) |
+| `icons/스타1프로게이머/` | 297 | 실존 인물 사진 — 동일 |
+| `icons/롤시나리오/` | 439 | Riot Games 캐릭터 아트 + 실존 프로선수 사진 |
+| `icons/루드라사움/` | 464 | 출처 미확인 (UNKNOWN) |
+| `icons/포켓몬스터/` | 291 | The Pokémon Company / Nintendo / Game Freak |
+| `icons/환상향/` | 176 | 東方Project (上海アリス幻樂団) 및 2차 창작 |
+| `icons/강서유서월드/` | 108 | 출처 미확인 (UNKNOWN) |
+| `icons/쿠키런킹덤/` | 22 | Devsisters Corp. |
+| `icons/삼모시네마틱유니버스/` | 7 | 출처 미확인 (UNKNOWN) |
+| `icons/삼국지6/` | 1 | 코에이 테크모 (삼국지6) |
+| `game/map/pokemon_v1/` | 1 | 위 포켓몬 시나리오 전용 맵 — 참조 시나리오 제거로 고아가 됨 |
+
+전부 삼국지 시나리오와 무관한 선택 시나리오 전용 자산이며, 메인 레포에서 이들을 참조하던
+비-삼국지 시나리오 데이터도 함께 제거된다.
+
+**주의 — jsDelivr 캐시.** 히스토리 재작성으로 이전 커밋 SHA는 사라지지만, jsDelivr가
+이미 캐싱한 SHA 고정 URL은 캐시가 만료될 때까지 잠시 더 응답할 수 있다. GitHub 쪽 객체는
+재작성 시점에 접근 불가가 된다.
+
+`game/map/ludo_rathowm/`은 **남긴다** — 아이콘 세트는 제거됐지만 시나리오 2180이 여전히 그 맵을 쓴다.
