@@ -1,0 +1,17 @@
+{
+  "$comment": "License boundary manifest. Every top-level entry in this repository must be declared here. Verified by tools/check-license-boundaries.py (also run in CI). classification: 'mit' = covered by the root LICENSE; 'third-party' = NOT covered by the root LICENSE, see THIRD-PARTY-NOTICES.md.",
+  "entries": [
+    { "path": ".gitignore", "classification": "mit" },
+    { "path": ".license-boundaries.json", "classification": "mit" },
+    { "path": ".github", "classification": "mit" },
+    { "path": "LICENSE", "classification": "mit" },
+    { "path": "README.md", "classification": "mit" },
+    { "path": "THIRD-PARTY-NOTICES.md", "classification": "mit" },
+    { "path": "tools", "classification": "mit" },
+
+    { "path": "game", "classification": "third-party", "notice": "game/LICENSE-NOTICE.md" },
+    { "path": "hook", "classification": "third-party", "notice": "hook/LICENSE-NOTICE.md" },
+    { "path": "icons", "classification": "third-party", "notice": "icons/LICENSE-NOTICE.md" },
+    { "path": "portraits", "classification": "third-party", "notice": "portraits/LICENSE-NOTICE.md" }
+  ]
+}

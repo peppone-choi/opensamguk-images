@@ -25,3 +25,18 @@ Assets are tagged with `v<YYYY.MM.DD>` for immutable CDN caching.
 - `game/` — game assets
 - `icons/` — icon images
 - `hook/` — hook assets
+
+## License
+
+The repository's own work — documentation, metadata, and the tooling under
+`tools/` and `.github/` — is MIT licensed; see [`LICENSE`](./LICENSE).
+
+**The asset directories `game/`, `hook/`, `icons/`, and `portraits/` are NOT
+covered by that license.** They contain third-party derived material or
+material of unrecorded origin. This repository claims no copyright in it and
+grants no license to it — see [`THIRD-PARTY-NOTICES.md`](./THIRD-PARTY-NOTICES.md)
+and the `LICENSE-NOTICE.md` file in each of those directories.
+
+The boundary is declared in [`.license-boundaries.json`](./.license-boundaries.json)
+and enforced by `tools/check-license-boundaries.py` (run in CI). Any new
+top-level entry must be classified there or the check fails.
