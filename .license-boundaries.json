@@ -7,6 +7,9 @@
     { "path": "LICENSE", "classification": "mit" },
     { "path": "README.md", "classification": "mit" },
     { "path": "THIRD-PARTY-NOTICES.md", "classification": "mit" },
+    { "path": "exports", "classification": "mit" },
+    { "path": "originals", "classification": "mit" },
+    { "path": "previews", "classification": "mit" },
     { "path": "tools", "classification": "mit" },
 
     { "path": "game", "classification": "third-party", "notice": "game/LICENSE-NOTICE.md" },

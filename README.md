@@ -25,6 +25,20 @@ Assets are tagged with `v<YYYY.MM.DD>` for immutable CDN caching.
 - `game/` — game assets
 - `icons/` — icon images
 - `hook/` — hook assets
+- `originals/` — project-authored source specifications
+- `exports/` — generated, deployment-ready project assets
+- `previews/` — generated visual QA sheets
+
+### Han map city markers
+
+The county, commandery-seat, and capital map markers are generated from
+`originals/map-city-markers/design.json`:
+
+```bash
+python3 tools/build-map-city-markers.py
+python3 tools/build-map-city-markers.py --check
+python3 tools/test-map-city-markers.py
+```
 
 ## License
 
