@@ -59,7 +59,7 @@ class CityIconPipelineTest(unittest.TestCase):
         self.assertEqual((32, 32), variants[1].size)
         self.assertEqual((64, 64), variants[2].size)
         for icon in variants.values():
-            self.assertEqual({0, 255}, set(icon.getchannel("A").getdata()))
+            self.assertEqual({0, 255}, set(icon.getchannel("A").tobytes()))
             self.assertEqual(0, icon.getpixel((0, 0))[3])
 
     def test_targets_include_dpr_specific_web_exports(self) -> None:
