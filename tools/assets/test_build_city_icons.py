@@ -52,6 +52,24 @@ class CityIconPipelineTest(unittest.TestCase):
         self.assertGreater(heights[5], heights[10])
         self.assertGreater(heights[10], heights[11])
 
+    def test_one_x_and_two_x_exports_are_independently_pixel_hinted(self) -> None:
+        variants = city_icons.render_variants(5)
+
+        self.assertEqual({1, 2}, set(variants))
+        self.assertEqual((32, 32), variants[1].size)
+        self.assertEqual((64, 64), variants[2].size)
+        for icon in variants.values():
+            self.assertEqual({0, 255}, set(icon.getchannel("A").getdata()))
+            self.assertEqual(0, icon.getpixel((0, 0))[3])
+
+    def test_targets_include_dpr_specific_web_exports(self) -> None:
+        icons = {level: city_icons.render_variants(level) for level in city_icons.LEVELS}
+        paths = {path.relative_to(city_icons.ROOT).as_posix() for path in city_icons.targets(icons)}
+
+        for app in city_icons.APPS:
+            self.assertIn(f"web/{app}/public/city/1x/cast_5.png", paths)
+            self.assertIn(f"web/{app}/public/city/2x/cast_5.png", paths)
+
 
 if __name__ == "__main__":
     unittest.main()
