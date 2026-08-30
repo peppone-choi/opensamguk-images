@@ -15,9 +15,6 @@
     { "path": "tools", "classification": "mit" },
     { "path": "web", "classification": "mit" },
 
-    { "path": "game", "classification": "third-party", "notice": "game/LICENSE-NOTICE.md" },
-    { "path": "hook", "classification": "third-party", "notice": "hook/LICENSE-NOTICE.md" },
-    { "path": "icons", "classification": "third-party", "notice": "icons/LICENSE-NOTICE.md" },
     { "path": "portraits", "classification": "third-party", "notice": "portraits/LICENSE-NOTICE.md" }
   ]
 }

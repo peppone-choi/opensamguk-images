@@ -38,35 +38,6 @@ treated the same as third-party: no license is granted.
 and index the third-party material and are kept inside the third-party boundary
 for clarity.
 
-## `icons/` — character icon pool
-
-The `icons/` tree is third-party derived or UNKNOWN throughout. No license is
-granted for any path under `icons/`.
-
-| Path | Origin as observed | Status |
-| --- | --- | --- |
-| `icons/*.jpg` (1833 numbered files at the top of `icons/`) | Legacy 삼국지 모의전투 (devsam / HiDCHe) general-portrait pool inherited with the game. Individual provenance is not recorded in this repository; portraits in this pool are widely Koei Tecmo *Romance of the Three Kingdoms* series derived. | UNKNOWN → treated as third-party |
-
-## `game/` — game UI, map, and unit assets
-
-| Item | Detail |
-| --- | --- |
-| Paths | `game/*` (backgrounds, banners, color chips, GIFs), `game/map/*`, `game/src/*` |
-| Origin as observed | Assets inherited from the legacy 삼국지 모의전투 (devsam / HiDCHe) PHP game. `game/src/*.jpg` are unit-type illustrations (보병, 궁병, 기병, 충차 …) of the kind used by the Koei Tecmo *Romance of the Three Kingdoms* series; `game/map/` holds scenario map art for che / chess / cr / ludo_rathowm. Original authorship is not recorded in this repository. |
-| Current state | Served unchanged as game assets. `game/src/코드.txt` is a unit-code table (text). |
-| Status | UNKNOWN → treated as third-party. No license granted by this repository. |
-
-## `hook/` — legacy image-service deploy scripts
-
-| Item | Detail |
-| --- | --- |
-| Paths | `hook/hook.php`, `hook/git_pull.php`, `hook/InstallKey.php`, `hook/HashKey.orig.php`, `hook/gogs_key.orig.php` |
-| Origin as observed | PHP sources in namespace `sammo\img_service` — the legacy 삼국지 모의전투 (devsam / HiDCHe) image-service deploy hooks, inherited rather than authored here. Upstream license not recorded in this repository. |
-| Current state | Retained as-is; not part of CDN asset serving. |
-| Status | UNKNOWN → treated as third-party. No license granted by this repository. |
-
----
-
 ## Reporting
 
 If you are a rights holder for any of the above and want a path removed or its
