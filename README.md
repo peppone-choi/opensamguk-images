@@ -28,6 +28,20 @@ Assets are tagged with `v<YYYY.MM.DD>` for immutable CDN caching.
 - `game/` — game assets
 - `icons/` — icon images
 - `hook/` — hook assets
+- `originals/` — project-authored source specifications
+- `exports/` — generated, deployment-ready project assets
+- `previews/` — generated visual QA sheets
+
+### Han map city markers
+
+The county, commandery-seat, and capital map markers are generated from
+`originals/map-city-markers/design.json`:
+
+```bash
+python3 tools/build-map-city-markers.py
+python3 tools/build-map-city-markers.py --check
+python3 tools/test-map-city-markers.py
+```
 
 새 자작 아이콘의 정본과 생성기는 이 저장소에만 둔다. `opensamguk`에는
 실제 프런트 런타임이 소비하는 export만 복사한다. 자세한 전달 경계는

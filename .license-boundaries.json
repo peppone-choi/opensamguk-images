@@ -9,6 +9,9 @@
     { "path": "README.md", "classification": "mit" },
     { "path": "THIRD-PARTY-NOTICES.md", "classification": "mit" },
     { "path": "assets", "classification": "mit" },
+    { "path": "exports", "classification": "mit" },
+    { "path": "originals", "classification": "mit" },
+    { "path": "previews", "classification": "mit" },
     { "path": "tools", "classification": "mit" },
     { "path": "web", "classification": "mit" },
 
