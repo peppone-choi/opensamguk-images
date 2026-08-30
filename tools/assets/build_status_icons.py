@@ -2,7 +2,7 @@
 """도시 상태/수도별 아이콘 빌더 (ImageGen 원화 · 결정적 후처리).
 
 `web/{gateway,game}/public/status/state-<code>.png`(12장) + `star-capital.png`(1장) +
-`imperial-residence.png`(1장)과
+`imperial-residence.png`(1장) + `imperial-npc.png`(1장)과
 검수 시트 `assets/brand/status-icons/preview.png`를 생성한다. 정본 원화는
 `assets/status-icons/source/status-master-imagegen.png`이며, 각 셀의 배경 제거·분리·축소·
 팔레트 제한을 코드로 재현한다.
@@ -68,6 +68,7 @@ PREVIEW_GAP = 4
 
 SIZE = 24
 STAR_SIZE = 16
+IMPERIAL_NPC_SIZE = 16
 
 OUTLINE = (18, 16, 14, 255)
 
@@ -391,6 +392,23 @@ def build_imperial_residence(size: int = SIZE) -> Image.Image:
     return canvas
 
 
+def build_imperial_npc_badge(size: int = IMPERIAL_NPC_SIZE) -> Image.Image:
+    """인물명 앞에 붙이는 황제 특별 NPC 배지. 16px용 면류관 앞판을 별도 클린업한다."""
+    badge = build_imperial_residence(size)
+    unit = max(1, size // IMPERIAL_NPC_SIZE)
+    if size == IMPERIAL_NPC_SIZE * unit:
+        for logical_x in range(4, 12):
+            color = STAR_GOLD if logical_x in (7, 8) else STAR_GOLD_D
+            for y in range(5 * unit, 6 * unit):
+                for x in range(logical_x * unit, (logical_x + 1) * unit):
+                    badge.putpixel((x, y), color)
+        for logical_x in (5, 7, 9, 11):
+            for y in range(6 * unit, 7 * unit):
+                for x in range(logical_x * unit, (logical_x + 1) * unit):
+                    badge.putpixel((x, y), STAR_GOLD_D)
+    return badge
+
+
 def preview_sheet(icons: dict[str, Image.Image]) -> Image.Image:
     s, gap = PREVIEW_SCALE, PREVIEW_GAP
     w = sum(i.width * s for i in icons.values()) + gap * (len(icons) + 1)
@@ -398,7 +416,7 @@ def preview_sheet(icons: dict[str, Image.Image]) -> Image.Image:
     sheet = Image.new("RGBA", (w, h), (24, 24, 28, 255))
     x = gap
     # 게임 상태 코드의 실제 순서로 보여 줘 32/34/43이 3과 4 사이에 끼지 않게 한다.
-    for key in ["capital", "imperial", *(str(code) for code in STATE_BUILDERS)]:
+    for key in ["capital", "imperial", "imperialNpc", *(str(code) for code in STATE_BUILDERS)]:
         img = icons[key]
         img = img.resize((img.width * s, img.height * s), Image.NEAREST)
         sheet.alpha_composite(img, (x, h - gap - img.height))
@@ -420,6 +438,8 @@ def targets(icons: dict[str, Image.Image]) -> dict[Path, bytes]:
             name = "star-capital.png"
         elif key == "imperial":
             name = "imperial-residence.png"
+        elif key == "imperialNpc":
+            name = "imperial-npc.png"
         else:
             name = f"state-{key}.png"
         for app in APPS:
@@ -429,6 +449,8 @@ def targets(icons: dict[str, Image.Image]) -> dict[Path, bytes]:
                 doubled = build_capital_star(STAR_SIZE * 2)
             elif key == "imperial":
                 doubled = build_imperial_residence(SIZE * 2)
+            elif key == "imperialNpc":
+                doubled = build_imperial_npc_badge(IMPERIAL_NPC_SIZE * 2)
             else:
                 doubled = build_state(int(key), SIZE * 2)
             out[ROOT / "web" / app / "public" / "status" / "2x" / name] = png_bytes(doubled)
@@ -444,6 +466,7 @@ def main() -> int:
     icons: dict[str, Image.Image] = {str(code): build_state(code) for code in STATE_BUILDERS}
     icons["capital"] = build_capital_star()
     icons["imperial"] = build_imperial_residence()
+    icons["imperialNpc"] = build_imperial_npc_badge()
     files = targets(icons)
 
     if args.check:
