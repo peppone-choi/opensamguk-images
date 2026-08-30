@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """도시 상태/수도별 아이콘 빌더 (ImageGen 원화 · 결정적 후처리).
 
-`web/{gateway,game}/public/status/state-<code>.png`(12장) + `star-capital.png`(1장)와
+`web/{gateway,game}/public/status/state-<code>.png`(12장) + `star-capital.png`(1장) +
+`imperial-residence.png`(1장)과
 검수 시트 `assets/brand/status-icons/preview.png`를 생성한다. 정본 원화는
 `assets/status-icons/source/status-master-imagegen.png`이며, 각 셀의 배경 제거·분리·축소·
 팔레트 제한을 코드로 재현한다.
@@ -61,6 +62,7 @@ ROOT = Path(__file__).resolve().parents[2]
 APPS = ("gateway", "game")
 PREVIEW = ROOT / "assets" / "brand" / "status-icons" / "preview.png"
 SOURCE_SHEET = ROOT / "assets" / "status-icons" / "source" / "status-master-imagegen.png"
+IMPERIAL_SOURCE = ROOT / "assets" / "status-icons" / "source" / "imperial-residence-imagegen.png"
 PREVIEW_SCALE = 8
 PREVIEW_GAP = 4
 
@@ -356,6 +358,39 @@ def build_capital_star(size: int = STAR_SIZE) -> Image.Image:
     return _render_source_cell(12, size, size - 1)
 
 
+@lru_cache(maxsize=1)
+def _imperial_source() -> Image.Image:
+    source = remove_checkerboard_background(Image.open(IMPERIAL_SOURCE))
+    bbox = source.getchannel("A").getbbox()
+    if bbox is None:
+        raise ValueError("imperial residence source is empty")
+    return source.crop(bbox)
+
+
+def build_imperial_residence(size: int = SIZE) -> Image.Image:
+    """RTK7 황제 필터 실루엣을 현재 상태 배지 화풍으로 재해석한 황제 거처 표식."""
+    source = _imperial_source()
+    extent = size - 2
+    scale = min(extent / source.width, extent / source.height)
+    resized = source.resize(
+        (max(1, round(source.width * scale)), max(1, round(source.height * scale))),
+        Image.Resampling.LANCZOS,
+    )
+    resized = _pixel_hint(resized)
+    canvas = Image.new("RGBA", (size, size), (0, 0, 0, 0))
+    canvas.alpha_composite(resized, ((size - resized.width) // 2, size - resized.height - 1))
+    # ImageGen 원화의 면류관 앞 유주가 24px LANCZOS 축소에서 한 덩어리로
+    # 합쳐지지 않게 논리 픽셀 격자에서 다섯 줄을 복원한다.
+    unit = max(1, size // SIZE)
+    if size == SIZE * unit:
+        for logical_x in (8, 10, 12, 14, 16):
+            color = STAR_GOLD if logical_x == 12 else STAR_GOLD_D
+            for y in range(8 * unit, 9 * unit):
+                for x in range(logical_x * unit, (logical_x + 1) * unit):
+                    canvas.putpixel((x, y), color)
+    return canvas
+
+
 def preview_sheet(icons: dict[str, Image.Image]) -> Image.Image:
     s, gap = PREVIEW_SCALE, PREVIEW_GAP
     w = sum(i.width * s for i in icons.values()) + gap * (len(icons) + 1)
@@ -363,7 +398,7 @@ def preview_sheet(icons: dict[str, Image.Image]) -> Image.Image:
     sheet = Image.new("RGBA", (w, h), (24, 24, 28, 255))
     x = gap
     # 게임 상태 코드의 실제 순서로 보여 줘 32/34/43이 3과 4 사이에 끼지 않게 한다.
-    for key in ["capital", *(str(code) for code in STATE_BUILDERS)]:
+    for key in ["capital", "imperial", *(str(code) for code in STATE_BUILDERS)]:
         img = icons[key]
         img = img.resize((img.width * s, img.height * s), Image.NEAREST)
         sheet.alpha_composite(img, (x, h - gap - img.height))
@@ -381,11 +416,21 @@ def targets(icons: dict[str, Image.Image]) -> dict[Path, bytes]:
     out: dict[Path, bytes] = {}
     for key, img in icons.items():
         data = png_bytes(img)
-        name = "star-capital.png" if key == "capital" else f"state-{key}.png"
+        if key == "capital":
+            name = "star-capital.png"
+        elif key == "imperial":
+            name = "imperial-residence.png"
+        else:
+            name = f"state-{key}.png"
         for app in APPS:
             out[ROOT / "web" / app / "public" / "status" / name] = data
             out[ROOT / "web" / app / "public" / "status" / "1x" / name] = data
-            doubled = build_capital_star(STAR_SIZE * 2) if key == "capital" else build_state(int(key), SIZE * 2)
+            if key == "capital":
+                doubled = build_capital_star(STAR_SIZE * 2)
+            elif key == "imperial":
+                doubled = build_imperial_residence(SIZE * 2)
+            else:
+                doubled = build_state(int(key), SIZE * 2)
             out[ROOT / "web" / app / "public" / "status" / "2x" / name] = png_bytes(doubled)
     out[PREVIEW] = png_bytes(preview_sheet(icons))
     return out
@@ -398,6 +443,7 @@ def main() -> int:
 
     icons: dict[str, Image.Image] = {str(code): build_state(code) for code in STATE_BUILDERS}
     icons["capital"] = build_capital_star()
+    icons["imperial"] = build_imperial_residence()
     files = targets(icons)
 
     if args.check:
