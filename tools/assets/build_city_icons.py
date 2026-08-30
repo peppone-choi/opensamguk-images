@@ -17,7 +17,7 @@ import sys
 from collections import deque
 from pathlib import Path
 
-from PIL import Image, ImageDraw
+from PIL import Image, ImageChops, ImageDraw, ImageEnhance, ImageFilter
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -101,7 +101,25 @@ def remove_checkerboard_background(source: Image.Image) -> Image.Image:
     return out
 
 
-def render_icon(level: int) -> Image.Image:
+def _pixel_hint(image: Image.Image) -> Image.Image:
+    """작은 크기에서 고전 전략게임식 계단과 명암을 남긴다."""
+    alpha = image.getchannel("A").point(lambda value: 255 if value >= 96 else 0)
+    rgb = Image.new("RGB", image.size, (20, 18, 16))
+    rgb.paste(image.convert("RGB"), mask=alpha)
+    rgb = ImageEnhance.Contrast(rgb).enhance(1.08)
+    rgb = ImageEnhance.Color(rgb).enhance(1.06)
+    rgb = rgb.filter(ImageFilter.UnsharpMask(radius=0.7, percent=190, threshold=2))
+    rgb = rgb.quantize(colors=48, method=Image.Quantize.MEDIANCUT, dither=Image.Dither.NONE).convert("RGBA")
+    rgb.putalpha(alpha)
+
+    outline_alpha = ImageChops.subtract(alpha.filter(ImageFilter.MaxFilter(3)), alpha)
+    outlined = Image.new("RGBA", image.size, (20, 17, 14, 0))
+    outlined.putalpha(outline_alpha)
+    outlined.alpha_composite(rgb)
+    return outlined
+
+
+def render_icon(level: int, canvas_size: int = CANVAS_SIZE) -> Image.Image:
     source = Image.open(source_path(level))
     extracted = remove_checkerboard_background(source)
     bbox = extracted.getchannel("A").getbbox()
@@ -109,19 +127,23 @@ def render_icon(level: int) -> Image.Image:
         raise ValueError(f"cast_{level}: foreground not found")
 
     cropped = extracted.crop(bbox)
-    extent = VISUAL_EXTENT[level]
+    extent = round(VISUAL_EXTENT[level] * canvas_size / CANVAS_SIZE)
     scale = min(extent / cropped.width, extent / cropped.height)
     size = (
         max(1, round(cropped.width * scale)),
         max(1, round(cropped.height * scale)),
     )
-    resized = cropped.resize(size, Image.Resampling.LANCZOS)
+    resized = _pixel_hint(cropped.resize(size, Image.Resampling.LANCZOS))
 
-    canvas = Image.new("RGBA", (CANVAS_SIZE, CANVAS_SIZE), (0, 0, 0, 0))
-    x = (CANVAS_SIZE - resized.width) // 2
-    y = CANVAS_SIZE - resized.height - 1
+    canvas = Image.new("RGBA", (canvas_size, canvas_size), (0, 0, 0, 0))
+    x = (canvas_size - resized.width) // 2
+    y = canvas_size - resized.height - 1
     canvas.alpha_composite(resized, (x, y))
     return canvas
+
+
+def render_variants(level: int) -> dict[int, Image.Image]:
+    return {1: render_icon(level, 32), 2: render_icon(level, 64)}
 
 
 def _png_bytes(image: Image.Image) -> bytes:
@@ -130,7 +152,7 @@ def _png_bytes(image: Image.Image) -> bytes:
     return buf.getvalue()
 
 
-def preview_sheet(icons: dict[int, Image.Image]) -> Image.Image:
+def preview_sheet(icons: dict[int, dict[int, Image.Image]]) -> Image.Image:
     scale = 4
     cell = CANVAS_SIZE * scale
     gap = 8
@@ -145,19 +167,23 @@ def preview_sheet(icons: dict[int, Image.Image]) -> Image.Image:
             for xx in range(0, cell, tile):
                 fill = (39, 44, 49, 255) if (xx // tile + yy // tile) % 2 else (49, 55, 61, 255)
                 draw.rectangle((x + xx, gap + yy, x + xx + tile - 1, gap + yy + tile - 1), fill=fill)
-        enlarged = icons[level].resize((cell, cell), Image.Resampling.NEAREST)
+        enlarged = icons[level][2].resize((cell, cell), Image.Resampling.NEAREST)
         sheet.alpha_composite(enlarged, (x, gap))
         draw.text((x + 5, gap + 5), str(level), fill=(255, 226, 130, 255), stroke_width=1, stroke_fill=(0, 0, 0, 255))
     return sheet
 
 
-def targets(icons: dict[int, Image.Image]) -> dict[Path, bytes]:
+def targets(icons: dict[int, dict[int, Image.Image]]) -> dict[Path, bytes]:
     files: dict[Path, bytes] = {}
-    for level, icon in icons.items():
-        data = _png_bytes(icon)
+    for level, variants in icons.items():
+        data = _png_bytes(variants[2])
         files[PROCESSED_DIR / f"cast_{level}.png"] = data
+        files[PROCESSED_DIR / "2x" / f"cast_{level}.png"] = data
+        files[PROCESSED_DIR / "1x" / f"cast_{level}.png"] = _png_bytes(variants[1])
         for app in APPS:
             files[ROOT / "web" / app / "public" / "city" / f"cast_{level}.png"] = data
+            for dpr, icon in variants.items():
+                files[ROOT / "web" / app / "public" / "city" / f"{dpr}x" / f"cast_{level}.png"] = _png_bytes(icon)
     files[PREVIEW] = _png_bytes(preview_sheet(icons))
     return files
 
@@ -167,7 +193,7 @@ def main() -> int:
     parser.add_argument("--check", action="store_true", help="기존 산출물과 바이트 비교")
     args = parser.parse_args()
 
-    icons = {level: render_icon(level) for level in LEVELS}
+    icons = {level: render_variants(level) for level in LEVELS}
     files = targets(icons)
     if args.check:
         drift = [path for path, data in files.items() if not path.exists() or path.read_bytes() != data]
