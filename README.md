@@ -22,14 +22,23 @@ Assets are tagged with `v<YYYY.MM.DD>` for immutable CDN caching.
 
 ## Structure
 
+- `assets/brand/` — opensamguk 아이콘 preview 정본
+- `tools/assets/` — 자작 아이콘 생성기 정본
+- `web/{game,gateway}/public/` — opensamguk에 전달하는 배포용 export
 - `game/` — game assets
 - `icons/` — icon images
 - `hook/` — hook assets
 
+새 자작 아이콘의 정본과 생성기는 이 저장소에만 둔다. `opensamguk`에는
+실제 프런트 런타임이 소비하는 export만 복사한다. 자세한 전달 경계는
+[`ASSET-EXPORTS.md`](./ASSET-EXPORTS.md)를 따른다.
+
 ## License
 
-The repository's own work — documentation, metadata, and the tooling under
-`tools/` and `.github/` — is MIT licensed; see [`LICENSE`](./LICENSE).
+The repository's own work — documentation, metadata, `assets/`, `web/`, and
+the tooling under `tools/` and `.github/` — is MIT licensed; see
+[`LICENSE`](./LICENSE).
+
 
 **The asset directories `game/`, `hook/`, `icons/`, and `portraits/` are NOT
 covered by that license.** They contain third-party derived material or
