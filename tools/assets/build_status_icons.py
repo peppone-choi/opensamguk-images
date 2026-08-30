@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
-"""도시 상태/수도별 아이콘 빌더 (자작 · 절차적 · 결정적).
+"""도시 상태/수도별 아이콘 빌더 (ImageGen 원화 · 결정적 후처리).
 
 `web/{gateway,game}/public/status/state-<code>.png`(12장) + `star-capital.png`(1장)와
-검수 시트 `assets/brand/status-icons/preview.png`를 생성한다. 입력 이미지는 없다 —
-`build_city_icons.py`와 같은 방식으로 픽셀아트를 코드로 직접 그린다.
+검수 시트 `assets/brand/status-icons/preview.png`를 생성한다. 정본 원화는
+`assets/status-icons/source/status-master-imagegen.png`이며, 각 셀의 배경 제거·분리·축소·
+팔레트 제한을 코드로 재현한다.
 
     python3 tools/assets/build_status_icons.py
     python3 tools/assets/build_status_icons.py --check   # 손편집 드리프트 검사, 불일치면 비0 종료
@@ -24,7 +25,7 @@ raw DB 컬럼이고, 값의 의미는 그걸 쓰는 로직 쪽에서만 확인�
   - `RaiseDisaster.kt` (분기별 재해/풍작 이벤트, `state<=10` 은 매 분기 0으로 리셋):
       1  풍작(호황, 7월) · 2  호황(4월) · 3  혹한/한파/폭설(1·10월)
       4  역병(1월) · 5  지진(전분기) · 6  태풍(4월) · 7  홍수(4월)
-      8  흉년/메뚜기(7월) · 9  황건적 출현(1·10월)
+      8  흉년/메뚜기(7월) · 9  민란(1·10월, 구형 황건 출현 문구를 일반화)
   - `CheHwagye.kt:262`/`CheSeondong.kt:257` — 화계(방화)·선동(소요) 성공 시 `state=32`
     (둘 다 같은 코드를 공유 — PHP 원본이 두 명령에 같은 표시를 쓴다).
   - `CheTalchwi.kt:294,301` — 탈취(약탈) 성공 시 `state=34`("탈취 상태").
@@ -34,9 +35,10 @@ raw DB 컬럼이고, 값의 의미는 그걸 쓰는 로직 쪽에서만 확인�
   `star-capital.png` 로 만든다).
 
 작게 렌더되므로(성 아이콘 우상단 배지) 색만으로 구분하지 않는다 — 실루엣 자체를 다르게
-그린다: 곡물단(풍작) / 동전(호황) / 눈송이(혹한) / 물방울+십자(역병) / 균열(지진) /
-소용돌이(태풍) / 파도(홍수) / 시든 이삭(흉년) / 불타는 두건(황건적) / 불꽃(화계·선동) /
-자루(탈취) / 창끝(출병). 수도 별은 5각 별로 별도.
+그린다: 곡물단(풍작) / 동전(호황) / 눈송이(혹한) / 해골과 독기(역병) / 균열(지진) /
+소용돌이(태풍) / 잠긴 집(홍수) / 빈 그릇과 시든 이삭(흉년) / 부러진 관아 명패·
+횃불·농기구(민란) / 불타는 성문(화계·선동) / 자루(탈취) / 군기·창·화살표(출병).
+수도 별은 5각 별로 별도다.
 """
 
 from __future__ import annotations
@@ -46,17 +48,24 @@ import io
 import math
 import sys
 from pathlib import Path
+from functools import lru_cache
 
 from PIL import Image
+
+try:
+    from tools.assets.build_city_icons import _pixel_hint, remove_checkerboard_background
+except ModuleNotFoundError:  # `python tools/assets/build_status_icons.py`
+    from build_city_icons import _pixel_hint, remove_checkerboard_background
 
 ROOT = Path(__file__).resolve().parents[2]
 APPS = ("gateway", "game")
 PREVIEW = ROOT / "assets" / "brand" / "status-icons" / "preview.png"
+SOURCE_SHEET = ROOT / "assets" / "status-icons" / "source" / "status-master-imagegen.png"
 PREVIEW_SCALE = 8
 PREVIEW_GAP = 4
 
-SIZE = 15  # 레거시 event*.gif 자연 크기(MapViewer.tsx STATE_PX 계산 기준값).
-STAR_SIZE = 10  # 레거시 event51.gif 자연 크기(MapViewer.tsx STAR_PX 계산 기준값).
+SIZE = 24
+STAR_SIZE = 16
 
 OUTLINE = (18, 16, 14, 255)
 
@@ -76,6 +85,11 @@ class Canvas:
         for y in range(y0, y1 + 1):
             for x in range(x0, x1 + 1):
                 self.set(x, y, color)
+
+    def clear_rect(self, x0: int, y0: int, x1: int, y1: int) -> None:
+        for y in range(y0, y1 + 1):
+            for x in range(x0, x1 + 1):
+                self.px.pop((x, y), None)
 
     def line(self, x0: int, y0: int, x1: int, y1: int, color) -> None:
         """Bresenham."""
@@ -139,63 +153,71 @@ STAR_GOLD, STAR_GOLD_D = (250, 214, 96, 255), (188, 138, 30, 255)
 
 
 def draw_1_bumper(c: Canvas) -> None:
-    """풍작 — 초록 곡물단(부채꼴로 벌어진 이삭 다발 + 허리끈)."""
-    base = (7, 12)
-    for tip in ((3, 3), (5, 2), (7, 1), (9, 2), (11, 3)):
-        c.line(base[0], base[1], tip[0], tip[1], GREEN)
-        c.set(tip[0], tip[1], GREEN_D)  # 이삭 머리
-    c.rect(4, 10, 10, 11, GREEN_D)  # 허리끈
+    """풍작 — 두 줄기와 낟알이 보이는 풍성한 곡물단."""
+    for x0, tip in ((10, (7, 3)), (13, (15, 2)), (12, (11, 4))):
+        c.line(12, 21, x0, 7, GREEN_D)
+        c.line(13, 21, tip[0], tip[1] + 3, GREEN)
+    for x, y in ((6, 4), (8, 5), (5, 7), (9, 8), (16, 3), (14, 5), (17, 7), (13, 8)):
+        c.rect(x, y, x + 2, y + 2, GREEN)
+        c.set(x + 1, y, GREEN_D)
+    c.rect(8, 16, 16, 18, GOLD_D)
 
 
 def draw_2_boom(c: Canvas) -> None:
-    """호황 — 금화 세 닢이 쌓인 모양."""
-    for cy, r in ((10, 4), (7, 4), (4, 3)):
-        c.circle(7, cy, r, GOLD)
-    for cy, r in ((10, 4), (7, 4), (4, 3)):
-        c.circle(7, cy, r, GOLD_D, fill=False)
+    """호황 — 네모 구멍이 난 한나라 동전 세 닢."""
+    for cx, cy in ((8, 15), (16, 15), (12, 8)):
+        c.circle(cx, cy, 6, GOLD)
+        c.circle(cx, cy, 6, GOLD_D, fill=False)
+        c.clear_rect(cx - 1, cy - 1, cx + 1, cy + 1)
 
 
 def draw_3_cold(c: Canvas) -> None:
     """혹한 — 6방향 눈송이."""
-    cx, cy, r = 7, 7, 6
+    cx, cy, r = 12, 12, 9
     for k in range(6):
         a = k * math.pi / 3
         x1, y1 = round(cx + r * math.cos(a)), round(cy + r * math.sin(a))
         c.line(cx, cy, x1, y1, ICE)
-        mx, my = round(cx + r * 0.6 * math.cos(a)), round(cy + r * 0.6 * math.sin(a))
+        mx, my = round(cx + r * 0.62 * math.cos(a)), round(cy + r * 0.62 * math.sin(a))
         for sa in (a + 0.7, a - 0.7):
-            sx, sy = round(mx + 2 * math.cos(sa)), round(my + 2 * math.sin(sa))
+            sx, sy = round(mx + 3 * math.cos(sa)), round(my + 3 * math.sin(sa))
             c.line(mx, my, sx, sy, ICE_D)
     c.set(cx, cy, ICE)
 
 
 def draw_4_plague(c: Canvas) -> None:
-    """역병 — 자주색 물방울(독기)에 십자(치료 불가 표식)."""
-    for y in range(3, 13):
-        half = max(1, 5 - abs(y - 8) // 2) if y > 5 else max(0, (y - 3))
-        c.rect(7 - half, y, 7 + half, y, PLAGUE)
-    c.rect(6, 6, 8, 6, PLAGUE_D)
-    c.rect(7, 4, 7, 8, PLAGUE_D)
+    """역병 — 해골과 위로 피어오르는 독기."""
+    c.circle(12, 12, 7, PLAGUE)
+    c.rect(8, 16, 16, 20, PLAGUE)
+    c.clear_rect(8, 10, 10, 12)
+    c.clear_rect(14, 10, 16, 12)
+    c.clear_rect(11, 14, 13, 15)
+    c.rect(10, 18, 11, 20, PLAGUE_D)
+    c.rect(13, 18, 14, 20, PLAGUE_D)
+    c.line(8, 6, 6, 2, PLAGUE_D)
+    c.line(14, 5, 16, 1, PLAGUE_D)
 
 
 def draw_5_quake(c: Canvas) -> None:
     """지진 — 갈라진 대지."""
-    c.rect(1, 10, 13, 13, ROCK)
-    zig = [(1, 10), (4, 6), (6, 9), (9, 4), (11, 8), (13, 5)]
+    c.rect(2, 14, 21, 21, ROCK)
+    zig = [(3, 14), (7, 8), (10, 14), (14, 6), (17, 13), (21, 9)]
     for (x0, y0), (x1, y1) in zip(zig, zig[1:]):
         c.line(x0, y0, x1, y1, ROCK_D)
         c.line(x0, y0 + 1, x1, y1 + 1, ROCK_D)
+    c.rect(3, 5, 6, 8, ROCK_D)
+    c.rect(18, 3, 21, 7, ROCK_D)
 
 
 def draw_6_typhoon(c: Canvas) -> None:
     """태풍 — 소용돌이."""
-    cx, cy = 7, 7
+    cx, cy = 12, 12
     prev = None
-    for i in range(70):
-        t = i * 0.28
-        r = 0.4 + t * 0.62
+    for i in range(110):
+        t = i * 0.22
+        r = 0.5 + t * 0.48
         x, y = round(cx + r * math.cos(t)), round(cy + r * math.sin(t))
-        if r > 6.4:
+        if r > 10:
             break
         if prev and prev != (x, y):
             c.line(prev[0], prev[1], x, y, TEAL if i % 6 < 3 else TEAL_D)
@@ -203,62 +225,74 @@ def draw_6_typhoon(c: Canvas) -> None:
 
 
 def draw_7_flood(c: Canvas) -> None:
-    """홍수 — 파도 세 줄."""
-    for row, y0 in enumerate((4, 8, 11)):
-        for x in range(1, 14):
+    """홍수 — 처마까지 잠긴 집과 파도."""
+    c.line(7, 9, 12, 4, ROCK_D)
+    c.line(12, 4, 17, 9, ROCK_D)
+    c.rect(8, 9, 16, 15, ROCK)
+    c.clear_rect(11, 11, 13, 15)
+    for row, y0 in enumerate((13, 17, 20)):
+        for x in range(2, 22):
             up = math.sin(x * 0.9 + row) > 0
             c.set(x, y0 + (0 if up else 1), WAVE if row < 2 else WAVE_D)
-    c.rect(1, 12, 13, 13, WAVE_D)
+    c.rect(2, 21, 21, 22, WAVE_D)
 
 
 def draw_8_famine(c: Canvas) -> None:
-    """흉년/메뚜기 — 고개 꺾여 늘어진 시든 이삭(두꺼운 줄기)."""
-    for dx in (0, 1):  # 줄기(아래쪽 곧음) — 2px 굵게
-        c.line(6 + dx, 13, 7 + dx, 8, WILT_D)
-        c.line(7 + dx, 8, 10 + dx, 5, WILT_D)  # 목이 꺾여 늘어진 부분
-    # 늘어진 이삭 머리 — 낟알 덩어리.
-    c.rect(9, 3, 12, 6, WILT)
-    c.rect(9, 3, 12, 3, WILT_D)
-    for (x, y) in ((3, 10), (4, 8)):  # 시들어 처진 잎 — 굵게
-        c.rect(x, y, x + 1, y + 1, WILT_D)
+    """흉년 — 금이 간 빈 그릇과 고개 숙인 이삭."""
+    c.line(3, 14, 12, 18, WILT_D)
+    c.line(12, 18, 21, 14, WILT_D)
+    c.rect(6, 18, 18, 21, WILT)
+    c.line(12, 18, 10, 21, OUTLINE)
+    c.line(18, 14, 17, 7, WILT_D)
+    c.line(17, 7, 14, 4, WILT_D)
+    for x, y in ((13, 3), (15, 4), (12, 6), (16, 7)):
+        c.rect(x, y, x + 2, y + 1, WILT)
 
 
 def draw_9_turban(c: Canvas) -> None:
-    """황건적 출현 — 불타는 두건(황색 띠 + 붉은 화염)."""
-    c.rect(3, 7, 11, 9, TURBAN)
-    c.rect(3, 9, 11, 9, TURBAN_D)
-    for cx in (4, 7, 10):
-        c.line(cx, 7, cx - 1, 3, FIRE)
-        c.line(cx, 7, cx + 1, 3, FIRE_D)
+    """황건적 출현 — 매듭과 긴 꼬리가 있는 황색 두건."""
+    c.rect(4, 7, 19, 12, TURBAN)
+    c.rect(5, 12, 18, 15, TURBAN_D)
+    c.rect(6, 15, 9, 21, TURBAN)
+    c.rect(15, 15, 18, 22, TURBAN)
+    c.rect(10, 8, 13, 11, FIRE_D)
 
 
 def draw_32_fire(c: Canvas) -> None:
-    """화계/선동 — 불꽃 하나."""
-    c.line(7, 13, 7, 9, FIRE_D)
-    pts = [(7, 2), (5, 5), (7, 4), (9, 6), (7, 8), (5, 9), (7, 11), (9, 9), (7, 2)]
-    for (x0, y0), (x1, y1) in zip(pts, pts[1:]):
-        c.line(x0, y0, x1, y1, FIRE)
-    c.rect(6, 6, 8, 8, FIRE_D)
+    """화계/선동 — 불타는 성문."""
+    c.rect(4, 13, 7, 22, ROCK_D)
+    c.rect(17, 13, 20, 22, ROCK_D)
+    c.rect(4, 11, 20, 14, ROCK)
+    c.rect(9, 16, 15, 22, OUTLINE)
+    for cx in (7, 12, 17):
+        c.line(cx, 12, cx - 2, 5, FIRE_D)
+        c.line(cx - 2, 5, cx, 2, FIRE)
+        c.line(cx, 2, cx + 2, 8, FIRE)
 
 
 def draw_34_plunder(c: Canvas) -> None:
     """탈취 — 묶은 자루."""
-    c.line(6, 3, 8, 3, SACK_D)
-    for y in range(4, 13):
-        half = min(y - 3, 13 - y) // 1
-        half = max(1, min(5, half + 2))
-        c.rect(7 - half, y, 7 + half, y, SACK)
-    c.rect(4, 11, 10, 12, SACK_D)
-    c.rect(6, 3, 8, 4, SACK_D)
+    c.line(10, 4, 14, 4, SACK_D)
+    for y in range(5, 22):
+        half = max(2, min(8, 3 + min(y - 5, 21 - y)))
+        c.rect(12 - half, y, 12 + half, y, SACK)
+    c.rect(6, 18, 18, 21, SACK_D)
+    c.rect(9, 4, 15, 7, SACK_D)
+    for cx, cy in ((4, 5), (19, 7)):
+        c.circle(cx, cy, 2, GOLD)
+        c.clear_rect(cx, cy, cx, cy)
 
 
 def draw_43_march(c: Canvas) -> None:
-    """출병(진군) — 붉은 창끝."""
-    c.line(7, 13, 7, 5, SPEAR_D)
-    c.line(7, 1, 4, 6, SPEAR)
-    c.line(7, 1, 10, 6, SPEAR)
-    c.line(4, 6, 10, 6, SPEAR)
-    c.rect(6, 6, 8, 6, SPEAR_D)
+    """출병(진군) — 창과 붉은 군기, 진행 화살표."""
+    c.line(8, 22, 8, 5, SPEAR_D)
+    c.line(8, 2, 5, 7, SPEAR)
+    c.line(8, 2, 11, 7, SPEAR)
+    c.line(5, 7, 11, 7, SPEAR)
+    c.rect(9, 8, 18, 14, (176, 52, 40, 255))
+    c.line(14, 19, 21, 19, SPEAR)
+    c.line(21, 19, 18, 16, SPEAR)
+    c.line(21, 19, 18, 22, SPEAR)
 
 
 STATE_BUILDERS = {
@@ -277,38 +311,49 @@ STATE_BUILDERS = {
 }
 
 
-def build_state(code: int) -> Image.Image:
-    c = Canvas(SIZE, SIZE)
-    STATE_BUILDERS[code](c)
-    c.outline()
-    return c.to_image()
+SOURCE_CELL_BY_CODE = {
+    1: 0, 2: 1, 3: 2, 4: 3,
+    5: 4, 6: 5, 7: 6, 8: 7,
+    9: 8, 32: 9, 34: 10, 43: 11,
+}
 
 
-def build_capital_star() -> Image.Image:
-    """수도 별 — 금색 5각 별(event51.gif 대체)."""
-    c = Canvas(STAR_SIZE, STAR_SIZE)
-    cx, cy, r_out, r_in = 5, 5, 4.6, 1.9
-    pts = []
-    for k in range(10):
-        r = r_out if k % 2 == 0 else r_in
-        a = -math.pi / 2 + k * math.pi / 5
-        pts.append((cx + r * math.cos(a), cy + r * math.sin(a)))
-    # 다각형을 스캔라인 채우기.
-    ys = [p[1] for p in pts]
-    for y in range(math.floor(min(ys)), math.ceil(max(ys)) + 1):
-        xs = []
-        for (x0, y0), (x1, y1) in zip(pts, pts[1:] + pts[:1]):
-            if (y0 <= y < y1) or (y1 <= y < y0):
-                t = (y - y0) / (y1 - y0)
-                xs.append(x0 + t * (x1 - x0))
-        xs.sort()
-        for i in range(0, len(xs) - 1, 2):
-            c.rect(round(xs[i]), y, round(xs[i + 1]), y, STAR_GOLD)
-    c.outline()
-    for (x, y) in list(c.px):
-        if c.px[(x, y)] == OUTLINE:
-            c.px[(x, y)] = STAR_GOLD_D
-    return c.to_image()
+@lru_cache(maxsize=1)
+def _source_cells() -> tuple[Image.Image, ...]:
+    source = remove_checkerboard_background(Image.open(SOURCE_SHEET))
+    width, height = source.size
+    cells: list[Image.Image] = []
+    for index in range(13):
+        col, row = index % 4, index // 4
+        left, right = round(col * width / 4), round((col + 1) * width / 4)
+        top, bottom = round(row * height / 4), round((row + 1) * height / 4)
+        cell = source.crop((left, top, right, bottom))
+        bbox = cell.getchannel("A").getbbox()
+        if bbox is None:
+            raise ValueError(f"status source cell {index} is empty")
+        cells.append(cell.crop(bbox))
+    return tuple(cells)
+
+
+def _render_source_cell(index: int, size: int, extent: int) -> Image.Image:
+    source = _source_cells()[index]
+    scale = min(extent / source.width, extent / source.height)
+    resized = source.resize(
+        (max(1, round(source.width * scale)), max(1, round(source.height * scale))),
+        Image.Resampling.LANCZOS,
+    )
+    resized = _pixel_hint(resized)
+    canvas = Image.new("RGBA", (size, size), (0, 0, 0, 0))
+    canvas.alpha_composite(resized, ((size - resized.width) // 2, size - resized.height))
+    return canvas
+
+
+def build_state(code: int, size: int = SIZE) -> Image.Image:
+    return _render_source_cell(SOURCE_CELL_BY_CODE[code], size, size - 2)
+
+
+def build_capital_star(size: int = STAR_SIZE) -> Image.Image:
+    return _render_source_cell(12, size, size - 1)
 
 
 def preview_sheet(icons: dict[str, Image.Image]) -> Image.Image:
@@ -339,6 +384,9 @@ def targets(icons: dict[str, Image.Image]) -> dict[Path, bytes]:
         name = "star-capital.png" if key == "capital" else f"state-{key}.png"
         for app in APPS:
             out[ROOT / "web" / app / "public" / "status" / name] = data
+            out[ROOT / "web" / app / "public" / "status" / "1x" / name] = data
+            doubled = build_capital_star(STAR_SIZE * 2) if key == "capital" else build_state(int(key), SIZE * 2)
+            out[ROOT / "web" / app / "public" / "status" / "2x" / name] = png_bytes(doubled)
     out[PREVIEW] = png_bytes(preview_sheet(icons))
     return out
 
