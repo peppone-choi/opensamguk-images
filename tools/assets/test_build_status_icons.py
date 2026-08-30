@@ -41,19 +41,40 @@ class StatusIconPipelineTest(unittest.TestCase):
         ]
         self.assertGreaterEqual(len(front_gold), 5)
 
+    def test_imperial_npc_badge_has_a_crisp_compact_crown_front(self) -> None:
+        badge = status_icons.build_imperial_npc_badge()
+
+        self.assertEqual((16, 16), badge.size)
+        self.assertLessEqual(set(badge.getchannel("A").tobytes()), {0, 255})
+        front_gold = [
+            badge.getpixel((x, 5))
+            for x in range(4, 12)
+            if (
+                badge.getpixel((x, 5))[3] == 255
+                and badge.getpixel((x, 5))[0] >= 150
+                and badge.getpixel((x, 5))[1] >= 100
+                and badge.getpixel((x, 5))[2] < 100
+            )
+        ]
+        self.assertGreaterEqual(len(front_gold), 4)
+
     def test_targets_export_all_states_capital_and_emperor_to_both_apps(self) -> None:
         icons = {str(code): status_icons.build_state(code) for code in status_icons.STATE_BUILDERS}
         icons["capital"] = status_icons.build_capital_star()
         icons["imperial"] = status_icons.build_imperial_residence()
+        icons["imperialNpc"] = status_icons.build_imperial_npc_badge()
         targets = {path.relative_to(status_icons.ROOT).as_posix() for path in status_icons.targets(icons)}
 
-        self.assertEqual(85, len(targets))
+        self.assertEqual(91, len(targets))
         for app in status_icons.APPS:
             self.assertIn(f"web/{app}/public/status/star-capital.png", targets)
             self.assertIn(f"web/{app}/public/status/2x/star-capital.png", targets)
             self.assertIn(f"web/{app}/public/status/imperial-residence.png", targets)
             self.assertIn(f"web/{app}/public/status/1x/imperial-residence.png", targets)
             self.assertIn(f"web/{app}/public/status/2x/imperial-residence.png", targets)
+            self.assertIn(f"web/{app}/public/status/imperial-npc.png", targets)
+            self.assertIn(f"web/{app}/public/status/1x/imperial-npc.png", targets)
+            self.assertIn(f"web/{app}/public/status/2x/imperial-npc.png", targets)
             for code in status_icons.STATE_BUILDERS:
                 self.assertIn(f"web/{app}/public/status/state-{code}.png", targets)
                 self.assertIn(f"web/{app}/public/status/1x/state-{code}.png", targets)
