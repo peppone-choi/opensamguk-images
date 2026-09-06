@@ -18,3 +18,5 @@ jobs:
       - run: python3 tools/check-license-boundaries.py
       - run: python3 tools/build-map-city-markers.py --check
       - run: python3 tools/test-map-city-markers.py
+      - run: python3 tools/assets/build_ui_icons.py --check
+      - run: python3 -m unittest tools.assets.test_build_ui_icons
