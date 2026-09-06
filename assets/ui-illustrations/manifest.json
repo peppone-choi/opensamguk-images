@@ -1,0 +1,24 @@
+{
+  "viewBox": "0 0 96 96",
+  "colors": [
+    "#697e58",
+    "#d3b064"
+  ],
+  "illustrations": [
+    {
+      "name": "map-pending",
+      "title": "지도 데이터 준비 중 — 접힌 지도",
+      "sha256": "a5862149dd181efdc866532b3902bb70efc6eac71174b49ceebb1831c742129a"
+    },
+    {
+      "name": "posts-empty",
+      "title": "게시물이 없습니다 — 빈 상소",
+      "sha256": "fa88c071167bc0d9ea8f24d30347595e0fcb0739def75bf4e9e8ba49218b42f3"
+    },
+    {
+      "name": "records-empty",
+      "title": "기록이 없습니다 — 빈 두루마리",
+      "sha256": "16181dfb57ed1fcf4ca29436931fb7be4ac03dd633a1c21c4442cdaaa0dd2e1e"
+    }
+  ]
+}
