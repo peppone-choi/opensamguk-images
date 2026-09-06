@@ -23,6 +23,11 @@
       "sha256": "2c53bda57e700018fd5880a9d6af045708cf5476ed7b9aaa564c71cdb6bb31e9"
     },
     {
+      "name": "auction",
+      "label": "경매",
+      "sha256": "71269e985013babe1f13b26682e274da0ad91c5c4c22a7d57ea53673ae87fc10"
+    },
+    {
       "name": "close",
       "label": "닫기",
       "sha256": "b40604269434573e167b482fda9bbfbf7b1e21b471c1ab16abb18d05d6cf5bbb"
@@ -78,6 +83,16 @@
       "sha256": "ba05538276ee891277c14def5f632375c269337124799e54f0e8cd2a1440af61"
     },
     {
+      "name": "dice",
+      "label": "베팅",
+      "sha256": "a573065b6235bd1f2b0ffcbbf228938788b6e780c25196bc1a4c920c39a19b4a"
+    },
+    {
+      "name": "diplomacy",
+      "label": "외교",
+      "sha256": "6bb2c585600e466a91732c0498bb6370494d758db29651c157fef633c8282c10"
+    },
+    {
       "name": "external",
       "label": "외부 링크",
       "sha256": "5c1686929d425301bfd7a362e5bde00bfa122a34f9ba15504ca87436e2cc6b18"
@@ -123,6 +138,16 @@
       "sha256": "150d1e48a480d4b65d541123cd9a5d126a2cdee9498e9b7a61899691c37cc45f"
     },
     {
+      "name": "mail",
+      "label": "서신",
+      "sha256": "930a2ee8617ab42533e3be14ee35fee24333e7f7b8406e5dacb6ba3ea87982d0"
+    },
+    {
+      "name": "members",
+      "label": "회원",
+      "sha256": "e79151c4659b509bc4d79ad5869ea76dfdfd9b24030606423c2734342af34556"
+    },
+    {
       "name": "refresh",
       "label": "갱신",
       "sha256": "5e5e7342da703935e62b73556968e368816a27b3bc8743cc4c7940f96f3f1753"
@@ -151,6 +176,11 @@
       "name": "search",
       "label": "검색",
       "sha256": "ad44dceecf6e9bde6995eff317e2ef6444772153cde467a997a0f3ea4f139d05"
+    },
+    {
+      "name": "tools",
+      "label": "관리",
+      "sha256": "14e94fd0cab6c2e3ca3f1128a354e7a35758767831a4154189f2389360dbc986"
     }
   ]
 }

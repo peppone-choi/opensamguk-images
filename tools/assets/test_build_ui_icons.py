@@ -11,6 +11,7 @@ REQUIRED = {
     "cmd-ok", "cmd-need", "cmd-no", "cmd-sealed",
     "res-gold", "res-rice", "res-troops", "res-provisions",
     "search", "refresh", "close", "arrow-left", "arrow-right", "arrow-up", "arrow-down", "external", "filter",
+    "auction", "dice", "diplomacy", "mail", "tools", "members",
 }
 
 

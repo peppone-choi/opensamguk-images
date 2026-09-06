@@ -34,3 +34,9 @@
 | `arrow-down` | 아래 |
 | `external` | 외부 링크 |
 | `filter` | 필터 |
+| `auction` | 경매 |
+| `dice` | 베팅 |
+| `diplomacy` | 외교 |
+| `mail` | 서신 |
+| `tools` | 관리 |
+| `members` | 회원 |
