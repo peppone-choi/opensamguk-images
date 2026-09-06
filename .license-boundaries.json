@@ -1,5 +1,5 @@
 {
-  "$comment": "License boundary manifest. Every top-level entry in this repository must be declared here. Verified by tools/check-license-boundaries.py (also run in CI). classification: 'mit' = covered by the root LICENSE; 'third-party' = NOT covered by the root LICENSE, see THIRD-PARTY-NOTICES.md.",
+  "$comment": "License boundary manifest. Every top-level entry in this repository must be declared here. Verified by tools/check-license-boundaries.py (also run in CI). classification: 'mit' = covered by the root LICENSE; 'third-party' = NOT covered by the root LICENSE and not used by the product; 'owner-accepted' = third-party material the repository owner has explicitly accepted responsibility for using in the OpenSamguk product (requires notice, accepted_by, accepted_on). See THIRD-PARTY-NOTICES.md.",
   "entries": [
     { "path": ".gitignore", "classification": "mit" },
     { "path": ".license-boundaries.json", "classification": "mit" },
@@ -15,6 +15,9 @@
     { "path": "tools", "classification": "mit" },
     { "path": "web", "classification": "mit" },
 
-    { "path": "portraits", "classification": "third-party", "notice": "portraits/LICENSE-NOTICE.md" }
+    { "path": "portraits", "classification": "owner-accepted", "notice": "portraits/LICENSE-NOTICE.md",
+      "rights_holder": "Koei Tecmo Games Co., Ltd. (RTK14 character illustrations)",
+      "accepted_by": "peppone-choi (repository owner)", "accepted_on": "2026-09-06",
+      "scope": "Use in the OpenSamguk product (CDN serving, web UI). No license is granted to third parties." }
   ]
 }

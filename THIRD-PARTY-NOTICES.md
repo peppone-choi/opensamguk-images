@@ -21,6 +21,11 @@ Origin is recorded as observed in this repository. Where the origin could not be
 established from repository evidence it is marked **UNKNOWN**, and UNKNOWN is
 treated the same as third-party: no license is granted.
 
+An `owner-accepted` entry is third-party material that the repository owner has
+explicitly decided to use in the OpenSamguk product, taking the responsibility
+for that use. It stays outside the root MIT license; the label records the
+decision, it does not grant anyone else a license.
+
 ---
 
 ## `portraits/` — RTK14 character illustrations and derivatives
@@ -31,7 +36,7 @@ treated the same as third-party: no license is granted.
 | Original rights holder | Koei Tecmo Games Co., Ltd. — character illustrations from *Romance of the Three Kingdoms XIV* (三國志14 / RTK14) |
 | Acquisition source | Attachment images on the RTK14 wikiwiki, `https://wikiwiki.jp/sangokushi14/` (`cdn.wikiwiki.jp/.../::attach/*.jpg`). Per-file source URLs are recorded in `portraits/rtk14/manifest/rtk14-name-file-map.tsv`. |
 | Current state | 1000 acquired originals (stored byte-preserved as `<sha256>.bin`) plus mechanically derived resizes/crops (148×210 full-frame, 148×210 face crop, 96×96 face icon) and id-keyed serving copies. Derivative processing does not create a new independent work here; the derivatives carry the same status as the originals. |
-| Status | Third-party derived. No license granted by this repository. |
+| Status | Third-party derived. No license granted by this repository to third parties. **Owner-accepted for use in the OpenSamguk product** (`.license-boundaries.json` classification `owner-accepted`, accepted 2026-09-06 by the repository owner, who takes the responsibility; see `portraits/LICENSE-NOTICE.md` and opensamguk ADR-LITE-048). |
 
 `portraits/rtk14/README.md`, `manifest/*`, `officer-id-registry.tsv` and
 `*/report.tsv` are pipeline metadata authored for this project, but they describe
