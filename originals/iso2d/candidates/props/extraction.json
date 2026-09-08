@@ -1,0 +1,43 @@
+{
+  "source": "originals/iso2d/raw/props.png",
+  "sourceSha256": "cee824fa863c3e0807929c238ffa06c545931857e676e99cb70ebd865ec0f434",
+  "pipeline": "sprite-gen chroma removal / cell extraction / alpha crop / fit and baseline",
+  "assets": [
+    {
+      "file": "mountain-rock.png",
+      "anchor": [
+        128,
+        240
+      ],
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "65db03535a5d701fa0b4a5c3cd084c5ab2a31ebb1fa721bc19279c4f0f620cf5"
+    },
+    {
+      "file": "mountain-snow.png",
+      "anchor": [
+        128,
+        240
+      ],
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "3c7d1ba75f14013bb54d68020c10f85ba011279b5f1e6c29697d9ec5eac0b7ce"
+    },
+    {
+      "file": "gate.png",
+      "anchor": [
+        128,
+        240
+      ],
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "dee26a6c1bfa1658bec03b7dedd369ee6bc2adc95853e57bfcad4773678ec88c"
+    }
+  ]
+}

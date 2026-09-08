@@ -1,0 +1,55 @@
+{
+  "source": "originals/iso2d/raw/buildings.png",
+  "sourceSha256": "2f26733fe63b515f9f943e81352dcc4dbd0d5e45ae07b506d7932680028c0cb9",
+  "pipeline": "sprite-gen chroma removal / cell extraction / alpha crop / fit and baseline",
+  "assets": [
+    {
+      "file": "hamlet.png",
+      "anchor": [
+        128,
+        240
+      ],
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "23fcf6f9405114480e1df00323ea94bbb8d994614a7cd448ff4a42ce9a161835"
+    },
+    {
+      "file": "county.png",
+      "anchor": [
+        128,
+        240
+      ],
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "08c8cf4ff3112ddb1146afc04fde1c51b9256ea9a591426c948a189c9083855c"
+    },
+    {
+      "file": "commandery.png",
+      "anchor": [
+        128,
+        240
+      ],
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "62f37fb9cbae4051387a9afee324c33fa86ca37008e95d676ba54212cd87a587"
+    },
+    {
+      "file": "capital.png",
+      "anchor": [
+        128,
+        240
+      ],
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "c0096d94c067ece81fac48ac70775ef27c147b6e9e370264b287b7f6acbac6b9"
+    }
+  ]
+}

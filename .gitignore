@@ -2,3 +2,6 @@
 /hook/logs.txt
 /hook/list.json
 /hook/HashKey.php
+__pycache__/
+*.pyc
+*.sg-rwlock

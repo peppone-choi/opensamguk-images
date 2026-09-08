@@ -1,0 +1,79 @@
+{
+  "source": "originals/iso2d/raw/units.png",
+  "sourceSha256": "860b5d237d50819226a360d96f90ea1d6f4e6c6c30765c8d8c9a4f8d06d68d18",
+  "pipeline": "sprite-gen chroma removal / cell extraction / alpha crop / fit and baseline",
+  "assets": [
+    {
+      "file": "wall.png",
+      "anchor": [
+        128,
+        240
+      ],
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "95138ff1662d64e9884bae681c2d08021cdf60070c1adf0c5e076d485823071c"
+    },
+    {
+      "file": "infantry.png",
+      "anchor": [
+        128,
+        240
+      ],
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "ca93d307d42e007ba92709e7c8cdaa146669b6cf09bb6945a5e19d9996968290"
+    },
+    {
+      "file": "archer.png",
+      "anchor": [
+        128,
+        240
+      ],
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "a8c53e67a3af1ea9c059fac5d8c657e5feb8aef6242a35d0b2d485e068bef795"
+    },
+    {
+      "file": "cavalry.png",
+      "anchor": [
+        128,
+        240
+      ],
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "0dd9c2e153241aaabaf4e40c904dadf04bb3349c400b0d50eaa66d52ed2eb67d"
+    },
+    {
+      "file": "siege.png",
+      "anchor": [
+        128,
+        240
+      ],
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "008e7ecf5d12c7f0deebbecfd44ed69e1e120d69b37d1de2653fb68ffe7cf1b2"
+    },
+    {
+      "file": "tower.png",
+      "anchor": [
+        128,
+        240
+      ],
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "437380dbf540be4cb9f25dd6f918abb1344959c92b317cab987a36b6483f62e1"
+    }
+  ]
+}

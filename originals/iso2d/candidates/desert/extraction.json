@@ -1,0 +1,248 @@
+{
+  "source": "originals/iso2d/raw/desert-15.png",
+  "sourceSha256": "4c46f47ac6481c5b003288cbd580464b3af692fdd323aa0e818da7ea7c579fa2",
+  "pipeline": "sprite-gen chroma removal / fixed guide crop from AI bleed / max-2px-per-axis source edge extrusion",
+  "status": "candidates-require-assembled-visual-QA",
+  "assets": [
+    {
+      "file": "desert-00.png",
+      "mask": 0,
+      "cornerHeights": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "anchor": [
+        128,
+        96
+      ],
+      "alphaEdgePixelsCopied": 0,
+      "sha256": "5e71f235c8696f260a200f94b293a0c18ae038004b69ab2d0317c4b0fb86ec65"
+    },
+    {
+      "file": "desert-01.png",
+      "mask": 1,
+      "cornerHeights": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "anchor": [
+        128,
+        96
+      ],
+      "alphaEdgePixelsCopied": 0,
+      "sha256": "808753cc993516dc6804a1b0966fc3ecf3a685a8e3940f91ba26eb22182b4367"
+    },
+    {
+      "file": "desert-02.png",
+      "mask": 2,
+      "cornerHeights": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "anchor": [
+        128,
+        96
+      ],
+      "alphaEdgePixelsCopied": 0,
+      "sha256": "06beaf17915cdf37be8c42467d518773ce01aaee470847c8b70e3f41f53b29a4"
+    },
+    {
+      "file": "desert-03.png",
+      "mask": 3,
+      "cornerHeights": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "anchor": [
+        128,
+        96
+      ],
+      "alphaEdgePixelsCopied": 0,
+      "sha256": "d1ed15069b608c9e8b8c74754199ba59c1adbf8d87a9deeeaf8c80821c302da5"
+    },
+    {
+      "file": "desert-04.png",
+      "mask": 4,
+      "cornerHeights": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "anchor": [
+        128,
+        96
+      ],
+      "alphaEdgePixelsCopied": 0,
+      "sha256": "b8ca9594d6d2bfc87180f6c5ddf6a7992c152505a15961a412801551f5db628b"
+    },
+    {
+      "file": "desert-05.png",
+      "mask": 5,
+      "cornerHeights": [
+        1,
+        0,
+        1,
+        0
+      ],
+      "anchor": [
+        128,
+        96
+      ],
+      "alphaEdgePixelsCopied": 0,
+      "sha256": "26ae9e66965cd4d97ea1c5a5619e214b06a4cc3b7da6e74eca47edc32522f23e"
+    },
+    {
+      "file": "desert-06.png",
+      "mask": 6,
+      "cornerHeights": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "anchor": [
+        128,
+        96
+      ],
+      "alphaEdgePixelsCopied": 0,
+      "sha256": "e3adc61a3e190f34caaa3ed2bd0b92fcb579fe6664716d56c414148a86976d2d"
+    },
+    {
+      "file": "desert-07.png",
+      "mask": 7,
+      "cornerHeights": [
+        1,
+        1,
+        1,
+        0
+      ],
+      "anchor": [
+        128,
+        96
+      ],
+      "alphaEdgePixelsCopied": 0,
+      "sha256": "c2c02518f7f3e616adac71acb68be7d1ade2d7642a8b09dc35832e5c1ccae0e2"
+    },
+    {
+      "file": "desert-08.png",
+      "mask": 8,
+      "cornerHeights": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "anchor": [
+        128,
+        96
+      ],
+      "alphaEdgePixelsCopied": 0,
+      "sha256": "eadda0e79a1e1d428004148ea328e27a7bf8d7ac2982ce9a8ba257c131f513b8"
+    },
+    {
+      "file": "desert-09.png",
+      "mask": 9,
+      "cornerHeights": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "anchor": [
+        128,
+        96
+      ],
+      "alphaEdgePixelsCopied": 0,
+      "sha256": "8b4024e3749e0517c4ccf4d2d13d7637f99301009f2c3586ec75e8694b5a1ce4"
+    },
+    {
+      "file": "desert-10.png",
+      "mask": 10,
+      "cornerHeights": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "anchor": [
+        128,
+        96
+      ],
+      "alphaEdgePixelsCopied": 0,
+      "sha256": "bec6ebb054add178c336fc0830977cb4f7da94da0904fddc57f05a95b7aaad5c"
+    },
+    {
+      "file": "desert-11.png",
+      "mask": 11,
+      "cornerHeights": [
+        1,
+        1,
+        0,
+        1
+      ],
+      "anchor": [
+        128,
+        96
+      ],
+      "alphaEdgePixelsCopied": 0,
+      "sha256": "0de5dd11550268f6397661a4f8e04f30616a272f9ac9ec66f889b9231709991e"
+    },
+    {
+      "file": "desert-12.png",
+      "mask": 12,
+      "cornerHeights": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "anchor": [
+        128,
+        96
+      ],
+      "alphaEdgePixelsCopied": 0,
+      "sha256": "e6417271d7d6f41f0a2aa56808d8fa680d2c3ca1cae066d8a481e61842c1aed2"
+    },
+    {
+      "file": "desert-13.png",
+      "mask": 13,
+      "cornerHeights": [
+        1,
+        0,
+        1,
+        1
+      ],
+      "anchor": [
+        128,
+        96
+      ],
+      "alphaEdgePixelsCopied": 0,
+      "sha256": "7d6898f6fd31c801c99c46c1972dcb1a5f36d0af4ba0e84bd1a1a3d02ef58aac"
+    },
+    {
+      "file": "desert-14.png",
+      "mask": 14,
+      "cornerHeights": [
+        0,
+        1,
+        1,
+        1
+      ],
+      "anchor": [
+        128,
+        96
+      ],
+      "alphaEdgePixelsCopied": 0,
+      "sha256": "cfa4bc46856927431f0e3c6eb6a1430f427f8f435e3daea8730b3d91b28d66f7"
+    }
+  ]
+}
