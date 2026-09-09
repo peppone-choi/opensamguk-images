@@ -5,7 +5,7 @@
   "sourceSha256": [
     "cee824fa863c3e0807929c238ffa06c545931857e676e99cb70ebd865ec0f434"
   ],
-  "pipeline": "sprite-gen chroma removal / cell extraction / alpha crop / fit and baseline",
+  "pipeline": "sprite-gen chroma removal / cell extraction / alpha crop / fit and seat on the tile diamond (seat_on_tile)",
   "assets": [
     {
       "file": "mountain-rock.png",
@@ -17,7 +17,7 @@
         256,
         256
       ],
-      "sha256": "65db03535a5d701fa0b4a5c3cd084c5ab2a31ebb1fa721bc19279c4f0f620cf5"
+      "sha256": "ae95173b853e5f03476f7be1353cd25d37bace3d9b6b87e54904b940794cdf26"
     },
     {
       "file": "mountain-snow.png",
@@ -29,7 +29,7 @@
         256,
         256
       ],
-      "sha256": "3c7d1ba75f14013bb54d68020c10f85ba011279b5f1e6c29697d9ec5eac0b7ce"
+      "sha256": "e4207a5877155517414d164c3c5d74805cb36f7081e4d3b2257bd9c89faeedfd"
     },
     {
       "file": "gate.png",
@@ -41,7 +41,7 @@
         256,
         256
       ],
-      "sha256": "dee26a6c1bfa1658bec03b7dedd369ee6bc2adc95853e57bfcad4773678ec88c"
+      "sha256": "aa3a2980355edb09d8ce61877a7ba4c20d30af37b380ba55e52d411ae084e389"
     }
   ]
 }
