@@ -2,6 +2,7 @@ import unittest
 import numpy as np
 from PIL import Image
 from prepare_iso2d_tiles import normalize_alpha, footprint
+from export_iso2d_assets import BUILDINGS, OUT, spill
 
 
 class GeometryTests(unittest.TestCase):
@@ -61,6 +62,47 @@ class GeometryTests(unittest.TestCase):
         self.assertTrue(np.array_equal(*results))
         self.assertEqual(results[0][1,1].tolist(),[0,0,255,255])
         self.assertEqual(results[0][2,14].tolist(),[255,0,0,255])
+
+
+class TileFitTests(unittest.TestCase):
+    """A ground object must stand inside the tile diamond it is placed on.
+
+    Nothing checked this before. prepare_iso2d_objects.py cropped each painted compound to its
+    alpha bbox and fitted it into an arbitrary (max_w, max_h) box, so the city icons came out at
+    different scales, off the diamond centre, hanging 10-31px onto the tile in front of them.
+    That, and not the painting, is what made them look inconsistent on the map.
+    """
+
+    def probe(self):
+        """A sprite that sits correctly, and the same sprite dropped 12px. If the second one
+        passes, the assertion below is measuring nothing."""
+        good = np.zeros((256, 256, 4), dtype=np.uint8)
+        for y in range(112, 241):
+            reach = int(128 * (1 - abs(y - 176) / 64)) if y >= 176 else 128
+            good[y, 128 - reach:128 + reach] = [160, 140, 110, 255]
+        bad = np.zeros_like(good)
+        bad[12:] = good[:-12]
+        return good, bad
+
+    def test_probe_separates_a_fitting_sprite_from_a_spilling_one(self):
+        good, bad = self.probe()
+        self.assertLessEqual(spill(good), 0)
+        self.assertGreater(spill(bad), 0)
+
+    def test_every_shipped_building_tier_stands_on_its_own_tile(self):
+        worst = {}
+        for name in BUILDINGS:
+            file = OUT / 'objects' / f'{name}.png'
+            self.assertTrue(file.is_file(), f'{name} is not exported')
+            with Image.open(file) as image:
+                self.assertEqual(image.size, (256, 256))
+                worst[name] = spill(np.array(image.convert('RGBA')))
+        over = {k: round(float(v), 1) for k, v in worst.items() if v > 0}
+        self.assertEqual(over, {}, f'building tiers hanging below their tile: {over}')
+
+    def test_one_tier_per_city_level_with_no_level_left_unmapped(self):
+        self.assertEqual(sorted(BUILDINGS.values()), list(range(1, 12)))
+        self.assertEqual(len(set(BUILDINGS)), len(BUILDINGS))
 
 
 if __name__ == '__main__':

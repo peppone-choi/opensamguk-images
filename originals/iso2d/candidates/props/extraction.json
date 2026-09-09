@@ -1,6 +1,10 @@
 {
-  "source": "originals/iso2d/raw/props.png",
-  "sourceSha256": "cee824fa863c3e0807929c238ffa06c545931857e676e99cb70ebd865ec0f434",
+  "source": [
+    "originals/iso2d/raw/props.png"
+  ],
+  "sourceSha256": [
+    "cee824fa863c3e0807929c238ffa06c545931857e676e99cb70ebd865ec0f434"
+  ],
   "pipeline": "sprite-gen chroma removal / cell extraction / alpha crop / fit and baseline",
   "assets": [
     {

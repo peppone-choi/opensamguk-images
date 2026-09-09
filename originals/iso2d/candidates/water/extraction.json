@@ -1,6 +1,10 @@
 {
-  "source": "originals/iso2d/raw/water.png",
-  "sourceSha256": "fd126a076b7b7a2ae908249b61c051203799df23d023c118d450038b6e7dfc81",
+  "source": [
+    "originals/iso2d/raw/water.png"
+  ],
+  "sourceSha256": [
+    "fd126a076b7b7a2ae908249b61c051203799df23d023c118d450038b6e7dfc81"
+  ],
   "pipeline": "sprite-gen chroma removal / cell extraction / alpha crop / fit and baseline",
   "assets": [
     {

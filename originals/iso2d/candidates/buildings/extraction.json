@@ -1,10 +1,34 @@
 {
-  "source": "originals/iso2d/raw/buildings.png",
-  "sourceSha256": "2f26733fe63b515f9f943e81352dcc4dbd0d5e45ae07b506d7932680028c0cb9",
-  "pipeline": "sprite-gen chroma removal / cell extraction / alpha crop / fit and baseline",
+  "source": [
+    "originals/iso2d/raw/buildings-water.png",
+    "originals/iso2d/raw/buildings-garrison.png",
+    "originals/iso2d/raw/buildings-pass.png",
+    "originals/iso2d/raw/buildings-tribal.png",
+    "originals/iso2d/raw/buildings-county-small.png",
+    "originals/iso2d/raw/buildings-county.png",
+    "originals/iso2d/raw/buildings-commandery.png",
+    "originals/iso2d/raw/buildings-commandery-mid.png",
+    "originals/iso2d/raw/buildings-commandery-major.png",
+    "originals/iso2d/raw/buildings-commandery-grand.png",
+    "originals/iso2d/raw/buildings-capital.png"
+  ],
+  "sourceSha256": [
+    "d00754dc96357e5aa4d0268aca29e7dcd0d57d57fb4dff364ca7509f7b3ea6af",
+    "32d35cb9242e7cad7ace3060a0c12954ebc6260b0704774242267806bfc7d028",
+    "ff5c4fae6da981cb07e0ed77578474bd6a8d6d46b50c5803c56a7b3f3eb162cb",
+    "8368b4dbb3c200881fdaef4f222055f8c33c523ec6a28b5e53f3e3f5d96148f7",
+    "cae915f50b935af35d031f2359ceeb17242f0496e255624be57bdd17b513b835",
+    "0dcee523d514aec4b49576a16c9aff4c44954a59592eeb1354b28a7da31197d0",
+    "feb674f23c9a8ac7e3aafbf1c16e46f332a0ada1c1870dba52cd1d4fbde6b2d9",
+    "2d7728fcbeba2b0fb7bd08ace14caca42a11ba6ec01ffcf1b3f780c266ea260e",
+    "c57ff67d6fffbe9ec7e459b33fed79cc045a789fecf619c8e886adc2ec921a29",
+    "4b5fea7de4d7048856190aa37a64a61075aabc24a087e7fc7322fe4abe76d08e",
+    "e95cc20f937f950693244a193026703ebaff502854e61a4842839eca67fd2d2b"
+  ],
+  "pipeline": "guide alpha mask / box downscale to the object frame",
   "assets": [
     {
-      "file": "hamlet.png",
+      "file": "water.png",
       "anchor": [
         128,
         240
@@ -13,7 +37,55 @@
         256,
         256
       ],
-      "sha256": "23fcf6f9405114480e1df00323ea94bbb8d994614a7cd448ff4a42ce9a161835"
+      "sha256": "7bb5a686cfed730a290a21177fecc8dd6dacf8c57eb6634faf5583320dbe6c7c"
+    },
+    {
+      "file": "garrison.png",
+      "anchor": [
+        128,
+        240
+      ],
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "c18843096f4f77f8f1555aa16b05c98865db286de0e58b7a97c5103a08d0a017"
+    },
+    {
+      "file": "pass.png",
+      "anchor": [
+        128,
+        240
+      ],
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "ab047e028377bae7bc8d3100a467e40b8213d3381138bd26f7e4fe0fbb24a138"
+    },
+    {
+      "file": "tribal.png",
+      "anchor": [
+        128,
+        240
+      ],
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "90a89134716032cb499fd673dec2bef70e5ac61d9f986aab61969a60ada6cf27"
+    },
+    {
+      "file": "county-small.png",
+      "anchor": [
+        128,
+        240
+      ],
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "c93d5a97b29d68df38c282752fe40bd4aa4f98bb76baa67db3e98f3a2a0241df"
     },
     {
       "file": "county.png",
@@ -25,7 +97,7 @@
         256,
         256
       ],
-      "sha256": "08c8cf4ff3112ddb1146afc04fde1c51b9256ea9a591426c948a189c9083855c"
+      "sha256": "31c22866d18f4047110f5a4aac5baf786e8deb19d22d5101456431966db8a2aa"
     },
     {
       "file": "commandery.png",
@@ -37,7 +109,43 @@
         256,
         256
       ],
-      "sha256": "62f37fb9cbae4051387a9afee324c33fa86ca37008e95d676ba54212cd87a587"
+      "sha256": "1884be33f272bd94e11974add90ac0264fe8ca0eaa6402c6e1191d57fb7eeeec"
+    },
+    {
+      "file": "commandery-mid.png",
+      "anchor": [
+        128,
+        240
+      ],
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "e9b77c4a719129bb7083dad2539763e2b5a1c433f2e401742cb66a823670893c"
+    },
+    {
+      "file": "commandery-major.png",
+      "anchor": [
+        128,
+        240
+      ],
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "b4bf9ed6db0b5ca2c85894ebc48e994352bc256362fd382a9c86d3f6bcf7fd0f"
+    },
+    {
+      "file": "commandery-grand.png",
+      "anchor": [
+        128,
+        240
+      ],
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "293e0c4f2b6a119b1169c0a064e749c335796f586a3fccdc67a7ce0cb10b5b89"
     },
     {
       "file": "capital.png",
@@ -49,7 +157,7 @@
         256,
         256
       ],
-      "sha256": "c0096d94c067ece81fac48ac70775ef27c147b6e9e370264b287b7f6acbac6b9"
+      "sha256": "89bf4f18115ac76b2b7eb3b2fa03f4b667ccf4135a79aa73091fd30b99e0d326"
     }
   ]
 }

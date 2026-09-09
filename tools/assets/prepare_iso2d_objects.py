@@ -4,7 +4,7 @@ import json
 from pathlib import Path
 
 import numpy as np
-from PIL import Image, ImageDraw
+from PIL import Image, ImageDraw, ImageFilter
 from sprite_gen.extract import remove_chroma_background
 from sprite_gen.slice_sheet import DEFAULT_KEY_THRESHOLD, DEFAULT_FRINGE_KEY_THRESHOLD, DEFAULT_FRINGE_DELTA
 from prepare_iso2d_tiles import normalize_alpha
@@ -19,7 +19,27 @@ def clean_sheet(name):
         (255, 0, 255), DEFAULT_KEY_THRESHOLD, DEFAULT_FRINGE_KEY_THRESHOLD, DEFAULT_FRINGE_DELTA)
 
 
-def save_group(group, source, images):
+BUILDING_TIERS = ['water', 'garrison', 'pass', 'tribal', 'county-small', 'county', 'commandery',
+                  'commandery-mid', 'commandery-major', 'commandery-grand', 'capital']
+
+# Ground-unit projection of the tile diamond, shared with build_iso2d_buildings.py.
+BASE_CY, TILE_HALF, FRAME = 176.0, 64.0, 256
+
+
+def spill(image):
+    """Pixels below the tile diamond. Positive means the sprite hangs off its own tile."""
+    alpha = np.array(image)[:, :, 3]
+    worst = -TILE_HALF
+    for x in range(FRAME):
+        column = np.nonzero(alpha[:, x] >= 8)[0]
+        if not column.size:
+            continue
+        limit = BASE_CY + TILE_HALF * (1 - abs(x - FRAME / 2) / (FRAME / 2))
+        worst = max(worst, column.max() - limit)
+    return worst
+
+
+def save_group(group, source, images, sources=None):
     output = BASE/'candidates'/group
     output.mkdir(parents=True, exist_ok=True)
     records = []
@@ -28,12 +48,47 @@ def save_group(group, source, images):
         image.save(file)
         records.append(dict(file=file.name, anchor=anchor, size=list(image.size),
             sha256=hashlib.sha256(file.read_bytes()).hexdigest()))
-    source_path = BASE/'raw'/f'{source}.png'
-    (output/'extraction.json').write_text(json.dumps(dict(source=str(source_path.relative_to(ROOT)),
-        sourceSha256=hashlib.sha256(source_path.read_bytes()).hexdigest(),
-        pipeline='sprite-gen chroma removal / cell extraction / alpha crop / fit and baseline',
+    paths = sources or [BASE/'raw'/f'{source}.png']
+    (output/'extraction.json').write_text(json.dumps(dict(
+        source=[str(f.relative_to(ROOT)) for f in paths],
+        sourceSha256=[hashlib.sha256(f.read_bytes()).hexdigest() for f in paths],
+        pipeline=('guide alpha mask / box downscale to the object frame' if sources else
+                  'sprite-gen chroma removal / cell extraction / alpha crop / fit and baseline'),
         assets=records), indent=2)+'\n')
     return records
+
+
+def buildings():
+    """City tiers come out of the painter already in object-sprite coordinates: the guide frame
+    IS the 256x256 object frame, base diamond centre (128,176), anchor (128,240). So there is
+    nothing to crop and nothing to fit. The old bbox-crop-then-fit-to-a-box path is exactly what
+    put four compounds at four different scales, off the diamond centre, hanging below the tile.
+
+    The guide's own alpha is the mask. The painter is told to keep the background transparent and
+    mostly does, but it still laid a water pool under the river station and rock under the pass;
+    masking removes those and makes the no-spill rule hold by construction, not by inspection.
+    """
+    result, sources = [], []
+    for name in BUILDING_TIERS:
+        guide = Image.open(BASE/'guides/buildings'/f'{name}.png').convert('RGBA')
+        painted_path = BASE/'raw'/f'buildings-{name}.png'
+        painted = Image.open(painted_path).convert('RGBA')
+        if guide.size != (FRAME, FRAME):
+            raise ValueError(f'{name}: guide is {guide.size}, expected {FRAME}x{FRAME}')
+        # The painter rounds the guide's hard edges by a pixel or two; keep that, drop
+        # everything the guide never claimed.
+        mask = Image.fromarray(np.array(guide)[:, :, 3]).resize(painted.size,
+                                                                Image.Resampling.BILINEAR)
+        mask = mask.filter(ImageFilter.MaxFilter(5))
+        a = np.array(painted)
+        a[:, :, 3] = np.minimum(a[:, :, 3], np.array(mask))
+        out = Image.fromarray(a).resize((FRAME, FRAME), Image.Resampling.LANCZOS)
+        over = spill(out)
+        if over > 0:
+            raise ValueError(f'{name}: {over:.1f}px below the tile diamond')
+        result.append((name, out, [128, 240]))
+        sources.append(painted_path)
+    save_group('buildings', 'buildings', result, sources)
 
 
 def water():
@@ -117,7 +172,7 @@ def objects(source, columns, rows, specs):
 if __name__=='__main__':
     water()
     skirts()
-    objects('buildings',2,2,[('hamlet',180,120),('county',216,160),('commandery',232,176),('capital',248,200)])
+    buildings()
     objects('units',3,2,[('wall',160,100),('infantry',90,128),('archer',90,128),('cavalry',144,144),('siege',168,132),('tower',144,176)])
     objects('props',3,1,[('mountain-rock',240,176),('mountain-snow',240,208),('gate',240,160)])
-    print('Extracted 18 water, skirt, building, unit and prop PNGs.')
+    print(f'Extracted {3 + 2 + len(BUILDING_TIERS) + 6 + 3} water, skirt, building, unit and prop PNGs.')
