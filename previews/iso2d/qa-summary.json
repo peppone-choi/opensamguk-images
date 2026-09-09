@@ -1,0 +1,32 @@
+{
+  "status": "agent-reviewed-static-assets",
+  "pngCount": 108,
+  "landHeightVariants": 90,
+  "unitTests": 7,
+  "landAssemblyScenes": 30,
+  "nonOpaqueInteriorPixels": 0,
+  "landSourceEdgePixelsCopied": 0,
+  "visualChecks": [
+    "six land flat 8x8 repeats",
+    "three water flat 8x8 repeats",
+    "hill basin ridge saddle profiles",
+    "mixed plain river mountain hill 8x8",
+    "objects over terrain",
+    "two-step exposed cliff",
+    "actual pinned glTF comparison with per-pixel depth"
+  ],
+  "codeReview": {
+    "status": "cleared",
+    "fixed": [
+      "Reject excessive opaque source silhouette before slope clipping",
+      "Use per-pixel depth for pinned 3D comparison"
+    ]
+  },
+  "humanApproval": false,
+  "engineIntegrationVerified": false,
+  "liveMapElevationAvailable": false,
+  "notes": [
+    "Texture/light variation follows AI-authored facets. No pixel-exact color match to unlit 3D is claimed.",
+    "Mixed material transitions require continuous renderer weights; demo is QA code, not runtime."
+  ]
+}

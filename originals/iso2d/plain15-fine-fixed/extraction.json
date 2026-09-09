@@ -1,0 +1,248 @@
+{
+  "source": "originals/iso2d/raw/plain-15-fine.png",
+  "sourceSha256": "9e07c67c7c4988e6c26d1691b1f050a6c466d82eb921ece59d5c044a24a6954e",
+  "pipeline": "sprite-gen chroma removal / fixed guide crop from AI bleed / max-2px-per-axis source edge extrusion",
+  "status": "candidates-require-assembled-visual-QA",
+  "assets": [
+    {
+      "file": "plain-00.png",
+      "mask": 0,
+      "cornerHeights": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "anchor": [
+        128,
+        96
+      ],
+      "alphaEdgePixelsCopied": 0,
+      "sha256": "5af08e0d45b32e0c0d85caf2f0bdabc203322c199951f6d12145b1e637fcb10e"
+    },
+    {
+      "file": "plain-01.png",
+      "mask": 1,
+      "cornerHeights": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "anchor": [
+        128,
+        96
+      ],
+      "alphaEdgePixelsCopied": 0,
+      "sha256": "ac29056aadf2dbb6bec3e4cb64bcc0b8b8ea4e70c99dd1ee3e152c4337bc5334"
+    },
+    {
+      "file": "plain-02.png",
+      "mask": 2,
+      "cornerHeights": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "anchor": [
+        128,
+        96
+      ],
+      "alphaEdgePixelsCopied": 0,
+      "sha256": "a43df698e5aca7ed5af2c72e10d1d65ad5c0dbb021b58a233a5b0a015724d16a"
+    },
+    {
+      "file": "plain-03.png",
+      "mask": 3,
+      "cornerHeights": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "anchor": [
+        128,
+        96
+      ],
+      "alphaEdgePixelsCopied": 0,
+      "sha256": "785e57e33fe27e2dce380b2bc4ac56e1abf1c7d10db3c4a5d4621c9121f5a6f5"
+    },
+    {
+      "file": "plain-04.png",
+      "mask": 4,
+      "cornerHeights": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "anchor": [
+        128,
+        96
+      ],
+      "alphaEdgePixelsCopied": 0,
+      "sha256": "fe9a8e1a14db2df64795432d5a5d260c058c177782a074ed237ca3132edfc72d"
+    },
+    {
+      "file": "plain-05.png",
+      "mask": 5,
+      "cornerHeights": [
+        1,
+        0,
+        1,
+        0
+      ],
+      "anchor": [
+        128,
+        96
+      ],
+      "alphaEdgePixelsCopied": 0,
+      "sha256": "7dd8a5dac3328b2666a4ea718c92c318105dabca3b19aa3520ed14500f4b64c5"
+    },
+    {
+      "file": "plain-06.png",
+      "mask": 6,
+      "cornerHeights": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "anchor": [
+        128,
+        96
+      ],
+      "alphaEdgePixelsCopied": 0,
+      "sha256": "13170b7c79c304e57d298a442a06b4168a6c024a1a0bc0538e6a5e5643d603e3"
+    },
+    {
+      "file": "plain-07.png",
+      "mask": 7,
+      "cornerHeights": [
+        1,
+        1,
+        1,
+        0
+      ],
+      "anchor": [
+        128,
+        96
+      ],
+      "alphaEdgePixelsCopied": 0,
+      "sha256": "a8cfed84770ede6c4dee81e1adb60d09bb88f13613c8cea5e0ceefa0a33b0ef6"
+    },
+    {
+      "file": "plain-08.png",
+      "mask": 8,
+      "cornerHeights": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "anchor": [
+        128,
+        96
+      ],
+      "alphaEdgePixelsCopied": 0,
+      "sha256": "0636c2b7be9381828b339cbe7993faf2de762d2774250851a0815b714719ff1e"
+    },
+    {
+      "file": "plain-09.png",
+      "mask": 9,
+      "cornerHeights": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "anchor": [
+        128,
+        96
+      ],
+      "alphaEdgePixelsCopied": 0,
+      "sha256": "f42939d36918fe71758ca815b75860b76d20e8cfd095e88ca9033c45789dd449"
+    },
+    {
+      "file": "plain-10.png",
+      "mask": 10,
+      "cornerHeights": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "anchor": [
+        128,
+        96
+      ],
+      "alphaEdgePixelsCopied": 0,
+      "sha256": "febf7ff8f26b79222a7357b8fd68f9bb6d7f7f4e095224d20d628785f9fbcded"
+    },
+    {
+      "file": "plain-11.png",
+      "mask": 11,
+      "cornerHeights": [
+        1,
+        1,
+        0,
+        1
+      ],
+      "anchor": [
+        128,
+        96
+      ],
+      "alphaEdgePixelsCopied": 0,
+      "sha256": "e2f1219701236e1000ab0eee16daddef8958c4e097da1ecd730beaa083d4015c"
+    },
+    {
+      "file": "plain-12.png",
+      "mask": 12,
+      "cornerHeights": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "anchor": [
+        128,
+        96
+      ],
+      "alphaEdgePixelsCopied": 0,
+      "sha256": "d23f1abb964f5ca4b666139339ae39d39fab6ef1e4c5905f60ffdf0ae13031d9"
+    },
+    {
+      "file": "plain-13.png",
+      "mask": 13,
+      "cornerHeights": [
+        1,
+        0,
+        1,
+        1
+      ],
+      "anchor": [
+        128,
+        96
+      ],
+      "alphaEdgePixelsCopied": 0,
+      "sha256": "774806d8cd1989cac0d37135207470c137db28f9e5bc41a6ac7aca4c539d9b9c"
+    },
+    {
+      "file": "plain-14.png",
+      "mask": 14,
+      "cornerHeights": [
+        0,
+        1,
+        1,
+        1
+      ],
+      "anchor": [
+        128,
+        96
+      ],
+      "alphaEdgePixelsCopied": 0,
+      "sha256": "dcfdf5381158d02b71242e9a6c99a9c715afc5dcdda2a6ebc495d6635cc965a8"
+    }
+  ]
+}

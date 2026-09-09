@@ -1,0 +1,248 @@
+{
+  "source": "originals/iso2d/raw/basin-v2-15.png",
+  "sourceSha256": "4898ef26a8e69d65ae4a6921664b0bd03332a87c2d7ee3ad5766c4b9c2052df9",
+  "pipeline": "sprite-gen chroma removal / fixed guide crop from AI bleed / max-2px-per-axis source edge extrusion",
+  "status": "candidates-require-assembled-visual-QA",
+  "assets": [
+    {
+      "file": "basin-00.png",
+      "mask": 0,
+      "cornerHeights": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "anchor": [
+        128,
+        96
+      ],
+      "alphaEdgePixelsCopied": 0,
+      "sha256": "e065cfef80a377521c7dc234ec603ebbfd5844e10f3fabcea62dbe4354e05ffa"
+    },
+    {
+      "file": "basin-01.png",
+      "mask": 1,
+      "cornerHeights": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "anchor": [
+        128,
+        96
+      ],
+      "alphaEdgePixelsCopied": 0,
+      "sha256": "dd34086585032c1c44bbca7c7745901bf3fba512a45fa88cb5ffa2270d7912e0"
+    },
+    {
+      "file": "basin-02.png",
+      "mask": 2,
+      "cornerHeights": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "anchor": [
+        128,
+        96
+      ],
+      "alphaEdgePixelsCopied": 0,
+      "sha256": "53bb03bb99647084768755b6d43ea9b1f416b01eec189543de7c414b43821ba8"
+    },
+    {
+      "file": "basin-03.png",
+      "mask": 3,
+      "cornerHeights": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "anchor": [
+        128,
+        96
+      ],
+      "alphaEdgePixelsCopied": 0,
+      "sha256": "3657d5c749c420723b2be0cc943103467b4c3ac7cb2b89de39c1e85b950fa708"
+    },
+    {
+      "file": "basin-04.png",
+      "mask": 4,
+      "cornerHeights": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "anchor": [
+        128,
+        96
+      ],
+      "alphaEdgePixelsCopied": 0,
+      "sha256": "1ad05061e39854a85b6ad810f56c2ed534e41f241673f593b7273a261dce7918"
+    },
+    {
+      "file": "basin-05.png",
+      "mask": 5,
+      "cornerHeights": [
+        1,
+        0,
+        1,
+        0
+      ],
+      "anchor": [
+        128,
+        96
+      ],
+      "alphaEdgePixelsCopied": 0,
+      "sha256": "f2bf02888fe60785d0d5a335c009f840f4242a84e8d1b254c2d2d6f17337b0a3"
+    },
+    {
+      "file": "basin-06.png",
+      "mask": 6,
+      "cornerHeights": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "anchor": [
+        128,
+        96
+      ],
+      "alphaEdgePixelsCopied": 0,
+      "sha256": "7cb21e6bf800a9e99d262bdc69521169cba17f31287fb161e312790b8cdab027"
+    },
+    {
+      "file": "basin-07.png",
+      "mask": 7,
+      "cornerHeights": [
+        1,
+        1,
+        1,
+        0
+      ],
+      "anchor": [
+        128,
+        96
+      ],
+      "alphaEdgePixelsCopied": 0,
+      "sha256": "6452c5808eb7b0a7d20c8050c0a86db79f0f9b5fd426f5f0e6044e5cfe22e9cc"
+    },
+    {
+      "file": "basin-08.png",
+      "mask": 8,
+      "cornerHeights": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "anchor": [
+        128,
+        96
+      ],
+      "alphaEdgePixelsCopied": 0,
+      "sha256": "91e4e5e5fc1e3b96d939d93fe6f4e4278e1e882264be592146d25ef1ec6e7f49"
+    },
+    {
+      "file": "basin-09.png",
+      "mask": 9,
+      "cornerHeights": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "anchor": [
+        128,
+        96
+      ],
+      "alphaEdgePixelsCopied": 0,
+      "sha256": "b9811020ba40c6ae8732b285002f949680da25503595e4d98b76a88fdf7c7cc6"
+    },
+    {
+      "file": "basin-10.png",
+      "mask": 10,
+      "cornerHeights": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "anchor": [
+        128,
+        96
+      ],
+      "alphaEdgePixelsCopied": 0,
+      "sha256": "f327696bbd36260e194573e35d39accf6c19a72e974825d127eb40ac881ee965"
+    },
+    {
+      "file": "basin-11.png",
+      "mask": 11,
+      "cornerHeights": [
+        1,
+        1,
+        0,
+        1
+      ],
+      "anchor": [
+        128,
+        96
+      ],
+      "alphaEdgePixelsCopied": 0,
+      "sha256": "f0fa5bc4a83a833787df6ab0a3f25deca551d594921427cfed4b89b68640d9f2"
+    },
+    {
+      "file": "basin-12.png",
+      "mask": 12,
+      "cornerHeights": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "anchor": [
+        128,
+        96
+      ],
+      "alphaEdgePixelsCopied": 0,
+      "sha256": "e7870b6f120c3fcf7014470dfda32ef12232c8072be44e46083cb7842bc5102b"
+    },
+    {
+      "file": "basin-13.png",
+      "mask": 13,
+      "cornerHeights": [
+        1,
+        0,
+        1,
+        1
+      ],
+      "anchor": [
+        128,
+        96
+      ],
+      "alphaEdgePixelsCopied": 0,
+      "sha256": "200c804061b4882cc24e82d9bcf7c2c368f7bc2d9a48206f0b39cc01d4874477"
+    },
+    {
+      "file": "basin-14.png",
+      "mask": 14,
+      "cornerHeights": [
+        0,
+        1,
+        1,
+        1
+      ],
+      "anchor": [
+        128,
+        96
+      ],
+      "alphaEdgePixelsCopied": 0,
+      "sha256": "b421e9ec8bbecbed085c76c471c36895dd95d6bb617ea960e3b15d7adf742b12"
+    }
+  ]
+}

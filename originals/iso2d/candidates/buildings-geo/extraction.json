@@ -1,0 +1,59 @@
+{
+  "source": "tools/assets/build_iso2d_buildings.py",
+  "pipeline": "deterministic isometric render; palette measured from the AI buildings sheet",
+  "note": "AI regeneration was unavailable (both image backends out of credit, 2026-09-10)",
+  "assets": [
+    {
+      "file": "hamlet.png",
+      "anchor": [
+        128,
+        240
+      ],
+      "size": [
+        256,
+        256
+      ],
+      "spillPx": -39.0,
+      "sha256": "b5cc7b32aa38797a4016abcfef4b3d9c08436fcdaf43c8aec5fda3e2573a90c3"
+    },
+    {
+      "file": "county.png",
+      "anchor": [
+        128,
+        240
+      ],
+      "size": [
+        256,
+        256
+      ],
+      "spillPx": -22.0,
+      "sha256": "8dbcac4a0776933280b11c8c00a75db7072c640facefa534dd9ed673d3f0ea9b"
+    },
+    {
+      "file": "commandery.png",
+      "anchor": [
+        128,
+        240
+      ],
+      "size": [
+        256,
+        256
+      ],
+      "spillPx": -13.0,
+      "sha256": "14308ae552545ef44950d16011011f052b406100d9f615966cbf7dc01dc9b344"
+    },
+    {
+      "file": "capital.png",
+      "anchor": [
+        128,
+        240
+      ],
+      "size": [
+        256,
+        256
+      ],
+      "spillPx": -4.0,
+      "sha256": "9d77f89765ab3cd22ae3bfdeb1b97e2306889f29aabd45fa81f60f033d1402cb"
+    }
+  ]
+}

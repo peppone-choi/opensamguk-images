@@ -1,0 +1,248 @@
+{
+  "source": "originals/iso2d/raw/hill-15.png",
+  "sourceSha256": "8ff9904315fc662adeb8b02687ff4b77fbfe570df15606f338a47758b3ef7424",
+  "pipeline": "sprite-gen chroma removal / fixed guide crop from AI bleed / max-2px-per-axis source edge extrusion",
+  "status": "candidates-require-assembled-visual-QA",
+  "assets": [
+    {
+      "file": "hill-00.png",
+      "mask": 0,
+      "cornerHeights": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "anchor": [
+        128,
+        96
+      ],
+      "alphaEdgePixelsCopied": 0,
+      "sha256": "e90e11d96a1d90674ce1a1ccfed3a247b60956ac28fcfeab4b72fb469e834fce"
+    },
+    {
+      "file": "hill-01.png",
+      "mask": 1,
+      "cornerHeights": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "anchor": [
+        128,
+        96
+      ],
+      "alphaEdgePixelsCopied": 0,
+      "sha256": "36b9bb93298cb1a639765d50e8de1351e902ef3d58d192d3c078938da092fc63"
+    },
+    {
+      "file": "hill-02.png",
+      "mask": 2,
+      "cornerHeights": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "anchor": [
+        128,
+        96
+      ],
+      "alphaEdgePixelsCopied": 0,
+      "sha256": "55d8ebdc3582e5b13574b883999d031463ba6d9b9719783ad66696a75090b68b"
+    },
+    {
+      "file": "hill-03.png",
+      "mask": 3,
+      "cornerHeights": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "anchor": [
+        128,
+        96
+      ],
+      "alphaEdgePixelsCopied": 0,
+      "sha256": "31bc2bf15ce21824ff80735889d1ad23b737fe0778180c89a00975a8a5f96052"
+    },
+    {
+      "file": "hill-04.png",
+      "mask": 4,
+      "cornerHeights": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "anchor": [
+        128,
+        96
+      ],
+      "alphaEdgePixelsCopied": 0,
+      "sha256": "28a88ff4bb694e29b954bde7d9b9ea5b491994b4785ce1cecd17447176a26588"
+    },
+    {
+      "file": "hill-05.png",
+      "mask": 5,
+      "cornerHeights": [
+        1,
+        0,
+        1,
+        0
+      ],
+      "anchor": [
+        128,
+        96
+      ],
+      "alphaEdgePixelsCopied": 0,
+      "sha256": "5c3f91feea9011f6b8fcafebd16fe3773e3ddfab30d3c79288891c03423c1835"
+    },
+    {
+      "file": "hill-06.png",
+      "mask": 6,
+      "cornerHeights": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "anchor": [
+        128,
+        96
+      ],
+      "alphaEdgePixelsCopied": 0,
+      "sha256": "b63b456e9867687bea53d0325aca13d44311f005450c4009950fb3537cd13302"
+    },
+    {
+      "file": "hill-07.png",
+      "mask": 7,
+      "cornerHeights": [
+        1,
+        1,
+        1,
+        0
+      ],
+      "anchor": [
+        128,
+        96
+      ],
+      "alphaEdgePixelsCopied": 0,
+      "sha256": "44d543b2edd5bf4b1bc7dac1118079003fdbfab4d3972a43a07282d3ed9283ad"
+    },
+    {
+      "file": "hill-08.png",
+      "mask": 8,
+      "cornerHeights": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "anchor": [
+        128,
+        96
+      ],
+      "alphaEdgePixelsCopied": 0,
+      "sha256": "422433624991d0dad100b45d9bbbd6cb617ace37e09c37f02e9981761333232d"
+    },
+    {
+      "file": "hill-09.png",
+      "mask": 9,
+      "cornerHeights": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "anchor": [
+        128,
+        96
+      ],
+      "alphaEdgePixelsCopied": 0,
+      "sha256": "d50e44a0e7f502210738cdef54099eb29c57d46d8dd1d2b430788542326085f4"
+    },
+    {
+      "file": "hill-10.png",
+      "mask": 10,
+      "cornerHeights": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "anchor": [
+        128,
+        96
+      ],
+      "alphaEdgePixelsCopied": 0,
+      "sha256": "67af716e4fbaaf7f0aa389f7d917d029f1edc2702a1bfe84d66c5b0060f49371"
+    },
+    {
+      "file": "hill-11.png",
+      "mask": 11,
+      "cornerHeights": [
+        1,
+        1,
+        0,
+        1
+      ],
+      "anchor": [
+        128,
+        96
+      ],
+      "alphaEdgePixelsCopied": 0,
+      "sha256": "a598a82d7eabf3f80ea8269015f5718ef3f5488d89d41ec78ecb0294e76d44db"
+    },
+    {
+      "file": "hill-12.png",
+      "mask": 12,
+      "cornerHeights": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "anchor": [
+        128,
+        96
+      ],
+      "alphaEdgePixelsCopied": 0,
+      "sha256": "5712414eb03d26e783a48641893f74d3d9ba212b9bc1892a70b906d4dd7a36ae"
+    },
+    {
+      "file": "hill-13.png",
+      "mask": 13,
+      "cornerHeights": [
+        1,
+        0,
+        1,
+        1
+      ],
+      "anchor": [
+        128,
+        96
+      ],
+      "alphaEdgePixelsCopied": 0,
+      "sha256": "f8c6c518629dc60528b84b4246e89456748ed97098c51df0500e381ea0d38974"
+    },
+    {
+      "file": "hill-14.png",
+      "mask": 14,
+      "cornerHeights": [
+        0,
+        1,
+        1,
+        1
+      ],
+      "anchor": [
+        128,
+        96
+      ],
+      "alphaEdgePixelsCopied": 0,
+      "sha256": "31c14ffe3d69e1749fbfc10767cf50a5a7a5fc534189b7bef25ad650ae5cdc19"
+    }
+  ]
+}

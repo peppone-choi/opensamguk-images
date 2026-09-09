@@ -1,0 +1,248 @@
+{
+  "source": "originals/iso2d/raw/mountain-15.png",
+  "sourceSha256": "6ed276a46e4f785b7657dfedfee88b1e8f7be0d86254ccf52bf0135d59f006d4",
+  "pipeline": "sprite-gen chroma removal / fixed guide crop from AI bleed / max-2px-per-axis source edge extrusion",
+  "status": "candidates-require-assembled-visual-QA",
+  "assets": [
+    {
+      "file": "mountain-00.png",
+      "mask": 0,
+      "cornerHeights": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "anchor": [
+        128,
+        96
+      ],
+      "alphaEdgePixelsCopied": 0,
+      "sha256": "af2dbf1e1b5c7d8fd89affca4fab6af792070671512afe36ae89b37d867eec9b"
+    },
+    {
+      "file": "mountain-01.png",
+      "mask": 1,
+      "cornerHeights": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "anchor": [
+        128,
+        96
+      ],
+      "alphaEdgePixelsCopied": 0,
+      "sha256": "eeb82d77816c2708f59ae605bd9f9bf951b0c940b90e4b39ce6e86895c13037c"
+    },
+    {
+      "file": "mountain-02.png",
+      "mask": 2,
+      "cornerHeights": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "anchor": [
+        128,
+        96
+      ],
+      "alphaEdgePixelsCopied": 0,
+      "sha256": "cc85006ef6d7dcb3e5a1a31db0d9703852dd2ecabfadf1e8ce48e0e96b3f85e1"
+    },
+    {
+      "file": "mountain-03.png",
+      "mask": 3,
+      "cornerHeights": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "anchor": [
+        128,
+        96
+      ],
+      "alphaEdgePixelsCopied": 0,
+      "sha256": "ca22bea1dc5cde65e81d272692f8b4abd79d83b861066c5fab0fdec0a1d5fe62"
+    },
+    {
+      "file": "mountain-04.png",
+      "mask": 4,
+      "cornerHeights": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "anchor": [
+        128,
+        96
+      ],
+      "alphaEdgePixelsCopied": 0,
+      "sha256": "595eceb4a363dbe844ec1ce74746197358930c437193fcd44df881e67d153fb8"
+    },
+    {
+      "file": "mountain-05.png",
+      "mask": 5,
+      "cornerHeights": [
+        1,
+        0,
+        1,
+        0
+      ],
+      "anchor": [
+        128,
+        96
+      ],
+      "alphaEdgePixelsCopied": 0,
+      "sha256": "899c570f435fd8525bc0926433d2730ea726ef5f95371e1f5a268b7c31d581d5"
+    },
+    {
+      "file": "mountain-06.png",
+      "mask": 6,
+      "cornerHeights": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "anchor": [
+        128,
+        96
+      ],
+      "alphaEdgePixelsCopied": 0,
+      "sha256": "eb2187e370533da762fc0fad8dd8d9f323ae7e7fc60f4398593a1509e7755659"
+    },
+    {
+      "file": "mountain-07.png",
+      "mask": 7,
+      "cornerHeights": [
+        1,
+        1,
+        1,
+        0
+      ],
+      "anchor": [
+        128,
+        96
+      ],
+      "alphaEdgePixelsCopied": 0,
+      "sha256": "e76be2cd0f8f919b532dbc08c560180def168df08a7544f9cf820882895d0b93"
+    },
+    {
+      "file": "mountain-08.png",
+      "mask": 8,
+      "cornerHeights": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "anchor": [
+        128,
+        96
+      ],
+      "alphaEdgePixelsCopied": 0,
+      "sha256": "bc7f004d2374f1d096aa34271c5fcb0455ee2531e5d0ec67501ebc69c3643f89"
+    },
+    {
+      "file": "mountain-09.png",
+      "mask": 9,
+      "cornerHeights": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "anchor": [
+        128,
+        96
+      ],
+      "alphaEdgePixelsCopied": 0,
+      "sha256": "12452a287812bf112558a843e3c181c9a35cdc644439c4b28ae08440d3b571b8"
+    },
+    {
+      "file": "mountain-10.png",
+      "mask": 10,
+      "cornerHeights": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "anchor": [
+        128,
+        96
+      ],
+      "alphaEdgePixelsCopied": 0,
+      "sha256": "1b7e94fe45e2988a15bc3f02b1fa9a5a925ba1bd88fbbd7b5aba789f8ea20046"
+    },
+    {
+      "file": "mountain-11.png",
+      "mask": 11,
+      "cornerHeights": [
+        1,
+        1,
+        0,
+        1
+      ],
+      "anchor": [
+        128,
+        96
+      ],
+      "alphaEdgePixelsCopied": 0,
+      "sha256": "b555b4df4614aa8c5182f7fd9a0bf3a3dd2a66c7e08ab645c21892e65ccb1f61"
+    },
+    {
+      "file": "mountain-12.png",
+      "mask": 12,
+      "cornerHeights": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "anchor": [
+        128,
+        96
+      ],
+      "alphaEdgePixelsCopied": 0,
+      "sha256": "9f91385992d13d3034bf2f1375c68c3951e9f92cb42992ad4527663f8fe102ea"
+    },
+    {
+      "file": "mountain-13.png",
+      "mask": 13,
+      "cornerHeights": [
+        1,
+        0,
+        1,
+        1
+      ],
+      "anchor": [
+        128,
+        96
+      ],
+      "alphaEdgePixelsCopied": 0,
+      "sha256": "456f9225c5be708012e5bc7b9acfdb927d90e96bd6cca0b6f917bf573e8ab4ff"
+    },
+    {
+      "file": "mountain-14.png",
+      "mask": 14,
+      "cornerHeights": [
+        0,
+        1,
+        1,
+        1
+      ],
+      "anchor": [
+        128,
+        96
+      ],
+      "alphaEdgePixelsCopied": 0,
+      "sha256": "47051e88c75ff5c5d742ced51bfbed5abfbf439ffa848975f20a62b65977234d"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "ok": true,
+  "engine": "component-row",
+  "run_dir": "/Users/apple/Desktop/개인프로젝트/opensamguk-meta/worktrees/opensamguk-images/iso2d-assets/originals/iso2d/curation/.skirts.sg-staging",
+  "cell": {
+    "shape": "rect",
+    "width": 128,
+    "height": 96,
+    "size": 128,
+    "safe_margin": 0
+  },
+  "rows": [
+    {
+      "state": "skirts",
+      "frames": 2,
+      "method": "imported-pngs",
+      "files": [
+        "frames/skirts/frame-0.png",
+        "frames/skirts/frame-1.png"
+      ],
+      "labels": [
+        "skirt-left",
+        "skirt-right"
+      ],
+      "ok": true
+    }
+  ],
+  "errors": [],
+  "warnings": []
+}

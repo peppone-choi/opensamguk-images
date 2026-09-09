@@ -1,0 +1,27 @@
+[
+  {
+    "scene": "flat",
+    "file": "desert-flat-8x8.png",
+    "nonOpaqueInteriorPixels": 0
+  },
+  {
+    "scene": "hill",
+    "file": "desert-hill-8x8.png",
+    "nonOpaqueInteriorPixels": 0
+  },
+  {
+    "scene": "basin",
+    "file": "desert-basin-8x8.png",
+    "nonOpaqueInteriorPixels": 0
+  },
+  {
+    "scene": "ridge",
+    "file": "desert-ridge-8x8.png",
+    "nonOpaqueInteriorPixels": 0
+  },
+  {
+    "scene": "saddle",
+    "file": "desert-saddle-8x8.png",
+    "nonOpaqueInteriorPixels": 0
+  }
+]
