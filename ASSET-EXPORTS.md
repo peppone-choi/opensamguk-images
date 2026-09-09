@@ -24,6 +24,12 @@ UI 아이콘(`icons/`)은 손으로 그린 `assets/ui-icons/source/*.svg`(20×20
 - 배포 export: `web/game/public/sprites/iso2d/`
 - 고정 태그: `v2026.09.08-iso2d-v1`
 
-108 PNG는 sprite-gen의 `curated/`에서만 복사한다. 원본 시트나 `frames/`를
-직접 설치하지 않는다. `export_iso2d_assets.py --check`로 명세와 바이트 동일성을
-검사한다. 지도 높이 데이터와 게임 렌더러 구현은 이 에셋 export에 포함되지 않는다.
+115 PNG(지형 93 · 오브젝트 20 · 스커트 2)를 내보낸다. 승인 기록은
+`originals/iso2d/curation/<group>/curated`, 실제 배포 바이트는 그것을 픽셀아트로 변환한
+`originals/iso2d/pixel/<group>`이다(`pixelize_iso2d.py`). 원본 시트나 `frames/`를 직접
+설치하지 않는다. `export_iso2d_assets.py --check`로 명세와 바이트 동일성을 검사한다.
+
+도시 아이콘 11종은 기하 가이드(`build_iso2d_buildings.py`)를 그려 놓고 그 위에 칠하며,
+export 가 타일 마름모 밖으로 흘러내리는지(no-spill) 검사해 통과한 것만 나간다.
+성 등급 대응표는 1:1 이고 정본은 `sprites/iso2d/manifest.json` 의 `cityLevelTiers` 다.
+지도 높이 데이터와 게임 렌더러 구현은 이 에셋 export에 포함되지 않는다.
