@@ -2,7 +2,8 @@ import unittest
 import numpy as np
 from PIL import Image
 from prepare_iso2d_tiles import normalize_alpha, footprint
-from export_iso2d_assets import BUILDINGS, OUT, spill
+from export_iso2d_assets import BUILDINGS, OUT, UNITS, spill
+from prepare_iso2d_objects import seat_on_tile
 
 
 class GeometryTests(unittest.TestCase):
@@ -89,16 +90,46 @@ class TileFitTests(unittest.TestCase):
         self.assertLessEqual(spill(good), 0)
         self.assertGreater(spill(bad), 0)
 
-    def test_every_shipped_building_tier_stands_on_its_own_tile(self):
+    def test_every_shipped_ground_object_stands_on_its_own_tile(self):
+        """All 20, not just the 11 tiers. The 9 unit and prop sprites were bottom-aligned at the
+        ground anchor and hung 4.5-48px over the diamond's falling edge; nothing measured them."""
+        names = sorted(file.stem for file in (OUT / 'objects').glob('*.png'))
+        # 11 tiers + 6 units + gate + two mountains. Named, so a dropped export fails here.
+        self.assertEqual(names, sorted(list(BUILDINGS) + list(UNITS.values())
+                                       + ['gate', 'mountain-rock', 'mountain-snow']))
         worst = {}
-        for name in BUILDINGS:
+        for name in names:
             file = OUT / 'objects' / f'{name}.png'
             self.assertTrue(file.is_file(), f'{name} is not exported')
             with Image.open(file) as image:
                 self.assertEqual(image.size, (256, 256))
                 worst[name] = spill(np.array(image.convert('RGBA')))
         over = {k: round(float(v), 1) for k, v in worst.items() if v > 0}
-        self.assertEqual(over, {}, f'building tiers hanging below their tile: {over}')
+        self.assertEqual(over, {}, f'ground objects hanging below their tile: {over}')
+
+    def test_seat_on_tile_shrinks_a_wide_sprite_that_bottom_aligning_would_spill(self):
+        """The red probe for the fix. A wide flat slab bottom-aligned at the ground anchor hangs
+        far over the diamond's falling edge; seat_on_tile must bring it back onto the tile
+        without sliding it off the tile centre."""
+        slab = Image.new('RGBA', (240, 40), (160, 140, 110, 255))
+        naive = Image.new('RGBA', (256, 256))
+        naive.alpha_composite(slab, (8, 200))  # what the old code did: bottom at y=240
+        self.assertGreater(spill(np.array(naive)), 40)
+
+        seated = seat_on_tile(slab, 240, 40)
+        self.assertEqual(seated.size, (256, 256))
+        self.assertLessEqual(spill(np.array(seated)), 0)
+        ys, xs = np.nonzero(np.array(seated)[:, :, 3] >= 8)
+        self.assertAlmostEqual((int(xs.min()) + int(xs.max())) / 2, 127.5, delta=1.5)
+
+    def test_seat_on_tile_leaves_a_sprite_that_already_fits_alone(self):
+        """If it shrank everything the gate would pass for the wrong reason."""
+        good, _ = self.probe()
+        crop = Image.fromarray(good).crop(Image.fromarray(good[:, :, 3]).getbbox())
+        seated = seat_on_tile(crop, crop.width, crop.height)
+        self.assertLessEqual(spill(np.array(seated)), 0)
+        self.assertGreaterEqual(int(np.array(seated)[:, :, 3].astype(bool).sum()),
+                                int(good[:, :, 3].astype(bool).sum()) * 0.9)
 
     def test_one_tier_per_city_level_with_no_level_left_unmapped(self):
         self.assertEqual(sorted(BUILDINGS.values()), list(range(1, 12)))

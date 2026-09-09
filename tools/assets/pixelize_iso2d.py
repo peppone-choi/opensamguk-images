@@ -23,6 +23,7 @@ Nearest colour is measured in Oklab, not RGB: in RGB the nearest entry to a shad
 is frequently a green, because RGB distance has no idea what lightness is.
 """
 import argparse
+import hashlib
 import json
 from pathlib import Path
 
@@ -138,6 +139,11 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--source', default='curation', help='curation | candidates')
     parser.add_argument('--out', default='pixel')
+    # The palette is median-cut over the whole corpus, so re-cutting it after touching a single
+    # sprite re-quantises all 115 shipped PNGs - a prop fix would silently re-tint 93 approved
+    # terrain tiles (measured: up to 44/255 on a channel, half the pixels). Point --palette at an
+    # approved palette.json to quantise against it instead, and only the edited files move.
+    parser.add_argument('--palette', help='reuse the colours of an approved palette.json')
     args = parser.parse_args()
 
     groups = {}
@@ -149,7 +155,19 @@ def main():
         if not groups[group]:
             raise SystemExit(f'no PNGs under {folder}')
 
-    palette = corpus_palette(groups)
+    pinned_sha = None
+    if args.palette:
+        pinned = json.loads(Path(args.palette).read_text())
+        # Record what was pinned, not where it lived - the file is usually this same palette.json
+        # read before it is overwritten, so a path would say nothing a later reader can check.
+        pinned_sha = hashlib.sha256(
+            json.dumps(pinned['colors']).encode()).hexdigest()
+        palette = np.array([[int(c[i:i + 2], 16) for i in (1, 3, 5)] for c in pinned['colors']],
+                           dtype=np.uint8)
+        if palette.shape != (PALETTE_SIZE, 3):
+            raise SystemExit(f'{args.palette}: expected {PALETTE_SIZE} colours')
+    else:
+        palette = corpus_palette(groups)
     lab = oklab(palette.astype(np.float64))
 
     counts = {}
@@ -162,6 +180,7 @@ def main():
         counts[group] = len(files)
     (BASE / args.out / 'palette.json').write_text(json.dumps(dict(
         scale=SCALE, size=PALETTE_SIZE, source=args.source, counts=counts,
+        pinnedSha256=pinned_sha,
         colors=['#%02x%02x%02x' % tuple(int(v) for v in c) for c in palette]), indent=2) + '\n')
     print(json.dumps(dict(ok=True, palette=PALETTE_SIZE, scale=SCALE, counts=counts)))
 

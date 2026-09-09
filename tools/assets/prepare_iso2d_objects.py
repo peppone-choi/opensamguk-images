@@ -39,7 +39,53 @@ def spill(image):
     return worst
 
 
-def save_group(group, source, images, sources=None):
+def place(crop,ratio,anchor_y=240.0,anchor_x=128.0):
+    """Drop the crop into the 256x256 object frame at the given scale.
+
+    anchor_x/anchor_y is where the crop's bottom centre lands. The default is the frame's own
+    ground anchor (128,240) - the bottom of the tile diamond, straight below the tile centre.
+    """
+    size=(max(1,round(crop.width*ratio)),max(1,round(crop.height*ratio)))
+    out=Image.new('RGBA',(FRAME,FRAME))
+    out.alpha_composite(crop.resize(size,Image.Resampling.LANCZOS),
+                        (round(anchor_x-size[0]/2),round(anchor_y-size[1])))
+    return out
+
+
+def seat_on_tile(crop,max_w,max_h):
+    """Fit the crop into (max_w,max_h) and then shrink it onto its own tile diamond.
+
+    Bottom-aligning at y=240 is only correct for the one column straight below the tile centre.
+    The diamond's lower edge falls away as |x-128| grows (bottom(x) <= 240 - |x-128|/2), so a
+    wide sprite bottom-aligned at the anchor hangs onto the tile in front of it - which is what
+    left the nine unit and prop sprites 4.5-48px over the edge while the eleven building tiers,
+    authored against a geometry guide, sat clean.
+
+    The shrink is about the diamond **centre** (128,176), not the ground anchor. Scaling about
+    the anchor is useless here: the overhang (y-240) + |x-128|/2 is homogeneous in that frame,
+    so it scales but never reaches zero. About the centre the same quantity reads
+    (y-176) + |x-128|/2 <= 64, which spill() already measures (spill = that max minus 64), so
+    64/(64+spill) is the exact factor that lands the worst pixel on the edge. Whole-pixel
+    rounding can leave a hair over, so the remainder is taken off in a bounded loop and the
+    result is asserted, not assumed.
+    """
+    ratio=min(max_w/crop.width,max_h/crop.height)
+    anchor_y=float(BASE_CY+TILE_HALF)
+    out=place(crop,ratio,anchor_y)
+    for _ in range(8):
+        over=spill(out)
+        if over<=0:
+            if np.array(out)[:,:,3].any() and Image.fromarray(np.array(out)[:,:,3]).getbbox()[1]<0:
+                raise ValueError('object does not fit the frame')
+            return out
+        step=TILE_HALF/(TILE_HALF+over)
+        ratio*=step
+        anchor_y=BASE_CY+step*(anchor_y-BASE_CY)
+        out=place(crop,ratio,anchor_y)
+    raise ValueError('could not seat the object on its tile diamond')
+
+
+def save_group(group, source, images, sources=None, pipeline=None):
     output = BASE/'candidates'/group
     output.mkdir(parents=True, exist_ok=True)
     records = []
@@ -52,7 +98,7 @@ def save_group(group, source, images, sources=None):
     (output/'extraction.json').write_text(json.dumps(dict(
         source=[str(f.relative_to(ROOT)) for f in paths],
         sourceSha256=[hashlib.sha256(f.read_bytes()).hexdigest() for f in paths],
-        pipeline=('guide alpha mask / box downscale to the object frame' if sources else
+        pipeline=pipeline or ('guide alpha mask / box downscale to the object frame' if sources else
                   'sprite-gen chroma removal / cell extraction / alpha crop / fit and baseline'),
         assets=records), indent=2)+'\n')
     return records
@@ -160,13 +206,9 @@ def objects(source, columns, rows, specs):
         if min(x0,y0,cell.width-x1,cell.height-y1)<2:
             raise ValueError(f'object {name} intersects cell boundary')
         crop=cell.crop(significant)
-        ratio=min(max_w/crop.width,max_h/crop.height)
-        size=(round(crop.width*ratio),round(crop.height*ratio))
-        crop=crop.resize(size,Image.Resampling.LANCZOS)
-        out=Image.new('RGBA',(256,256))
-        out.alpha_composite(crop,((256-size[0])//2,240-size[1]))
-        result.append((name,out,[128,240]))
-    save_group(source,source,result)
+        result.append((name,seat_on_tile(crop,max_w,max_h),[128,240]))
+    save_group(source,source,result,pipeline='sprite-gen chroma removal / cell extraction / '
+               'alpha crop / fit and seat on the tile diamond (seat_on_tile)')
 
 
 if __name__=='__main__':

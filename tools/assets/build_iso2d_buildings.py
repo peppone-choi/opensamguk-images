@@ -619,7 +619,10 @@ def build(check=False):
         source='tools/assets/build_iso2d_buildings.py',
         role='geometry guide for gen_iso2d_buildings.py; not a shippable asset',
         pipeline='deterministic isometric render; palette measured from the AI buildings sheet',
-        note='AI regeneration was unavailable (both image backends out of credit, 2026-09-10)',
+        # Corrected 2026-09-10: an earlier note here said AI regeneration was unavailable.
+        # It was not - gen_iso2d_buildings.py did run and the shipped tiers are its paint.
+        note='geometry guide only; the shipped tiers are the AI paint over this render '
+             '(gen_iso2d_buildings.py). This render ships nothing on its own.',
         assets=records), indent=2) + '\n')
     print(json.dumps(dict(ok=True, tiers=[r['file'] for r in records],
                           spill=[r['spillPx'] for r in records]), ensure_ascii=False))

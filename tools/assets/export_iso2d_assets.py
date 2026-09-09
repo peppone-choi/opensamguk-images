@@ -17,7 +17,7 @@ from prepare_iso2d_tiles import footprint
 ROOT=Path(__file__).resolve().parents[2]
 BASE=ROOT/'originals/iso2d'
 OUT=ROOT/'web/game/public/sprites/iso2d'
-TAG='v2026.09.08-iso2d-v1'
+TAG='v2026.09.10-iso2d-v2'
 LAND=['plain','mountain','desert','plateau','basin','hill']
 WATER=['sea','river','lake']
 # City level -> building tier, 1:1. Levels 9/10/11 were appended for the han world and are NOT
@@ -38,6 +38,11 @@ def spill(rgba):
     to its alpha bbox and fit it into an arbitrary (max_w, max_h) box, so the four city icons
     landed at four scales, off the diamond centre, hanging 10-31px onto the tile in front. That,
     not the painting, is what made the icons look inconsistent.
+
+    It applies to **every** object now, not only the eleven building tiers. The nine unit and
+    prop sprites were still bottom-aligned at the ground anchor and hung 4.5-48px over the
+    diamond's falling edge; prepare_iso2d_objects.seat_on_tile shrinks them onto it and this
+    gate is what keeps them there.
     """
     a=rgba[:,:,3];worst=-64.0
     for x in range(a.shape[1]):
@@ -65,7 +70,7 @@ def build(check=False):
             with Image.open(p) as im:
                 a=np.array(im.convert('RGBA'))
                 if im.size!=size or not a[:,:,3].any():raise ValueError(f'bad size/empty {p}')
-            if group=='objects' and source.stem in BUILDINGS:
+            if group=='objects':
                 over=spill(a)
                 if over>0:raise ValueError(f'{source.name}: {over:.1f}px below its own tile diamond')
             r={'file':f'{group}/{p.name}','size':list(size),'anchor':anchor,
@@ -89,7 +94,10 @@ def build(check=False):
         'authorship':'AI image generation over deterministic geometry guides; chroma removal, extraction, curation and pixel-art conversion',
         'pixelArt':{'scale':2,'paletteSize':96,'space':'Oklab nearest','dither':'none',
                     'alpha':'hard for objects; terrain and skirt alpha preserved exactly so the tiling contract still holds',
-                    'tool':'tools/assets/pixelize_iso2d.py','palette':'originals/iso2d/pixel/palette.json'},
+                    'tool':'tools/assets/pixelize_iso2d.py','palette':'originals/iso2d/pixel/palette.json',
+                    'paletteCut':'median cut over the v1 corpus, then pinned (pixelize_iso2d.py --palette). '
+                                 'Re-cutting after any edit re-quantises all 115 PNGs, so approved assets '
+                                 'stay byte-stable and only edited files move.'},
         'paletteReference':{'repository':'opensamguk','commit':'dfec1516','path':'tools/assets/build_iso3d_assets.py',
                             'comparison':'CPU orthographic rendering of actual pinned glTF vertex colors; not engine lighting'},
         'rasterGroup':4,'tileGrid':{'cols':192,'rows':167},'flatFootprint':[256,128],
@@ -116,10 +124,11 @@ def build(check=False):
             'AI painted lighting approximates the geometry guide; textures are static and direction-specific.',
             'Object colors follow the muted palette family but are darker and more textured than unlit iso3d vertex colors.',
             'Visual QA and curation selection performed by the agent; no claim of human approval.',
-            'Unit and prop sprites still come from the old sheet extraction and hang below their '
-            'tile diamond (gate 48px, wall 18, siege 17.5, archer 17, mountain-rock 15.5, '
-            'infantry 12, cavalry 11.5, mountain-snow 10, tower 4.5). Only the 11 building tiers '
-            'are authored against a geometry guide and gated on no-spill.'],
+            'Unit and prop sprites are extracted from AI sheets, not authored against a geometry '
+            'guide like the 11 building tiers; they are seated on the tile diamond by '
+            'prepare_iso2d_objects.seat_on_tile and gated on no-spill together with the tiers.',
+            'No renderer consumes the 6 unit and 3 prop sprites yet - they ship, they are gated, '
+            'and nothing draws them.'],
         'files':records}
     text=json.dumps(manifest,ensure_ascii=False,indent=2)+'\n'
     path=OUT/'manifest.json'
