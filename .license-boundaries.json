@@ -8,6 +8,7 @@
     { "path": "README.md", "classification": "mit" },
     { "path": "THIRD-PARTY-NOTICES.md", "classification": "mit" },
     { "path": "tools", "classification": "mit" },
+    { "path": "portraits-original", "classification": "mit" },
 
     { "path": "game", "classification": "third-party", "notice": "game/LICENSE-NOTICE.md" },
     { "path": "hook", "classification": "third-party", "notice": "hook/LICENSE-NOTICE.md" },
