@@ -1,0 +1,78 @@
+[
+  {
+    "file": "originals/iso2d/raw/basin-15.png",
+    "sha256": "f12cac46fa76a179bed2b008925aca97a230013faf3df6018266d8eef865eaab"
+  },
+  {
+    "file": "originals/iso2d/raw/basin-v2-15.png",
+    "sha256": "4898ef26a8e69d65ae4a6921664b0bd03332a87c2d7ee3ad5766c4b9c2052df9"
+  },
+  {
+    "file": "originals/iso2d/raw/buildings.png",
+    "sha256": "2f26733fe63b515f9f943e81352dcc4dbd0d5e45ae07b506d7932680028c0cb9"
+  },
+  {
+    "file": "originals/iso2d/raw/desert-15.png",
+    "sha256": "4c46f47ac6481c5b003288cbd580464b3af692fdd323aa0e818da7ea7c579fa2"
+  },
+  {
+    "file": "originals/iso2d/raw/hill-15.png",
+    "sha256": "8ff9904315fc662adeb8b02687ff4b77fbfe570df15606f338a47758b3ef7424"
+  },
+  {
+    "file": "originals/iso2d/raw/mountain-15.png",
+    "sha256": "6ed276a46e4f785b7657dfedfee88b1e8f7be0d86254ccf52bf0135d59f006d4"
+  },
+  {
+    "file": "originals/iso2d/raw/plain-15-bleed.png",
+    "sha256": "b795fac5dfbaa24bb4b62d56af5c7bb806a973fe3d08ffac7e5b1afc9856dc44"
+  },
+  {
+    "file": "originals/iso2d/raw/plain-15-fine.png",
+    "sha256": "9e07c67c7c4988e6c26d1691b1f050a6c466d82eb921ece59d5c044a24a6954e"
+  },
+  {
+    "file": "originals/iso2d/raw/plain-15-v2.png",
+    "sha256": "2f0b353b4407c3fa86b0465a60f061f2303ce46dabad368a8af54301a328c6df"
+  },
+  {
+    "file": "originals/iso2d/raw/plain-15.png",
+    "sha256": "bdf2618eddb5a3538e472f38410b706a5a242cd17a2360a57f26bb9beb3ae0de"
+  },
+  {
+    "file": "originals/iso2d/raw/plain-flat-pilot.png",
+    "sha256": "1bd74771387299efc41e82777deeca97618e263a4a2eed0a83f2a0751f449c22"
+  },
+  {
+    "file": "originals/iso2d/raw/plain-flat-v2.png",
+    "sha256": "23bc7be02d1eaa2e161c4054f15e1d10d8bd30711ae6c0d219c63d50134523c1"
+  },
+  {
+    "file": "originals/iso2d/raw/plain-ramps-v2.png",
+    "sha256": "2d3201672a6be101703ced18aee9c75a7e32f475609f530960ee9f5024deb2c0"
+  },
+  {
+    "file": "originals/iso2d/raw/plain-ramps.png",
+    "sha256": "78a091d1d2f8d17ed3ddac42abe7f7f781378888caddd903448dfbd9cd96798a"
+  },
+  {
+    "file": "originals/iso2d/raw/plateau-15.png",
+    "sha256": "9f17663716def0bec1129171d3fa9e03fc01e57daf2023a026ea5bfd4c2a3039"
+  },
+  {
+    "file": "originals/iso2d/raw/props.png",
+    "sha256": "cee824fa863c3e0807929c238ffa06c545931857e676e99cb70ebd865ec0f434"
+  },
+  {
+    "file": "originals/iso2d/raw/skirt.png",
+    "sha256": "e5270be195485978269db53b8f1876345d75862f716ab723fd3424f5f4045cc7"
+  },
+  {
+    "file": "originals/iso2d/raw/units.png",
+    "sha256": "860b5d237d50819226a360d96f90ea1d6f4e6c6c30765c8d8c9a4f8d06d68d18"
+  },
+  {
+    "file": "originals/iso2d/raw/water.png",
+    "sha256": "fd126a076b7b7a2ae908249b61c051203799df23d023c118d450038b6e7dfc81"
+  }
+]

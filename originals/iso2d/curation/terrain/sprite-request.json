@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "kind": "sprite-gen-request",
+  "engine": "component-row",
+  "character": {
+    "id": ".terrain.sg-staging",
+    "description": "imported PNG set from /Users/apple/Desktop/개인프로젝트/opensamguk-meta/worktrees/opensamguk-images/iso2d-assets/originals/iso2d/curation-input/terrain"
+  },
+  "cell": {
+    "shape": "rect",
+    "width": 256,
+    "height": 160,
+    "size": 256,
+    "safe_margin": 0
+  },
+  "chroma_key": {
+    "name": "magenta",
+    "hex": "#FF00FF",
+    "rgb": [
+      255,
+      0,
+      255
+    ]
+  },
+  "states": {
+    "terrain": {
+      "frames": 93,
+      "fps": 2,
+      "loop": false,
+      "action": "imported still set"
+    }
+  }
+}

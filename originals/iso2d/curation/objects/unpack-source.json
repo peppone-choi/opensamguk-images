@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "kind": "sprite-gen-unpack-source",
+  "layout_source": "imported-pngs",
+  "cell": {
+    "width": 256,
+    "height": 256
+  },
+  "source_dir": "/Users/apple/Desktop/개인프로젝트/opensamguk-meta/worktrees/opensamguk-images/iso2d-assets/originals/iso2d/curation-input/objects",
+  "files": [
+    "archer.png",
+    "capital.png",
+    "cavalry.png",
+    "commandery.png",
+    "county.png",
+    "gate.png",
+    "hamlet.png",
+    "infantry.png",
+    "mountain-rock.png",
+    "mountain-snow.png",
+    "siege.png",
+    "tower.png",
+    "wall.png"
+  ],
+  "labels": [
+    "archer",
+    "capital",
+    "cavalry",
+    "commandery",
+    "county",
+    "gate",
+    "hamlet",
+    "infantry",
+    "mountain-rock",
+    "mountain-snow",
+    "siege",
+    "tower",
+    "wall"
+  ],
+  "groups": [
+    "objects"
+  ],
+  "base_source": null,
+  "imported_refs": {}
+}

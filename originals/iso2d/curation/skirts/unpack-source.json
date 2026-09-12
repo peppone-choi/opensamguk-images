@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "kind": "sprite-gen-unpack-source",
+  "layout_source": "imported-pngs",
+  "cell": {
+    "width": 128,
+    "height": 96
+  },
+  "source_dir": "/Users/apple/Desktop/개인프로젝트/opensamguk-meta/worktrees/opensamguk-images/iso2d-assets/originals/iso2d/curation-input/skirts",
+  "files": [
+    "skirt-left.png",
+    "skirt-right.png"
+  ],
+  "labels": [
+    "skirt-left",
+    "skirt-right"
+  ],
+  "groups": [
+    "skirts"
+  ],
+  "base_source": null,
+  "imported_refs": {}
+}

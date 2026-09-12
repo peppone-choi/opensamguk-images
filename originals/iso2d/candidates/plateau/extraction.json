@@ -1,0 +1,248 @@
+{
+  "source": "originals/iso2d/raw/plateau-15.png",
+  "sourceSha256": "9f17663716def0bec1129171d3fa9e03fc01e57daf2023a026ea5bfd4c2a3039",
+  "pipeline": "sprite-gen chroma removal / fixed guide crop from AI bleed / max-2px-per-axis source edge extrusion",
+  "status": "candidates-require-assembled-visual-QA",
+  "assets": [
+    {
+      "file": "plateau-00.png",
+      "mask": 0,
+      "cornerHeights": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "anchor": [
+        128,
+        96
+      ],
+      "alphaEdgePixelsCopied": 0,
+      "sha256": "7f8d95ae53ab85e0fd090f370769d914e34ea07a02b894e32032e49dde749ba3"
+    },
+    {
+      "file": "plateau-01.png",
+      "mask": 1,
+      "cornerHeights": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "anchor": [
+        128,
+        96
+      ],
+      "alphaEdgePixelsCopied": 0,
+      "sha256": "bc7d5b57f1e290d752ca781a45c83cfb34720e65cd9913dd853880586b34eaeb"
+    },
+    {
+      "file": "plateau-02.png",
+      "mask": 2,
+      "cornerHeights": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "anchor": [
+        128,
+        96
+      ],
+      "alphaEdgePixelsCopied": 0,
+      "sha256": "8f2d8803954aa17edb48d0659c079c46f6e8f602088ac1eece28aad4449d3f62"
+    },
+    {
+      "file": "plateau-03.png",
+      "mask": 3,
+      "cornerHeights": [
+        1,
+        1,
+        0,
+        0
+      ],
+      "anchor": [
+        128,
+        96
+      ],
+      "alphaEdgePixelsCopied": 0,
+      "sha256": "f3a40879e06078b66bdbe9c8c79a5435f6a6bf1deccbb1da3b8f7bedc63d37da"
+    },
+    {
+      "file": "plateau-04.png",
+      "mask": 4,
+      "cornerHeights": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "anchor": [
+        128,
+        96
+      ],
+      "alphaEdgePixelsCopied": 0,
+      "sha256": "d999f277f481b361450cd616fcee25ee45b45c40a00144077be16cc75f072b20"
+    },
+    {
+      "file": "plateau-05.png",
+      "mask": 5,
+      "cornerHeights": [
+        1,
+        0,
+        1,
+        0
+      ],
+      "anchor": [
+        128,
+        96
+      ],
+      "alphaEdgePixelsCopied": 0,
+      "sha256": "7968317a62426f3e2af58c774a1015e20208b0298101bba10b80871466944bda"
+    },
+    {
+      "file": "plateau-06.png",
+      "mask": 6,
+      "cornerHeights": [
+        0,
+        1,
+        1,
+        0
+      ],
+      "anchor": [
+        128,
+        96
+      ],
+      "alphaEdgePixelsCopied": 0,
+      "sha256": "2bf6c1edf117aa3165f102fc0cfad20a37fa1b0c7d0744ddce6860dd89ad6f96"
+    },
+    {
+      "file": "plateau-07.png",
+      "mask": 7,
+      "cornerHeights": [
+        1,
+        1,
+        1,
+        0
+      ],
+      "anchor": [
+        128,
+        96
+      ],
+      "alphaEdgePixelsCopied": 0,
+      "sha256": "02c323c564d7e90e6eb765397f1122859e1052d1ce74b106285c36e41b907acc"
+    },
+    {
+      "file": "plateau-08.png",
+      "mask": 8,
+      "cornerHeights": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "anchor": [
+        128,
+        96
+      ],
+      "alphaEdgePixelsCopied": 0,
+      "sha256": "621463914cc099c411bcc7434c00d201a9bca16d053e9471acd61024d29f0def"
+    },
+    {
+      "file": "plateau-09.png",
+      "mask": 9,
+      "cornerHeights": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "anchor": [
+        128,
+        96
+      ],
+      "alphaEdgePixelsCopied": 0,
+      "sha256": "395eb4d4b8956517ca745c7da4ec3490722f1623bb0564940074c2808e82ffb5"
+    },
+    {
+      "file": "plateau-10.png",
+      "mask": 10,
+      "cornerHeights": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "anchor": [
+        128,
+        96
+      ],
+      "alphaEdgePixelsCopied": 0,
+      "sha256": "e9001f2912439bb2fe217a51298a40ee2773b18ee76b2590d22a7e086ed8c6ae"
+    },
+    {
+      "file": "plateau-11.png",
+      "mask": 11,
+      "cornerHeights": [
+        1,
+        1,
+        0,
+        1
+      ],
+      "anchor": [
+        128,
+        96
+      ],
+      "alphaEdgePixelsCopied": 0,
+      "sha256": "7d3b854d628b5854cb7ec53430d9be557f941efb4d9004f1ff0a11c5dad7f780"
+    },
+    {
+      "file": "plateau-12.png",
+      "mask": 12,
+      "cornerHeights": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "anchor": [
+        128,
+        96
+      ],
+      "alphaEdgePixelsCopied": 0,
+      "sha256": "125b3a2a463e572b3be2c5309608af2f6e6dd6d42537ae635a62b25a7d4ce888"
+    },
+    {
+      "file": "plateau-13.png",
+      "mask": 13,
+      "cornerHeights": [
+        1,
+        0,
+        1,
+        1
+      ],
+      "anchor": [
+        128,
+        96
+      ],
+      "alphaEdgePixelsCopied": 0,
+      "sha256": "7630d79860ab1208a1140d1bd22600937f5ccd158a70f11426110fdc3b44de26"
+    },
+    {
+      "file": "plateau-14.png",
+      "mask": 14,
+      "cornerHeights": [
+        0,
+        1,
+        1,
+        1
+      ],
+      "anchor": [
+        128,
+        96
+      ],
+      "alphaEdgePixelsCopied": 0,
+      "sha256": "d9e6c798efa6a879112f75588f014a297a48c220bc35068c06a4015921157f61"
+    }
+  ]
+}

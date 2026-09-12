@@ -1,0 +1,47 @@
+{
+  "source": [
+    "originals/iso2d/raw/water.png"
+  ],
+  "sourceSha256": [
+    "fd126a076b7b7a2ae908249b61c051203799df23d023c118d450038b6e7dfc81"
+  ],
+  "pipeline": "sprite-gen chroma removal / cell extraction / alpha crop / fit and baseline",
+  "assets": [
+    {
+      "file": "sea-00.png",
+      "anchor": [
+        128,
+        96
+      ],
+      "size": [
+        256,
+        160
+      ],
+      "sha256": "68033247b1dc8dfd8e239c3bc8e79f03892e87a76e2027c5eb46007f23c21584"
+    },
+    {
+      "file": "river-00.png",
+      "anchor": [
+        128,
+        96
+      ],
+      "size": [
+        256,
+        160
+      ],
+      "sha256": "a5f1d6410d7c7da3d77ac0ed25034ffa3978ad05d1355e806649ac0e693b7f46"
+    },
+    {
+      "file": "lake-00.png",
+      "anchor": [
+        128,
+        96
+      ],
+      "size": [
+        256,
+        160
+      ],
+      "sha256": "431e779ad42d3233d7a2f93a225fc5daf045402e8ab073617613933049850bb6"
+    }
+  ]
+}

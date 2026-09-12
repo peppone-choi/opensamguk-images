@@ -1,0 +1,27 @@
+[
+  {
+    "scene": "flat",
+    "file": "basin-flat-8x8.png",
+    "nonOpaqueInteriorPixels": 0
+  },
+  {
+    "scene": "hill",
+    "file": "basin-hill-8x8.png",
+    "nonOpaqueInteriorPixels": 0
+  },
+  {
+    "scene": "basin",
+    "file": "basin-basin-8x8.png",
+    "nonOpaqueInteriorPixels": 0
+  },
+  {
+    "scene": "ridge",
+    "file": "basin-ridge-8x8.png",
+    "nonOpaqueInteriorPixels": 0
+  },
+  {
+    "scene": "saddle",
+    "file": "basin-saddle-8x8.png",
+    "nonOpaqueInteriorPixels": 0
+  }
+]

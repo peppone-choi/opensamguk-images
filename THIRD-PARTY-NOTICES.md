@@ -21,6 +21,11 @@ Origin is recorded as observed in this repository. Where the origin could not be
 established from repository evidence it is marked **UNKNOWN**, and UNKNOWN is
 treated the same as third-party: no license is granted.
 
+An `owner-accepted` entry is third-party material that the repository owner has
+explicitly decided to use in the OpenSamguk product, taking the responsibility
+for that use. It stays outside the root MIT license; the label records the
+decision, it does not grant anyone else a license.
+
 ---
 
 ## `portraits/` — RTK14 character illustrations and derivatives
@@ -31,41 +36,12 @@ treated the same as third-party: no license is granted.
 | Original rights holder | Koei Tecmo Games Co., Ltd. — character illustrations from *Romance of the Three Kingdoms XIV* (三國志14 / RTK14) |
 | Acquisition source | Attachment images on the RTK14 wikiwiki, `https://wikiwiki.jp/sangokushi14/` (`cdn.wikiwiki.jp/.../::attach/*.jpg`). Per-file source URLs are recorded in `portraits/rtk14/manifest/rtk14-name-file-map.tsv`. |
 | Current state | 1000 acquired originals (stored byte-preserved as `<sha256>.bin`) plus mechanically derived resizes/crops (148×210 full-frame, 148×210 face crop, 96×96 face icon) and id-keyed serving copies. Derivative processing does not create a new independent work here; the derivatives carry the same status as the originals. |
-| Status | Third-party derived. No license granted by this repository. |
+| Status | Third-party derived. No license granted by this repository to third parties. **Owner-accepted for use in the OpenSamguk product** (`.license-boundaries.json` classification `owner-accepted`, accepted 2026-09-06 by the repository owner, who takes the responsibility; see `portraits/LICENSE-NOTICE.md` and opensamguk ADR-LITE-048). |
 
 `portraits/rtk14/README.md`, `manifest/*`, `officer-id-registry.tsv` and
 `*/report.tsv` are pipeline metadata authored for this project, but they describe
 and index the third-party material and are kept inside the third-party boundary
 for clarity.
-
-## `icons/` — character icon pool
-
-The `icons/` tree is third-party derived or UNKNOWN throughout. No license is
-granted for any path under `icons/`.
-
-| Path | Origin as observed | Status |
-| --- | --- | --- |
-| `icons/*.jpg` (1833 numbered files at the top of `icons/`) | Legacy 삼국지 모의전투 (devsam / HiDCHe) general-portrait pool inherited with the game. Individual provenance is not recorded in this repository; portraits in this pool are widely Koei Tecmo *Romance of the Three Kingdoms* series derived. | UNKNOWN → treated as third-party |
-
-## `game/` — game UI, map, and unit assets
-
-| Item | Detail |
-| --- | --- |
-| Paths | `game/*` (backgrounds, banners, color chips, GIFs), `game/map/*`, `game/src/*` |
-| Origin as observed | Assets inherited from the legacy 삼국지 모의전투 (devsam / HiDCHe) PHP game. `game/src/*.jpg` are unit-type illustrations (보병, 궁병, 기병, 충차 …) of the kind used by the Koei Tecmo *Romance of the Three Kingdoms* series; `game/map/` holds scenario map art for che / chess / cr / ludo_rathowm. Original authorship is not recorded in this repository. |
-| Current state | Served unchanged as game assets. `game/src/코드.txt` is a unit-code table (text). |
-| Status | UNKNOWN → treated as third-party. No license granted by this repository. |
-
-## `hook/` — legacy image-service deploy scripts
-
-| Item | Detail |
-| --- | --- |
-| Paths | `hook/hook.php`, `hook/git_pull.php`, `hook/InstallKey.php`, `hook/HashKey.orig.php`, `hook/gogs_key.orig.php` |
-| Origin as observed | PHP sources in namespace `sammo\img_service` — the legacy 삼국지 모의전투 (devsam / HiDCHe) image-service deploy hooks, inherited rather than authored here. Upstream license not recorded in this repository. |
-| Current state | Retained as-is; not part of CDN asset serving. |
-| Status | UNKNOWN → treated as third-party. No license granted by this repository. |
-
----
 
 ## Reporting
 

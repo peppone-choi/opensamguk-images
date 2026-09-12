@@ -1,0 +1,186 @@
+{
+  "viewBox": "0 0 20 20",
+  "stroke": 1.5,
+  "icons": [
+    {
+      "name": "arrow-down",
+      "label": "아래",
+      "sha256": "764ca1d347b4406ae7b8e24a3e53a68130207e77fa21236f10dde11865c93ecb"
+    },
+    {
+      "name": "arrow-left",
+      "label": "왼쪽",
+      "sha256": "9784ea56d8a62882927362b83d2db993d25b2d8363748417d1288ad9a2a7e3f7"
+    },
+    {
+      "name": "arrow-right",
+      "label": "오른쪽",
+      "sha256": "69a652b38f54a41b7bc904db0a8caa268225dab1c111b3f0c9027cedadc5eeb0"
+    },
+    {
+      "name": "arrow-up",
+      "label": "위",
+      "sha256": "2c53bda57e700018fd5880a9d6af045708cf5476ed7b9aaa564c71cdb6bb31e9"
+    },
+    {
+      "name": "auction",
+      "label": "경매",
+      "sha256": "71269e985013babe1f13b26682e274da0ad91c5c4c22a7d57ea53673ae87fc10"
+    },
+    {
+      "name": "close",
+      "label": "닫기",
+      "sha256": "b40604269434573e167b482fda9bbfbf7b1e21b471c1ab16abb18d05d6cf5bbb"
+    },
+    {
+      "name": "cmd-need",
+      "label": "부족",
+      "sha256": "b4965f2a04763746d240f9c2ea854cd0ffe1df7e0c8f3db1ba8c40b5fc0e6ddf"
+    },
+    {
+      "name": "cmd-no",
+      "label": "불가",
+      "sha256": "4861fa9a8a76f50088623f49139c27f2efef6ea8d656b2bad78adadb313a76c5"
+    },
+    {
+      "name": "cmd-ok",
+      "label": "가능",
+      "sha256": "6e3263381cf8ba0b6513215a3d6433292a2ef09124567c98fb5d8b0fea08c3e8"
+    },
+    {
+      "name": "cmd-sealed",
+      "label": "봉인",
+      "sha256": "fd1e3861d30e5ccade75aeb62bed3c8b8ba25785171839456af14049c33ca96a"
+    },
+    {
+      "name": "dept-info",
+      "label": "정보",
+      "sha256": "35cbb259c925f5b136147f560ac489046539408af401823f571527280a45341f"
+    },
+    {
+      "name": "dept-military",
+      "label": "군사",
+      "sha256": "51a23e6f8068c3c79fbb5d3a064a5be97af7cc982b79305e8d768dbf6e632139"
+    },
+    {
+      "name": "dept-nation",
+      "label": "국가 운영",
+      "sha256": "103aad0fde0db943d467cb89ea7c057dacce7baa4fe013cae39c9148daaa2e44"
+    },
+    {
+      "name": "dept-ops",
+      "label": "작전실",
+      "sha256": "fe6561536883da4069a42d5ab7efef3d1a2edb6a9643932737609f1d7c8d5ba7"
+    },
+    {
+      "name": "dept-plaza",
+      "label": "광장",
+      "sha256": "98495ccf3e1d35c582c6fed3d8a4ae580b88a92b5a0b315e297852c2864a8707"
+    },
+    {
+      "name": "dept-records",
+      "label": "기록",
+      "sha256": "ba05538276ee891277c14def5f632375c269337124799e54f0e8cd2a1440af61"
+    },
+    {
+      "name": "dice",
+      "label": "베팅",
+      "sha256": "a573065b6235bd1f2b0ffcbbf228938788b6e780c25196bc1a4c920c39a19b4a"
+    },
+    {
+      "name": "diplomacy",
+      "label": "외교",
+      "sha256": "6bb2c585600e466a91732c0498bb6370494d758db29651c157fef633c8282c10"
+    },
+    {
+      "name": "external",
+      "label": "외부 링크",
+      "sha256": "5c1686929d425301bfd7a362e5bde00bfa122a34f9ba15504ca87436e2cc6b18"
+    },
+    {
+      "name": "filter",
+      "label": "필터",
+      "sha256": "181d8925a6c46eab6561e788ad4b421b7c7236d4401eba70aea00d21b341932b"
+    },
+    {
+      "name": "hub-best-generals",
+      "label": "명장 순위",
+      "sha256": "d09dfe38882acbb427d785f0cfd1d127e49dd229227c5243162a5e52f9d2b21a"
+    },
+    {
+      "name": "hub-emperor",
+      "label": "황제 정보",
+      "sha256": "9276b07418a2f2b315db031b76fcf1683a348d2c17bd383e0ed8c8381194d10c"
+    },
+    {
+      "name": "hub-generals",
+      "label": "장수 일람",
+      "sha256": "7c282f7a29e995c4af874c05c3181c811143c0198fc95d99d7ef0522dd55f444"
+    },
+    {
+      "name": "hub-hall-of-fame",
+      "label": "명예의 전당",
+      "sha256": "59b42cda70c86dea493e23f59b5159d63d915f5fceec50be02199bd68ca28bca"
+    },
+    {
+      "name": "hub-kingdoms",
+      "label": "세력 순위",
+      "sha256": "d6b7a59efbbfcce89afbc62a0568910baec0742b8e16fa93cba623f336f3bf35"
+    },
+    {
+      "name": "hub-npcs",
+      "label": "NPC 일람",
+      "sha256": "d0ea82887bddb9ecf2da835c6ebf226a5221c20614e5c27f7978ac098d57b66a"
+    },
+    {
+      "name": "hub-traffic",
+      "label": "접속 통계",
+      "sha256": "150d1e48a480d4b65d541123cd9a5d126a2cdee9498e9b7a61899691c37cc45f"
+    },
+    {
+      "name": "mail",
+      "label": "서신",
+      "sha256": "930a2ee8617ab42533e3be14ee35fee24333e7f7b8406e5dacb6ba3ea87982d0"
+    },
+    {
+      "name": "members",
+      "label": "회원",
+      "sha256": "e79151c4659b509bc4d79ad5869ea76dfdfd9b24030606423c2734342af34556"
+    },
+    {
+      "name": "refresh",
+      "label": "갱신",
+      "sha256": "5e5e7342da703935e62b73556968e368816a27b3bc8743cc4c7940f96f3f1753"
+    },
+    {
+      "name": "res-gold",
+      "label": "금",
+      "sha256": "f41029bae7a7523c1f62e89be798f09105bb052905c6dfc427e128bb38b8742d"
+    },
+    {
+      "name": "res-provisions",
+      "label": "군량",
+      "sha256": "8a7e4fd58ac137124fad536b63e2479669108cbbf84e30d9f3717cdf64da71d0"
+    },
+    {
+      "name": "res-rice",
+      "label": "쌀",
+      "sha256": "0628f83c8525c92d4b9151bc1bd0f825ae47f9d28fd27f42f9c3cb0a744f0cca"
+    },
+    {
+      "name": "res-troops",
+      "label": "병력",
+      "sha256": "38361ac9696e10ad293cc792721af19822e12c2a28a72573744a97ae9e1c4ae5"
+    },
+    {
+      "name": "search",
+      "label": "검색",
+      "sha256": "ad44dceecf6e9bde6995eff317e2ef6444772153cde467a997a0f3ea4f139d05"
+    },
+    {
+      "name": "tools",
+      "label": "관리",
+      "sha256": "14e94fd0cab6c2e3ca3f1128a354e7a35758767831a4154189f2389360dbc986"
+    }
+  ]
+}

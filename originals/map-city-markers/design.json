@@ -1,0 +1,16 @@
+{
+  "name": "Han administrative map markers",
+  "style": "compact seal pin",
+  "palette": {
+    "outline": "#3A1B10",
+    "rim": "#B9261A",
+    "face": "#FFF2CF",
+    "gold": "#E8AE35",
+    "gate": "#7B2518"
+  },
+  "markers": {
+    "county": { "width": 28, "height": 32, "roofTiers": 1, "gates": 1 },
+    "commandery": { "width": 36, "height": 40, "roofTiers": 2, "gates": 2 },
+    "capital": { "width": 44, "height": 48, "roofTiers": 3, "gates": 3, "finial": true }
+  }
+}
