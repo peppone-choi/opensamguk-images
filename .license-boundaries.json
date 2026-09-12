@@ -13,6 +13,7 @@
     { "path": "originals", "classification": "mit" },
     { "path": "previews", "classification": "mit" },
     { "path": "tools", "classification": "mit" },
+    { "path": "portraits-original", "classification": "mit" },
     { "path": "web", "classification": "mit" },
 
     { "path": "portraits", "classification": "owner-accepted", "notice": "portraits/LICENSE-NOTICE.md",
