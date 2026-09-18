@@ -172,7 +172,7 @@
   "bright": "Clean, polished semi-realistic digital illustration for a historical strategy game card, late Han dynasty China around 200 CE. HIGH-KEY and bright: clear daylight, open luminous sky, light airy backgrounds, well-lit midtones, soft natural shadows — never murky, never low-key, no heavy vignette, no dark silhouettes. Vivid saturated colour with clean separation: bright crimson and vermilion banners and cloaks, clear azure and royal blue, fresh green landscape, polished gold and bronze armour fittings, warm healthy skin tones. Smooth refined brushwork with crisp edges and fine detail on lamellar armour, silk robes and architecture, heroic and clear readable staging. The subject is the ACTION of the scene with several figures in an environment, medium-wide view, not a close-up portrait. Unless the scene itself says night, render it in bright daytime; night scenes are moonlit and still clearly readable. Vertical 2:3 composition, no border, no frame, no text, no letters, no calligraphy, no seals, no watermark, no modern objects."
  },
  "defaultStyle": "bright",
- "periodRules": "STRICT PERIOD ACCURACY — Eastern Han / Three Kingdoms China, c. 184–280 CE, as seen in Han tomb figurines, murals and brick reliefs. CLOTHING: cross-collared robes and jackets wrapped right side over left (youren) tied with a cloth sash; common soldiers wear a knee-length belted tunic (often madder red) over loose trousers with cloth leg wraps and low cloth or leather shoes; officials and strategists wear long wide-sleeved robes (shenyi/pao) with layered collars. HEADWEAR: hair in a topknot; soldiers wear a flat cloth headcloth cap (ze), often red, or a simple low rounded iron or leather lamellar helmet made of laced plates with a neck guard and a smooth dome with NO spike, knob or finial on top; officers may have a small pheasant feather; civil officials wear a small black lacquered gauze cap (jinxian guan) or a plain headcloth (fujin). ARMOUR: dark lacquered iron or leather lamellar of small rectangular plates laced with cords, as a sleeveless cuirass with shoulder flaps or a short-sleeved tube-sleeve coat worn over the tunic, reaching the hips. WEAPONS: ji halberd (spear with a perpendicular side blade), long spears, perfectly STRAIGHT single-edged ring-pommel sabres (huanshou dao) with a ring at the pommel and no curve at all, straight double-edged jian, crossbows with bronze triggers, rectangular or double-arc wooden shields. HORSES: small steppe-type horses with simple padded saddles and NO stirrups — riders' legs hang free with no foot loops or straps of any kind. ARCHITECTURE: tawny rammed-earth walls with plain parapets, timber-frame halls and gate towers (que) with hip roofs whose eaves are STRAIGHT horizontal lines with flat, un-curved corners, grey cylindrical tiles and round eave tiles, plain ridge ends without ornaments, single-storey or a simple two-level gate tower, simple brackets, packed-earth courtyards. FURNITURE: people kneel or sit on woven mats and low platforms at low tables; writing is on bamboo slips and silk. FORBIDDEN ANACHRONISMS: no capes, cloaks, shawls or neck scarves, no Roman or Greek crested helmets, no tall horsehair plumes, no European plate or chainmail, no curved sabres, no guandao glaive, no chairs or high tables, no strongly upturned curling roof corners, no Ming/Qing brick fortresses or stone castles, no queue hairstyles, no Japanese samurai armour, no paper lanterns, no stirrups, no gunpowder.",
+ "periodRules": "STRICT PERIOD ACCURACY — Eastern Han / Three Kingdoms China, c. 184–280 CE, as seen in Han tomb figurines, murals and brick reliefs. CLOTHING: cross-collared robes and jackets wrapped right side over left (youren) tied with a cloth sash; common soldiers wear a knee-length belted tunic (often madder red) over loose trousers with cloth leg wraps and low cloth or leather shoes; officials and strategists wear long wide-sleeved robes (shenyi/pao) with layered collars. HEADWEAR: hair in a topknot; soldiers wear a flat cloth headcloth cap (ze), often red, or a simple low rounded iron or leather lamellar helmet made of laced plates with a neck guard and a smooth dome with NO spike, knob or finial on top; officers may have a small pheasant feather; civil officials wear a small black lacquered gauze cap (jinxian guan) or a plain headcloth (fujin). ARMOUR: dark lacquered iron or leather lamellar of small rectangular plates laced with cords, as a sleeveless cuirass with shoulder flaps or a short-sleeved tube-sleeve coat worn over the tunic, reaching the hips. WEAPONS: ji halberd (spear with a perpendicular side blade), long spears, perfectly STRAIGHT single-edged ring-pommel sabres (huanshou dao) with a ring at the pommel and no curve at all, straight double-edged jian, crossbows with bronze triggers, rectangular or double-arc wooden shields. HORSES: small steppe-type horses with simple padded saddles and NO stirrups — riders' legs hang free with no foot loops or straps of any kind. ARCHITECTURE: tawny rammed-earth walls with plain parapets, timber-frame halls and gate towers (que) with hip roofs whose eaves are STRAIGHT horizontal lines with flat, un-curved corners, grey cylindrical tiles and round eave tiles, plain ridge ends without ornaments, single-storey or a simple two-level gate tower, simple brackets, packed-earth courtyards. FURNITURE: people kneel or sit on woven mats and low platforms at low tables; writing is on bamboo slips and silk. RIDERS AND OFFICERS never wear a cape, mantle or any cloth draped from the shoulders — their shoulders show only the tunic or lamellar shoulder flaps. BACKGROUNDS vary with the scene: do NOT put a city gate tower in the background unless the scene is about a city; use open country, rivers, camps, farmland, forest, mountains, interiors. SHIPS are Han river craft: flat-bottomed plank boats and multi-deck tower ships (louchuan) with oars and simple square mat sails, no battened junk sails. FORBIDDEN ANACHRONISMS: no capes, cloaks, shawls or neck scarves, no Roman or Greek crested helmets, no tall horsehair plumes, no European plate or chainmail, no curved sabres, no guandao glaive, no chairs or high tables, no strongly upturned curling roof corners, no Ming/Qing brick fortresses or stone castles, no queue hairstyles, no Japanese samurai armour, no paper lanterns, no stirrups, no gunpowder.",
  "qaChecklist": [
   "곧은 環首刀(휜 칼 금지)",
   "등자 없음",
@@ -183,5 +183,48 @@
   "처마 직선(들린 추녀 금지)",
   "판축 토성(벽돌·석성 금지)",
   "깃발에 글자 없음"
- ]
+ ],
+ "qaFirstPass": {
+  "date": "2026-09-18",
+  "style": "bright-low",
+  "verdict": {
+   "pass": [
+    "maebok",
+    "uibyeong",
+    "cheopbo",
+    "ganpa",
+    "sugong",
+    "yueon",
+    "pagoe",
+    "sahang",
+    "goyuk",
+    "chajeon",
+    "gongseong",
+    "dunjeon",
+    "chomu",
+    "guhyul",
+    "hosi",
+    "baekseong",
+    "uibyeongmojip",
+    "cheongeo",
+    "injil"
+   ],
+   "redo": {
+    "hwagye": "방화자가 갑옷 무장으로 나온 후보가 있다",
+    "gyeonbyeok": "기마 인물의 망토·휜 칼",
+    "gunryang": "망토·휜 칼, 밤이어야 하는데 낮",
+    "talchwi": "망토",
+    "yaseup": "망토, 밤 장면 약함",
+    "hwagong": "장면이 작고 강변 구경꾼 구도",
+    "yeonhwan": "후대 정크 돛",
+    "pilsa": "솥 깨기만 있고 배 태우기가 없다",
+    "igan": "높은 탁자",
+    "yeonhwanigan": "칼을 빼 든 구도가 과하다, 누각 난간이 후대풍",
+    "bangan": "높은 탁자·의자",
+    "geupseup": "망토",
+    "ihogyeongsik": "깃발에 무늬·가짜 글자"
+   }
+  },
+  "note": "모든 후보에 같은 성문 문루가 배경으로 반복된다 — 규칙에 배경 변주를 넣었다. 채택은 아직 없다."
+ }
 }
