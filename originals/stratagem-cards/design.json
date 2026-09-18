@@ -37,7 +37,7 @@
   {
    "id": "gunryang",
    "nameKo": "군량 습격",
-   "scene": "Light cavalry raiding a supply convoy of ox carts on a country road at night, grain sacks catching fire, drivers fleeing."
+   "scene": "Seen from a hillside at dusk: a supply convoy of ox carts loaded with grain sacks stretched along a country road, several carts already burning, a dozen small raiders ON FOOT in plain tunics and headcloths running among the carts with torches, drivers fleeing into the fields; all figures small in a wide landscape. Open countryside only — no buildings, walls or towers anywhere in the picture."
   },
   {
    "id": "sugong",
@@ -57,7 +57,7 @@
   {
    "id": "talchwi",
    "nameKo": "탈취",
-   "scene": "Raiders on horseback leading away pack horses loaded with grain sacks and strings of bronze coins from a county storehouse at dawn."
+   "scene": "At dawn beside a riverside storehouse yard of raised timber granaries, small figures of raiders on foot in plain tunics leading away a string of pack horses and mules loaded with grain sacks and coin strings, one raider barring the gate; nobody is riding, no mounted officers."
   },
   {
    "id": "yaseup",
@@ -132,7 +132,7 @@
   {
    "id": "igan",
    "nameKo": "이간",
-   "scene": "Two generals in a command tent eyeing each other with suspicion over a letter with blotted-out lines, a messenger withdrawing into shadow."
+   "scene": "Inside a command tent, two generals KNEELING on woven floor mats on either side of a very low knee-high table, one holding a letter with blotted-out lines and eyeing the other with suspicion, a messenger slipping out through the tent flap; no chairs, no stools, everyone sits on the floor."
   },
   {
    "id": "yeonhwanigan",
@@ -142,7 +142,7 @@
   {
    "id": "bangan",
    "nameKo": "반간",
-   "scene": "A commander pretending to sleep at his desk while an enemy spy steals a forged letter left deliberately in view, a knowing half-smile on the commander's face."
+   "scene": "Inside a lamplit tent at night, a commander lying on a low sleeping platform on the floor pretending to sleep with a faint knowing smile, while a crouching spy in dark plain clothes lifts a forged bamboo-slip letter from a very low knee-high table beside him; no chairs, no high desk."
   },
   {
    "id": "cheongeo",
@@ -157,12 +157,12 @@
   {
    "id": "geupseup",
    "nameKo": "급습",
-   "scene": "A column of cavalry riding hard through the night on a forced march, torches streaming, a distant unsuspecting border fort on the horizon."
+   "scene": "A long column of light cavalry seen FROM BEHIND and far off, riding hard along a moonlit road across an open plain toward a faint distant line of hills, torches streaming; riders are small dark figures in tunics and lamellar with bare shoulders and no cloaks, legs hanging free without stirrups. Open countryside only — no buildings, walls or towers anywhere in the picture."
   },
   {
    "id": "ihogyeongsik",
    "nameKo": "이호경식",
-   "scene": "A cunning adviser watching from a hill as two rival armies are lured into fighting each other in the valley below, a tiger motif banner on each side without any characters."
+   "scene": "A cunning adviser in a plain wide-sleeved robe standing on a grassy hill, seen from behind, watching two rival armies collide in the valley far below; the armies' banners are completely plain solid colours, one side red and one side blue, with NO emblems, animals, characters or patterns on any banner. Open countryside only — no buildings, walls or towers anywhere in the picture."
   }
  ],
  "styles": {
@@ -226,5 +226,29 @@
    }
   },
   "note": "모든 후보에 같은 성문 문루가 배경으로 반복된다 — 규칙에 배경 변주를 넣었다. 채택은 아직 없다."
+ },
+ "qaSecondPass": {
+  "date": "2026-09-18",
+  "lesson": "금지어를 늘리는 것보다 장면을 바꾸는 쪽이 먹힌다 — 기마 근접 인물을 빼고(도보·뒷모습·원경), 실내는 「바닥 자리 + 무릎 높이 탁자」를 장면에 직접 쓰고, 「건물 없는 들판」을 장면에 넣는다. 저품질보다 중품질이 규칙을 잘 따른다.",
+  "pass": [
+   "gunryang",
+   "talchwi",
+   "igan",
+   "bangan",
+   "ihogyeongsik",
+   "yaseup",
+   "hwagong",
+   "pilsa",
+   "yeonhwanigan"
+  ],
+  "pickNotes": {
+   "geupseup": "1번(뒷모습, 망토 없음) — 2번은 망토",
+   "yeonhwan": "2번(사각 돗자리 돛) — 1번은 정크 돛",
+   "talchwi": "2번"
+  },
+  "stillOpen": [
+   "배경에 성문 문루가 남는 카드가 있다(탈취·반간 2번)",
+   "채택본 고품질 재생성은 아직"
+  ]
  }
 }
