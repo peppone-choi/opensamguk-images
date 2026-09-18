@@ -1,0 +1,254 @@
+{
+ "schemaVersion": 1,
+ "note": "계책 카드 그림의 정본 명세. 그림에는 글자·테두리·방식/비용 표식을 넣지 않는다 — 카드 이름과 표식은 UI 가 그린다. 장면 문구는 opensamguk docs/superpowers/specs/2026-09-17-stratagem-card-catalog-draft.md 의 효과 방향·출처에서 옮겼다. 실존 작가·다른 게임의 화풍을 지목하지 않는다.",
+ "model": "gpt-image-1-mini",
+ "size": "1024x1536",
+ "cards": [
+  {
+   "id": "maebok",
+   "nameKo": "매복",
+   "scene": "Soldiers with spears crouching hidden among tall reeds and wooded hills beside a narrow mountain road, seen from behind them, an unsuspecting column of troops far below on the road."
+  },
+  {
+   "id": "uibyeong",
+   "nameKo": "의병(疑兵)",
+   "scene": "A wide view of a hillside ridge lined with many plain blank cloth banners on poles and rows of straw dummies dressed in tunics, with campfires smoking to fake a large army; only a few small real soldiers tending the dummies; the banners are blank with no characters or symbols."
+  },
+  {
+   "id": "hwagye",
+   "nameKo": "화계",
+   "scene": "A county granary compound of timber storehouses on raised posts and stacked lumber set ablaze, seen from a distance; two small plain-clothed infiltrators in commoner tunics and headcloths (no armour) slipping away with torches, alarmed guards running from the gate."
+  },
+  {
+   "id": "cheopbo",
+   "nameKo": "첩보",
+   "scene": "A plain-clothed scout in a commoner's tunic and headcloth crouching behind trees on a hill, overlooking a rammed-earth walled town and rows of army tents below, tallying on a bamboo slip."
+  },
+  {
+   "id": "gyeonbyeok",
+   "nameKo": "견벽",
+   "scene": "A Han dynasty rammed-earth city wall: massive sloped tawny earthen rampart with visible horizontal tamped layers, NO stone blocks and NO European crenellated towers, a timber gate tower with a tiled hip roof above a barred wooden gate, defenders with spears and crossbows along a plain earthen parapet, fields outside stripped bare, a besieging host small in the distance."
+  },
+  {
+   "id": "ganpa",
+   "nameKo": "간파",
+   "scene": "A calm strategist in a wide-sleeved robe and plain headcloth kneeling on a mat at a low table with a silk field map and bamboo slips inside an open command tent, one hand raised in warning to two attending officers, while through the tent opening drifting smoke thins to reveal enemy soldiers hidden in a grove."
+  },
+  {
+   "id": "gunryang",
+   "nameKo": "군량 습격",
+   "scene": "Seen from a hillside at dusk: a supply convoy of ox carts loaded with grain sacks stretched along a country road, several carts already burning, a dozen small raiders ON FOOT in plain tunics and headcloths running among the carts with torches, drivers fleeing into the fields; all figures small in a wide landscape. Open countryside only — no buildings, walls or towers anywhere in the picture."
+  },
+  {
+   "id": "sugong",
+   "nameKo": "수공",
+   "scene": "Soldiers breaching a river dike with spades so a torrent of water rushes toward a besieged earthen-walled city in the low ground beyond."
+  },
+  {
+   "id": "yueon",
+   "nameKo": "유언",
+   "scene": "A busy village market street of low thatched and tiled houses (no city walls, no gate towers), a stranger in a plain tunic whispering behind his hand to a small group of worried townsfolk, faces turning, baskets of vegetables and cloth on the ground."
+  },
+  {
+   "id": "pagoe",
+   "nameKo": "파괴",
+   "scene": "Saboteurs at night prying apart the timber scaffolding and tamped-earth of a half-built rampart with iron bars and axes, tools scattered."
+  },
+  {
+   "id": "talchwi",
+   "nameKo": "탈취",
+   "scene": "At dawn beside a riverside storehouse yard of raised timber granaries, small figures of raiders on foot in plain tunics leading away a string of pack horses and mules loaded with grain sacks and coin strings, one raider barring the gate; nobody is riding, no mounted officers."
+  },
+  {
+   "id": "yaseup",
+   "nameKo": "결사대 야습",
+   "scene": "A small band of picked warriors with halberds charging out of darkness into a sleeping enemy camp, tents and startled sentries lit by a few torches."
+  },
+  {
+   "id": "hwagong",
+   "nameKo": "화공",
+   "scene": "Fire ships drifting downwind into a moored fleet of wooden war junks on a wide river at night, sails ablaze, reeds on the bank."
+  },
+  {
+   "id": "sahang",
+   "nameKo": "사항(詐降)",
+   "scene": "A small boat under a plain flag rowing toward an enemy river camp, a kneeling envoy at the prow offering a sealed bamboo letter, hidden blades under the deck mats."
+  },
+  {
+   "id": "goyuk",
+   "nameKo": "고육계",
+   "scene": "An old general bound and beaten with rods before an assembled staff in a command tent, officers looking away in distress, the commander stern and deliberate."
+  },
+  {
+   "id": "yeonhwan",
+   "nameKo": "연환계(선박)",
+   "scene": "A wide river seen from a high bank: many flat-decked Han wooden war boats with square woven-mat sails on single masts, lashed side by side with heavy iron chains and plank walkways across them, soldiers walking steadily between the joined decks. No junk sails with battens, no city."
+  },
+  {
+   "id": "chajeon",
+   "nameKo": "차전(借箭)",
+   "scene": "Straw-covered boats in thick river fog bristling with hundreds of arrows shot from an unseen shore, a calm figure seated inside under a canopy."
+  },
+  {
+   "id": "gongseong",
+   "nameKo": "공성계",
+   "scene": "A lone strategist calmly playing a guqin zither atop an open, undefended earthen city gate, two boys sweeping the road below, a vast wary army halted in the distance."
+  },
+  {
+   "id": "pilsa",
+   "nameKo": "필사즉생",
+   "scene": "On a riverbank, a commander in lamellar armour with bare shoulders swings an axe to smash large clay cooking pots while behind him wooden river boats are burning; his soldiers stand in ranks raising spears in grim resolve. No buildings anywhere."
+  },
+  {
+   "id": "dunjeon",
+   "nameKo": "둔전령",
+   "scene": "Soldiers in plain tunics ploughing fields with oxen beside a military camp, spears stacked at the field edge, granaries under construction."
+  },
+  {
+   "id": "chomu",
+   "nameKo": "초무",
+   "scene": "An official on a low platform welcoming a long line of ragged refugees and surrendered bandits laying down their weapons, clerks registering households on bamboo slips."
+  },
+  {
+   "id": "guhyul",
+   "nameKo": "구휼",
+   "scene": "Officials distributing grain from an opened granary to famished villagers after a flood, children holding bowls, broken fields behind."
+  },
+  {
+   "id": "hosi",
+   "nameKo": "호시(互市)",
+   "scene": "A frontier market where Han merchants trade bolts of silk and coins for steppe horses with nomad herders in fur caps, a watchtower on the ridge."
+  },
+  {
+   "id": "baekseong",
+   "nameKo": "백성동원",
+   "scene": "Townspeople of all ages carrying baskets of earth and timber to raise a city's earthen rampart, a magistrate directing the work with a raised arm."
+  },
+  {
+   "id": "uibyeongmojip",
+   "nameKo": "의병모집",
+   "scene": "Farmers and hunters gathering under a plain banner in a village square to enlist, a local leader handing out spears, women bringing provisions."
+  },
+  {
+   "id": "igan",
+   "nameKo": "이간",
+   "scene": "Inside a command tent, two generals KNEELING on woven floor mats on either side of a very low knee-high table, one holding a letter with blotted-out lines and eyeing the other with suspicion, a messenger slipping out through the tent flap; no chairs, no stools, everyone sits on the floor."
+  },
+  {
+   "id": "yeonhwanigan",
+   "nameKo": "연환 이간",
+   "scene": "A graceful court lady standing between a burly tyrant and a young warrior in a lamplit pavilion, each man's hand on his sword, jealousy in their faces."
+  },
+  {
+   "id": "bangan",
+   "nameKo": "반간",
+   "scene": "Inside a lamplit tent at night, a commander lying on a low sleeping platform on the floor pretending to sleep with a faint knowing smile, while a crouching spy in dark plain clothes lifts a forged bamboo-slip letter from a very low knee-high table beside him; no chairs, no high desk."
+  },
+  {
+   "id": "cheongeo",
+   "nameKo": "천거",
+   "scene": "A senior minister presenting a modest young scholar to a lord seated in a hall, a memorial of recommendation on a tray, courtiers watching."
+  },
+  {
+   "id": "injil",
+   "nameKo": "인질",
+   "scene": "A young boy in fine robes being handed over with his attendants at a city gate to a waiting escort, his father bowing stiffly, guards on both sides."
+  },
+  {
+   "id": "geupseup",
+   "nameKo": "급습",
+   "scene": "A long column of light cavalry seen FROM BEHIND and far off, riding hard along a moonlit road across an open plain toward a faint distant line of hills, torches streaming; riders are small dark figures in tunics and lamellar with bare shoulders and no cloaks, legs hanging free without stirrups. Open countryside only — no buildings, walls or towers anywhere in the picture."
+  },
+  {
+   "id": "ihogyeongsik",
+   "nameKo": "이호경식",
+   "scene": "A cunning adviser in a plain wide-sleeved robe standing on a grassy hill, seen from behind, watching two rival armies collide in the valley far below; the armies' banners are completely plain solid colours, one side red and one side blue, with NO emblems, animals, characters or patterns on any banner. Open countryside only — no buildings, walls or towers anywhere in the picture."
+  }
+ ],
+ "styles": {
+  "ink": "East Asian ink-wash illustration for a strategy game card, late Han dynasty China around 200 CE. Monochrome sumi ink on aged warm paper with a single restrained accent of antique bronze-gold. Dry-brush texture, strong silhouette, generous empty space in the upper third, dark vignette at the edges so it sits on a near-black interface. Vertical 2:3 composition, single clear subject, no border, no frame, no text, no letters, no calligraphy, no seals, no watermark, no modern objects.",
+  "color": "East Asian painted illustration for a strategy game card, late Han dynasty China around 200 CE. Full colour in traditional mineral pigments on aged silk: malachite green, azurite blue, cinnabar red, ochre and warm earth tones, with ink outlines and a restrained antique bronze-gold highlight. Rich but muted and slightly desaturated, painterly brushwork, dramatic low-key lighting, dark vignette at the edges so it sits on a near-black interface. Vertical 2:3 composition, single clear subject, no border, no frame, no text, no letters, no calligraphy, no seals, no watermark, no modern objects.",
+  "vivid": "Polished, highly detailed digital painting for a historical strategy game card, late Han dynasty China around 200 CE. Vivid, saturated, high-contrast colour: brilliant crimson and vermilion, deep royal blue, emerald green, gleaming gold trim and lacquer, luminous dramatic skies. Let the time of day and dominant hue follow the scene — moonlit blue night, pale dawn, bright noon, overcast grey-green, or fiery dusk — so that different cards do not all share one orange sunset. Cinematic lighting with strong rim light and warm-cool contrast, crisp realistic rendering, deep atmospheric perspective. The subject is the ACTION of the scene shown as a wide establishing view with several small-to-medium figures in an environment — never a close-up portrait of one hero, no figure larger than a third of the frame height. Edges fall off to darkness so it sits on a near-black interface. Vertical 2:3 composition, no border, no frame, no text, no letters, no calligraphy, no seals, no watermark, no modern objects.",
+  "bright": "Clean, polished semi-realistic digital illustration for a historical strategy game card, late Han dynasty China around 200 CE. HIGH-KEY and bright: clear daylight, open luminous sky, light airy backgrounds, well-lit midtones, soft natural shadows — never murky, never low-key, no heavy vignette, no dark silhouettes. Vivid saturated colour with clean separation: bright crimson and vermilion banners and cloaks, clear azure and royal blue, fresh green landscape, polished gold and bronze armour fittings, warm healthy skin tones. Smooth refined brushwork with crisp edges and fine detail on lamellar armour, silk robes and architecture, heroic and clear readable staging. The subject is the ACTION of the scene with several figures in an environment, medium-wide view, not a close-up portrait. Unless the scene itself says night, render it in bright daytime; night scenes are moonlit and still clearly readable. Vertical 2:3 composition, no border, no frame, no text, no letters, no calligraphy, no seals, no watermark, no modern objects."
+ },
+ "defaultStyle": "bright",
+ "periodRules": "STRICT PERIOD ACCURACY — Eastern Han / Three Kingdoms China, c. 184–280 CE, as seen in Han tomb figurines, murals and brick reliefs. CLOTHING: cross-collared robes and jackets wrapped right side over left (youren) tied with a cloth sash; common soldiers wear a knee-length belted tunic (often madder red) over loose trousers with cloth leg wraps and low cloth or leather shoes; officials and strategists wear long wide-sleeved robes (shenyi/pao) with layered collars. HEADWEAR: hair in a topknot; soldiers wear a flat cloth headcloth cap (ze), often red, or a simple low rounded iron or leather lamellar helmet made of laced plates with a neck guard and a smooth dome with NO spike, knob or finial on top; officers may have a small pheasant feather; civil officials wear a small black lacquered gauze cap (jinxian guan) or a plain headcloth (fujin). ARMOUR: dark lacquered iron or leather lamellar of small rectangular plates laced with cords, as a sleeveless cuirass with shoulder flaps or a short-sleeved tube-sleeve coat worn over the tunic, reaching the hips. WEAPONS: ji halberd (spear with a perpendicular side blade), long spears, perfectly STRAIGHT single-edged ring-pommel sabres (huanshou dao) with a ring at the pommel and no curve at all, straight double-edged jian, crossbows with bronze triggers, rectangular or double-arc wooden shields. HORSES: small steppe-type horses with simple padded saddles and NO stirrups — riders' legs hang free with no foot loops or straps of any kind. ARCHITECTURE: tawny rammed-earth walls with plain parapets, timber-frame halls and gate towers (que) with hip roofs whose eaves are STRAIGHT horizontal lines with flat, un-curved corners, grey cylindrical tiles and round eave tiles, plain ridge ends without ornaments, single-storey or a simple two-level gate tower, simple brackets, packed-earth courtyards. FURNITURE: people kneel or sit on woven mats and low platforms at low tables; writing is on bamboo slips and silk. RIDERS AND OFFICERS never wear a cape, mantle or any cloth draped from the shoulders — their shoulders show only the tunic or lamellar shoulder flaps. BACKGROUNDS vary with the scene: do NOT put a city gate tower in the background unless the scene is about a city; use open country, rivers, camps, farmland, forest, mountains, interiors. SHIPS are Han river craft: flat-bottomed plank boats and multi-deck tower ships (louchuan) with oars and simple square mat sails, no battened junk sails. FORBIDDEN ANACHRONISMS: no capes, cloaks, shawls or neck scarves, no Roman or Greek crested helmets, no tall horsehair plumes, no European plate or chainmail, no curved sabres, no guandao glaive, no chairs or high tables, no strongly upturned curling roof corners, no Ming/Qing brick fortresses or stone castles, no queue hairstyles, no Japanese samurai armour, no paper lanterns, no stirrups, no gunpowder.",
+ "qaChecklist": [
+  "곧은 環首刀(휜 칼 금지)",
+  "등자 없음",
+  "망토·숄 없음",
+  "투구: 둥근 札甲胄, 꼭지·깃 장식 없음(장교의 꿩깃만)",
+  "右衽 교차 깃",
+  "바닥·낮은 案(의자 금지)",
+  "처마 직선(들린 추녀 금지)",
+  "판축 토성(벽돌·석성 금지)",
+  "깃발에 글자 없음"
+ ],
+ "qaFirstPass": {
+  "date": "2026-09-18",
+  "style": "bright-low",
+  "verdict": {
+   "pass": [
+    "maebok",
+    "uibyeong",
+    "cheopbo",
+    "ganpa",
+    "sugong",
+    "yueon",
+    "pagoe",
+    "sahang",
+    "goyuk",
+    "chajeon",
+    "gongseong",
+    "dunjeon",
+    "chomu",
+    "guhyul",
+    "hosi",
+    "baekseong",
+    "uibyeongmojip",
+    "cheongeo",
+    "injil"
+   ],
+   "redo": {
+    "hwagye": "방화자가 갑옷 무장으로 나온 후보가 있다",
+    "gyeonbyeok": "기마 인물의 망토·휜 칼",
+    "gunryang": "망토·휜 칼, 밤이어야 하는데 낮",
+    "talchwi": "망토",
+    "yaseup": "망토, 밤 장면 약함",
+    "hwagong": "장면이 작고 강변 구경꾼 구도",
+    "yeonhwan": "후대 정크 돛",
+    "pilsa": "솥 깨기만 있고 배 태우기가 없다",
+    "igan": "높은 탁자",
+    "yeonhwanigan": "칼을 빼 든 구도가 과하다, 누각 난간이 후대풍",
+    "bangan": "높은 탁자·의자",
+    "geupseup": "망토",
+    "ihogyeongsik": "깃발에 무늬·가짜 글자"
+   }
+  },
+  "note": "모든 후보에 같은 성문 문루가 배경으로 반복된다 — 규칙에 배경 변주를 넣었다. 채택은 아직 없다."
+ },
+ "qaSecondPass": {
+  "date": "2026-09-18",
+  "lesson": "금지어를 늘리는 것보다 장면을 바꾸는 쪽이 먹힌다 — 기마 근접 인물을 빼고(도보·뒷모습·원경), 실내는 「바닥 자리 + 무릎 높이 탁자」를 장면에 직접 쓰고, 「건물 없는 들판」을 장면에 넣는다. 저품질보다 중품질이 규칙을 잘 따른다.",
+  "pass": [
+   "gunryang",
+   "talchwi",
+   "igan",
+   "bangan",
+   "ihogyeongsik",
+   "yaseup",
+   "hwagong",
+   "pilsa",
+   "yeonhwanigan"
+  ],
+  "pickNotes": {
+   "geupseup": "1번(뒷모습, 망토 없음) — 2번은 망토",
+   "yeonhwan": "2번(사각 돗자리 돛) — 1번은 정크 돛",
+   "talchwi": "2번"
+  },
+  "stillOpen": [
+   "배경에 성문 문루가 남는 카드가 있다(탈취·반간 2번)",
+   "채택본 고품질 재생성은 아직"
+  ]
+ }
+}

@@ -1,0 +1,162 @@
+{
+ "schemaVersion": 1,
+ "note": "AI 생성 후보의 출처. 채택 여부는 adopted 로 사람이 적는다.",
+ "runs": [
+  {
+   "card": "infantry-column",
+   "generatedAt": "20260918T121120Z",
+   "provider": "OpenAI Images API",
+   "model": "gpt-image-1-mini",
+   "style": "token",
+   "size": "1024x1024",
+   "quality": "medium",
+   "prompt": "A game unit token: a small group of miniature soldiers seen from a high three-quarter isometric view, clean polished semi-realistic digital illustration, bright even daylight, vivid saturated colour, crisp edges, soft contact shadow on the ground directly beneath the group only, fully TRANSPARENT background, nothing else in the image, no ground plane beyond the shadow, no border, no text, no letters. STRICT PERIOD ACCURACY — Eastern Han / Three Kingdoms China, c. 184–280 CE, as seen in Han tomb figurines, murals and brick reliefs. CLOTHING: cross-collared robes and jackets wrapped right side over left (youren) tied with a cloth sash; common soldiers wear a knee-length belted tunic (often madder red) over loose trousers with cloth leg wraps and low cloth or leather shoes; officials and strategists wear long wide-sleeved robes (shenyi/pao) with layered collars. HEADWEAR: hair in a topknot; soldiers wear a flat cloth headcloth cap (ze), often red, or a simple low rounded iron or leather lamellar helmet made of laced plates with a neck guard and a smooth dome with NO spike, knob or finial on top; officers may have a small pheasant feather; civil officials wear a small black lacquered gauze cap (jinxian guan) or a plain headcloth (fujin). ARMOUR: dark lacquered iron or leather lamellar of small rectangular plates laced with cords, as a sleeveless cuirass with shoulder flaps or a short-sleeved tube-sleeve coat worn over the tunic, reaching the hips. WEAPONS: ji halberd (spear with a perpendicular side blade), long spears, perfectly STRAIGHT single-edged ring-pommel sabres (huanshou dao) with a ring at the pommel and no curve at all, straight double-edged jian, crossbows with bronze triggers, rectangular or double-arc wooden shields. HORSES: small steppe-type horses with simple padded saddles and NO stirrups — riders' legs hang free with no foot loops or straps of any kind. ARCHITECTURE: tawny rammed-earth walls with plain parapets, timber-frame halls and gate towers (que) with hip roofs whose eaves are STRAIGHT horizontal lines with flat, un-curved corners, grey cylindrical tiles and round eave tiles, plain ridge ends without ornaments, single-storey or a simple two-level gate tower, simple brackets, packed-earth courtyards. FURNITURE: people kneel or sit on woven mats and low platforms at low tables; writing is on bamboo slips and silk. FORBIDDEN ANACHRONISMS: no capes, cloaks, shawls or neck scarves, no Roman or Greek crested helmets, no tall horsehair plumes, no European plate or chainmail, no curved sabres, no guandao glaive, no chairs or high tables, no strongly upturned curling roof corners, no Ming/Qing brick fortresses or stone castles, no queue hairstyles, no Japanese samurai armour, no paper lanterns, no stirrups, no gunpowder. Scene: About twelve Han infantrymen marching in a narrow column three abreast, red tunics, dark lamellar cuirasses, red headcloth caps, long spears and ji halberds upright, one plain red banner with no characters at the front.",
+   "files": [
+    {
+     "path": "previews/battle-tokens/candidates/infantry-column/infantry-column-20260918T121120Z-token-medium-1.png",
+     "sha256": "d4c5a07413d6cd36aa4cb053d72f7858fd7a88a122d55bdf0b5677be25ede004"
+    },
+    {
+     "path": "previews/battle-tokens/candidates/infantry-column/infantry-column-20260918T121120Z-token-medium-2.png",
+     "sha256": "a0e00cf844b5cb2febd6beb3703734cff1ff0ef8e679cda533a93e09b632da27"
+    }
+   ],
+   "adopted": null
+  },
+  {
+   "card": "infantry-line",
+   "generatedAt": "20260918T121138Z",
+   "provider": "OpenAI Images API",
+   "model": "gpt-image-1-mini",
+   "style": "token",
+   "size": "1024x1024",
+   "quality": "medium",
+   "prompt": "A game unit token: a small group of miniature soldiers seen from a high three-quarter isometric view, clean polished semi-realistic digital illustration, bright even daylight, vivid saturated colour, crisp edges, soft contact shadow on the ground directly beneath the group only, fully TRANSPARENT background, nothing else in the image, no ground plane beyond the shadow, no border, no text, no letters. STRICT PERIOD ACCURACY — Eastern Han / Three Kingdoms China, c. 184–280 CE, as seen in Han tomb figurines, murals and brick reliefs. CLOTHING: cross-collared robes and jackets wrapped right side over left (youren) tied with a cloth sash; common soldiers wear a knee-length belted tunic (often madder red) over loose trousers with cloth leg wraps and low cloth or leather shoes; officials and strategists wear long wide-sleeved robes (shenyi/pao) with layered collars. HEADWEAR: hair in a topknot; soldiers wear a flat cloth headcloth cap (ze), often red, or a simple low rounded iron or leather lamellar helmet made of laced plates with a neck guard and a smooth dome with NO spike, knob or finial on top; officers may have a small pheasant feather; civil officials wear a small black lacquered gauze cap (jinxian guan) or a plain headcloth (fujin). ARMOUR: dark lacquered iron or leather lamellar of small rectangular plates laced with cords, as a sleeveless cuirass with shoulder flaps or a short-sleeved tube-sleeve coat worn over the tunic, reaching the hips. WEAPONS: ji halberd (spear with a perpendicular side blade), long spears, perfectly STRAIGHT single-edged ring-pommel sabres (huanshou dao) with a ring at the pommel and no curve at all, straight double-edged jian, crossbows with bronze triggers, rectangular or double-arc wooden shields. HORSES: small steppe-type horses with simple padded saddles and NO stirrups — riders' legs hang free with no foot loops or straps of any kind. ARCHITECTURE: tawny rammed-earth walls with plain parapets, timber-frame halls and gate towers (que) with hip roofs whose eaves are STRAIGHT horizontal lines with flat, un-curved corners, grey cylindrical tiles and round eave tiles, plain ridge ends without ornaments, single-storey or a simple two-level gate tower, simple brackets, packed-earth courtyards. FURNITURE: people kneel or sit on woven mats and low platforms at low tables; writing is on bamboo slips and silk. FORBIDDEN ANACHRONISMS: no capes, cloaks, shawls or neck scarves, no Roman or Greek crested helmets, no tall horsehair plumes, no European plate or chainmail, no curved sabres, no guandao glaive, no chairs or high tables, no strongly upturned curling roof corners, no Ming/Qing brick fortresses or stone castles, no queue hairstyles, no Japanese samurai armour, no paper lanterns, no stirrups, no gunpowder. Scene: About twelve Han infantrymen drawn up in a wide two-rank line facing left, blue-grey tunics, dark lamellar cuirasses, rectangular wooden shields forward, spears levelled, one plain blue banner with no characters.",
+   "files": [
+    {
+     "path": "previews/battle-tokens/candidates/infantry-line/infantry-line-20260918T121138Z-token-medium-1.png",
+     "sha256": "415828f82f0bc5605d9d2210acc70a2b903e75b7f6f392b3026f34a438f2c837"
+    },
+    {
+     "path": "previews/battle-tokens/candidates/infantry-line/infantry-line-20260918T121138Z-token-medium-2.png",
+     "sha256": "aa720b8c405976cffc865d47271719c18631d2735f2492070b89e67e83668bf9"
+    }
+   ],
+   "adopted": null
+  },
+  {
+   "card": "guard",
+   "generatedAt": "20260918T121155Z",
+   "provider": "OpenAI Images API",
+   "model": "gpt-image-1-mini",
+   "style": "token",
+   "size": "1024x1024",
+   "quality": "medium",
+   "prompt": "A game unit token: a small group of miniature soldiers seen from a high three-quarter isometric view, clean polished semi-realistic digital illustration, bright even daylight, vivid saturated colour, crisp edges, soft contact shadow on the ground directly beneath the group only, fully TRANSPARENT background, nothing else in the image, no ground plane beyond the shadow, no border, no text, no letters. STRICT PERIOD ACCURACY — Eastern Han / Three Kingdoms China, c. 184–280 CE, as seen in Han tomb figurines, murals and brick reliefs. CLOTHING: cross-collared robes and jackets wrapped right side over left (youren) tied with a cloth sash; common soldiers wear a knee-length belted tunic (often madder red) over loose trousers with cloth leg wraps and low cloth or leather shoes; officials and strategists wear long wide-sleeved robes (shenyi/pao) with layered collars. HEADWEAR: hair in a topknot; soldiers wear a flat cloth headcloth cap (ze), often red, or a simple low rounded iron or leather lamellar helmet made of laced plates with a neck guard and a smooth dome with NO spike, knob or finial on top; officers may have a small pheasant feather; civil officials wear a small black lacquered gauze cap (jinxian guan) or a plain headcloth (fujin). ARMOUR: dark lacquered iron or leather lamellar of small rectangular plates laced with cords, as a sleeveless cuirass with shoulder flaps or a short-sleeved tube-sleeve coat worn over the tunic, reaching the hips. WEAPONS: ji halberd (spear with a perpendicular side blade), long spears, perfectly STRAIGHT single-edged ring-pommel sabres (huanshou dao) with a ring at the pommel and no curve at all, straight double-edged jian, crossbows with bronze triggers, rectangular or double-arc wooden shields. HORSES: small steppe-type horses with simple padded saddles and NO stirrups — riders' legs hang free with no foot loops or straps of any kind. ARCHITECTURE: tawny rammed-earth walls with plain parapets, timber-frame halls and gate towers (que) with hip roofs whose eaves are STRAIGHT horizontal lines with flat, un-curved corners, grey cylindrical tiles and round eave tiles, plain ridge ends without ornaments, single-storey or a simple two-level gate tower, simple brackets, packed-earth courtyards. FURNITURE: people kneel or sit on woven mats and low platforms at low tables; writing is on bamboo slips and silk. FORBIDDEN ANACHRONISMS: no capes, cloaks, shawls or neck scarves, no Roman or Greek crested helmets, no tall horsehair plumes, no European plate or chainmail, no curved sabres, no guandao glaive, no chairs or high tables, no strongly upturned curling roof corners, no Ming/Qing brick fortresses or stone castles, no queue hairstyles, no Japanese samurai armour, no paper lanterns, no stirrups, no gunpowder. Scene: Six burly Han household guards in a tight cluster, red tunics and heavier dark lamellar with shoulder flaps, straight ring-pommel sabres and rectangular shields, alert stance.",
+   "files": [
+    {
+     "path": "previews/battle-tokens/candidates/guard/guard-20260918T121155Z-token-medium-1.png",
+     "sha256": "8e347a27afe1b5792ed458dd5c09659221a84a75c2d45471540c0a5ce1f6f91b"
+    },
+    {
+     "path": "previews/battle-tokens/candidates/guard/guard-20260918T121155Z-token-medium-2.png",
+     "sha256": "09e430f539fe509024bf52697c1d98f566399004cde1c488c222239ef7d9361a"
+    }
+   ],
+   "adopted": null
+  },
+  {
+   "card": "cavalry",
+   "generatedAt": "20260918T121212Z",
+   "provider": "OpenAI Images API",
+   "model": "gpt-image-1-mini",
+   "style": "token",
+   "size": "1024x1024",
+   "quality": "medium",
+   "prompt": "A game unit token: a small group of miniature soldiers seen from a high three-quarter isometric view, clean polished semi-realistic digital illustration, bright even daylight, vivid saturated colour, crisp edges, soft contact shadow on the ground directly beneath the group only, fully TRANSPARENT background, nothing else in the image, no ground plane beyond the shadow, no border, no text, no letters. STRICT PERIOD ACCURACY — Eastern Han / Three Kingdoms China, c. 184–280 CE, as seen in Han tomb figurines, murals and brick reliefs. CLOTHING: cross-collared robes and jackets wrapped right side over left (youren) tied with a cloth sash; common soldiers wear a knee-length belted tunic (often madder red) over loose trousers with cloth leg wraps and low cloth or leather shoes; officials and strategists wear long wide-sleeved robes (shenyi/pao) with layered collars. HEADWEAR: hair in a topknot; soldiers wear a flat cloth headcloth cap (ze), often red, or a simple low rounded iron or leather lamellar helmet made of laced plates with a neck guard and a smooth dome with NO spike, knob or finial on top; officers may have a small pheasant feather; civil officials wear a small black lacquered gauze cap (jinxian guan) or a plain headcloth (fujin). ARMOUR: dark lacquered iron or leather lamellar of small rectangular plates laced with cords, as a sleeveless cuirass with shoulder flaps or a short-sleeved tube-sleeve coat worn over the tunic, reaching the hips. WEAPONS: ji halberd (spear with a perpendicular side blade), long spears, perfectly STRAIGHT single-edged ring-pommel sabres (huanshou dao) with a ring at the pommel and no curve at all, straight double-edged jian, crossbows with bronze triggers, rectangular or double-arc wooden shields. HORSES: small steppe-type horses with simple padded saddles and NO stirrups — riders' legs hang free with no foot loops or straps of any kind. ARCHITECTURE: tawny rammed-earth walls with plain parapets, timber-frame halls and gate towers (que) with hip roofs whose eaves are STRAIGHT horizontal lines with flat, un-curved corners, grey cylindrical tiles and round eave tiles, plain ridge ends without ornaments, single-storey or a simple two-level gate tower, simple brackets, packed-earth courtyards. FURNITURE: people kneel or sit on woven mats and low platforms at low tables; writing is on bamboo slips and silk. FORBIDDEN ANACHRONISMS: no capes, cloaks, shawls or neck scarves, no Roman or Greek crested helmets, no tall horsehair plumes, no European plate or chainmail, no curved sabres, no guandao glaive, no chairs or high tables, no strongly upturned curling roof corners, no Ming/Qing brick fortresses or stone castles, no queue hairstyles, no Japanese samurai armour, no paper lanterns, no stirrups, no gunpowder. Scene: Eight Han light cavalrymen on small sturdy horses trotting in a loose wedge, padded saddles with no stirrups and legs hanging free, riders in tunics and lamellar with long spears, one plain banner with no characters.",
+   "files": [
+    {
+     "path": "previews/battle-tokens/candidates/cavalry/cavalry-20260918T121212Z-token-medium-1.png",
+     "sha256": "7a213bae55ac966d680a06dd82cef8da27e6d27e09671ef28d2f3192919c8803"
+    },
+    {
+     "path": "previews/battle-tokens/candidates/cavalry/cavalry-20260918T121212Z-token-medium-2.png",
+     "sha256": "533cb9da95280538286985870ea9f0e3eb52e05f613869fd4ce4b04061df9cd0"
+    }
+   ],
+   "adopted": null
+  },
+  {
+   "card": "crossbow",
+   "generatedAt": "20260918T121230Z",
+   "provider": "OpenAI Images API",
+   "model": "gpt-image-1-mini",
+   "style": "token",
+   "size": "1024x1024",
+   "quality": "medium",
+   "prompt": "A game unit token: a small group of miniature soldiers seen from a high three-quarter isometric view, clean polished semi-realistic digital illustration, bright even daylight, vivid saturated colour, crisp edges, soft contact shadow on the ground directly beneath the group only, fully TRANSPARENT background, nothing else in the image, no ground plane beyond the shadow, no border, no text, no letters. STRICT PERIOD ACCURACY — Eastern Han / Three Kingdoms China, c. 184–280 CE, as seen in Han tomb figurines, murals and brick reliefs. CLOTHING: cross-collared robes and jackets wrapped right side over left (youren) tied with a cloth sash; common soldiers wear a knee-length belted tunic (often madder red) over loose trousers with cloth leg wraps and low cloth or leather shoes; officials and strategists wear long wide-sleeved robes (shenyi/pao) with layered collars. HEADWEAR: hair in a topknot; soldiers wear a flat cloth headcloth cap (ze), often red, or a simple low rounded iron or leather lamellar helmet made of laced plates with a neck guard and a smooth dome with NO spike, knob or finial on top; officers may have a small pheasant feather; civil officials wear a small black lacquered gauze cap (jinxian guan) or a plain headcloth (fujin). ARMOUR: dark lacquered iron or leather lamellar of small rectangular plates laced with cords, as a sleeveless cuirass with shoulder flaps or a short-sleeved tube-sleeve coat worn over the tunic, reaching the hips. WEAPONS: ji halberd (spear with a perpendicular side blade), long spears, perfectly STRAIGHT single-edged ring-pommel sabres (huanshou dao) with a ring at the pommel and no curve at all, straight double-edged jian, crossbows with bronze triggers, rectangular or double-arc wooden shields. HORSES: small steppe-type horses with simple padded saddles and NO stirrups — riders' legs hang free with no foot loops or straps of any kind. ARCHITECTURE: tawny rammed-earth walls with plain parapets, timber-frame halls and gate towers (que) with hip roofs whose eaves are STRAIGHT horizontal lines with flat, un-curved corners, grey cylindrical tiles and round eave tiles, plain ridge ends without ornaments, single-storey or a simple two-level gate tower, simple brackets, packed-earth courtyards. FURNITURE: people kneel or sit on woven mats and low platforms at low tables; writing is on bamboo slips and silk. FORBIDDEN ANACHRONISMS: no capes, cloaks, shawls or neck scarves, no Roman or Greek crested helmets, no tall horsehair plumes, no European plate or chainmail, no curved sabres, no guandao glaive, no chairs or high tables, no strongly upturned curling roof corners, no Ming/Qing brick fortresses or stone castles, no queue hairstyles, no Japanese samurai armour, no paper lanterns, no stirrups, no gunpowder. Scene: Ten Han crossbowmen kneeling and standing in two ranks aiming crossbows with bronze triggers, tunics and headcloth caps, quivers of bolts at the hip.",
+   "files": [
+    {
+     "path": "previews/battle-tokens/candidates/crossbow/crossbow-20260918T121230Z-token-medium-1.png",
+     "sha256": "fa7d77a2e6e1991e291bda9aa6079026567cebccf43778d8bd27b6358cce553a"
+    },
+    {
+     "path": "previews/battle-tokens/candidates/crossbow/crossbow-20260918T121230Z-token-medium-2.png",
+     "sha256": "74bf9a9bceac9b7b9032cf57e4fcadf14a750c2d8ad086c440b218403e80fd4b"
+    }
+   ],
+   "adopted": null
+  },
+  {
+   "card": "infantry-column",
+   "generatedAt": "20260918T121309Z",
+   "provider": "OpenAI Images API",
+   "model": "gpt-image-1-mini",
+   "style": "token",
+   "size": "1024x1024",
+   "quality": "medium",
+   "prompt": "A game unit token: a small group of miniature soldiers seen from a high three-quarter isometric view, clean polished semi-realistic digital illustration, bright even daylight, vivid saturated colour, crisp edges, NO shadow and NO ground of any kind — the figures float on a fully TRANSPARENT background with nothing beneath them, nothing else in the image, no border, no text, no letters. STRICT PERIOD ACCURACY — Eastern Han / Three Kingdoms China, c. 184–280 CE, as seen in Han tomb figurines, murals and brick reliefs. CLOTHING: cross-collared robes and jackets wrapped right side over left (youren) tied with a cloth sash; common soldiers wear a knee-length belted tunic (often madder red) over loose trousers with cloth leg wraps and low cloth or leather shoes; officials and strategists wear long wide-sleeved robes (shenyi/pao) with layered collars. HEADWEAR: hair in a topknot; soldiers wear a flat cloth headcloth cap (ze), often red, or a simple low rounded iron or leather lamellar helmet made of laced plates with a neck guard and a smooth dome with NO spike, knob or finial on top; officers may have a small pheasant feather; civil officials wear a small black lacquered gauze cap (jinxian guan) or a plain headcloth (fujin). ARMOUR: dark lacquered iron or leather lamellar of small rectangular plates laced with cords, as a sleeveless cuirass with shoulder flaps or a short-sleeved tube-sleeve coat worn over the tunic, reaching the hips. WEAPONS: ji halberd (spear with a perpendicular side blade), long spears, perfectly STRAIGHT single-edged ring-pommel sabres (huanshou dao) with a ring at the pommel and no curve at all, straight double-edged jian, crossbows with bronze triggers, rectangular or double-arc wooden shields. HORSES: small steppe-type horses with simple padded saddles and NO stirrups — riders' legs hang free with no foot loops or straps of any kind. ARCHITECTURE: tawny rammed-earth walls with plain parapets, timber-frame halls and gate towers (que) with hip roofs whose eaves are STRAIGHT horizontal lines with flat, un-curved corners, grey cylindrical tiles and round eave tiles, plain ridge ends without ornaments, single-storey or a simple two-level gate tower, simple brackets, packed-earth courtyards. FURNITURE: people kneel or sit on woven mats and low platforms at low tables; writing is on bamboo slips and silk. FORBIDDEN ANACHRONISMS: no capes, cloaks, shawls or neck scarves, no Roman or Greek crested helmets, no tall horsehair plumes, no European plate or chainmail, no curved sabres, no guandao glaive, no chairs or high tables, no strongly upturned curling roof corners, no Ming/Qing brick fortresses or stone castles, no queue hairstyles, no Japanese samurai armour, no paper lanterns, no stirrups, no gunpowder. Scene: About twelve Han infantrymen marching in a narrow column three abreast, red tunics, dark lamellar cuirasses, red headcloth caps, long spears and ji halberds upright, one plain red banner with no characters at the front.",
+   "files": [
+    {
+     "path": "previews/battle-tokens/candidates/infantry-column/infantry-column-20260918T121309Z-token-medium-1.png",
+     "sha256": "bff4c5b6f42320fac71623cf31398168a471a95bb9a0c86c7348f0e0cffa7730"
+    }
+   ],
+   "adopted": null
+  },
+  {
+   "card": "infantry-line",
+   "generatedAt": "20260918T121326Z",
+   "provider": "OpenAI Images API",
+   "model": "gpt-image-1-mini",
+   "style": "token",
+   "size": "1024x1024",
+   "quality": "medium",
+   "prompt": "A game unit token: a small group of miniature soldiers seen from a high three-quarter isometric view, clean polished semi-realistic digital illustration, bright even daylight, vivid saturated colour, crisp edges, NO shadow and NO ground of any kind — the figures float on a fully TRANSPARENT background with nothing beneath them, nothing else in the image, no border, no text, no letters. STRICT PERIOD ACCURACY — Eastern Han / Three Kingdoms China, c. 184–280 CE, as seen in Han tomb figurines, murals and brick reliefs. CLOTHING: cross-collared robes and jackets wrapped right side over left (youren) tied with a cloth sash; common soldiers wear a knee-length belted tunic (often madder red) over loose trousers with cloth leg wraps and low cloth or leather shoes; officials and strategists wear long wide-sleeved robes (shenyi/pao) with layered collars. HEADWEAR: hair in a topknot; soldiers wear a flat cloth headcloth cap (ze), often red, or a simple low rounded iron or leather lamellar helmet made of laced plates with a neck guard and a smooth dome with NO spike, knob or finial on top; officers may have a small pheasant feather; civil officials wear a small black lacquered gauze cap (jinxian guan) or a plain headcloth (fujin). ARMOUR: dark lacquered iron or leather lamellar of small rectangular plates laced with cords, as a sleeveless cuirass with shoulder flaps or a short-sleeved tube-sleeve coat worn over the tunic, reaching the hips. WEAPONS: ji halberd (spear with a perpendicular side blade), long spears, perfectly STRAIGHT single-edged ring-pommel sabres (huanshou dao) with a ring at the pommel and no curve at all, straight double-edged jian, crossbows with bronze triggers, rectangular or double-arc wooden shields. HORSES: small steppe-type horses with simple padded saddles and NO stirrups — riders' legs hang free with no foot loops or straps of any kind. ARCHITECTURE: tawny rammed-earth walls with plain parapets, timber-frame halls and gate towers (que) with hip roofs whose eaves are STRAIGHT horizontal lines with flat, un-curved corners, grey cylindrical tiles and round eave tiles, plain ridge ends without ornaments, single-storey or a simple two-level gate tower, simple brackets, packed-earth courtyards. FURNITURE: people kneel or sit on woven mats and low platforms at low tables; writing is on bamboo slips and silk. FORBIDDEN ANACHRONISMS: no capes, cloaks, shawls or neck scarves, no Roman or Greek crested helmets, no tall horsehair plumes, no European plate or chainmail, no curved sabres, no guandao glaive, no chairs or high tables, no strongly upturned curling roof corners, no Ming/Qing brick fortresses or stone castles, no queue hairstyles, no Japanese samurai armour, no paper lanterns, no stirrups, no gunpowder. Scene: About twelve Han infantrymen drawn up in a wide two-rank line facing left, blue-grey tunics, dark lamellar cuirasses, rectangular wooden shields forward, spears levelled, one plain blue banner with no characters.",
+   "files": [
+    {
+     "path": "previews/battle-tokens/candidates/infantry-line/infantry-line-20260918T121326Z-token-medium-1.png",
+     "sha256": "91819670552b74ad68416968b000adfe142d79511ff95ae33b71de5baccd3f19"
+    }
+   ],
+   "adopted": null
+  },
+  {
+   "card": "guard",
+   "generatedAt": "20260918T121344Z",
+   "provider": "OpenAI Images API",
+   "model": "gpt-image-1-mini",
+   "style": "token",
+   "size": "1024x1024",
+   "quality": "medium",
+   "prompt": "A game unit token: a small group of miniature soldiers seen from a high three-quarter isometric view, clean polished semi-realistic digital illustration, bright even daylight, vivid saturated colour, crisp edges, NO shadow and NO ground of any kind — the figures float on a fully TRANSPARENT background with nothing beneath them, nothing else in the image, no border, no text, no letters. STRICT PERIOD ACCURACY — Eastern Han / Three Kingdoms China, c. 184–280 CE, as seen in Han tomb figurines, murals and brick reliefs. CLOTHING: cross-collared robes and jackets wrapped right side over left (youren) tied with a cloth sash; common soldiers wear a knee-length belted tunic (often madder red) over loose trousers with cloth leg wraps and low cloth or leather shoes; officials and strategists wear long wide-sleeved robes (shenyi/pao) with layered collars. HEADWEAR: hair in a topknot; soldiers wear a flat cloth headcloth cap (ze), often red, or a simple low rounded iron or leather lamellar helmet made of laced plates with a neck guard and a smooth dome with NO spike, knob or finial on top; officers may have a small pheasant feather; civil officials wear a small black lacquered gauze cap (jinxian guan) or a plain headcloth (fujin). ARMOUR: dark lacquered iron or leather lamellar of small rectangular plates laced with cords, as a sleeveless cuirass with shoulder flaps or a short-sleeved tube-sleeve coat worn over the tunic, reaching the hips. WEAPONS: ji halberd (spear with a perpendicular side blade), long spears, perfectly STRAIGHT single-edged ring-pommel sabres (huanshou dao) with a ring at the pommel and no curve at all, straight double-edged jian, crossbows with bronze triggers, rectangular or double-arc wooden shields. HORSES: small steppe-type horses with simple padded saddles and NO stirrups — riders' legs hang free with no foot loops or straps of any kind. ARCHITECTURE: tawny rammed-earth walls with plain parapets, timber-frame halls and gate towers (que) with hip roofs whose eaves are STRAIGHT horizontal lines with flat, un-curved corners, grey cylindrical tiles and round eave tiles, plain ridge ends without ornaments, single-storey or a simple two-level gate tower, simple brackets, packed-earth courtyards. FURNITURE: people kneel or sit on woven mats and low platforms at low tables; writing is on bamboo slips and silk. FORBIDDEN ANACHRONISMS: no capes, cloaks, shawls or neck scarves, no Roman or Greek crested helmets, no tall horsehair plumes, no European plate or chainmail, no curved sabres, no guandao glaive, no chairs or high tables, no strongly upturned curling roof corners, no Ming/Qing brick fortresses or stone castles, no queue hairstyles, no Japanese samurai armour, no paper lanterns, no stirrups, no gunpowder. Scene: Six burly Han household guards in a tight cluster, red tunics and heavier dark lamellar with shoulder flaps, straight ring-pommel sabres and rectangular shields, alert stance.",
+   "files": [
+    {
+     "path": "previews/battle-tokens/candidates/guard/guard-20260918T121344Z-token-medium-1.png",
+     "sha256": "0ff70e7d7977780e87e631bcbafe251cbc6db8914386ab63e0dfd874776249db"
+    }
+   ],
+   "adopted": null
+  }
+ ]
+}

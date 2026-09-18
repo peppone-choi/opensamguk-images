@@ -1,0 +1,36 @@
+{
+ "schemaVersion": 1,
+ "note": "전투 리플레이에서 부대를 나타내는 말(토큰). 투명 배경, 3/4 부감 미니어처 군상. 고증 규칙은 stratagem-cards/design.json 의 periodRules 를 그대로 쓴다.",
+ "model": "gpt-image-1-mini",
+ "size": "1024x1024",
+ "background": "transparent",
+ "styleHead": "A game unit token: a small group of miniature soldiers seen from a high three-quarter isometric view, clean polished semi-realistic digital illustration, bright even daylight, vivid saturated colour, crisp edges, NO shadow and NO ground of any kind — the figures float on a fully TRANSPARENT background with nothing beneath them, nothing else in the image, no border, no text, no letters.",
+ "periodRules": "STRICT PERIOD ACCURACY — Eastern Han / Three Kingdoms China, c. 184–280 CE, as seen in Han tomb figurines, murals and brick reliefs. CLOTHING: cross-collared robes and jackets wrapped right side over left (youren) tied with a cloth sash; common soldiers wear a knee-length belted tunic (often madder red) over loose trousers with cloth leg wraps and low cloth or leather shoes; officials and strategists wear long wide-sleeved robes (shenyi/pao) with layered collars. HEADWEAR: hair in a topknot; soldiers wear a flat cloth headcloth cap (ze), often red, or a simple low rounded iron or leather lamellar helmet made of laced plates with a neck guard and a smooth dome with NO spike, knob or finial on top; officers may have a small pheasant feather; civil officials wear a small black lacquered gauze cap (jinxian guan) or a plain headcloth (fujin). ARMOUR: dark lacquered iron or leather lamellar of small rectangular plates laced with cords, as a sleeveless cuirass with shoulder flaps or a short-sleeved tube-sleeve coat worn over the tunic, reaching the hips. WEAPONS: ji halberd (spear with a perpendicular side blade), long spears, perfectly STRAIGHT single-edged ring-pommel sabres (huanshou dao) with a ring at the pommel and no curve at all, straight double-edged jian, crossbows with bronze triggers, rectangular or double-arc wooden shields. HORSES: small steppe-type horses with simple padded saddles and NO stirrups — riders' legs hang free with no foot loops or straps of any kind. ARCHITECTURE: tawny rammed-earth walls with plain parapets, timber-frame halls and gate towers (que) with hip roofs whose eaves are STRAIGHT horizontal lines with flat, un-curved corners, grey cylindrical tiles and round eave tiles, plain ridge ends without ornaments, single-storey or a simple two-level gate tower, simple brackets, packed-earth courtyards. FURNITURE: people kneel or sit on woven mats and low platforms at low tables; writing is on bamboo slips and silk. FORBIDDEN ANACHRONISMS: no capes, cloaks, shawls or neck scarves, no Roman or Greek crested helmets, no tall horsehair plumes, no European plate or chainmail, no curved sabres, no guandao glaive, no chairs or high tables, no strongly upturned curling roof corners, no Ming/Qing brick fortresses or stone castles, no queue hairstyles, no Japanese samurai armour, no paper lanterns, no stirrups, no gunpowder.",
+ "tokens": [
+  {
+   "id": "infantry-column",
+   "nameKo": "보병 · 종대",
+   "scene": "About twelve Han infantrymen marching in a narrow column three abreast, red tunics, dark lamellar cuirasses, red headcloth caps, long spears and ji halberds upright, one plain red banner with no characters at the front."
+  },
+  {
+   "id": "infantry-line",
+   "nameKo": "보병 · 선형",
+   "scene": "About twelve Han infantrymen drawn up in a wide two-rank line facing left, blue-grey tunics, dark lamellar cuirasses, rectangular wooden shields forward, spears levelled, one plain blue banner with no characters."
+  },
+  {
+   "id": "guard",
+   "nameKo": "호위 · 부곡",
+   "scene": "Six burly Han household guards in a tight cluster, red tunics and heavier dark lamellar with shoulder flaps, straight ring-pommel sabres and rectangular shields, alert stance."
+  },
+  {
+   "id": "cavalry",
+   "nameKo": "기병",
+   "scene": "Eight Han light cavalrymen on small sturdy horses trotting in a loose wedge, padded saddles with no stirrups and legs hanging free, riders in tunics and lamellar with long spears, one plain banner with no characters."
+  },
+  {
+   "id": "crossbow",
+   "nameKo": "쇠뇌병",
+   "scene": "Ten Han crossbowmen kneeling and standing in two ranks aiming crossbows with bronze triggers, tunics and headcloth caps, quivers of bolts at the hip."
+  }
+ ]
+}
