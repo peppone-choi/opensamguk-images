@@ -3,13 +3,171 @@
  "note": "계책 카드 그림의 정본 명세. 그림에는 글자·테두리·방식/비용 표식을 넣지 않는다 — 카드 이름과 표식은 UI 가 그린다. 장면 문구는 opensamguk docs/superpowers/specs/2026-09-17-stratagem-card-catalog-draft.md 의 효과 방향·출처에서 옮겼다. 실존 작가·다른 게임의 화풍을 지목하지 않는다.",
  "model": "gpt-image-1-mini",
  "size": "1024x1536",
- "styleHead": "East Asian ink-wash illustration for a strategy game card, late Han dynasty China around 200 CE. Monochrome sumi ink on aged warm paper with a single restrained accent of antique bronze-gold. Dry-brush texture, strong silhouette, generous empty space in the upper third, dark vignette at the edges so it sits on a near-black interface. Vertical 2:3 composition, single clear subject, no border, no frame, no text, no letters, no calligraphy, no seals, no watermark, no modern objects.",
  "cards": [
-  {"id": "maebok", "nameKo": "매복", "scene": "Soldiers with spears crouching hidden among tall reeds and wooded hills beside a narrow mountain road, seen from behind them, an unsuspecting column of troops far below on the road."},
-  {"id": "uibyeong", "nameKo": "의병(疑兵)", "scene": "A hillside ridge lined with many banners and straw dummies and campfire smoke to fake a large army, only a handful of real soldiers tending them."},
-  {"id": "hwagye", "nameKo": "화계", "scene": "A county granary and timber stockpile burning at night, flames rendered in the bronze-gold accent, a lone figure with a torch slipping away in the foreground."},
-  {"id": "cheopbo", "nameKo": "첩보", "scene": "A plain-clothed scout on a wooded hill overlooking a walled town and its army camp at dusk, counting tents, a bamboo slip tucked in his sash."},
-  {"id": "gyeonbyeok", "nameKo": "견벽", "scene": "A rammed-earth fortress wall with its gate barred and defenders standing firm behind battlements, fields outside stripped bare, a besieging host small in the distance."},
-  {"id": "ganpa", "nameKo": "간파", "scene": "A calm strategist in scholar's robes seated at a low table with a field map, one hand raised, his gaze piercing through drifting smoke that reveals hidden enemy soldiers behind it."}
- ]
+  {
+   "id": "maebok",
+   "nameKo": "매복",
+   "scene": "Soldiers with spears crouching hidden among tall reeds and wooded hills beside a narrow mountain road, seen from behind them, an unsuspecting column of troops far below on the road."
+  },
+  {
+   "id": "uibyeong",
+   "nameKo": "의병(疑兵)",
+   "scene": "A hillside ridge lined with many plain blank cloth banners and straw dummies in armour and campfire smoke to fake a large army, only a handful of real soldiers tending them; the banners are blank with no characters or symbols."
+  },
+  {
+   "id": "hwagye",
+   "nameKo": "화계",
+   "scene": "A county granary and timber stockpile burning at night, flames rendered in the bronze-gold accent, a lone figure with a torch slipping away in the foreground."
+  },
+  {
+   "id": "cheopbo",
+   "nameKo": "첩보",
+   "scene": "A plain-clothed scout on a wooded hill overlooking a walled town and its army camp at dusk, counting tents, a bamboo slip tucked in his sash."
+  },
+  {
+   "id": "gyeonbyeok",
+   "nameKo": "견벽",
+   "scene": "A Han dynasty rammed-earth city wall: massive sloped tawny earthen rampart with visible horizontal tamped layers, NO stone blocks and NO European crenellated towers, a timber gate tower with a tiled hip roof above a barred wooden gate, defenders with spears and crossbows along a plain earthen parapet, fields outside stripped bare, a besieging host small in the distance."
+  },
+  {
+   "id": "ganpa",
+   "nameKo": "간파",
+   "scene": "A calm strategist in scholar's robes seated at a low table with a field map, one hand raised, his gaze piercing through drifting smoke that reveals hidden enemy soldiers behind it."
+  },
+  {
+   "id": "gunryang",
+   "nameKo": "군량 습격",
+   "scene": "Light cavalry raiding a supply convoy of ox carts on a country road at night, grain sacks catching fire, drivers fleeing."
+  },
+  {
+   "id": "sugong",
+   "nameKo": "수공",
+   "scene": "Soldiers breaching a river dike with spades so a torrent of water rushes toward a besieged earthen-walled city in the low ground beyond."
+  },
+  {
+   "id": "yueon",
+   "nameKo": "유언",
+   "scene": "A crowded county market where a stranger whispers to uneasy townsfolk, heads turning, anxious murmuring faces, an official's hall in the background."
+  },
+  {
+   "id": "pagoe",
+   "nameKo": "파괴",
+   "scene": "Saboteurs at night prying apart the timber scaffolding and tamped-earth of a half-built rampart with iron bars and axes, tools scattered."
+  },
+  {
+   "id": "talchwi",
+   "nameKo": "탈취",
+   "scene": "Raiders on horseback leading away pack horses loaded with grain sacks and strings of bronze coins from a county storehouse at dawn."
+  },
+  {
+   "id": "yaseup",
+   "nameKo": "결사대 야습",
+   "scene": "A small band of picked warriors with halberds charging out of darkness into a sleeping enemy camp, tents and startled sentries lit by a few torches."
+  },
+  {
+   "id": "hwagong",
+   "nameKo": "화공",
+   "scene": "Fire ships drifting downwind into a moored fleet of wooden war junks on a wide river at night, sails ablaze, reeds on the bank."
+  },
+  {
+   "id": "sahang",
+   "nameKo": "사항(詐降)",
+   "scene": "A small boat under a plain flag rowing toward an enemy river camp, a kneeling envoy at the prow offering a sealed bamboo letter, hidden blades under the deck mats."
+  },
+  {
+   "id": "goyuk",
+   "nameKo": "고육계",
+   "scene": "An old general bound and beaten with rods before an assembled staff in a command tent, officers looking away in distress, the commander stern and deliberate."
+  },
+  {
+   "id": "yeonhwan",
+   "nameKo": "연환계(선박)",
+   "scene": "Large war junks chained together side by side with heavy iron chains and planks across a wide river, soldiers walking steadily across the joined decks."
+  },
+  {
+   "id": "chajeon",
+   "nameKo": "차전(借箭)",
+   "scene": "Straw-covered boats in thick river fog bristling with hundreds of arrows shot from an unseen shore, a calm figure seated inside under a canopy."
+  },
+  {
+   "id": "gongseong",
+   "nameKo": "공성계",
+   "scene": "A lone strategist calmly playing a guqin zither atop an open, undefended earthen city gate, two boys sweeping the road below, a vast wary army halted in the distance."
+  },
+  {
+   "id": "pilsa",
+   "nameKo": "필사즉생",
+   "scene": "A commander smashing cooking pots and burning the boats behind his assembled army at a riverbank, soldiers raising weapons with grim resolve."
+  },
+  {
+   "id": "dunjeon",
+   "nameKo": "둔전령",
+   "scene": "Soldiers in plain tunics ploughing fields with oxen beside a military camp, spears stacked at the field edge, granaries under construction."
+  },
+  {
+   "id": "chomu",
+   "nameKo": "초무",
+   "scene": "An official on a low platform welcoming a long line of ragged refugees and surrendered bandits laying down their weapons, clerks registering households on bamboo slips."
+  },
+  {
+   "id": "guhyul",
+   "nameKo": "구휼",
+   "scene": "Officials distributing grain from an opened granary to famished villagers after a flood, children holding bowls, broken fields behind."
+  },
+  {
+   "id": "hosi",
+   "nameKo": "호시(互市)",
+   "scene": "A frontier market where Han merchants trade bolts of silk and coins for steppe horses with nomad herders in fur caps, a watchtower on the ridge."
+  },
+  {
+   "id": "baekseong",
+   "nameKo": "백성동원",
+   "scene": "Townspeople of all ages carrying baskets of earth and timber to raise a city's earthen rampart, a magistrate directing the work with a raised arm."
+  },
+  {
+   "id": "uibyeongmojip",
+   "nameKo": "의병모집",
+   "scene": "Farmers and hunters gathering under a plain banner in a village square to enlist, a local leader handing out spears, women bringing provisions."
+  },
+  {
+   "id": "igan",
+   "nameKo": "이간",
+   "scene": "Two generals in a command tent eyeing each other with suspicion over a letter with blotted-out lines, a messenger withdrawing into shadow."
+  },
+  {
+   "id": "yeonhwanigan",
+   "nameKo": "연환 이간",
+   "scene": "A graceful court lady standing between a burly tyrant and a young warrior in a lamplit pavilion, each man's hand on his sword, jealousy in their faces."
+  },
+  {
+   "id": "bangan",
+   "nameKo": "반간",
+   "scene": "A commander pretending to sleep at his desk while an enemy spy steals a forged letter left deliberately in view, a knowing half-smile on the commander's face."
+  },
+  {
+   "id": "cheongeo",
+   "nameKo": "천거",
+   "scene": "A senior minister presenting a modest young scholar to a lord seated in a hall, a memorial of recommendation on a tray, courtiers watching."
+  },
+  {
+   "id": "injil",
+   "nameKo": "인질",
+   "scene": "A young boy in fine robes being handed over with his attendants at a city gate to a waiting escort, his father bowing stiffly, guards on both sides."
+  },
+  {
+   "id": "geupseup",
+   "nameKo": "급습",
+   "scene": "A column of cavalry riding hard through the night on a forced march, torches streaming, a distant unsuspecting border fort on the horizon."
+  },
+  {
+   "id": "ihogyeongsik",
+   "nameKo": "이호경식",
+   "scene": "A cunning adviser watching from a hill as two rival armies are lured into fighting each other in the valley below, a tiger motif banner on each side without any characters."
+  }
+ ],
+ "styles": {
+  "ink": "East Asian ink-wash illustration for a strategy game card, late Han dynasty China around 200 CE. Monochrome sumi ink on aged warm paper with a single restrained accent of antique bronze-gold. Dry-brush texture, strong silhouette, generous empty space in the upper third, dark vignette at the edges so it sits on a near-black interface. Vertical 2:3 composition, single clear subject, no border, no frame, no text, no letters, no calligraphy, no seals, no watermark, no modern objects.",
+  "color": "East Asian painted illustration for a strategy game card, late Han dynasty China around 200 CE. Full colour in traditional mineral pigments on aged silk: malachite green, azurite blue, cinnabar red, ochre and warm earth tones, with ink outlines and a restrained antique bronze-gold highlight. Rich but muted and slightly desaturated, painterly brushwork, dramatic low-key lighting, dark vignette at the edges so it sits on a near-black interface. Vertical 2:3 composition, single clear subject, no border, no frame, no text, no letters, no calligraphy, no seals, no watermark, no modern objects."
+ },
+ "defaultStyle": "ink"
 }

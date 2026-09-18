@@ -28,8 +28,8 @@ OUT = ROOT / "previews/stratagem-cards/candidates"
 ENDPOINT = "https://api.openai.com/v1/images/generations"
 
 
-def prompt_for(design: dict, card: dict) -> str:
-    return f"{design['styleHead']} Scene: {card['scene']}"
+def prompt_for(design: dict, card: dict, style: str) -> str:
+    return f"{design['styles'][style]} Scene: {card['scene']}"
 
 
 def generate(key: str, model: str, prompt: str, size: str, quality: str, n: int) -> list[bytes]:
@@ -50,9 +50,13 @@ def main(argv=None) -> int:
     ap.add_argument("--cards", default="", help="쉼표로 나눈 card id (기본: 전부)")
     ap.add_argument("--n", type=int, default=4)
     ap.add_argument("--quality", default="low", choices=["low", "medium", "high"])
+    ap.add_argument("--style", default=None, help="design.json styles 의 키 (기본: defaultStyle)")
     ap.add_argument("--dry-run", action="store_true")
     args = ap.parse_args(argv)
     design = json.loads(DESIGN.read_text(encoding="utf-8"))
+    style = args.style or design["defaultStyle"]
+    if style not in design["styles"]:
+        raise SystemExit(f"design.json 에 없는 style: {style}")
     wanted = {c for c in args.cards.split(",") if c}
     unknown = wanted - {c["id"] for c in design["cards"]}
     if unknown:
@@ -60,7 +64,7 @@ def main(argv=None) -> int:
     cards = [c for c in design["cards"] if not wanted or c["id"] in wanted]
     if args.dry_run:
         for c in cards:
-            print(f"[{c['id']}] {prompt_for(design, c)}\n")
+            print(f"[{c['id']}] {prompt_for(design, c, style)}\n")
         return 0
     key = os.environ.get("OPENAI_API_KEY", "").strip()
     if not key:
@@ -68,18 +72,18 @@ def main(argv=None) -> int:
     ledger = json.loads(PROVENANCE.read_text(encoding="utf-8")) if PROVENANCE.exists() else {
         "schemaVersion": 1, "note": "AI 생성 후보의 출처. 채택 여부는 adopted 로 사람이 적는다.", "runs": []}
     for c in cards:
-        prompt = prompt_for(design, c)
+        prompt = prompt_for(design, c, style)
         images = generate(key, design["model"], prompt, design["size"], args.quality, args.n)
         stamp = datetime.datetime.now(datetime.timezone.utc).strftime("%Y%m%dT%H%M%SZ")
         folder = OUT / c["id"]
         folder.mkdir(parents=True, exist_ok=True)
         files = []
         for i, raw in enumerate(images, start=1):
-            path = folder / f"{c['id']}-{stamp}-{args.quality}-{i}.png"
+            path = folder / f"{c['id']}-{stamp}-{style}-{args.quality}-{i}.png"
             path.write_bytes(raw)
             files.append({"path": str(path.relative_to(ROOT)), "sha256": hashlib.sha256(raw).hexdigest()})
         ledger["runs"].append({"card": c["id"], "generatedAt": stamp, "provider": "OpenAI Images API",
-                               "model": design["model"], "size": design["size"], "quality": args.quality,
+                               "model": design["model"], "style": style, "size": design["size"], "quality": args.quality,
                                "prompt": prompt, "files": files, "adopted": None})
         PROVENANCE.write_text(json.dumps(ledger, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
         print(f"{c['id']}: {len(files)} candidates", file=sys.stderr)

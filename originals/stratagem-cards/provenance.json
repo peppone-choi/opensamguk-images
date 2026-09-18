@@ -181,6 +181,132 @@
     }
    ],
    "adopted": null
+  },
+  {
+   "card": "maebok",
+   "generatedAt": "20260918T114815Z",
+   "provider": "OpenAI Images API",
+   "model": "gpt-image-1-mini",
+   "style": "color",
+   "size": "1024x1536",
+   "quality": "low",
+   "prompt": "East Asian painted illustration for a strategy game card, late Han dynasty China around 200 CE. Full colour in traditional mineral pigments on aged silk: malachite green, azurite blue, cinnabar red, ochre and warm earth tones, with ink outlines and a restrained antique bronze-gold highlight. Rich but muted and slightly desaturated, painterly brushwork, dramatic low-key lighting, dark vignette at the edges so it sits on a near-black interface. Vertical 2:3 composition, single clear subject, no border, no frame, no text, no letters, no calligraphy, no seals, no watermark, no modern objects. Scene: Soldiers with spears crouching hidden among tall reeds and wooded hills beside a narrow mountain road, seen from behind them, an unsuspecting column of troops far below on the road.",
+   "files": [
+    {
+     "path": "previews/stratagem-cards/candidates/maebok/maebok-20260918T114815Z-color-low-1.png",
+     "sha256": "e13359462f2b025a5f727c47265e26202143f6b516319e406fc4dfd3f784a01d"
+    },
+    {
+     "path": "previews/stratagem-cards/candidates/maebok/maebok-20260918T114815Z-color-low-2.png",
+     "sha256": "462cf26e85745a6d0a6d4e54591afed8d4bd901adac809d91666a918962ed920"
+    }
+   ],
+   "adopted": null
+  },
+  {
+   "card": "hwagye",
+   "generatedAt": "20260918T114826Z",
+   "provider": "OpenAI Images API",
+   "model": "gpt-image-1-mini",
+   "style": "color",
+   "size": "1024x1536",
+   "quality": "low",
+   "prompt": "East Asian painted illustration for a strategy game card, late Han dynasty China around 200 CE. Full colour in traditional mineral pigments on aged silk: malachite green, azurite blue, cinnabar red, ochre and warm earth tones, with ink outlines and a restrained antique bronze-gold highlight. Rich but muted and slightly desaturated, painterly brushwork, dramatic low-key lighting, dark vignette at the edges so it sits on a near-black interface. Vertical 2:3 composition, single clear subject, no border, no frame, no text, no letters, no calligraphy, no seals, no watermark, no modern objects. Scene: A county granary and timber stockpile burning at night, flames rendered in the bronze-gold accent, a lone figure with a torch slipping away in the foreground.",
+   "files": [
+    {
+     "path": "previews/stratagem-cards/candidates/hwagye/hwagye-20260918T114826Z-color-low-1.png",
+     "sha256": "8e620581ee4f5d55f684e17d22ecf1980f596f16863093183a5cf4f6c6d0e5a6"
+    },
+    {
+     "path": "previews/stratagem-cards/candidates/hwagye/hwagye-20260918T114826Z-color-low-2.png",
+     "sha256": "f61e48f5ecbc40ebfe834b7340eb09c7669ce9e8c741e189181356d273a43c08"
+    }
+   ],
+   "adopted": null
+  },
+  {
+   "card": "gyeonbyeok",
+   "generatedAt": "20260918T114839Z",
+   "provider": "OpenAI Images API",
+   "model": "gpt-image-1-mini",
+   "style": "color",
+   "size": "1024x1536",
+   "quality": "low",
+   "prompt": "East Asian painted illustration for a strategy game card, late Han dynasty China around 200 CE. Full colour in traditional mineral pigments on aged silk: malachite green, azurite blue, cinnabar red, ochre and warm earth tones, with ink outlines and a restrained antique bronze-gold highlight. Rich but muted and slightly desaturated, painterly brushwork, dramatic low-key lighting, dark vignette at the edges so it sits on a near-black interface. Vertical 2:3 composition, single clear subject, no border, no frame, no text, no letters, no calligraphy, no seals, no watermark, no modern objects. Scene: A Han dynasty rammed-earth city wall: massive sloped tawny earthen rampart with visible horizontal tamped layers, NO stone blocks and NO European crenellated towers, a timber gate tower with a tiled hip roof above a barred wooden gate, defenders with spears and crossbows along a plain earthen parapet, fields outside stripped bare, a besieging host small in the distance.",
+   "files": [
+    {
+     "path": "previews/stratagem-cards/candidates/gyeonbyeok/gyeonbyeok-20260918T114839Z-color-low-1.png",
+     "sha256": "4254b01990e634243474779acecac7a3e805c0054da4337930b1dbe375f443e9"
+    },
+    {
+     "path": "previews/stratagem-cards/candidates/gyeonbyeok/gyeonbyeok-20260918T114839Z-color-low-2.png",
+     "sha256": "b4f7796fd16e53b433a7f78fc50263e316792513debe5277d5d512c5d8e68bf2"
+    }
+   ],
+   "adopted": null
+  },
+  {
+   "card": "ganpa",
+   "generatedAt": "20260918T114851Z",
+   "provider": "OpenAI Images API",
+   "model": "gpt-image-1-mini",
+   "style": "color",
+   "size": "1024x1536",
+   "quality": "low",
+   "prompt": "East Asian painted illustration for a strategy game card, late Han dynasty China around 200 CE. Full colour in traditional mineral pigments on aged silk: malachite green, azurite blue, cinnabar red, ochre and warm earth tones, with ink outlines and a restrained antique bronze-gold highlight. Rich but muted and slightly desaturated, painterly brushwork, dramatic low-key lighting, dark vignette at the edges so it sits on a near-black interface. Vertical 2:3 composition, single clear subject, no border, no frame, no text, no letters, no calligraphy, no seals, no watermark, no modern objects. Scene: A calm strategist in scholar's robes seated at a low table with a field map, one hand raised, his gaze piercing through drifting smoke that reveals hidden enemy soldiers behind it.",
+   "files": [
+    {
+     "path": "previews/stratagem-cards/candidates/ganpa/ganpa-20260918T114851Z-color-low-1.png",
+     "sha256": "192421be13dd5613ca59d350ff07c10664c2cb40407b99b2a4de5b805b08bc6d"
+    },
+    {
+     "path": "previews/stratagem-cards/candidates/ganpa/ganpa-20260918T114851Z-color-low-2.png",
+     "sha256": "ecc70b585b88c7eacf3d6298c52da6099b8490a5e18c2b5f7f710677b84db2b3"
+    }
+   ],
+   "adopted": null
+  },
+  {
+   "card": "uibyeong",
+   "generatedAt": "20260918T114904Z",
+   "provider": "OpenAI Images API",
+   "model": "gpt-image-1-mini",
+   "style": "ink",
+   "size": "1024x1536",
+   "quality": "low",
+   "prompt": "East Asian ink-wash illustration for a strategy game card, late Han dynasty China around 200 CE. Monochrome sumi ink on aged warm paper with a single restrained accent of antique bronze-gold. Dry-brush texture, strong silhouette, generous empty space in the upper third, dark vignette at the edges so it sits on a near-black interface. Vertical 2:3 composition, single clear subject, no border, no frame, no text, no letters, no calligraphy, no seals, no watermark, no modern objects. Scene: A hillside ridge lined with many plain blank cloth banners and straw dummies in armour and campfire smoke to fake a large army, only a handful of real soldiers tending them; the banners are blank with no characters or symbols.",
+   "files": [
+    {
+     "path": "previews/stratagem-cards/candidates/uibyeong/uibyeong-20260918T114904Z-ink-low-1.png",
+     "sha256": "2ccdf44deefbb324b46af31faf30e4692e5bd9ae83c5ba92842d75e1f14b761c"
+    },
+    {
+     "path": "previews/stratagem-cards/candidates/uibyeong/uibyeong-20260918T114904Z-ink-low-2.png",
+     "sha256": "3cab00053474b6dd627494ffbe02a95d74ff783accee79cef4bbc4eb0df38c9e"
+    }
+   ],
+   "adopted": null
+  },
+  {
+   "card": "gyeonbyeok",
+   "generatedAt": "20260918T114916Z",
+   "provider": "OpenAI Images API",
+   "model": "gpt-image-1-mini",
+   "style": "ink",
+   "size": "1024x1536",
+   "quality": "low",
+   "prompt": "East Asian ink-wash illustration for a strategy game card, late Han dynasty China around 200 CE. Monochrome sumi ink on aged warm paper with a single restrained accent of antique bronze-gold. Dry-brush texture, strong silhouette, generous empty space in the upper third, dark vignette at the edges so it sits on a near-black interface. Vertical 2:3 composition, single clear subject, no border, no frame, no text, no letters, no calligraphy, no seals, no watermark, no modern objects. Scene: A Han dynasty rammed-earth city wall: massive sloped tawny earthen rampart with visible horizontal tamped layers, NO stone blocks and NO European crenellated towers, a timber gate tower with a tiled hip roof above a barred wooden gate, defenders with spears and crossbows along a plain earthen parapet, fields outside stripped bare, a besieging host small in the distance.",
+   "files": [
+    {
+     "path": "previews/stratagem-cards/candidates/gyeonbyeok/gyeonbyeok-20260918T114916Z-ink-low-1.png",
+     "sha256": "0db6205f1f13f147c2ad8c6438eb2a093bd5b22b2d62f078439cb2dd181e158c"
+    },
+    {
+     "path": "previews/stratagem-cards/candidates/gyeonbyeok/gyeonbyeok-20260918T114916Z-ink-low-2.png",
+     "sha256": "af805461b039e26dd4a47e769bd0519111d63395d2f63dcabec068c8dcaba4e9"
+    }
+   ],
+   "adopted": null
   }
  ]
 }
