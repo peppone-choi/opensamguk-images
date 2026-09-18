@@ -1,0 +1,15 @@
+{
+ "schemaVersion": 1,
+ "note": "계책 카드 그림의 정본 명세. 그림에는 글자·테두리·방식/비용 표식을 넣지 않는다 — 카드 이름과 표식은 UI 가 그린다. 장면 문구는 opensamguk docs/superpowers/specs/2026-09-17-stratagem-card-catalog-draft.md 의 효과 방향·출처에서 옮겼다. 실존 작가·다른 게임의 화풍을 지목하지 않는다.",
+ "model": "gpt-image-1-mini",
+ "size": "1024x1536",
+ "styleHead": "East Asian ink-wash illustration for a strategy game card, late Han dynasty China around 200 CE. Monochrome sumi ink on aged warm paper with a single restrained accent of antique bronze-gold. Dry-brush texture, strong silhouette, generous empty space in the upper third, dark vignette at the edges so it sits on a near-black interface. Vertical 2:3 composition, single clear subject, no border, no frame, no text, no letters, no calligraphy, no seals, no watermark, no modern objects.",
+ "cards": [
+  {"id": "maebok", "nameKo": "매복", "scene": "Soldiers with spears crouching hidden among tall reeds and wooded hills beside a narrow mountain road, seen from behind them, an unsuspecting column of troops far below on the road."},
+  {"id": "uibyeong", "nameKo": "의병(疑兵)", "scene": "A hillside ridge lined with many banners and straw dummies and campfire smoke to fake a large army, only a handful of real soldiers tending them."},
+  {"id": "hwagye", "nameKo": "화계", "scene": "A county granary and timber stockpile burning at night, flames rendered in the bronze-gold accent, a lone figure with a torch slipping away in the foreground."},
+  {"id": "cheopbo", "nameKo": "첩보", "scene": "A plain-clothed scout on a wooded hill overlooking a walled town and its army camp at dusk, counting tents, a bamboo slip tucked in his sash."},
+  {"id": "gyeonbyeok", "nameKo": "견벽", "scene": "A rammed-earth fortress wall with its gate barred and defenders standing firm behind battlements, fields outside stripped bare, a besieging host small in the distance."},
+  {"id": "ganpa", "nameKo": "간파", "scene": "A calm strategist in scholar's robes seated at a low table with a field map, one hand raised, his gaze piercing through drifting smoke that reveals hidden enemy soldiers behind it."}
+ ]
+}

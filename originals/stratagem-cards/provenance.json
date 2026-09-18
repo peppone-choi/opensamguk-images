@@ -1,0 +1,186 @@
+{
+ "schemaVersion": 1,
+ "note": "AI 생성 후보의 출처. 채택 여부는 adopted 로 사람이 적는다.",
+ "runs": [
+  {
+   "card": "maebok",
+   "generatedAt": "20260918T114225Z",
+   "provider": "OpenAI Images API",
+   "model": "gpt-image-1-mini",
+   "size": "1024x1536",
+   "quality": "low",
+   "prompt": "East Asian ink-wash illustration for a strategy game card, late Han dynasty China around 200 CE. Monochrome sumi ink on aged warm paper with a single restrained accent of antique bronze-gold. Dry-brush texture, strong silhouette, generous empty space in the upper third, dark vignette at the edges so it sits on a near-black interface. Vertical 2:3 composition, single clear subject, no border, no frame, no text, no letters, no calligraphy, no seals, no watermark, no modern objects. Scene: Soldiers with spears crouching hidden among tall reeds and wooded hills beside a narrow mountain road, seen from behind them, an unsuspecting column of troops far below on the road.",
+   "files": [
+    {
+     "path": "previews/stratagem-cards/candidates/maebok/maebok-20260918T114225Z-low-1.png",
+     "sha256": "c0bf3da20370989a09ed68e578e2c770aa950a9e11d9934f5502349a0c5ea772"
+    },
+    {
+     "path": "previews/stratagem-cards/candidates/maebok/maebok-20260918T114225Z-low-2.png",
+     "sha256": "bf09c88355726bfda3fd7e8570dc0321736bbb4a9ad3c57e383bda4f378af356"
+    }
+   ],
+   "adopted": null
+  },
+  {
+   "card": "uibyeong",
+   "generatedAt": "20260918T114301Z",
+   "provider": "OpenAI Images API",
+   "model": "gpt-image-1-mini",
+   "size": "1024x1536",
+   "quality": "low",
+   "prompt": "East Asian ink-wash illustration for a strategy game card, late Han dynasty China around 200 CE. Monochrome sumi ink on aged warm paper with a single restrained accent of antique bronze-gold. Dry-brush texture, strong silhouette, generous empty space in the upper third, dark vignette at the edges so it sits on a near-black interface. Vertical 2:3 composition, single clear subject, no border, no frame, no text, no letters, no calligraphy, no seals, no watermark, no modern objects. Scene: A hillside ridge lined with many banners and straw dummies and campfire smoke to fake a large army, only a handful of real soldiers tending them.",
+   "files": [
+    {
+     "path": "previews/stratagem-cards/candidates/uibyeong/uibyeong-20260918T114301Z-low-1.png",
+     "sha256": "c7e4050b65908c1d07f31b69939500c30fb6558e325338b1012725daf5469cf4"
+    },
+    {
+     "path": "previews/stratagem-cards/candidates/uibyeong/uibyeong-20260918T114301Z-low-2.png",
+     "sha256": "289dce23ea53b2ae6613f27eabf10231f3b43d1d57bba4e8e2fb16e54c8489d8"
+    },
+    {
+     "path": "previews/stratagem-cards/candidates/uibyeong/uibyeong-20260918T114301Z-low-3.png",
+     "sha256": "6f96b314fa16bf3ada7cd10dda1bbe294af50b804e32aab361925e2ba6520d72"
+    },
+    {
+     "path": "previews/stratagem-cards/candidates/uibyeong/uibyeong-20260918T114301Z-low-4.png",
+     "sha256": "a05b942a5a9ad2c75266a581de1249fd70fffda074827fd0b47373a1024536c0"
+    }
+   ],
+   "adopted": null
+  },
+  {
+   "card": "hwagye",
+   "generatedAt": "20260918T114314Z",
+   "provider": "OpenAI Images API",
+   "model": "gpt-image-1-mini",
+   "size": "1024x1536",
+   "quality": "low",
+   "prompt": "East Asian ink-wash illustration for a strategy game card, late Han dynasty China around 200 CE. Monochrome sumi ink on aged warm paper with a single restrained accent of antique bronze-gold. Dry-brush texture, strong silhouette, generous empty space in the upper third, dark vignette at the edges so it sits on a near-black interface. Vertical 2:3 composition, single clear subject, no border, no frame, no text, no letters, no calligraphy, no seals, no watermark, no modern objects. Scene: A county granary and timber stockpile burning at night, flames rendered in the bronze-gold accent, a lone figure with a torch slipping away in the foreground.",
+   "files": [
+    {
+     "path": "previews/stratagem-cards/candidates/hwagye/hwagye-20260918T114314Z-low-1.png",
+     "sha256": "8925670c601e4c754867c1cbfa75561db3e13e6ec4d2a38e1d129b3b1ab6e341"
+    },
+    {
+     "path": "previews/stratagem-cards/candidates/hwagye/hwagye-20260918T114314Z-low-2.png",
+     "sha256": "a1ae75e898f230379130741db012613d755c5f7f216933c7420b9fd129d07b5b"
+    },
+    {
+     "path": "previews/stratagem-cards/candidates/hwagye/hwagye-20260918T114314Z-low-3.png",
+     "sha256": "dcfb8674cd7394562c04ba609fb4d49ce7d4224a9ee22538287e960c9dfd551c"
+    },
+    {
+     "path": "previews/stratagem-cards/candidates/hwagye/hwagye-20260918T114314Z-low-4.png",
+     "sha256": "5a8fb35a43c1378b4fb56306fc985d17f979278634bfc09dae7ce8f4ac12f7fc"
+    }
+   ],
+   "adopted": null
+  },
+  {
+   "card": "cheopbo",
+   "generatedAt": "20260918T114329Z",
+   "provider": "OpenAI Images API",
+   "model": "gpt-image-1-mini",
+   "size": "1024x1536",
+   "quality": "low",
+   "prompt": "East Asian ink-wash illustration for a strategy game card, late Han dynasty China around 200 CE. Monochrome sumi ink on aged warm paper with a single restrained accent of antique bronze-gold. Dry-brush texture, strong silhouette, generous empty space in the upper third, dark vignette at the edges so it sits on a near-black interface. Vertical 2:3 composition, single clear subject, no border, no frame, no text, no letters, no calligraphy, no seals, no watermark, no modern objects. Scene: A plain-clothed scout on a wooded hill overlooking a walled town and its army camp at dusk, counting tents, a bamboo slip tucked in his sash.",
+   "files": [
+    {
+     "path": "previews/stratagem-cards/candidates/cheopbo/cheopbo-20260918T114329Z-low-1.png",
+     "sha256": "e3358ac7b8d05af5c46581ac853722d968cc6a4f751c6a21a70a878fc88ce4c1"
+    },
+    {
+     "path": "previews/stratagem-cards/candidates/cheopbo/cheopbo-20260918T114329Z-low-2.png",
+     "sha256": "59e4dd55d9a941e3573cb99d2d32cadee2447c9b7d187954dfb7a770b3ab20a0"
+    },
+    {
+     "path": "previews/stratagem-cards/candidates/cheopbo/cheopbo-20260918T114329Z-low-3.png",
+     "sha256": "c4c848170df5363ff1a6a8709445765986186c7a3635587c1a6cda28c4891422"
+    },
+    {
+     "path": "previews/stratagem-cards/candidates/cheopbo/cheopbo-20260918T114329Z-low-4.png",
+     "sha256": "908c6234fb410e00ea273c11e01a5923a97f4ec9c60671adf27f1aac9eb4d589"
+    }
+   ],
+   "adopted": null
+  },
+  {
+   "card": "gyeonbyeok",
+   "generatedAt": "20260918T114343Z",
+   "provider": "OpenAI Images API",
+   "model": "gpt-image-1-mini",
+   "size": "1024x1536",
+   "quality": "low",
+   "prompt": "East Asian ink-wash illustration for a strategy game card, late Han dynasty China around 200 CE. Monochrome sumi ink on aged warm paper with a single restrained accent of antique bronze-gold. Dry-brush texture, strong silhouette, generous empty space in the upper third, dark vignette at the edges so it sits on a near-black interface. Vertical 2:3 composition, single clear subject, no border, no frame, no text, no letters, no calligraphy, no seals, no watermark, no modern objects. Scene: A rammed-earth fortress wall with its gate barred and defenders standing firm behind battlements, fields outside stripped bare, a besieging host small in the distance.",
+   "files": [
+    {
+     "path": "previews/stratagem-cards/candidates/gyeonbyeok/gyeonbyeok-20260918T114343Z-low-1.png",
+     "sha256": "9978dc693cba69552474b4353a085083efc99416a1fb4bc8d3945ef03e75d797"
+    },
+    {
+     "path": "previews/stratagem-cards/candidates/gyeonbyeok/gyeonbyeok-20260918T114343Z-low-2.png",
+     "sha256": "fed1c84bd9dcaed70a87f1b1b9e883083c4ff9f8868f4d012cc0a3d5bc088b0e"
+    },
+    {
+     "path": "previews/stratagem-cards/candidates/gyeonbyeok/gyeonbyeok-20260918T114343Z-low-3.png",
+     "sha256": "b1d6b3c2b6ba7c45046f0f6aafb1a2afd4b54904d538bdc3ad727090dacf7fe1"
+    },
+    {
+     "path": "previews/stratagem-cards/candidates/gyeonbyeok/gyeonbyeok-20260918T114343Z-low-4.png",
+     "sha256": "903a8fde4680c3eab607d03dd929e8424a2097f826c7f2675c6eac6f88150d6e"
+    }
+   ],
+   "adopted": null
+  },
+  {
+   "card": "ganpa",
+   "generatedAt": "20260918T114357Z",
+   "provider": "OpenAI Images API",
+   "model": "gpt-image-1-mini",
+   "size": "1024x1536",
+   "quality": "low",
+   "prompt": "East Asian ink-wash illustration for a strategy game card, late Han dynasty China around 200 CE. Monochrome sumi ink on aged warm paper with a single restrained accent of antique bronze-gold. Dry-brush texture, strong silhouette, generous empty space in the upper third, dark vignette at the edges so it sits on a near-black interface. Vertical 2:3 composition, single clear subject, no border, no frame, no text, no letters, no calligraphy, no seals, no watermark, no modern objects. Scene: A calm strategist in scholar's robes seated at a low table with a field map, one hand raised, his gaze piercing through drifting smoke that reveals hidden enemy soldiers behind it.",
+   "files": [
+    {
+     "path": "previews/stratagem-cards/candidates/ganpa/ganpa-20260918T114357Z-low-1.png",
+     "sha256": "3ef8e669e0f79a5829269e48d888753120ffd95f360e70c84e2063abbc75025e"
+    },
+    {
+     "path": "previews/stratagem-cards/candidates/ganpa/ganpa-20260918T114357Z-low-2.png",
+     "sha256": "e966491e87ae4ea4a8727b77797d1ad8d44a83bc13648e7162491a64d843011a"
+    },
+    {
+     "path": "previews/stratagem-cards/candidates/ganpa/ganpa-20260918T114357Z-low-3.png",
+     "sha256": "2a0fb46483a164fbbb70c11adee08b14955d9d4119f14ab851deb0ba833e44fd"
+    },
+    {
+     "path": "previews/stratagem-cards/candidates/ganpa/ganpa-20260918T114357Z-low-4.png",
+     "sha256": "ae27ddc703bd861a8576e64529e077e77ecc523ff9c7f025ec8d190803838c26"
+    }
+   ],
+   "adopted": null
+  },
+  {
+   "card": "maebok",
+   "generatedAt": "20260918T114409Z",
+   "provider": "OpenAI Images API",
+   "model": "gpt-image-1-mini",
+   "size": "1024x1536",
+   "quality": "low",
+   "prompt": "East Asian ink-wash illustration for a strategy game card, late Han dynasty China around 200 CE. Monochrome sumi ink on aged warm paper with a single restrained accent of antique bronze-gold. Dry-brush texture, strong silhouette, generous empty space in the upper third, dark vignette at the edges so it sits on a near-black interface. Vertical 2:3 composition, single clear subject, no border, no frame, no text, no letters, no calligraphy, no seals, no watermark, no modern objects. Scene: Soldiers with spears crouching hidden among tall reeds and wooded hills beside a narrow mountain road, seen from behind them, an unsuspecting column of troops far below on the road.",
+   "files": [
+    {
+     "path": "previews/stratagem-cards/candidates/maebok/maebok-20260918T114409Z-low-1.png",
+     "sha256": "82bbb55f983c98c60eaeff5fef437400d177ee579891c28873d1f6d6d256e13e"
+    },
+    {
+     "path": "previews/stratagem-cards/candidates/maebok/maebok-20260918T114409Z-low-2.png",
+     "sha256": "1ea9a80509d053954d71176efee34ba57814a746c01aecdc4d0f876fc0d61586"
+    }
+   ],
+   "adopted": null
+  }
+ ]
+}
