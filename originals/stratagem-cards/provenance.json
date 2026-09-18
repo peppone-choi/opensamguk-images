@@ -307,6 +307,342 @@
     }
    ],
    "adopted": null
+  },
+  {
+   "card": "uibyeong",
+   "generatedAt": "20260918T115040Z",
+   "provider": "OpenAI Images API",
+   "model": "gpt-image-1-mini",
+   "style": "color",
+   "size": "1024x1536",
+   "quality": "low",
+   "prompt": "East Asian painted illustration for a strategy game card, late Han dynasty China around 200 CE. Full colour in traditional mineral pigments on aged silk: malachite green, azurite blue, cinnabar red, ochre and warm earth tones, with ink outlines and a restrained antique bronze-gold highlight. Rich but muted and slightly desaturated, painterly brushwork, dramatic low-key lighting, dark vignette at the edges so it sits on a near-black interface. Vertical 2:3 composition, single clear subject, no border, no frame, no text, no letters, no calligraphy, no seals, no watermark, no modern objects. Scene: A hillside ridge lined with many plain blank cloth banners and straw dummies in armour and campfire smoke to fake a large army, only a handful of real soldiers tending them; the banners are blank with no characters or symbols.",
+   "files": [
+    {
+     "path": "previews/stratagem-cards/candidates/uibyeong/uibyeong-20260918T115040Z-color-low-1.png",
+     "sha256": "52ec5f05bd3692120a86af208dc824a2f3afb40a151a4c629bf30bbc9256269e"
+    },
+    {
+     "path": "previews/stratagem-cards/candidates/uibyeong/uibyeong-20260918T115040Z-color-low-2.png",
+     "sha256": "783bb2448149b96e89746514806dc6680a00a36cde82d38a524db7b18850c3b8"
+    }
+   ],
+   "adopted": null
+  },
+  {
+   "card": "cheopbo",
+   "generatedAt": "20260918T115053Z",
+   "provider": "OpenAI Images API",
+   "model": "gpt-image-1-mini",
+   "style": "color",
+   "size": "1024x1536",
+   "quality": "low",
+   "prompt": "East Asian painted illustration for a strategy game card, late Han dynasty China around 200 CE. Full colour in traditional mineral pigments on aged silk: malachite green, azurite blue, cinnabar red, ochre and warm earth tones, with ink outlines and a restrained antique bronze-gold highlight. Rich but muted and slightly desaturated, painterly brushwork, dramatic low-key lighting, dark vignette at the edges so it sits on a near-black interface. Vertical 2:3 composition, single clear subject, no border, no frame, no text, no letters, no calligraphy, no seals, no watermark, no modern objects. Scene: A plain-clothed scout on a wooded hill overlooking a walled town and its army camp at dusk, counting tents, a bamboo slip tucked in his sash.",
+   "files": [
+    {
+     "path": "previews/stratagem-cards/candidates/cheopbo/cheopbo-20260918T115053Z-color-low-1.png",
+     "sha256": "61f0812f6118c53ab3c00fb7f62f8f3fa17fc7e6ed50895d1f462df54d404e19"
+    },
+    {
+     "path": "previews/stratagem-cards/candidates/cheopbo/cheopbo-20260918T115053Z-color-low-2.png",
+     "sha256": "c76a5d0678c79156e3a6b9d6144c7bb95d54d0f803d0deb2fd98940180378df3"
+    }
+   ],
+   "adopted": null
+  },
+  {
+   "card": "gunryang",
+   "generatedAt": "20260918T115105Z",
+   "provider": "OpenAI Images API",
+   "model": "gpt-image-1-mini",
+   "style": "color",
+   "size": "1024x1536",
+   "quality": "low",
+   "prompt": "East Asian painted illustration for a strategy game card, late Han dynasty China around 200 CE. Full colour in traditional mineral pigments on aged silk: malachite green, azurite blue, cinnabar red, ochre and warm earth tones, with ink outlines and a restrained antique bronze-gold highlight. Rich but muted and slightly desaturated, painterly brushwork, dramatic low-key lighting, dark vignette at the edges so it sits on a near-black interface. Vertical 2:3 composition, single clear subject, no border, no frame, no text, no letters, no calligraphy, no seals, no watermark, no modern objects. Scene: Light cavalry raiding a supply convoy of ox carts on a country road at night, grain sacks catching fire, drivers fleeing.",
+   "files": [
+    {
+     "path": "previews/stratagem-cards/candidates/gunryang/gunryang-20260918T115105Z-color-low-1.png",
+     "sha256": "eae61435216ec439905967ba623107443ba882ae47992717b2617f28fc6b06ca"
+    },
+    {
+     "path": "previews/stratagem-cards/candidates/gunryang/gunryang-20260918T115105Z-color-low-2.png",
+     "sha256": "4d8fecbeb8a185f93a32754cb512269ff54b44084e78ab08c4944cf12dd4a7d5"
+    }
+   ],
+   "adopted": null
+  },
+  {
+   "card": "sugong",
+   "generatedAt": "20260918T115119Z",
+   "provider": "OpenAI Images API",
+   "model": "gpt-image-1-mini",
+   "style": "color",
+   "size": "1024x1536",
+   "quality": "low",
+   "prompt": "East Asian painted illustration for a strategy game card, late Han dynasty China around 200 CE. Full colour in traditional mineral pigments on aged silk: malachite green, azurite blue, cinnabar red, ochre and warm earth tones, with ink outlines and a restrained antique bronze-gold highlight. Rich but muted and slightly desaturated, painterly brushwork, dramatic low-key lighting, dark vignette at the edges so it sits on a near-black interface. Vertical 2:3 composition, single clear subject, no border, no frame, no text, no letters, no calligraphy, no seals, no watermark, no modern objects. Scene: Soldiers breaching a river dike with spades so a torrent of water rushes toward a besieged earthen-walled city in the low ground beyond.",
+   "files": [
+    {
+     "path": "previews/stratagem-cards/candidates/sugong/sugong-20260918T115119Z-color-low-1.png",
+     "sha256": "97665deeb9b26f5912ee6d1603fae58b086491cfcc1faa4805103885751083c5"
+    },
+    {
+     "path": "previews/stratagem-cards/candidates/sugong/sugong-20260918T115119Z-color-low-2.png",
+     "sha256": "a0aa6ea890defbfa50a11fdeac3b38a2f1b20c2706b291ecc8663550ff48774a"
+    }
+   ],
+   "adopted": null
+  },
+  {
+   "card": "yueon",
+   "generatedAt": "20260918T115132Z",
+   "provider": "OpenAI Images API",
+   "model": "gpt-image-1-mini",
+   "style": "color",
+   "size": "1024x1536",
+   "quality": "low",
+   "prompt": "East Asian painted illustration for a strategy game card, late Han dynasty China around 200 CE. Full colour in traditional mineral pigments on aged silk: malachite green, azurite blue, cinnabar red, ochre and warm earth tones, with ink outlines and a restrained antique bronze-gold highlight. Rich but muted and slightly desaturated, painterly brushwork, dramatic low-key lighting, dark vignette at the edges so it sits on a near-black interface. Vertical 2:3 composition, single clear subject, no border, no frame, no text, no letters, no calligraphy, no seals, no watermark, no modern objects. Scene: A crowded county market where a stranger whispers to uneasy townsfolk, heads turning, anxious murmuring faces, an official's hall in the background.",
+   "files": [
+    {
+     "path": "previews/stratagem-cards/candidates/yueon/yueon-20260918T115132Z-color-low-1.png",
+     "sha256": "a2b977e460e109bc2fd798a284678f1f2ade0e363ef2924a8ebef4223b191c08"
+    },
+    {
+     "path": "previews/stratagem-cards/candidates/yueon/yueon-20260918T115132Z-color-low-2.png",
+     "sha256": "724cafe17c6b739336b3e1023a247a2f8f4279eaa7bb28596301a7782c85a596"
+    }
+   ],
+   "adopted": null
+  },
+  {
+   "card": "pagoe",
+   "generatedAt": "20260918T115144Z",
+   "provider": "OpenAI Images API",
+   "model": "gpt-image-1-mini",
+   "style": "color",
+   "size": "1024x1536",
+   "quality": "low",
+   "prompt": "East Asian painted illustration for a strategy game card, late Han dynasty China around 200 CE. Full colour in traditional mineral pigments on aged silk: malachite green, azurite blue, cinnabar red, ochre and warm earth tones, with ink outlines and a restrained antique bronze-gold highlight. Rich but muted and slightly desaturated, painterly brushwork, dramatic low-key lighting, dark vignette at the edges so it sits on a near-black interface. Vertical 2:3 composition, single clear subject, no border, no frame, no text, no letters, no calligraphy, no seals, no watermark, no modern objects. Scene: Saboteurs at night prying apart the timber scaffolding and tamped-earth of a half-built rampart with iron bars and axes, tools scattered.",
+   "files": [
+    {
+     "path": "previews/stratagem-cards/candidates/pagoe/pagoe-20260918T115144Z-color-low-1.png",
+     "sha256": "a73d3981f6103f5a01cd574c2420fb91730f765b6c47672a1cef1675a89e4f53"
+    },
+    {
+     "path": "previews/stratagem-cards/candidates/pagoe/pagoe-20260918T115144Z-color-low-2.png",
+     "sha256": "e684c814bbbc9d3f17fa09bd8db64c1432889fcfb467aee5b2c3fa8ff5db68ff"
+    }
+   ],
+   "adopted": null
+  },
+  {
+   "card": "talchwi",
+   "generatedAt": "20260918T115201Z",
+   "provider": "OpenAI Images API",
+   "model": "gpt-image-1-mini",
+   "style": "color",
+   "size": "1024x1536",
+   "quality": "low",
+   "prompt": "East Asian painted illustration for a strategy game card, late Han dynasty China around 200 CE. Full colour in traditional mineral pigments on aged silk: malachite green, azurite blue, cinnabar red, ochre and warm earth tones, with ink outlines and a restrained antique bronze-gold highlight. Rich but muted and slightly desaturated, painterly brushwork, dramatic low-key lighting, dark vignette at the edges so it sits on a near-black interface. Vertical 2:3 composition, single clear subject, no border, no frame, no text, no letters, no calligraphy, no seals, no watermark, no modern objects. Scene: Raiders on horseback leading away pack horses loaded with grain sacks and strings of bronze coins from a county storehouse at dawn.",
+   "files": [
+    {
+     "path": "previews/stratagem-cards/candidates/talchwi/talchwi-20260918T115201Z-color-low-1.png",
+     "sha256": "0bda21583b9c223a7d84028afd67a983fe62a61e8ab007464601b3400141559e"
+    },
+    {
+     "path": "previews/stratagem-cards/candidates/talchwi/talchwi-20260918T115201Z-color-low-2.png",
+     "sha256": "c2fa502549b62c73f0d277f641cc4363d9119ec1ada664101b1219369dd1a78a"
+    }
+   ],
+   "adopted": null
+  },
+  {
+   "card": "yaseup",
+   "generatedAt": "20260918T115213Z",
+   "provider": "OpenAI Images API",
+   "model": "gpt-image-1-mini",
+   "style": "color",
+   "size": "1024x1536",
+   "quality": "low",
+   "prompt": "East Asian painted illustration for a strategy game card, late Han dynasty China around 200 CE. Full colour in traditional mineral pigments on aged silk: malachite green, azurite blue, cinnabar red, ochre and warm earth tones, with ink outlines and a restrained antique bronze-gold highlight. Rich but muted and slightly desaturated, painterly brushwork, dramatic low-key lighting, dark vignette at the edges so it sits on a near-black interface. Vertical 2:3 composition, single clear subject, no border, no frame, no text, no letters, no calligraphy, no seals, no watermark, no modern objects. Scene: A small band of picked warriors with halberds charging out of darkness into a sleeping enemy camp, tents and startled sentries lit by a few torches.",
+   "files": [
+    {
+     "path": "previews/stratagem-cards/candidates/yaseup/yaseup-20260918T115213Z-color-low-1.png",
+     "sha256": "cf2731237b261528b5cc91bdbe9e2203460fa17fac437a4da3094c2d59eb0295"
+    },
+    {
+     "path": "previews/stratagem-cards/candidates/yaseup/yaseup-20260918T115213Z-color-low-2.png",
+     "sha256": "b1a33aa7323659fcc19b00075ce8e6192f20e39e6a23c790aea03dbe5760ec9f"
+    }
+   ],
+   "adopted": null
+  },
+  {
+   "card": "hwagong",
+   "generatedAt": "20260918T115227Z",
+   "provider": "OpenAI Images API",
+   "model": "gpt-image-1-mini",
+   "style": "color",
+   "size": "1024x1536",
+   "quality": "low",
+   "prompt": "East Asian painted illustration for a strategy game card, late Han dynasty China around 200 CE. Full colour in traditional mineral pigments on aged silk: malachite green, azurite blue, cinnabar red, ochre and warm earth tones, with ink outlines and a restrained antique bronze-gold highlight. Rich but muted and slightly desaturated, painterly brushwork, dramatic low-key lighting, dark vignette at the edges so it sits on a near-black interface. Vertical 2:3 composition, single clear subject, no border, no frame, no text, no letters, no calligraphy, no seals, no watermark, no modern objects. Scene: Fire ships drifting downwind into a moored fleet of wooden war junks on a wide river at night, sails ablaze, reeds on the bank.",
+   "files": [
+    {
+     "path": "previews/stratagem-cards/candidates/hwagong/hwagong-20260918T115227Z-color-low-1.png",
+     "sha256": "aecaa971aa5371397896b26d6aa87539f0124e48cf1ede703533e9b9bc7d0020"
+    },
+    {
+     "path": "previews/stratagem-cards/candidates/hwagong/hwagong-20260918T115227Z-color-low-2.png",
+     "sha256": "49d15fe72fbe7fa9a40776f76b48c93c7576f43b812aa7ff96c91f10cfcc8995"
+    }
+   ],
+   "adopted": null
+  },
+  {
+   "card": "sahang",
+   "generatedAt": "20260918T115239Z",
+   "provider": "OpenAI Images API",
+   "model": "gpt-image-1-mini",
+   "style": "color",
+   "size": "1024x1536",
+   "quality": "low",
+   "prompt": "East Asian painted illustration for a strategy game card, late Han dynasty China around 200 CE. Full colour in traditional mineral pigments on aged silk: malachite green, azurite blue, cinnabar red, ochre and warm earth tones, with ink outlines and a restrained antique bronze-gold highlight. Rich but muted and slightly desaturated, painterly brushwork, dramatic low-key lighting, dark vignette at the edges so it sits on a near-black interface. Vertical 2:3 composition, single clear subject, no border, no frame, no text, no letters, no calligraphy, no seals, no watermark, no modern objects. Scene: A small boat under a plain flag rowing toward an enemy river camp, a kneeling envoy at the prow offering a sealed bamboo letter, hidden blades under the deck mats.",
+   "files": [
+    {
+     "path": "previews/stratagem-cards/candidates/sahang/sahang-20260918T115239Z-color-low-1.png",
+     "sha256": "d107eb239d2ae72653ea70b39dbebe48d16ac76b7cbfeeade7cd5f7316e9c103"
+    },
+    {
+     "path": "previews/stratagem-cards/candidates/sahang/sahang-20260918T115239Z-color-low-2.png",
+     "sha256": "bd892c0548a06c36b79a2427b859cee8e1802d791378c14c862be99e1b8f8d74"
+    }
+   ],
+   "adopted": null
+  },
+  {
+   "card": "goyuk",
+   "generatedAt": "20260918T115251Z",
+   "provider": "OpenAI Images API",
+   "model": "gpt-image-1-mini",
+   "style": "color",
+   "size": "1024x1536",
+   "quality": "low",
+   "prompt": "East Asian painted illustration for a strategy game card, late Han dynasty China around 200 CE. Full colour in traditional mineral pigments on aged silk: malachite green, azurite blue, cinnabar red, ochre and warm earth tones, with ink outlines and a restrained antique bronze-gold highlight. Rich but muted and slightly desaturated, painterly brushwork, dramatic low-key lighting, dark vignette at the edges so it sits on a near-black interface. Vertical 2:3 composition, single clear subject, no border, no frame, no text, no letters, no calligraphy, no seals, no watermark, no modern objects. Scene: An old general bound and beaten with rods before an assembled staff in a command tent, officers looking away in distress, the commander stern and deliberate.",
+   "files": [
+    {
+     "path": "previews/stratagem-cards/candidates/goyuk/goyuk-20260918T115251Z-color-low-1.png",
+     "sha256": "4fa9cc13b7a3a07a16de2223a0c1f7d6199d5e3d4ad817e8eaa57f149d5d19a4"
+    },
+    {
+     "path": "previews/stratagem-cards/candidates/goyuk/goyuk-20260918T115251Z-color-low-2.png",
+     "sha256": "a1e18ab6fd51c2078436d45624459a15f3a867b807c3aefb8dd31d4505e2db35"
+    }
+   ],
+   "adopted": null
+  },
+  {
+   "card": "yeonhwan",
+   "generatedAt": "20260918T115303Z",
+   "provider": "OpenAI Images API",
+   "model": "gpt-image-1-mini",
+   "style": "color",
+   "size": "1024x1536",
+   "quality": "low",
+   "prompt": "East Asian painted illustration for a strategy game card, late Han dynasty China around 200 CE. Full colour in traditional mineral pigments on aged silk: malachite green, azurite blue, cinnabar red, ochre and warm earth tones, with ink outlines and a restrained antique bronze-gold highlight. Rich but muted and slightly desaturated, painterly brushwork, dramatic low-key lighting, dark vignette at the edges so it sits on a near-black interface. Vertical 2:3 composition, single clear subject, no border, no frame, no text, no letters, no calligraphy, no seals, no watermark, no modern objects. Scene: Large war junks chained together side by side with heavy iron chains and planks across a wide river, soldiers walking steadily across the joined decks.",
+   "files": [
+    {
+     "path": "previews/stratagem-cards/candidates/yeonhwan/yeonhwan-20260918T115303Z-color-low-1.png",
+     "sha256": "ccbcc0235828475cdf4e89477625f91ca7f762c2cb22c9a34ed833ba76ed8c16"
+    },
+    {
+     "path": "previews/stratagem-cards/candidates/yeonhwan/yeonhwan-20260918T115303Z-color-low-2.png",
+     "sha256": "bd5a6fae43fd66fffe3834c57fb46ee990704852af043a9d6852301e83658386"
+    }
+   ],
+   "adopted": null
+  },
+  {
+   "card": "chajeon",
+   "generatedAt": "20260918T115317Z",
+   "provider": "OpenAI Images API",
+   "model": "gpt-image-1-mini",
+   "style": "color",
+   "size": "1024x1536",
+   "quality": "low",
+   "prompt": "East Asian painted illustration for a strategy game card, late Han dynasty China around 200 CE. Full colour in traditional mineral pigments on aged silk: malachite green, azurite blue, cinnabar red, ochre and warm earth tones, with ink outlines and a restrained antique bronze-gold highlight. Rich but muted and slightly desaturated, painterly brushwork, dramatic low-key lighting, dark vignette at the edges so it sits on a near-black interface. Vertical 2:3 composition, single clear subject, no border, no frame, no text, no letters, no calligraphy, no seals, no watermark, no modern objects. Scene: Straw-covered boats in thick river fog bristling with hundreds of arrows shot from an unseen shore, a calm figure seated inside under a canopy.",
+   "files": [
+    {
+     "path": "previews/stratagem-cards/candidates/chajeon/chajeon-20260918T115317Z-color-low-1.png",
+     "sha256": "7d6093c1ecac98b730fa4dfc886524c0cd6d29b71a112ca71ac92102bf9279be"
+    },
+    {
+     "path": "previews/stratagem-cards/candidates/chajeon/chajeon-20260918T115317Z-color-low-2.png",
+     "sha256": "2a4d2fc737cddb2c88652719691a48a54e7e8b540ad0973b935b7a761b3c15a4"
+    }
+   ],
+   "adopted": null
+  },
+  {
+   "card": "gongseong",
+   "generatedAt": "20260918T115330Z",
+   "provider": "OpenAI Images API",
+   "model": "gpt-image-1-mini",
+   "style": "color",
+   "size": "1024x1536",
+   "quality": "low",
+   "prompt": "East Asian painted illustration for a strategy game card, late Han dynasty China around 200 CE. Full colour in traditional mineral pigments on aged silk: malachite green, azurite blue, cinnabar red, ochre and warm earth tones, with ink outlines and a restrained antique bronze-gold highlight. Rich but muted and slightly desaturated, painterly brushwork, dramatic low-key lighting, dark vignette at the edges so it sits on a near-black interface. Vertical 2:3 composition, single clear subject, no border, no frame, no text, no letters, no calligraphy, no seals, no watermark, no modern objects. Scene: A lone strategist calmly playing a guqin zither atop an open, undefended earthen city gate, two boys sweeping the road below, a vast wary army halted in the distance.",
+   "files": [
+    {
+     "path": "previews/stratagem-cards/candidates/gongseong/gongseong-20260918T115330Z-color-low-1.png",
+     "sha256": "325d97756e3964fa97d77e6c5c4c97c979f8f8d52e4a3a13a0d702726f52dfe5"
+    },
+    {
+     "path": "previews/stratagem-cards/candidates/gongseong/gongseong-20260918T115330Z-color-low-2.png",
+     "sha256": "ed3bd52b069e5c97c4c43f16ca20e3fa21dd92327a1465005618333848e9fc6f"
+    }
+   ],
+   "adopted": null
+  },
+  {
+   "card": "pilsa",
+   "generatedAt": "20260918T115341Z",
+   "provider": "OpenAI Images API",
+   "model": "gpt-image-1-mini",
+   "style": "color",
+   "size": "1024x1536",
+   "quality": "low",
+   "prompt": "East Asian painted illustration for a strategy game card, late Han dynasty China around 200 CE. Full colour in traditional mineral pigments on aged silk: malachite green, azurite blue, cinnabar red, ochre and warm earth tones, with ink outlines and a restrained antique bronze-gold highlight. Rich but muted and slightly desaturated, painterly brushwork, dramatic low-key lighting, dark vignette at the edges so it sits on a near-black interface. Vertical 2:3 composition, single clear subject, no border, no frame, no text, no letters, no calligraphy, no seals, no watermark, no modern objects. Scene: A commander smashing cooking pots and burning the boats behind his assembled army at a riverbank, soldiers raising weapons with grim resolve.",
+   "files": [
+    {
+     "path": "previews/stratagem-cards/candidates/pilsa/pilsa-20260918T115341Z-color-low-1.png",
+     "sha256": "9a0b491c2ec4f43b965a34e89102232c2d52343b45293ff2986edd5045753014"
+    },
+    {
+     "path": "previews/stratagem-cards/candidates/pilsa/pilsa-20260918T115341Z-color-low-2.png",
+     "sha256": "9274a34becf3f6504c89c1db94557b94f1252c8123b29be363b5f08b26e6f6a8"
+    }
+   ],
+   "adopted": null
+  },
+  {
+   "card": "dunjeon",
+   "generatedAt": "20260918T115353Z",
+   "provider": "OpenAI Images API",
+   "model": "gpt-image-1-mini",
+   "style": "color",
+   "size": "1024x1536",
+   "quality": "low",
+   "prompt": "East Asian painted illustration for a strategy game card, late Han dynasty China around 200 CE. Full colour in traditional mineral pigments on aged silk: malachite green, azurite blue, cinnabar red, ochre and warm earth tones, with ink outlines and a restrained antique bronze-gold highlight. Rich but muted and slightly desaturated, painterly brushwork, dramatic low-key lighting, dark vignette at the edges so it sits on a near-black interface. Vertical 2:3 composition, single clear subject, no border, no frame, no text, no letters, no calligraphy, no seals, no watermark, no modern objects. Scene: Soldiers in plain tunics ploughing fields with oxen beside a military camp, spears stacked at the field edge, granaries under construction.",
+   "files": [
+    {
+     "path": "previews/stratagem-cards/candidates/dunjeon/dunjeon-20260918T115353Z-color-low-1.png",
+     "sha256": "d0359576e65650d6b681a4b5276349333986650d3ce31f09774c52b0ca4e20e0"
+    },
+    {
+     "path": "previews/stratagem-cards/candidates/dunjeon/dunjeon-20260918T115353Z-color-low-2.png",
+     "sha256": "8581b600530bcd99af33c14d6a1dd336cd26fbfe66600776c38a6006edb2112d"
+    }
+   ],
+   "adopted": null
   }
  ]
 }
