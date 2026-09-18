@@ -874,6 +874,132 @@
     }
    ],
    "adopted": null
+  },
+  {
+   "card": "maebok",
+   "generatedAt": "20260918T115922Z",
+   "provider": "OpenAI Images API",
+   "model": "gpt-image-1-mini",
+   "style": "bright",
+   "size": "1024x1536",
+   "quality": "medium",
+   "prompt": "Clean, polished semi-realistic digital illustration for a historical strategy game card, late Han dynasty China around 200 CE. HIGH-KEY and bright: clear daylight, open luminous sky, light airy backgrounds, well-lit midtones, soft natural shadows — never murky, never low-key, no heavy vignette, no dark silhouettes. Vivid saturated colour with clean separation: bright crimson and vermilion banners and cloaks, clear azure and royal blue, fresh green landscape, polished gold and bronze armour fittings, warm healthy skin tones. Smooth refined brushwork with crisp edges and fine detail on lamellar armour, silk robes and architecture, heroic and clear readable staging. The subject is the ACTION of the scene with several figures in an environment, medium-wide view, not a close-up portrait. Unless the scene itself says night, render it in bright daytime; night scenes are moonlit and still clearly readable. Vertical 2:3 composition, no border, no frame, no text, no letters, no calligraphy, no seals, no watermark, no modern objects. STRICT PERIOD ACCURACY — Eastern Han / Three Kingdoms China, c. 184–280 CE, as seen in Han tomb figurines, murals and brick reliefs. CLOTHING: cross-collared robes and jackets wrapped right side over left (youren) tied with a cloth sash; common soldiers wear a knee-length belted tunic (often madder red) over loose trousers with cloth leg wraps and low cloth or leather shoes; officials and strategists wear long wide-sleeved robes (shenyi/pao) with layered collars. HEADWEAR: hair in a topknot; soldiers wear a flat cloth headcloth cap (ze), often red, or a simple rounded iron or leather lamellar helmet made of laced plates with a neck guard; officers may have a small pheasant feather; civil officials wear a small black lacquered gauze cap (jinxian guan) or a plain headcloth (fujin). ARMOUR: dark lacquered iron or leather lamellar of small rectangular plates laced with cords, as a sleeveless cuirass with shoulder flaps or a short-sleeved tube-sleeve coat worn over the tunic, reaching the hips. WEAPONS: ji halberd (spear with a perpendicular side blade), long spears, straight single-edged ring-pommel sabres (huanshou dao), straight double-edged jian, crossbows with bronze triggers, rectangular or double-arc wooden shields. HORSES: small steppe-type horses with simple padded saddles and NO stirrups. ARCHITECTURE: tawny rammed-earth walls with plain parapets, timber-frame halls and gate towers (que) with straight, gently sloped hip roofs of grey cylindrical tiles and round eave tiles, simple brackets, packed-earth courtyards. FURNITURE: people kneel or sit on woven mats and low platforms at low tables; writing is on bamboo slips and silk. FORBIDDEN ANACHRONISMS: no capes or cloaks, no Roman or Greek crested helmets, no tall horsehair plumes, no European plate or chainmail, no curved sabres, no guandao glaive, no chairs or high tables, no strongly upturned curling roof corners, no Ming/Qing brick fortresses or stone castles, no queue hairstyles, no Japanese samurai armour, no paper lanterns, no stirrups, no gunpowder. Scene: Soldiers with spears crouching hidden among tall reeds and wooded hills beside a narrow mountain road, seen from behind them, an unsuspecting column of troops far below on the road.",
+   "files": [
+    {
+     "path": "previews/stratagem-cards/candidates/maebok/maebok-20260918T115922Z-bright-medium-1.png",
+     "sha256": "46c0193dc2a267d1e62921521ea02b0750b1d3f690c4820a70eaacc9b72c71af"
+    },
+    {
+     "path": "previews/stratagem-cards/candidates/maebok/maebok-20260918T115922Z-bright-medium-2.png",
+     "sha256": "e76000f22b410511430c42949ab9369336044d19bc664cc6ed926aee2827b7e8"
+    }
+   ],
+   "adopted": null
+  },
+  {
+   "card": "uibyeong",
+   "generatedAt": "20260918T115943Z",
+   "provider": "OpenAI Images API",
+   "model": "gpt-image-1-mini",
+   "style": "bright",
+   "size": "1024x1536",
+   "quality": "medium",
+   "prompt": "Clean, polished semi-realistic digital illustration for a historical strategy game card, late Han dynasty China around 200 CE. HIGH-KEY and bright: clear daylight, open luminous sky, light airy backgrounds, well-lit midtones, soft natural shadows — never murky, never low-key, no heavy vignette, no dark silhouettes. Vivid saturated colour with clean separation: bright crimson and vermilion banners and cloaks, clear azure and royal blue, fresh green landscape, polished gold and bronze armour fittings, warm healthy skin tones. Smooth refined brushwork with crisp edges and fine detail on lamellar armour, silk robes and architecture, heroic and clear readable staging. The subject is the ACTION of the scene with several figures in an environment, medium-wide view, not a close-up portrait. Unless the scene itself says night, render it in bright daytime; night scenes are moonlit and still clearly readable. Vertical 2:3 composition, no border, no frame, no text, no letters, no calligraphy, no seals, no watermark, no modern objects. STRICT PERIOD ACCURACY — Eastern Han / Three Kingdoms China, c. 184–280 CE, as seen in Han tomb figurines, murals and brick reliefs. CLOTHING: cross-collared robes and jackets wrapped right side over left (youren) tied with a cloth sash; common soldiers wear a knee-length belted tunic (often madder red) over loose trousers with cloth leg wraps and low cloth or leather shoes; officials and strategists wear long wide-sleeved robes (shenyi/pao) with layered collars. HEADWEAR: hair in a topknot; soldiers wear a flat cloth headcloth cap (ze), often red, or a simple rounded iron or leather lamellar helmet made of laced plates with a neck guard; officers may have a small pheasant feather; civil officials wear a small black lacquered gauze cap (jinxian guan) or a plain headcloth (fujin). ARMOUR: dark lacquered iron or leather lamellar of small rectangular plates laced with cords, as a sleeveless cuirass with shoulder flaps or a short-sleeved tube-sleeve coat worn over the tunic, reaching the hips. WEAPONS: ji halberd (spear with a perpendicular side blade), long spears, straight single-edged ring-pommel sabres (huanshou dao), straight double-edged jian, crossbows with bronze triggers, rectangular or double-arc wooden shields. HORSES: small steppe-type horses with simple padded saddles and NO stirrups. ARCHITECTURE: tawny rammed-earth walls with plain parapets, timber-frame halls and gate towers (que) with straight, gently sloped hip roofs of grey cylindrical tiles and round eave tiles, simple brackets, packed-earth courtyards. FURNITURE: people kneel or sit on woven mats and low platforms at low tables; writing is on bamboo slips and silk. FORBIDDEN ANACHRONISMS: no capes or cloaks, no Roman or Greek crested helmets, no tall horsehair plumes, no European plate or chainmail, no curved sabres, no guandao glaive, no chairs or high tables, no strongly upturned curling roof corners, no Ming/Qing brick fortresses or stone castles, no queue hairstyles, no Japanese samurai armour, no paper lanterns, no stirrups, no gunpowder. Scene: A wide view of a hillside ridge lined with many plain blank cloth banners on poles and rows of straw dummies dressed in tunics, with campfires smoking to fake a large army; only a few small real soldiers tending the dummies; the banners are blank with no characters or symbols.",
+   "files": [
+    {
+     "path": "previews/stratagem-cards/candidates/uibyeong/uibyeong-20260918T115943Z-bright-medium-1.png",
+     "sha256": "cd8cb723d9199418e00a076cddca699f4e551eeb6187a807026cb5c798a803d6"
+    },
+    {
+     "path": "previews/stratagem-cards/candidates/uibyeong/uibyeong-20260918T115943Z-bright-medium-2.png",
+     "sha256": "31a2b55dc9e0ea740ff55bbbe21e8a581e4b91d60b3b89f841a0df6b30c507ca"
+    }
+   ],
+   "adopted": null
+  },
+  {
+   "card": "hwagye",
+   "generatedAt": "20260918T120004Z",
+   "provider": "OpenAI Images API",
+   "model": "gpt-image-1-mini",
+   "style": "bright",
+   "size": "1024x1536",
+   "quality": "medium",
+   "prompt": "Clean, polished semi-realistic digital illustration for a historical strategy game card, late Han dynasty China around 200 CE. HIGH-KEY and bright: clear daylight, open luminous sky, light airy backgrounds, well-lit midtones, soft natural shadows — never murky, never low-key, no heavy vignette, no dark silhouettes. Vivid saturated colour with clean separation: bright crimson and vermilion banners and cloaks, clear azure and royal blue, fresh green landscape, polished gold and bronze armour fittings, warm healthy skin tones. Smooth refined brushwork with crisp edges and fine detail on lamellar armour, silk robes and architecture, heroic and clear readable staging. The subject is the ACTION of the scene with several figures in an environment, medium-wide view, not a close-up portrait. Unless the scene itself says night, render it in bright daytime; night scenes are moonlit and still clearly readable. Vertical 2:3 composition, no border, no frame, no text, no letters, no calligraphy, no seals, no watermark, no modern objects. STRICT PERIOD ACCURACY — Eastern Han / Three Kingdoms China, c. 184–280 CE, as seen in Han tomb figurines, murals and brick reliefs. CLOTHING: cross-collared robes and jackets wrapped right side over left (youren) tied with a cloth sash; common soldiers wear a knee-length belted tunic (often madder red) over loose trousers with cloth leg wraps and low cloth or leather shoes; officials and strategists wear long wide-sleeved robes (shenyi/pao) with layered collars. HEADWEAR: hair in a topknot; soldiers wear a flat cloth headcloth cap (ze), often red, or a simple rounded iron or leather lamellar helmet made of laced plates with a neck guard; officers may have a small pheasant feather; civil officials wear a small black lacquered gauze cap (jinxian guan) or a plain headcloth (fujin). ARMOUR: dark lacquered iron or leather lamellar of small rectangular plates laced with cords, as a sleeveless cuirass with shoulder flaps or a short-sleeved tube-sleeve coat worn over the tunic, reaching the hips. WEAPONS: ji halberd (spear with a perpendicular side blade), long spears, straight single-edged ring-pommel sabres (huanshou dao), straight double-edged jian, crossbows with bronze triggers, rectangular or double-arc wooden shields. HORSES: small steppe-type horses with simple padded saddles and NO stirrups. ARCHITECTURE: tawny rammed-earth walls with plain parapets, timber-frame halls and gate towers (que) with straight, gently sloped hip roofs of grey cylindrical tiles and round eave tiles, simple brackets, packed-earth courtyards. FURNITURE: people kneel or sit on woven mats and low platforms at low tables; writing is on bamboo slips and silk. FORBIDDEN ANACHRONISMS: no capes or cloaks, no Roman or Greek crested helmets, no tall horsehair plumes, no European plate or chainmail, no curved sabres, no guandao glaive, no chairs or high tables, no strongly upturned curling roof corners, no Ming/Qing brick fortresses or stone castles, no queue hairstyles, no Japanese samurai armour, no paper lanterns, no stirrups, no gunpowder. Scene: A county granary compound of timber storehouses on raised posts and stacked lumber set ablaze, seen from a distance; two small plain-clothed infiltrators in commoner tunics and headcloths (no armour) slipping away with torches, alarmed guards running from the gate.",
+   "files": [
+    {
+     "path": "previews/stratagem-cards/candidates/hwagye/hwagye-20260918T120004Z-bright-medium-1.png",
+     "sha256": "79740b1ed28643ddb3192d364e0b7feb334bf9d32e785b2ce396a12da93f3293"
+    },
+    {
+     "path": "previews/stratagem-cards/candidates/hwagye/hwagye-20260918T120004Z-bright-medium-2.png",
+     "sha256": "3b348f99237bfe7cc355a7a969327b7c3765e1224acaa3925e785a093f3070ea"
+    }
+   ],
+   "adopted": null
+  },
+  {
+   "card": "cheopbo",
+   "generatedAt": "20260918T120023Z",
+   "provider": "OpenAI Images API",
+   "model": "gpt-image-1-mini",
+   "style": "bright",
+   "size": "1024x1536",
+   "quality": "medium",
+   "prompt": "Clean, polished semi-realistic digital illustration for a historical strategy game card, late Han dynasty China around 200 CE. HIGH-KEY and bright: clear daylight, open luminous sky, light airy backgrounds, well-lit midtones, soft natural shadows — never murky, never low-key, no heavy vignette, no dark silhouettes. Vivid saturated colour with clean separation: bright crimson and vermilion banners and cloaks, clear azure and royal blue, fresh green landscape, polished gold and bronze armour fittings, warm healthy skin tones. Smooth refined brushwork with crisp edges and fine detail on lamellar armour, silk robes and architecture, heroic and clear readable staging. The subject is the ACTION of the scene with several figures in an environment, medium-wide view, not a close-up portrait. Unless the scene itself says night, render it in bright daytime; night scenes are moonlit and still clearly readable. Vertical 2:3 composition, no border, no frame, no text, no letters, no calligraphy, no seals, no watermark, no modern objects. STRICT PERIOD ACCURACY — Eastern Han / Three Kingdoms China, c. 184–280 CE, as seen in Han tomb figurines, murals and brick reliefs. CLOTHING: cross-collared robes and jackets wrapped right side over left (youren) tied with a cloth sash; common soldiers wear a knee-length belted tunic (often madder red) over loose trousers with cloth leg wraps and low cloth or leather shoes; officials and strategists wear long wide-sleeved robes (shenyi/pao) with layered collars. HEADWEAR: hair in a topknot; soldiers wear a flat cloth headcloth cap (ze), often red, or a simple rounded iron or leather lamellar helmet made of laced plates with a neck guard; officers may have a small pheasant feather; civil officials wear a small black lacquered gauze cap (jinxian guan) or a plain headcloth (fujin). ARMOUR: dark lacquered iron or leather lamellar of small rectangular plates laced with cords, as a sleeveless cuirass with shoulder flaps or a short-sleeved tube-sleeve coat worn over the tunic, reaching the hips. WEAPONS: ji halberd (spear with a perpendicular side blade), long spears, straight single-edged ring-pommel sabres (huanshou dao), straight double-edged jian, crossbows with bronze triggers, rectangular or double-arc wooden shields. HORSES: small steppe-type horses with simple padded saddles and NO stirrups. ARCHITECTURE: tawny rammed-earth walls with plain parapets, timber-frame halls and gate towers (que) with straight, gently sloped hip roofs of grey cylindrical tiles and round eave tiles, simple brackets, packed-earth courtyards. FURNITURE: people kneel or sit on woven mats and low platforms at low tables; writing is on bamboo slips and silk. FORBIDDEN ANACHRONISMS: no capes or cloaks, no Roman or Greek crested helmets, no tall horsehair plumes, no European plate or chainmail, no curved sabres, no guandao glaive, no chairs or high tables, no strongly upturned curling roof corners, no Ming/Qing brick fortresses or stone castles, no queue hairstyles, no Japanese samurai armour, no paper lanterns, no stirrups, no gunpowder. Scene: A plain-clothed scout in a commoner's tunic and headcloth crouching behind trees on a hill, overlooking a rammed-earth walled town and rows of army tents below, tallying on a bamboo slip.",
+   "files": [
+    {
+     "path": "previews/stratagem-cards/candidates/cheopbo/cheopbo-20260918T120023Z-bright-medium-1.png",
+     "sha256": "c4b546f92a35b562c0a6672bd474a5318597481289f2ed4d4118ca44031e2480"
+    },
+    {
+     "path": "previews/stratagem-cards/candidates/cheopbo/cheopbo-20260918T120023Z-bright-medium-2.png",
+     "sha256": "8f2f942db6f3462f535bbd2998f5d9d195282cc436875b0c5ed75a195650a354"
+    }
+   ],
+   "adopted": null
+  },
+  {
+   "card": "gyeonbyeok",
+   "generatedAt": "20260918T120042Z",
+   "provider": "OpenAI Images API",
+   "model": "gpt-image-1-mini",
+   "style": "bright",
+   "size": "1024x1536",
+   "quality": "medium",
+   "prompt": "Clean, polished semi-realistic digital illustration for a historical strategy game card, late Han dynasty China around 200 CE. HIGH-KEY and bright: clear daylight, open luminous sky, light airy backgrounds, well-lit midtones, soft natural shadows — never murky, never low-key, no heavy vignette, no dark silhouettes. Vivid saturated colour with clean separation: bright crimson and vermilion banners and cloaks, clear azure and royal blue, fresh green landscape, polished gold and bronze armour fittings, warm healthy skin tones. Smooth refined brushwork with crisp edges and fine detail on lamellar armour, silk robes and architecture, heroic and clear readable staging. The subject is the ACTION of the scene with several figures in an environment, medium-wide view, not a close-up portrait. Unless the scene itself says night, render it in bright daytime; night scenes are moonlit and still clearly readable. Vertical 2:3 composition, no border, no frame, no text, no letters, no calligraphy, no seals, no watermark, no modern objects. STRICT PERIOD ACCURACY — Eastern Han / Three Kingdoms China, c. 184–280 CE, as seen in Han tomb figurines, murals and brick reliefs. CLOTHING: cross-collared robes and jackets wrapped right side over left (youren) tied with a cloth sash; common soldiers wear a knee-length belted tunic (often madder red) over loose trousers with cloth leg wraps and low cloth or leather shoes; officials and strategists wear long wide-sleeved robes (shenyi/pao) with layered collars. HEADWEAR: hair in a topknot; soldiers wear a flat cloth headcloth cap (ze), often red, or a simple rounded iron or leather lamellar helmet made of laced plates with a neck guard; officers may have a small pheasant feather; civil officials wear a small black lacquered gauze cap (jinxian guan) or a plain headcloth (fujin). ARMOUR: dark lacquered iron or leather lamellar of small rectangular plates laced with cords, as a sleeveless cuirass with shoulder flaps or a short-sleeved tube-sleeve coat worn over the tunic, reaching the hips. WEAPONS: ji halberd (spear with a perpendicular side blade), long spears, straight single-edged ring-pommel sabres (huanshou dao), straight double-edged jian, crossbows with bronze triggers, rectangular or double-arc wooden shields. HORSES: small steppe-type horses with simple padded saddles and NO stirrups. ARCHITECTURE: tawny rammed-earth walls with plain parapets, timber-frame halls and gate towers (que) with straight, gently sloped hip roofs of grey cylindrical tiles and round eave tiles, simple brackets, packed-earth courtyards. FURNITURE: people kneel or sit on woven mats and low platforms at low tables; writing is on bamboo slips and silk. FORBIDDEN ANACHRONISMS: no capes or cloaks, no Roman or Greek crested helmets, no tall horsehair plumes, no European plate or chainmail, no curved sabres, no guandao glaive, no chairs or high tables, no strongly upturned curling roof corners, no Ming/Qing brick fortresses or stone castles, no queue hairstyles, no Japanese samurai armour, no paper lanterns, no stirrups, no gunpowder. Scene: A Han dynasty rammed-earth city wall: massive sloped tawny earthen rampart with visible horizontal tamped layers, NO stone blocks and NO European crenellated towers, a timber gate tower with a tiled hip roof above a barred wooden gate, defenders with spears and crossbows along a plain earthen parapet, fields outside stripped bare, a besieging host small in the distance.",
+   "files": [
+    {
+     "path": "previews/stratagem-cards/candidates/gyeonbyeok/gyeonbyeok-20260918T120042Z-bright-medium-1.png",
+     "sha256": "abef791c276a5af3a3bfb78651efd1deffc0e57cd6ea532244e1867ae3fe742a"
+    },
+    {
+     "path": "previews/stratagem-cards/candidates/gyeonbyeok/gyeonbyeok-20260918T120042Z-bright-medium-2.png",
+     "sha256": "7a2bed10e0230653272b583e54e417eea4e1e607c86aed5a94d2458d0f54e06a"
+    }
+   ],
+   "adopted": null
+  },
+  {
+   "card": "ganpa",
+   "generatedAt": "20260918T120100Z",
+   "provider": "OpenAI Images API",
+   "model": "gpt-image-1-mini",
+   "style": "bright",
+   "size": "1024x1536",
+   "quality": "medium",
+   "prompt": "Clean, polished semi-realistic digital illustration for a historical strategy game card, late Han dynasty China around 200 CE. HIGH-KEY and bright: clear daylight, open luminous sky, light airy backgrounds, well-lit midtones, soft natural shadows — never murky, never low-key, no heavy vignette, no dark silhouettes. Vivid saturated colour with clean separation: bright crimson and vermilion banners and cloaks, clear azure and royal blue, fresh green landscape, polished gold and bronze armour fittings, warm healthy skin tones. Smooth refined brushwork with crisp edges and fine detail on lamellar armour, silk robes and architecture, heroic and clear readable staging. The subject is the ACTION of the scene with several figures in an environment, medium-wide view, not a close-up portrait. Unless the scene itself says night, render it in bright daytime; night scenes are moonlit and still clearly readable. Vertical 2:3 composition, no border, no frame, no text, no letters, no calligraphy, no seals, no watermark, no modern objects. STRICT PERIOD ACCURACY — Eastern Han / Three Kingdoms China, c. 184–280 CE, as seen in Han tomb figurines, murals and brick reliefs. CLOTHING: cross-collared robes and jackets wrapped right side over left (youren) tied with a cloth sash; common soldiers wear a knee-length belted tunic (often madder red) over loose trousers with cloth leg wraps and low cloth or leather shoes; officials and strategists wear long wide-sleeved robes (shenyi/pao) with layered collars. HEADWEAR: hair in a topknot; soldiers wear a flat cloth headcloth cap (ze), often red, or a simple rounded iron or leather lamellar helmet made of laced plates with a neck guard; officers may have a small pheasant feather; civil officials wear a small black lacquered gauze cap (jinxian guan) or a plain headcloth (fujin). ARMOUR: dark lacquered iron or leather lamellar of small rectangular plates laced with cords, as a sleeveless cuirass with shoulder flaps or a short-sleeved tube-sleeve coat worn over the tunic, reaching the hips. WEAPONS: ji halberd (spear with a perpendicular side blade), long spears, straight single-edged ring-pommel sabres (huanshou dao), straight double-edged jian, crossbows with bronze triggers, rectangular or double-arc wooden shields. HORSES: small steppe-type horses with simple padded saddles and NO stirrups. ARCHITECTURE: tawny rammed-earth walls with plain parapets, timber-frame halls and gate towers (que) with straight, gently sloped hip roofs of grey cylindrical tiles and round eave tiles, simple brackets, packed-earth courtyards. FURNITURE: people kneel or sit on woven mats and low platforms at low tables; writing is on bamboo slips and silk. FORBIDDEN ANACHRONISMS: no capes or cloaks, no Roman or Greek crested helmets, no tall horsehair plumes, no European plate or chainmail, no curved sabres, no guandao glaive, no chairs or high tables, no strongly upturned curling roof corners, no Ming/Qing brick fortresses or stone castles, no queue hairstyles, no Japanese samurai armour, no paper lanterns, no stirrups, no gunpowder. Scene: A calm strategist in a wide-sleeved robe and plain headcloth kneeling on a mat at a low table with a silk field map and bamboo slips inside an open command tent, one hand raised in warning to two attending officers, while through the tent opening drifting smoke thins to reveal enemy soldiers hidden in a grove.",
+   "files": [
+    {
+     "path": "previews/stratagem-cards/candidates/ganpa/ganpa-20260918T120100Z-bright-medium-1.png",
+     "sha256": "5b3c698bb50ee6b9fd0589447e84ad500cf2ff95e653f9c3fb50f5a229699137"
+    },
+    {
+     "path": "previews/stratagem-cards/candidates/ganpa/ganpa-20260918T120100Z-bright-medium-2.png",
+     "sha256": "a2a29b71f3fcaa8bb9a88a57952d56426d0773c42258135a21c10096910c654d"
+    }
+   ],
+   "adopted": null
   }
  ]
 }

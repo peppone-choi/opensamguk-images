@@ -12,17 +12,17 @@
   {
    "id": "uibyeong",
    "nameKo": "의병(疑兵)",
-   "scene": "A hillside ridge lined with many plain blank cloth banners and straw dummies in armour and campfire smoke to fake a large army, only a handful of real soldiers tending them; the banners are blank with no characters or symbols."
+   "scene": "A wide view of a hillside ridge lined with many plain blank cloth banners on poles and rows of straw dummies dressed in tunics, with campfires smoking to fake a large army; only a few small real soldiers tending the dummies; the banners are blank with no characters or symbols."
   },
   {
    "id": "hwagye",
    "nameKo": "화계",
-   "scene": "A county granary and timber stockpile burning at night, flames rendered in the bronze-gold accent, a lone figure with a torch slipping away in the foreground."
+   "scene": "A county granary compound of timber storehouses on raised posts and stacked lumber set ablaze, seen from a distance; two small plain-clothed infiltrators in commoner tunics and headcloths (no armour) slipping away with torches, alarmed guards running from the gate."
   },
   {
    "id": "cheopbo",
    "nameKo": "첩보",
-   "scene": "A plain-clothed scout on a wooded hill overlooking a walled town and its army camp at dusk, counting tents, a bamboo slip tucked in his sash."
+   "scene": "A plain-clothed scout in a commoner's tunic and headcloth crouching behind trees on a hill, overlooking a rammed-earth walled town and rows of army tents below, tallying on a bamboo slip."
   },
   {
    "id": "gyeonbyeok",
@@ -32,7 +32,7 @@
   {
    "id": "ganpa",
    "nameKo": "간파",
-   "scene": "A calm strategist in scholar's robes seated at a low table with a field map, one hand raised, his gaze piercing through drifting smoke that reveals hidden enemy soldiers behind it."
+   "scene": "A calm strategist in a wide-sleeved robe and plain headcloth kneeling on a mat at a low table with a silk field map and bamboo slips inside an open command tent, one hand raised in warning to two attending officers, while through the tent opening drifting smoke thins to reveal enemy soldiers hidden in a grove."
   },
   {
    "id": "gunryang",
@@ -171,5 +171,17 @@
   "vivid": "Polished, highly detailed digital painting for a historical strategy game card, late Han dynasty China around 200 CE. Vivid, saturated, high-contrast colour: brilliant crimson and vermilion, deep royal blue, emerald green, gleaming gold trim and lacquer, luminous dramatic skies. Let the time of day and dominant hue follow the scene — moonlit blue night, pale dawn, bright noon, overcast grey-green, or fiery dusk — so that different cards do not all share one orange sunset. Cinematic lighting with strong rim light and warm-cool contrast, crisp realistic rendering, deep atmospheric perspective. The subject is the ACTION of the scene shown as a wide establishing view with several small-to-medium figures in an environment — never a close-up portrait of one hero, no figure larger than a third of the frame height. Edges fall off to darkness so it sits on a near-black interface. Vertical 2:3 composition, no border, no frame, no text, no letters, no calligraphy, no seals, no watermark, no modern objects.",
   "bright": "Clean, polished semi-realistic digital illustration for a historical strategy game card, late Han dynasty China around 200 CE. HIGH-KEY and bright: clear daylight, open luminous sky, light airy backgrounds, well-lit midtones, soft natural shadows — never murky, never low-key, no heavy vignette, no dark silhouettes. Vivid saturated colour with clean separation: bright crimson and vermilion banners and cloaks, clear azure and royal blue, fresh green landscape, polished gold and bronze armour fittings, warm healthy skin tones. Smooth refined brushwork with crisp edges and fine detail on lamellar armour, silk robes and architecture, heroic and clear readable staging. The subject is the ACTION of the scene with several figures in an environment, medium-wide view, not a close-up portrait. Unless the scene itself says night, render it in bright daytime; night scenes are moonlit and still clearly readable. Vertical 2:3 composition, no border, no frame, no text, no letters, no calligraphy, no seals, no watermark, no modern objects."
  },
- "defaultStyle": "bright"
+ "defaultStyle": "bright",
+ "periodRules": "STRICT PERIOD ACCURACY — Eastern Han / Three Kingdoms China, c. 184–280 CE, as seen in Han tomb figurines, murals and brick reliefs. CLOTHING: cross-collared robes and jackets wrapped right side over left (youren) tied with a cloth sash; common soldiers wear a knee-length belted tunic (often madder red) over loose trousers with cloth leg wraps and low cloth or leather shoes; officials and strategists wear long wide-sleeved robes (shenyi/pao) with layered collars. HEADWEAR: hair in a topknot; soldiers wear a flat cloth headcloth cap (ze), often red, or a simple low rounded iron or leather lamellar helmet made of laced plates with a neck guard and a smooth dome with NO spike, knob or finial on top; officers may have a small pheasant feather; civil officials wear a small black lacquered gauze cap (jinxian guan) or a plain headcloth (fujin). ARMOUR: dark lacquered iron or leather lamellar of small rectangular plates laced with cords, as a sleeveless cuirass with shoulder flaps or a short-sleeved tube-sleeve coat worn over the tunic, reaching the hips. WEAPONS: ji halberd (spear with a perpendicular side blade), long spears, perfectly STRAIGHT single-edged ring-pommel sabres (huanshou dao) with a ring at the pommel and no curve at all, straight double-edged jian, crossbows with bronze triggers, rectangular or double-arc wooden shields. HORSES: small steppe-type horses with simple padded saddles and NO stirrups — riders' legs hang free with no foot loops or straps of any kind. ARCHITECTURE: tawny rammed-earth walls with plain parapets, timber-frame halls and gate towers (que) with hip roofs whose eaves are STRAIGHT horizontal lines with flat, un-curved corners, grey cylindrical tiles and round eave tiles, plain ridge ends without ornaments, single-storey or a simple two-level gate tower, simple brackets, packed-earth courtyards. FURNITURE: people kneel or sit on woven mats and low platforms at low tables; writing is on bamboo slips and silk. FORBIDDEN ANACHRONISMS: no capes, cloaks, shawls or neck scarves, no Roman or Greek crested helmets, no tall horsehair plumes, no European plate or chainmail, no curved sabres, no guandao glaive, no chairs or high tables, no strongly upturned curling roof corners, no Ming/Qing brick fortresses or stone castles, no queue hairstyles, no Japanese samurai armour, no paper lanterns, no stirrups, no gunpowder.",
+ "qaChecklist": [
+  "곧은 環首刀(휜 칼 금지)",
+  "등자 없음",
+  "망토·숄 없음",
+  "투구: 둥근 札甲胄, 꼭지·깃 장식 없음(장교의 꿩깃만)",
+  "右衽 교차 깃",
+  "바닥·낮은 案(의자 금지)",
+  "처마 직선(들린 추녀 금지)",
+  "판축 토성(벽돌·석성 금지)",
+  "깃발에 글자 없음"
+ ]
 }

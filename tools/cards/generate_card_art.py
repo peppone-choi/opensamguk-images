@@ -29,7 +29,7 @@ ENDPOINT = "https://api.openai.com/v1/images/generations"
 
 
 def prompt_for(design: dict, card: dict, style: str) -> str:
-    return f"{design['styles'][style]} Scene: {card['scene']}"
+    return f"{design['styles'][style]} {design.get('periodRules', '')} Scene: {card['scene']}"
 
 
 def generate(key: str, model: str, prompt: str, size: str, quality: str, n: int) -> list[bytes]:
