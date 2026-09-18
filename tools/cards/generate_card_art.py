@@ -32,8 +32,12 @@ def prompt_for(design: dict, card: dict, style: str) -> str:
     return f"{design['styles'][style]} {design.get('periodRules', '')} Scene: {card['scene']}"
 
 
-def generate(key: str, model: str, prompt: str, size: str, quality: str, n: int) -> list[bytes]:
-    body = json.dumps({"model": model, "prompt": prompt, "size": size, "quality": quality, "n": n}).encode()
+def generate(key: str, model: str, prompt: str, size: str, quality: str, n: int, background: str | None = None) -> list[bytes]:
+    payload = {"model": model, "prompt": prompt, "size": size, "quality": quality, "n": n}
+    if background:
+        payload["background"] = background
+        payload["output_format"] = "png"
+    body = json.dumps(payload).encode()
     req = urllib.request.Request(ENDPOINT, data=body, headers={
         "Authorization": f"Bearer {key}", "Content-Type": "application/json"})
     try:
@@ -51,9 +55,16 @@ def main(argv=None) -> int:
     ap.add_argument("--n", type=int, default=4)
     ap.add_argument("--quality", default="low", choices=["low", "medium", "high"])
     ap.add_argument("--style", default=None, help="design.json styles 의 키 (기본: defaultStyle)")
+    ap.add_argument("--design", default=None, help="다른 명세 파일(예: originals/battle-tokens/design.json)")
     ap.add_argument("--dry-run", action="store_true")
     args = ap.parse_args(argv)
-    design = json.loads(DESIGN.read_text(encoding="utf-8"))
+    design_path = Path(args.design).resolve() if args.design else DESIGN
+    design = json.loads(design_path.read_text(encoding="utf-8"))
+    kind = design_path.parent.name
+    if "tokens" in design:  # 토큰 명세는 cards 자리에 tokens, styles 자리에 styleHead 하나를 둔다
+        design["cards"] = design["tokens"]
+        design.setdefault("styles", {"token": design["styleHead"]})
+        design.setdefault("defaultStyle", "token")
     style = args.style or design["defaultStyle"]
     if style not in design["styles"]:
         raise SystemExit(f"design.json 에 없는 style: {style}")
@@ -69,13 +80,14 @@ def main(argv=None) -> int:
     key = os.environ.get("OPENAI_API_KEY", "").strip()
     if not key:
         raise SystemExit("OPENAI_API_KEY 가 비어 있다 — 메타레포 .env 를 export 한 뒤 다시 돌려라")
-    ledger = json.loads(PROVENANCE.read_text(encoding="utf-8")) if PROVENANCE.exists() else {
+    provenance = design_path.parent / "provenance.json"
+    ledger = json.loads(provenance.read_text(encoding="utf-8")) if provenance.exists() else {
         "schemaVersion": 1, "note": "AI 생성 후보의 출처. 채택 여부는 adopted 로 사람이 적는다.", "runs": []}
     for c in cards:
         prompt = prompt_for(design, c, style)
-        images = generate(key, design["model"], prompt, design["size"], args.quality, args.n)
+        images = generate(key, design["model"], prompt, design["size"], args.quality, args.n, design.get("background"))
         stamp = datetime.datetime.now(datetime.timezone.utc).strftime("%Y%m%dT%H%M%SZ")
-        folder = OUT / c["id"]
+        folder = (ROOT / "previews" / kind / "candidates" / c["id"]) if args.design else OUT / c["id"]
         folder.mkdir(parents=True, exist_ok=True)
         files = []
         for i, raw in enumerate(images, start=1):
@@ -85,7 +97,7 @@ def main(argv=None) -> int:
         ledger["runs"].append({"card": c["id"], "generatedAt": stamp, "provider": "OpenAI Images API",
                                "model": design["model"], "style": style, "size": design["size"], "quality": args.quality,
                                "prompt": prompt, "files": files, "adopted": None})
-        PROVENANCE.write_text(json.dumps(ledger, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+        provenance.write_text(json.dumps(ledger, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
         print(f"{c['id']}: {len(files)} candidates", file=sys.stderr)
     return 0
 
