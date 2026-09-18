@@ -47,7 +47,7 @@
   {
    "id": "yueon",
    "nameKo": "유언",
-   "scene": "A crowded county market where a stranger whispers to uneasy townsfolk, heads turning, anxious murmuring faces, an official's hall in the background."
+   "scene": "A busy village market street of low thatched and tiled houses (no city walls, no gate towers), a stranger in a plain tunic whispering behind his hand to a small group of worried townsfolk, faces turning, baskets of vegetables and cloth on the ground."
   },
   {
    "id": "pagoe",
@@ -82,7 +82,7 @@
   {
    "id": "yeonhwan",
    "nameKo": "연환계(선박)",
-   "scene": "Large war junks chained together side by side with heavy iron chains and planks across a wide river, soldiers walking steadily across the joined decks."
+   "scene": "A wide river seen from a high bank: many flat-decked Han wooden war boats with square woven-mat sails on single masts, lashed side by side with heavy iron chains and plank walkways across them, soldiers walking steadily between the joined decks. No junk sails with battens, no city."
   },
   {
    "id": "chajeon",
@@ -97,7 +97,7 @@
   {
    "id": "pilsa",
    "nameKo": "필사즉생",
-   "scene": "A commander smashing cooking pots and burning the boats behind his assembled army at a riverbank, soldiers raising weapons with grim resolve."
+   "scene": "On a riverbank, a commander in lamellar armour with bare shoulders swings an axe to smash large clay cooking pots while behind him wooden river boats are burning; his soldiers stand in ranks raising spears in grim resolve. No buildings anywhere."
   },
   {
    "id": "dunjeon",

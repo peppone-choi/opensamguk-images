@@ -894,7 +894,11 @@
      "sha256": "e76000f22b410511430c42949ab9369336044d19bc664cc6ed926aee2827b7e8"
     }
    ],
-   "adopted": null
+   "adopted": {
+    "file": "previews/stratagem-cards/candidates/maebok/maebok-20260918T115922Z-bright-medium-1.png",
+    "export": "exports/stratagem-cards/maebok.webp",
+    "sha256": "07d9fbb94ea4ed4933318fb9a96a66b0d543da5fd502775404d1d402a07f8a70"
+   }
   },
   {
    "card": "uibyeong",
@@ -915,7 +919,11 @@
      "sha256": "31a2b55dc9e0ea740ff55bbbe21e8a581e4b91d60b3b89f841a0df6b30c507ca"
     }
    ],
-   "adopted": null
+   "adopted": {
+    "file": "previews/stratagem-cards/candidates/uibyeong/uibyeong-20260918T115943Z-bright-medium-2.png",
+    "export": "exports/stratagem-cards/uibyeong.webp",
+    "sha256": "ce6878360036b0103ae567acaad2f59946d0f4bdcbe1484338fc24d538e59326"
+   }
   },
   {
    "card": "hwagye",
@@ -957,7 +965,11 @@
      "sha256": "8f2f942db6f3462f535bbd2998f5d9d195282cc436875b0c5ed75a195650a354"
     }
    ],
-   "adopted": null
+   "adopted": {
+    "file": "previews/stratagem-cards/candidates/cheopbo/cheopbo-20260918T120023Z-bright-medium-2.png",
+    "export": "exports/stratagem-cards/cheopbo.webp",
+    "sha256": "5574e7013ffe98922ac1b43ed777d83efde27ddf6ded452cccf7cc5d9606e505"
+   }
   },
   {
    "card": "gyeonbyeok",
@@ -999,7 +1011,11 @@
      "sha256": "a2a29b71f3fcaa8bb9a88a57952d56426d0773c42258135a21c10096910c654d"
     }
    ],
-   "adopted": null
+   "adopted": {
+    "file": "previews/stratagem-cards/candidates/ganpa/ganpa-20260918T120100Z-bright-medium-1.png",
+    "export": "exports/stratagem-cards/ganpa.webp",
+    "sha256": "ef1b329ef7429c120b65f27923d446cab4d5cb69f85ed4e75eda596bfe8c14d9"
+   }
   },
   {
    "card": "maebok",
@@ -1167,7 +1183,11 @@
      "sha256": "c74e44baccdc43646341e8c4ec61536c28018aaa814e6ec876f867351b5021e2"
     }
    ],
-   "adopted": null
+   "adopted": {
+    "file": "previews/stratagem-cards/candidates/sugong/sugong-20260918T120348Z-bright-low-2.png",
+    "export": "exports/stratagem-cards/sugong.webp",
+    "sha256": "bbd646f4d2fc17dd686c807faef1115a178fb8750e04a5477bd89ad49684875f"
+   }
   },
   {
    "card": "yueon",
@@ -1209,7 +1229,11 @@
      "sha256": "800935856bfa8df97ad11d41936188187234189837419b42089f18ce6f095f27"
     }
    ],
-   "adopted": null
+   "adopted": {
+    "file": "previews/stratagem-cards/candidates/pagoe/pagoe-20260918T120412Z-bright-low-2.png",
+    "export": "exports/stratagem-cards/pagoe.webp",
+    "sha256": "026b6fa4a0d15b1a05300d19709b095ab110c67fc1955127f424ae9c7ae3551c"
+   }
   },
   {
    "card": "talchwi",
@@ -1293,7 +1317,11 @@
      "sha256": "1969f232f227f8c80a0eabc95eb6a3c21d58a77a5626699b9adc154c50ead6f9"
     }
    ],
-   "adopted": null
+   "adopted": {
+    "file": "previews/stratagem-cards/candidates/sahang/sahang-20260918T120503Z-bright-low-2.png",
+    "export": "exports/stratagem-cards/sahang.webp",
+    "sha256": "a5a24103c996b7ff5a99dba72ba51328fa9bf2d768ba9e0842c34174d7c6ef83"
+   }
   },
   {
    "card": "goyuk",
@@ -1314,7 +1342,11 @@
      "sha256": "9a0f444cd012bcfadbf367a364e374542d7760b4aeab455432b1035afc46adf7"
     }
    ],
-   "adopted": null
+   "adopted": {
+    "file": "previews/stratagem-cards/candidates/goyuk/goyuk-20260918T120516Z-bright-low-2.png",
+    "export": "exports/stratagem-cards/goyuk.webp",
+    "sha256": "1f4cf7f7014c060322277dbc0fcfa729e77e0369db2ac9fbbaecbe401c75108a"
+   }
   },
   {
    "card": "yeonhwan",
@@ -1356,7 +1388,11 @@
      "sha256": "49565b450e83c62d327ec4c390beec6b6c82e27c5d5554a6089c79bfb45c8d03"
     }
    ],
-   "adopted": null
+   "adopted": {
+    "file": "previews/stratagem-cards/candidates/chajeon/chajeon-20260918T120547Z-bright-low-2.png",
+    "export": "exports/stratagem-cards/chajeon.webp",
+    "sha256": "44d7adbaffa6e02b069c2c783a208f4c2a14710c375491d66f4482f7df99e359"
+   }
   },
   {
    "card": "gongseong",
@@ -1377,7 +1413,11 @@
      "sha256": "5eb24533aa27e5c697cd15edd6b76c921d59f08faf49323fbfa015ac9d712635"
     }
    ],
-   "adopted": null
+   "adopted": {
+    "file": "previews/stratagem-cards/candidates/gongseong/gongseong-20260918T120559Z-bright-low-2.png",
+    "export": "exports/stratagem-cards/gongseong.webp",
+    "sha256": "d343cfd7e338fcd08650ab7b91bfac8cbc89da22c69689d65c1e7012826c2cad"
+   }
   },
   {
    "card": "pilsa",
@@ -1419,7 +1459,11 @@
      "sha256": "18a6f1b7faee34bad01f649af604455e7c1f197a24e174fdef461b0749656835"
     }
    ],
-   "adopted": null
+   "adopted": {
+    "file": "previews/stratagem-cards/candidates/dunjeon/dunjeon-20260918T120625Z-bright-low-2.png",
+    "export": "exports/stratagem-cards/dunjeon.webp",
+    "sha256": "ebd83303b13c90b462f7c5d6a0dabf009b2dcb3dccd7f9c814d7393f2d4c5513"
+   }
   },
   {
    "card": "chomu",
@@ -1440,7 +1484,11 @@
      "sha256": "69006299459f9a4ee6392ca9b34dcdeec944e5a736747eac443e07dc2a48fc46"
     }
    ],
-   "adopted": null
+   "adopted": {
+    "file": "previews/stratagem-cards/candidates/chomu/chomu-20260918T120638Z-bright-low-2.png",
+    "export": "exports/stratagem-cards/chomu.webp",
+    "sha256": "6fd5e7aad13e97dd168a6e512c5958a88aa903ffea46e1324b370dbd1f3158c2"
+   }
   },
   {
    "card": "guhyul",
@@ -1461,7 +1509,11 @@
      "sha256": "bc3d1c2219f8ec401f4763acd8bc65a393c5af5c92eac7757b502ee04501439d"
     }
    ],
-   "adopted": null
+   "adopted": {
+    "file": "previews/stratagem-cards/candidates/guhyul/guhyul-20260918T120651Z-bright-low-2.png",
+    "export": "exports/stratagem-cards/guhyul.webp",
+    "sha256": "42ad45e9401dfb8f3c09e9d2a5c28f6c42fcf24fbebf536c3ba7eca98b1e8ad4"
+   }
   },
   {
    "card": "hosi",
@@ -1482,7 +1534,11 @@
      "sha256": "e3b2c207ed1c1d409729bd883e7f6036e884517186c752b70757ccbaa74e4b9a"
     }
    ],
-   "adopted": null
+   "adopted": {
+    "file": "previews/stratagem-cards/candidates/hosi/hosi-20260918T120702Z-bright-low-2.png",
+    "export": "exports/stratagem-cards/hosi.webp",
+    "sha256": "562093950c23f0452ecdc2b26e3d2dc406fd77f91bcded9159265e59db0234f6"
+   }
   },
   {
    "card": "baekseong",
@@ -1503,7 +1559,11 @@
      "sha256": "c7cc63c28b8a6e29c18d2901de39545da663b5194b0311babcb8d9bad27116d3"
     }
    ],
-   "adopted": null
+   "adopted": {
+    "file": "previews/stratagem-cards/candidates/baekseong/baekseong-20260918T120715Z-bright-low-2.png",
+    "export": "exports/stratagem-cards/baekseong.webp",
+    "sha256": "b18685b7676b233823c8e3c6b05e7b6ba518c02f713828c7456ad996c7ff4733"
+   }
   },
   {
    "card": "uibyeongmojip",
@@ -1524,7 +1584,11 @@
      "sha256": "a8dc7f49e6be0564cc64e992e5e3c389af4206951914d19788f088f49382acd5"
     }
    ],
-   "adopted": null
+   "adopted": {
+    "file": "previews/stratagem-cards/candidates/uibyeongmojip/uibyeongmojip-20260918T120729Z-bright-low-2.png",
+    "export": "exports/stratagem-cards/uibyeongmojip.webp",
+    "sha256": "809ec3a2032a1522c018110d7cad9974de36dc4f3dda247b71164ccc8a350257"
+   }
   },
   {
    "card": "igan",
@@ -1608,7 +1672,11 @@
      "sha256": "b7d9262c5813c55c0e0612e049e661093c4573a003fc5f65f1080cdbb264000b"
     }
    ],
-   "adopted": null
+   "adopted": {
+    "file": "previews/stratagem-cards/candidates/cheongeo/cheongeo-20260918T120822Z-bright-low-2.png",
+    "export": "exports/stratagem-cards/cheongeo.webp",
+    "sha256": "030e8edcf9742a1a877646e8a80d036c42598333cdb884593e35bae260c6bb30"
+   }
   },
   {
    "card": "injil",
@@ -1629,7 +1697,11 @@
      "sha256": "e9e1bb7083253d60d8632db582016777e87efc14f6e0187e7440028f87416ea9"
     }
    ],
-   "adopted": null
+   "adopted": {
+    "file": "previews/stratagem-cards/candidates/injil/injil-20260918T120834Z-bright-low-2.png",
+    "export": "exports/stratagem-cards/injil.webp",
+    "sha256": "24759a8fd92090155f36819d0f48037f3528b8eb9136bfd5a028d5261bcb2249"
+   }
   },
   {
    "card": "geupseup",
@@ -1692,7 +1764,11 @@
      "sha256": "04482e7966755ddbb068805d61c8d56a26f28ab437712abd225085f87cddb5d2"
     }
    ],
-   "adopted": null
+   "adopted": {
+    "file": "previews/stratagem-cards/candidates/hwagye/hwagye-20260918T122158Z-bright-low-1.png",
+    "export": "exports/stratagem-cards/hwagye.webp",
+    "sha256": "dc81fef81a6def09b549b5b3ccb677451e368055bd661b2308a2049a47360b5f"
+   }
   },
   {
    "card": "gyeonbyeok",
@@ -1713,7 +1789,11 @@
      "sha256": "f6cc5d559e04954c1d250e7132cb276fabc2f92d35040627a6d979150b828621"
     }
    ],
-   "adopted": null
+   "adopted": {
+    "file": "previews/stratagem-cards/candidates/gyeonbyeok/gyeonbyeok-20260918T122211Z-bright-low-2.png",
+    "export": "exports/stratagem-cards/gyeonbyeok.webp",
+    "sha256": "1787a483f5306e6d95584a461aea66829548059c7f8fa40b7ceefc6dfd869983"
+   }
   },
   {
    "card": "gunryang",
@@ -1797,7 +1877,11 @@
      "sha256": "484cf7a3c173e4524223310b20c509c5715ab49e0203dfa77e3eda795f93252d"
     }
    ],
-   "adopted": null
+   "adopted": {
+    "file": "previews/stratagem-cards/candidates/yaseup/yaseup-20260918T131640Z-bright-low-2.png",
+    "export": "exports/stratagem-cards/yaseup.webp",
+    "sha256": "a87f4ccb908bf89767ae51067a8368553169144a90dfc191482ebe28e678fe3d"
+   }
   },
   {
    "card": "hwagong",
@@ -1818,7 +1902,11 @@
      "sha256": "40730f177def158da2f8cca928f3d73dbf55486718580b85a462508b3cd85c3d"
     }
    ],
-   "adopted": null
+   "adopted": {
+    "file": "previews/stratagem-cards/candidates/hwagong/hwagong-20260918T131657Z-bright-low-2.png",
+    "export": "exports/stratagem-cards/hwagong.webp",
+    "sha256": "9118844fad7df9b862d9a295fd5dc4cfc57933bd3d3f6d4b9c08316359e15017"
+   }
   },
   {
    "card": "yeonhwan",
@@ -1902,7 +1990,11 @@
      "sha256": "2c02567887340271d73c915e2d5d4998d3b92410385561652fce711d941ff4fb"
     }
    ],
-   "adopted": null
+   "adopted": {
+    "file": "previews/stratagem-cards/candidates/yeonhwanigan/yeonhwanigan-20260918T131747Z-bright-low-2.png",
+    "export": "exports/stratagem-cards/yeonhwanigan.webp",
+    "sha256": "128c254f55929f46213e0ed6c2ca2f07a25d1dd7d9b86d6bded36631acd98d06"
+   }
   },
   {
    "card": "bangan",
@@ -1986,7 +2078,11 @@
      "sha256": "7ff2c243a465dba856567eeac97cd476dd0b124185681c5fe6467f0810ef67b5"
     }
    ],
-   "adopted": null
+   "adopted": {
+    "file": "previews/stratagem-cards/candidates/gunryang/gunryang-20260918T134452Z-bright-medium-1.png",
+    "export": "exports/stratagem-cards/gunryang.webp",
+    "sha256": "2d02779fad36c78e522108daea8b743928a179cdf1f3352c689d581fe5be5417"
+   }
   },
   {
    "card": "talchwi",
@@ -2007,7 +2103,11 @@
      "sha256": "be40b6096522cdf10c44b57f200a1d2b9745522ff92181c1b7efff7ea12147eb"
     }
    ],
-   "adopted": null
+   "adopted": {
+    "file": "previews/stratagem-cards/candidates/talchwi/talchwi-20260918T134512Z-bright-medium-2.png",
+    "export": "exports/stratagem-cards/talchwi.webp",
+    "sha256": "4993b816eac59d4856ed80e16dd50a4bfed28d6e74e8be4958156b98b7e30de2"
+   }
   },
   {
    "card": "igan",
@@ -2028,7 +2128,11 @@
      "sha256": "595cc7646b6a168bc7e90f69a71391333a10e8e37d120ed397e47d6c51a4b2ae"
     }
    ],
-   "adopted": null
+   "adopted": {
+    "file": "previews/stratagem-cards/candidates/igan/igan-20260918T134534Z-bright-medium-1.png",
+    "export": "exports/stratagem-cards/igan.webp",
+    "sha256": "0caa02cee460ebc01168f58feb0df3e8ef8d168669c75069de6bdae2be3de4b8"
+   }
   },
   {
    "card": "bangan",
@@ -2049,7 +2153,11 @@
      "sha256": "4a312c8b1be5af5bee8f96fc73d5abfe89211cfad0296291d745635fa49c86bc"
     }
    ],
-   "adopted": null
+   "adopted": {
+    "file": "previews/stratagem-cards/candidates/bangan/bangan-20260918T134553Z-bright-medium-1.png",
+    "export": "exports/stratagem-cards/bangan.webp",
+    "sha256": "ef27429e3b2887ec6a785747ef8993078d7a932c5c5ad3f941ca1611cb742a94"
+   }
   },
   {
    "card": "geupseup",
@@ -2070,7 +2178,11 @@
      "sha256": "11d0d5bd1bcf0814530e9ec6aed8ce09a5a5b1f704069924f423444a2dfa4d94"
     }
    ],
-   "adopted": null
+   "adopted": {
+    "file": "previews/stratagem-cards/candidates/geupseup/geupseup-20260918T134612Z-bright-medium-1.png",
+    "export": "exports/stratagem-cards/geupseup.webp",
+    "sha256": "e2e5427d64ac1a03bc15749cd0fb97c91ff331d8ea3e4cf642ecaca2d957ef3f"
+   }
   },
   {
    "card": "ihogyeongsik",
@@ -2091,7 +2203,86 @@
      "sha256": "1028b48bb7e82b3ad3cb39eac22aeb8cd2e60244ce43560e2619636c7a1f35d1"
     }
    ],
-   "adopted": null
+   "adopted": {
+    "file": "previews/stratagem-cards/candidates/ihogyeongsik/ihogyeongsik-20260918T134633Z-bright-medium-2.png",
+    "export": "exports/stratagem-cards/ihogyeongsik.webp",
+    "sha256": "e2690ca1b4f4fb17126f5c197029d168329ab25997c7730be17c645c90323e85"
+   }
+  },
+  {
+   "card": "yueon",
+   "generatedAt": "20260918T143507Z",
+   "provider": "OpenAI Images API",
+   "model": "gpt-image-1-mini",
+   "style": "bright",
+   "size": "1024x1536",
+   "quality": "medium",
+   "prompt": "Clean, polished semi-realistic digital illustration for a historical strategy game card, late Han dynasty China around 200 CE. HIGH-KEY and bright: clear daylight, open luminous sky, light airy backgrounds, well-lit midtones, soft natural shadows — never murky, never low-key, no heavy vignette, no dark silhouettes. Vivid saturated colour with clean separation: bright crimson and vermilion banners and cloaks, clear azure and royal blue, fresh green landscape, polished gold and bronze armour fittings, warm healthy skin tones. Smooth refined brushwork with crisp edges and fine detail on lamellar armour, silk robes and architecture, heroic and clear readable staging. The subject is the ACTION of the scene with several figures in an environment, medium-wide view, not a close-up portrait. Unless the scene itself says night, render it in bright daytime; night scenes are moonlit and still clearly readable. Vertical 2:3 composition, no border, no frame, no text, no letters, no calligraphy, no seals, no watermark, no modern objects. STRICT PERIOD ACCURACY — Eastern Han / Three Kingdoms China, c. 184–280 CE, as seen in Han tomb figurines, murals and brick reliefs. CLOTHING: cross-collared robes and jackets wrapped right side over left (youren) tied with a cloth sash; common soldiers wear a knee-length belted tunic (often madder red) over loose trousers with cloth leg wraps and low cloth or leather shoes; officials and strategists wear long wide-sleeved robes (shenyi/pao) with layered collars. HEADWEAR: hair in a topknot; soldiers wear a flat cloth headcloth cap (ze), often red, or a simple low rounded iron or leather lamellar helmet made of laced plates with a neck guard and a smooth dome with NO spike, knob or finial on top; officers may have a small pheasant feather; civil officials wear a small black lacquered gauze cap (jinxian guan) or a plain headcloth (fujin). ARMOUR: dark lacquered iron or leather lamellar of small rectangular plates laced with cords, as a sleeveless cuirass with shoulder flaps or a short-sleeved tube-sleeve coat worn over the tunic, reaching the hips. WEAPONS: ji halberd (spear with a perpendicular side blade), long spears, perfectly STRAIGHT single-edged ring-pommel sabres (huanshou dao) with a ring at the pommel and no curve at all, straight double-edged jian, crossbows with bronze triggers, rectangular or double-arc wooden shields. HORSES: small steppe-type horses with simple padded saddles and NO stirrups — riders' legs hang free with no foot loops or straps of any kind. ARCHITECTURE: tawny rammed-earth walls with plain parapets, timber-frame halls and gate towers (que) with hip roofs whose eaves are STRAIGHT horizontal lines with flat, un-curved corners, grey cylindrical tiles and round eave tiles, plain ridge ends without ornaments, single-storey or a simple two-level gate tower, simple brackets, packed-earth courtyards. FURNITURE: people kneel or sit on woven mats and low platforms at low tables; writing is on bamboo slips and silk. RIDERS AND OFFICERS never wear a cape, mantle or any cloth draped from the shoulders — their shoulders show only the tunic or lamellar shoulder flaps. BACKGROUNDS vary with the scene: do NOT put a city gate tower in the background unless the scene is about a city; use open country, rivers, camps, farmland, forest, mountains, interiors. SHIPS are Han river craft: flat-bottomed plank boats and multi-deck tower ships (louchuan) with oars and simple square mat sails, no battened junk sails. FORBIDDEN ANACHRONISMS: no capes, cloaks, shawls or neck scarves, no Roman or Greek crested helmets, no tall horsehair plumes, no European plate or chainmail, no curved sabres, no guandao glaive, no chairs or high tables, no strongly upturned curling roof corners, no Ming/Qing brick fortresses or stone castles, no queue hairstyles, no Japanese samurai armour, no paper lanterns, no stirrups, no gunpowder. Scene: A busy village market street of low thatched and tiled houses (no city walls, no gate towers), a stranger in a plain tunic whispering behind his hand to a small group of worried townsfolk, faces turning, baskets of vegetables and cloth on the ground.",
+   "files": [
+    {
+     "path": "previews/stratagem-cards/candidates/yueon/yueon-20260918T143507Z-bright-medium-1.png",
+     "sha256": "7095dda995452ba2ba7078b6d54f2e1484bc4c58724ceaf308b0a76bd2ed13ad"
+    },
+    {
+     "path": "previews/stratagem-cards/candidates/yueon/yueon-20260918T143507Z-bright-medium-2.png",
+     "sha256": "58b6d5c3778c5a8fd93957b0abe6f7acd0f9684f3a200bdef1cac1adda7a9ed8"
+    }
+   ],
+   "adopted": {
+    "file": "previews/stratagem-cards/candidates/yueon/yueon-20260918T143507Z-bright-medium-1.png",
+    "export": "exports/stratagem-cards/yueon.webp",
+    "sha256": "1b9320b438887031ff46fb79c8f3d55812531efd6e46ea0e4d5a3e7434832c7d"
+   }
+  },
+  {
+   "card": "yeonhwan",
+   "generatedAt": "20260918T143529Z",
+   "provider": "OpenAI Images API",
+   "model": "gpt-image-1-mini",
+   "style": "bright",
+   "size": "1024x1536",
+   "quality": "medium",
+   "prompt": "Clean, polished semi-realistic digital illustration for a historical strategy game card, late Han dynasty China around 200 CE. HIGH-KEY and bright: clear daylight, open luminous sky, light airy backgrounds, well-lit midtones, soft natural shadows — never murky, never low-key, no heavy vignette, no dark silhouettes. Vivid saturated colour with clean separation: bright crimson and vermilion banners and cloaks, clear azure and royal blue, fresh green landscape, polished gold and bronze armour fittings, warm healthy skin tones. Smooth refined brushwork with crisp edges and fine detail on lamellar armour, silk robes and architecture, heroic and clear readable staging. The subject is the ACTION of the scene with several figures in an environment, medium-wide view, not a close-up portrait. Unless the scene itself says night, render it in bright daytime; night scenes are moonlit and still clearly readable. Vertical 2:3 composition, no border, no frame, no text, no letters, no calligraphy, no seals, no watermark, no modern objects. STRICT PERIOD ACCURACY — Eastern Han / Three Kingdoms China, c. 184–280 CE, as seen in Han tomb figurines, murals and brick reliefs. CLOTHING: cross-collared robes and jackets wrapped right side over left (youren) tied with a cloth sash; common soldiers wear a knee-length belted tunic (often madder red) over loose trousers with cloth leg wraps and low cloth or leather shoes; officials and strategists wear long wide-sleeved robes (shenyi/pao) with layered collars. HEADWEAR: hair in a topknot; soldiers wear a flat cloth headcloth cap (ze), often red, or a simple low rounded iron or leather lamellar helmet made of laced plates with a neck guard and a smooth dome with NO spike, knob or finial on top; officers may have a small pheasant feather; civil officials wear a small black lacquered gauze cap (jinxian guan) or a plain headcloth (fujin). ARMOUR: dark lacquered iron or leather lamellar of small rectangular plates laced with cords, as a sleeveless cuirass with shoulder flaps or a short-sleeved tube-sleeve coat worn over the tunic, reaching the hips. WEAPONS: ji halberd (spear with a perpendicular side blade), long spears, perfectly STRAIGHT single-edged ring-pommel sabres (huanshou dao) with a ring at the pommel and no curve at all, straight double-edged jian, crossbows with bronze triggers, rectangular or double-arc wooden shields. HORSES: small steppe-type horses with simple padded saddles and NO stirrups — riders' legs hang free with no foot loops or straps of any kind. ARCHITECTURE: tawny rammed-earth walls with plain parapets, timber-frame halls and gate towers (que) with hip roofs whose eaves are STRAIGHT horizontal lines with flat, un-curved corners, grey cylindrical tiles and round eave tiles, plain ridge ends without ornaments, single-storey or a simple two-level gate tower, simple brackets, packed-earth courtyards. FURNITURE: people kneel or sit on woven mats and low platforms at low tables; writing is on bamboo slips and silk. RIDERS AND OFFICERS never wear a cape, mantle or any cloth draped from the shoulders — their shoulders show only the tunic or lamellar shoulder flaps. BACKGROUNDS vary with the scene: do NOT put a city gate tower in the background unless the scene is about a city; use open country, rivers, camps, farmland, forest, mountains, interiors. SHIPS are Han river craft: flat-bottomed plank boats and multi-deck tower ships (louchuan) with oars and simple square mat sails, no battened junk sails. FORBIDDEN ANACHRONISMS: no capes, cloaks, shawls or neck scarves, no Roman or Greek crested helmets, no tall horsehair plumes, no European plate or chainmail, no curved sabres, no guandao glaive, no chairs or high tables, no strongly upturned curling roof corners, no Ming/Qing brick fortresses or stone castles, no queue hairstyles, no Japanese samurai armour, no paper lanterns, no stirrups, no gunpowder. Scene: A wide river seen from a high bank: many flat-decked Han wooden war boats with square woven-mat sails on single masts, lashed side by side with heavy iron chains and plank walkways across them, soldiers walking steadily between the joined decks. No junk sails with battens, no city.",
+   "files": [
+    {
+     "path": "previews/stratagem-cards/candidates/yeonhwan/yeonhwan-20260918T143529Z-bright-medium-1.png",
+     "sha256": "b3704ea83499ad32e57120f50fd6796958eb9709eeca085b6b3c4a6fc1fc695d"
+    },
+    {
+     "path": "previews/stratagem-cards/candidates/yeonhwan/yeonhwan-20260918T143529Z-bright-medium-2.png",
+     "sha256": "2564107a7b1baae1547ee56275db35f0904082d8a30a38b9ce34db6f966c2223"
+    }
+   ],
+   "adopted": {
+    "file": "previews/stratagem-cards/candidates/yeonhwan/yeonhwan-20260918T143529Z-bright-medium-2.png",
+    "export": "exports/stratagem-cards/yeonhwan.webp",
+    "sha256": "fa3e572ba37d07b49589a089099ac17ef1e5e9a21305189a3f50a0004b02777c"
+   }
+  },
+  {
+   "card": "pilsa",
+   "generatedAt": "20260918T143548Z",
+   "provider": "OpenAI Images API",
+   "model": "gpt-image-1-mini",
+   "style": "bright",
+   "size": "1024x1536",
+   "quality": "medium",
+   "prompt": "Clean, polished semi-realistic digital illustration for a historical strategy game card, late Han dynasty China around 200 CE. HIGH-KEY and bright: clear daylight, open luminous sky, light airy backgrounds, well-lit midtones, soft natural shadows — never murky, never low-key, no heavy vignette, no dark silhouettes. Vivid saturated colour with clean separation: bright crimson and vermilion banners and cloaks, clear azure and royal blue, fresh green landscape, polished gold and bronze armour fittings, warm healthy skin tones. Smooth refined brushwork with crisp edges and fine detail on lamellar armour, silk robes and architecture, heroic and clear readable staging. The subject is the ACTION of the scene with several figures in an environment, medium-wide view, not a close-up portrait. Unless the scene itself says night, render it in bright daytime; night scenes are moonlit and still clearly readable. Vertical 2:3 composition, no border, no frame, no text, no letters, no calligraphy, no seals, no watermark, no modern objects. STRICT PERIOD ACCURACY — Eastern Han / Three Kingdoms China, c. 184–280 CE, as seen in Han tomb figurines, murals and brick reliefs. CLOTHING: cross-collared robes and jackets wrapped right side over left (youren) tied with a cloth sash; common soldiers wear a knee-length belted tunic (often madder red) over loose trousers with cloth leg wraps and low cloth or leather shoes; officials and strategists wear long wide-sleeved robes (shenyi/pao) with layered collars. HEADWEAR: hair in a topknot; soldiers wear a flat cloth headcloth cap (ze), often red, or a simple low rounded iron or leather lamellar helmet made of laced plates with a neck guard and a smooth dome with NO spike, knob or finial on top; officers may have a small pheasant feather; civil officials wear a small black lacquered gauze cap (jinxian guan) or a plain headcloth (fujin). ARMOUR: dark lacquered iron or leather lamellar of small rectangular plates laced with cords, as a sleeveless cuirass with shoulder flaps or a short-sleeved tube-sleeve coat worn over the tunic, reaching the hips. WEAPONS: ji halberd (spear with a perpendicular side blade), long spears, perfectly STRAIGHT single-edged ring-pommel sabres (huanshou dao) with a ring at the pommel and no curve at all, straight double-edged jian, crossbows with bronze triggers, rectangular or double-arc wooden shields. HORSES: small steppe-type horses with simple padded saddles and NO stirrups — riders' legs hang free with no foot loops or straps of any kind. ARCHITECTURE: tawny rammed-earth walls with plain parapets, timber-frame halls and gate towers (que) with hip roofs whose eaves are STRAIGHT horizontal lines with flat, un-curved corners, grey cylindrical tiles and round eave tiles, plain ridge ends without ornaments, single-storey or a simple two-level gate tower, simple brackets, packed-earth courtyards. FURNITURE: people kneel or sit on woven mats and low platforms at low tables; writing is on bamboo slips and silk. RIDERS AND OFFICERS never wear a cape, mantle or any cloth draped from the shoulders — their shoulders show only the tunic or lamellar shoulder flaps. BACKGROUNDS vary with the scene: do NOT put a city gate tower in the background unless the scene is about a city; use open country, rivers, camps, farmland, forest, mountains, interiors. SHIPS are Han river craft: flat-bottomed plank boats and multi-deck tower ships (louchuan) with oars and simple square mat sails, no battened junk sails. FORBIDDEN ANACHRONISMS: no capes, cloaks, shawls or neck scarves, no Roman or Greek crested helmets, no tall horsehair plumes, no European plate or chainmail, no curved sabres, no guandao glaive, no chairs or high tables, no strongly upturned curling roof corners, no Ming/Qing brick fortresses or stone castles, no queue hairstyles, no Japanese samurai armour, no paper lanterns, no stirrups, no gunpowder. Scene: On a riverbank, a commander in lamellar armour with bare shoulders swings an axe to smash large clay cooking pots while behind him wooden river boats are burning; his soldiers stand in ranks raising spears in grim resolve. No buildings anywhere.",
+   "files": [
+    {
+     "path": "previews/stratagem-cards/candidates/pilsa/pilsa-20260918T143548Z-bright-medium-1.png",
+     "sha256": "c88cb10559d5390d7ab83394842e0f091d5a61660b6108af05605273eb8785f7"
+    },
+    {
+     "path": "previews/stratagem-cards/candidates/pilsa/pilsa-20260918T143548Z-bright-medium-2.png",
+     "sha256": "3530b253cc4685dfbff2ddda46d7caf3d08a9d71d696f3df981578cc435475ed"
+    }
+   ],
+   "adopted": {
+    "file": "previews/stratagem-cards/candidates/pilsa/pilsa-20260918T143548Z-bright-medium-1.png",
+    "export": "exports/stratagem-cards/pilsa.webp",
+    "sha256": "e4b11ed097462721d136deaa67dff8065ee431954235c0a3c6e2953af7835ff7"
+   }
   }
  ]
 }
