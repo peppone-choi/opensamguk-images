@@ -52,15 +52,26 @@ class CityIconPipelineTest(unittest.TestCase):
         self.assertGreater(heights[5], heights[10])
         self.assertGreater(heights[10], heights[11])
 
-    def test_one_x_and_two_x_exports_are_independently_pixel_hinted(self) -> None:
+    def test_dpr_exports_are_independently_pixel_hinted(self) -> None:
         variants = city_icons.render_variants(5)
 
-        self.assertEqual({1, 2}, set(variants))
-        self.assertEqual((32, 32), variants[1].size)
-        self.assertEqual((64, 64), variants[2].size)
-        for icon in variants.values():
+        self.assertEqual({1: 32, 2: 64, 4: 128, 8: 256}, city_icons.VARIANT_SIZES)
+        self.assertEqual({1, 2, 4, 8}, set(variants))
+        for dpr, icon in variants.items():
+            self.assertEqual((32 * dpr, 32 * dpr), icon.size)
             self.assertEqual({0, 255}, set(icon.getchannel("A").tobytes()))
             self.assertEqual(0, icon.getpixel((0, 0))[3])
+
+    def test_large_variants_keep_hierarchy_and_proportional_bottom_anchor(self) -> None:
+        for dpr, size in ((4, 128), (8, 256)):
+            bboxes = {level: city_icons.render_variants(level)[dpr].getchannel("A").getbbox() for level in (5, 10, 11)}
+            heights = {level: bbox[3] - bbox[1] for level, bbox in bboxes.items()}
+            self.assertGreater(heights[5], heights[10])
+            self.assertGreater(heights[10], heights[11])
+            # 64px 규격 anchorY 63/64 — 하단 여백이 캔버스에 비례한다(128→2px, 256→4px).
+            self.assertEqual(size * 63 // 64, bboxes[5][3])
+            center = (bboxes[5][0] + bboxes[5][2]) / 2
+            self.assertLessEqual(abs(center - size / 2), dpr)
 
     def test_targets_include_dpr_specific_web_exports(self) -> None:
         icons = {level: city_icons.render_variants(level) for level in city_icons.LEVELS}
@@ -69,6 +80,9 @@ class CityIconPipelineTest(unittest.TestCase):
         for app in city_icons.APPS:
             self.assertIn(f"web/{app}/public/city/1x/cast_5.png", paths)
             self.assertIn(f"web/{app}/public/city/2x/cast_5.png", paths)
+            self.assertIn(f"web/{app}/public/city/4x/cast_5.png", paths)
+            self.assertIn(f"web/{app}/public/city/8x/cast_5.png", paths)
+            self.assertIn(f"web/{app}/public/city/cast_5.png", paths)
 
 
 if __name__ == "__main__":

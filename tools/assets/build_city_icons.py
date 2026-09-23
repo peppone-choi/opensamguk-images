@@ -15,6 +15,7 @@ import argparse
 import io
 import sys
 from collections import deque
+from functools import lru_cache
 from pathlib import Path
 
 from PIL import Image, ImageChops, ImageDraw, ImageEnhance, ImageFilter
@@ -24,6 +25,9 @@ ROOT = Path(__file__).resolve().parents[2]
 LEVELS = tuple(range(1, 12))
 APPS = ("gateway", "game")
 CANVAS_SIZE = 64
+# DPR 배율 → 정사각 캔버스 한 변(px). 1x=32 가 기준이고, 건물 아이콘이 발자국을 채우도록
+# 커지면서(경 5×5 최대 약 240 CSS px) 4x=128·8x=256 을 원화에서 따로 뽑는다.
+VARIANT_SIZES = {1: 32, 2: 64, 4: 128, 8: 256}
 SOURCE_DIR = ROOT / "assets" / "city-icons" / "source" / "central-plains"
 PROCESSED_DIR = ROOT / "assets" / "city-icons" / "processed" / "central-plains"
 PREVIEW = ROOT / "assets" / "brand" / "city-icons" / "preview.png"
@@ -119,14 +123,22 @@ def _pixel_hint(image: Image.Image) -> Image.Image:
     return outlined
 
 
-def render_icon(level: int, canvas_size: int = CANVAS_SIZE) -> Image.Image:
-    source = Image.open(source_path(level))
-    extracted = remove_checkerboard_background(source)
+@lru_cache(maxsize=None)
+def _extracted_source(level: int) -> Image.Image:
+    extracted = remove_checkerboard_background(Image.open(source_path(level)))
     bbox = extracted.getchannel("A").getbbox()
     if bbox is None:
         raise ValueError(f"cast_{level}: foreground not found")
+    return extracted.crop(bbox)
 
-    cropped = extracted.crop(bbox)
+
+def bottom_margin(canvas_size: int) -> int:
+    """앵커(하단 중앙)를 64px 기준 anchorY 63/64 에 비례시켜 둔다. 32·64 는 1px 그대로다."""
+    return max(1, round(canvas_size / CANVAS_SIZE))
+
+
+def render_icon(level: int, canvas_size: int = CANVAS_SIZE) -> Image.Image:
+    cropped = _extracted_source(level)
     extent = round(VISUAL_EXTENT[level] * canvas_size / CANVAS_SIZE)
     scale = min(extent / cropped.width, extent / cropped.height)
     size = (
@@ -137,13 +149,13 @@ def render_icon(level: int, canvas_size: int = CANVAS_SIZE) -> Image.Image:
 
     canvas = Image.new("RGBA", (canvas_size, canvas_size), (0, 0, 0, 0))
     x = (canvas_size - resized.width) // 2
-    y = canvas_size - resized.height - 1
+    y = canvas_size - resized.height - bottom_margin(canvas_size)
     canvas.alpha_composite(resized, (x, y))
     return canvas
 
 
 def render_variants(level: int) -> dict[int, Image.Image]:
-    return {1: render_icon(level, 32), 2: render_icon(level, 64)}
+    return {dpr: render_icon(level, size) for dpr, size in VARIANT_SIZES.items()}
 
 
 def _png_bytes(image: Image.Image) -> bytes:
@@ -153,22 +165,27 @@ def _png_bytes(image: Image.Image) -> bytes:
 
 
 def preview_sheet(icons: dict[int, dict[int, Image.Image]]) -> Image.Image:
+    """위 줄: 2x(64px)를 4배 최근접 확대. 아래 줄: 8x(256px) 원寸 — 큰 건물 표시용 검수."""
     scale = 4
     cell = CANVAS_SIZE * scale
+    big = VARIANT_SIZES[8]
     gap = 8
-    width = gap + 11 * (cell + gap)
-    height = gap * 2 + cell
+    width = gap + 11 * (max(cell, big) + gap)
+    height = gap * 3 + cell + big
     sheet = Image.new("RGBA", (width, height), (27, 31, 35, 255))
     draw = ImageDraw.Draw(sheet)
     for column, level in enumerate(LEVELS):
-        x = gap + column * (cell + gap)
-        tile = 16
-        for yy in range(0, cell, tile):
-            for xx in range(0, cell, tile):
-                fill = (39, 44, 49, 255) if (xx // tile + yy // tile) % 2 else (49, 55, 61, 255)
-                draw.rectangle((x + xx, gap + yy, x + xx + tile - 1, gap + yy + tile - 1), fill=fill)
-        enlarged = icons[level][2].resize((cell, cell), Image.Resampling.NEAREST)
-        sheet.alpha_composite(enlarged, (x, gap))
+        x = gap + column * (max(cell, big) + gap)
+        for top, size, image in (
+            (gap, cell, icons[level][2].resize((cell, cell), Image.Resampling.NEAREST)),
+            (gap * 2 + cell, big, icons[level][8]),
+        ):
+            tile = 16
+            for yy in range(0, size, tile):
+                for xx in range(0, size, tile):
+                    fill = (39, 44, 49, 255) if (xx // tile + yy // tile) % 2 else (49, 55, 61, 255)
+                    draw.rectangle((x + xx, top + yy, x + xx + tile - 1, top + yy + tile - 1), fill=fill)
+            sheet.alpha_composite(image, (x, top))
         draw.text((x + 5, gap + 5), str(level), fill=(255, 226, 130, 255), stroke_width=1, stroke_fill=(0, 0, 0, 255))
     return sheet
 
@@ -178,8 +195,8 @@ def targets(icons: dict[int, dict[int, Image.Image]]) -> dict[Path, bytes]:
     for level, variants in icons.items():
         data = _png_bytes(variants[2])
         files[PROCESSED_DIR / f"cast_{level}.png"] = data
-        files[PROCESSED_DIR / "2x" / f"cast_{level}.png"] = data
-        files[PROCESSED_DIR / "1x" / f"cast_{level}.png"] = _png_bytes(variants[1])
+        for dpr, icon in variants.items():
+            files[PROCESSED_DIR / f"{dpr}x" / f"cast_{level}.png"] = _png_bytes(icon)
         for app in APPS:
             files[ROOT / "web" / app / "public" / "city" / f"cast_{level}.png"] = data
             for dpr, icon in variants.items():
