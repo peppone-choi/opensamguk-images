@@ -5,3 +5,6 @@
 __pycache__/
 *.pyc
 *.sg-rwlock
+
+# ImageGen 후보(선택본만 source/ 정본으로 승격)
+/assets/status-icons/source/raw/
