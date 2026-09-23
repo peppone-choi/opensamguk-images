@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "sheet": {
+    "columns": 4,
+    "rows": 3,
+    "source": "source/sheet-0001.png",
+    "generator": "OpenAI image generation",
+    "generatedAt": "2026-08-30",
+    "promptClass": "original late-Eastern-Han fictional portrait atlas"
+  },
+  "portraits": [
+    {"id": "ogp0001", "name": "헌제", "cell": 0},
+    {"id": "ogp0002", "name": "하진", "cell": 1},
+    {"id": "ogp0003", "name": "노식", "cell": 2},
+    {"id": "ogp0004", "name": "황보숭", "cell": 3},
+    {"id": "ogp0005", "name": "곽씨", "cell": 4},
+    {"id": "ogp0006", "name": "장각", "cell": 5},
+    {"id": "ogp0007", "name": "주준", "cell": 6},
+    {"id": "ogp0008", "name": "왕윤", "cell": 7},
+    {"id": "ogp0009", "name": "조조", "cell": 8},
+    {"id": "ogp0010", "name": "맹획", "cell": 9},
+    {"id": "ogp0011", "name": "유비", "cell": 10},
+    {"id": "ogp0012", "name": "관해", "cell": 11}
+  ]
+}

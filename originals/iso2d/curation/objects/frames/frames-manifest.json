@@ -1,0 +1,52 @@
+{
+  "ok": true,
+  "engine": "component-row",
+  "run_dir": "/Users/apple/Desktop/개인프로젝트/opensamguk-meta/worktrees/opensamguk-images/iso2d-assets/originals/iso2d/curation/.objects.sg-staging",
+  "cell": {
+    "shape": "square",
+    "width": 256,
+    "height": 256,
+    "size": 256,
+    "safe_margin": 0
+  },
+  "rows": [
+    {
+      "state": "objects",
+      "frames": 13,
+      "method": "imported-pngs",
+      "files": [
+        "frames/objects/frame-0.png",
+        "frames/objects/frame-1.png",
+        "frames/objects/frame-2.png",
+        "frames/objects/frame-3.png",
+        "frames/objects/frame-4.png",
+        "frames/objects/frame-5.png",
+        "frames/objects/frame-6.png",
+        "frames/objects/frame-7.png",
+        "frames/objects/frame-8.png",
+        "frames/objects/frame-9.png",
+        "frames/objects/frame-10.png",
+        "frames/objects/frame-11.png",
+        "frames/objects/frame-12.png"
+      ],
+      "labels": [
+        "archer",
+        "capital",
+        "cavalry",
+        "commandery",
+        "county",
+        "gate",
+        "hamlet",
+        "infantry",
+        "mountain-rock",
+        "mountain-snow",
+        "siege",
+        "tower",
+        "wall"
+      ],
+      "ok": true
+    }
+  ],
+  "errors": [],
+  "warnings": []
+}

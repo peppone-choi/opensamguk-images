@@ -1,0 +1,83 @@
+{
+  "source": [
+    "originals/iso2d/raw/units.png"
+  ],
+  "sourceSha256": [
+    "860b5d237d50819226a360d96f90ea1d6f4e6c6c30765c8d8c9a4f8d06d68d18"
+  ],
+  "pipeline": "sprite-gen chroma removal / cell extraction / alpha crop / fit and seat on the tile diamond (seat_on_tile)",
+  "assets": [
+    {
+      "file": "wall.png",
+      "anchor": [
+        128,
+        240
+      ],
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "168d47c898d4f633b38d0f852a3ddc5b48556c981b8492734cd5d9c15f855c9f"
+    },
+    {
+      "file": "infantry.png",
+      "anchor": [
+        128,
+        240
+      ],
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "7ca148cbde7513969b84990e8b360500b07b9c3af29cc0e703f3a8926f5272cf"
+    },
+    {
+      "file": "archer.png",
+      "anchor": [
+        128,
+        240
+      ],
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "9ecc150ccf93f7e0bbd02d3ec94c14fa2b1a9c5486e7514162a397e3f959a60d"
+    },
+    {
+      "file": "cavalry.png",
+      "anchor": [
+        128,
+        240
+      ],
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "61f8b33a18ff049f8266ae059240b2ac6537ca08bedc717ffb6863698b0913e6"
+    },
+    {
+      "file": "siege.png",
+      "anchor": [
+        128,
+        240
+      ],
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "06bb9609c646b929e98301c5dfa1f75257d5cebffd40d1df6835b9e6eb418419"
+    },
+    {
+      "file": "tower.png",
+      "anchor": [
+        128,
+        240
+      ],
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "58f9fb6a23474ddbe6158f9d363653dee772a734a858c12a57e376a1dbf3b19b"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "source": [
+    "originals/iso2d/raw/skirt.png"
+  ],
+  "sourceSha256": [
+    "e5270be195485978269db53b8f1876345d75862f716ab723fd3424f5f4045cc7"
+  ],
+  "pipeline": "sprite-gen chroma removal / cell extraction / alpha crop / fit and baseline",
+  "assets": [
+    {
+      "file": "skirt-left.png",
+      "anchor": [
+        0,
+        0
+      ],
+      "size": [
+        128,
+        96
+      ],
+      "sha256": "073eb41153731a2748e6d8f5385bac38f5770d035173cf4d5f01ec58af5233d8"
+    },
+    {
+      "file": "skirt-right.png",
+      "anchor": [
+        0,
+        0
+      ],
+      "size": [
+        128,
+        96
+      ],
+      "sha256": "9ba386596408a4936060513d81632c9dd3f186d6477deb74153134560fbd56d2"
+    }
+  ]
+}

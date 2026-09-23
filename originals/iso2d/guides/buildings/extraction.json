@@ -1,0 +1,151 @@
+{
+  "source": "tools/assets/build_iso2d_buildings.py",
+  "role": "geometry guide for gen_iso2d_buildings.py; not a shippable asset",
+  "pipeline": "deterministic isometric render; palette measured from the AI buildings sheet",
+  "note": "geometry guide only; the shipped tiers are the AI paint over this render (gen_iso2d_buildings.py). This render ships nothing on its own.",
+  "assets": [
+    {
+      "file": "water.png",
+      "anchor": [
+        128,
+        240
+      ],
+      "size": [
+        256,
+        256
+      ],
+      "spillPx": -3.0,
+      "sha256": "81a7e3bb99d1bb04a1b59eafb14daed39c51a35901bd10f3668768e8da1e868a"
+    },
+    {
+      "file": "garrison.png",
+      "anchor": [
+        128,
+        240
+      ],
+      "size": [
+        256,
+        256
+      ],
+      "spillPx": -21.5,
+      "sha256": "a1e379c8b5c13a9a362f4f9dff75d38dcb42db6f570a3ebd05796572b4126b68"
+    },
+    {
+      "file": "pass.png",
+      "anchor": [
+        128,
+        240
+      ],
+      "size": [
+        256,
+        256
+      ],
+      "spillPx": -4.0,
+      "sha256": "a4cc2fca6f86f416f36b21d071d1aa31c38b64f0270f52fd22aedce0d2d83d15"
+    },
+    {
+      "file": "tribal.png",
+      "anchor": [
+        128,
+        240
+      ],
+      "size": [
+        256,
+        256
+      ],
+      "spillPx": -33.5,
+      "sha256": "18cca19048bb53a57b75c1e20ea7847c9d420ee7bf89e88b69a14b8255159701"
+    },
+    {
+      "file": "county-small.png",
+      "anchor": [
+        128,
+        240
+      ],
+      "size": [
+        256,
+        256
+      ],
+      "spillPx": -30.0,
+      "sha256": "04ee2f3cba5d51f0c6da7cf5c76f1573968765ec5e73c6ddc4d8f97bb0978ede"
+    },
+    {
+      "file": "county.png",
+      "anchor": [
+        128,
+        240
+      ],
+      "size": [
+        256,
+        256
+      ],
+      "spillPx": -24.0,
+      "sha256": "ffa0bde65cd9e16974d17053fe576de5fadc5c8c01dbaee91e7ba14b9fdb7b31"
+    },
+    {
+      "file": "commandery.png",
+      "anchor": [
+        128,
+        240
+      ],
+      "size": [
+        256,
+        256
+      ],
+      "spillPx": -19.0,
+      "sha256": "4e6da80896fbbf0fe0e418757b97bb56199ebf9d3d2ec7c8038b372d43dd8979"
+    },
+    {
+      "file": "commandery-mid.png",
+      "anchor": [
+        128,
+        240
+      ],
+      "size": [
+        256,
+        256
+      ],
+      "spillPx": -14.5,
+      "sha256": "3b29f50a76dcba5ccd15b3dc8e8666d64b3f88e0b96472343130a4bdd0b6005a"
+    },
+    {
+      "file": "commandery-major.png",
+      "anchor": [
+        128,
+        240
+      ],
+      "size": [
+        256,
+        256
+      ],
+      "spillPx": -11.0,
+      "sha256": "4f58d7e194b90ed1b177094812d3e09d7d442d7dc234900ad07d5838fb978a30"
+    },
+    {
+      "file": "commandery-grand.png",
+      "anchor": [
+        128,
+        240
+      ],
+      "size": [
+        256,
+        256
+      ],
+      "spillPx": -7.0,
+      "sha256": "a98d97996f3b7717111006b5d7f367686366e2aecae11df6df8d7c012f2a7962"
+    },
+    {
+      "file": "capital.png",
+      "anchor": [
+        128,
+        240
+      ],
+      "size": [
+        256,
+        256
+      ],
+      "spillPx": -4.0,
+      "sha256": "ae1c9cddf5f6c8ad659a9c4e8f75ad016fca400bc414082bc84e6032086731bb"
+    }
+  ]
+}

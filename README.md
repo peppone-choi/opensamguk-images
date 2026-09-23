@@ -51,10 +51,11 @@ the tooling under `tools/` and `.github/` — is MIT licensed; see
 [`LICENSE`](./LICENSE).
 
 
-**The asset directory `portraits/` is NOT covered by that license.** It contains third-party derived material or
-material of unrecorded origin. This repository claims no copyright in it and
-grants no license to it — see [`THIRD-PARTY-NOTICES.md`](./THIRD-PARTY-NOTICES.md)
-and its `LICENSE-NOTICE.md` file.
+**The asset directory `portraits/` is NOT covered by that license.** It contains third-party derived material
+(RTK14 character illustrations) or material of unrecorded origin. This repository claims no copyright in it and
+grants no license to third parties. Since 2026-09-06 it is classified `owner-accepted`: the repository owner
+uses it in the OpenSamguk product on their own responsibility — see [`THIRD-PARTY-NOTICES.md`](./THIRD-PARTY-NOTICES.md)
+and `portraits/LICENSE-NOTICE.md`.
 
 The boundary is declared in [`.license-boundaries.json`](./.license-boundaries.json)
 and enforced by `tools/check-license-boundaries.py` (run in CI). Any new
