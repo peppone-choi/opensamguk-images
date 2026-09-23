@@ -2,3 +2,7 @@
 /hook/logs.txt
 /hook/list.json
 /hook/HashKey.php
+
+# ImageGen 후보(선택본만 source/ 정본으로 승격) · 파이썬 캐시
+/assets/status-icons/source/raw/
+__pycache__/
