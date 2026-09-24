@@ -61,25 +61,28 @@ def extract(atlas: Image.Image, style: str) -> dict[int, Image.Image]:
     return result
 
 
-def quantize(image: Image.Image, palette: np.ndarray, block: int) -> Image.Image:
+def quantize(image: Image.Image, palette: np.ndarray, contour: int) -> Image.Image:
+    """Snap every pixel of the export to the fixed palette on its own grid.
+
+    Each export size is its own pixel grid, like build_city_icons.py: 128 and
+    256 carry real detail instead of a 64-cell grid repeated in 2x2/4x4 blocks.
+    Colour is alpha-weighted (premultiplied) exactly as the 32/64 exports
+    always were, so those bytes do not move. ``contour`` is the outline width
+    in export pixels.
+    """
     source = np.array(image.convert('RGBA'), dtype=np.float64)
     h, w = source.shape[:2]
-    cells = source.reshape(h // block, block, w // block, block, 4).transpose(0, 2, 1, 3, 4)
-    weight = cells[..., 3] / 255
-    total = weight.sum((2, 3))
-    rgb = (cells[..., :3] * weight[..., None]).sum((2, 3)) / np.maximum(total[..., None], 1)
-    keep = total >= block * block * .5
+    weight = source[..., 3] / 255
+    rgb = source[..., :3] * weight[..., None] / np.maximum(weight[..., None], 1)
+    keep = weight >= .5
     lab = oklab(palette.astype(np.float64))
     index = np.argmin(((oklab(rgb).reshape(-1, 1, 3) - lab[None]) ** 2).sum(2), axis=1)
-    out = np.zeros((h // block, w // block, 4), dtype=np.uint8)
-    out[..., :3] = palette[index].reshape(h // block, w // block, 3)
+    out = np.zeros((h, w, 4), dtype=np.uint8)
+    out[..., :3] = palette[index].reshape(h, w, 3)
     out[..., 3] = np.where(keep, 255, 0)
-    # Draw the contour on the pixel grid, before expanding its cells. A
-    # post-resize one-pixel outline would break the pixel blocks at 4x/8x.
-    low_alpha = Image.fromarray(out[..., 3], 'L')
-    rim = np.array(low_alpha.filter(ImageFilter.MaxFilter(3)), dtype=np.uint8) > out[..., 3]
+    alpha = Image.fromarray(out[..., 3], 'L')
+    rim = np.array(alpha.filter(ImageFilter.MaxFilter(2 * contour + 1)), dtype=np.uint8) > out[..., 3]
     out[rim] = (*palette[0], 255)
-    out = np.repeat(np.repeat(out, block, 0), block, 1)
     out[out[:, :, 3] == 0] = 0
     return Image.fromarray(out, 'RGBA')
 
@@ -96,8 +99,12 @@ def render(source: Image.Image, level: int, size: int, palette: np.ndarray) -> I
     art = source.resize((width, height), Image.Resampling.LANCZOS)
     canvas = Image.new('RGBA', (size, size))
     canvas.alpha_composite(art, ((size - width) // 2, size - height - margin))
-    # A fixed 64-cell pixel grid keeps the 8x asset visibly pixelated when
-    # scaled onto the map instead of turning back into a tiny painting.
+    # Render 128/256 on their own grid. Nearest-upscaling the 64 grid made the
+    # zoomed map look low-resolution next to the real 4x/8x base icons. The
+    # contour keeps the 64px weight (1px at 64, 2px at 128, 4px at 256): the
+    # map fits every variant with the 64px marker spec, so a 1px contour at
+    # 256 would shrink the silhouette by 1.5 map pixels and thin the outline
+    # when the zoom switches from the 2x to the 4x/8x export.
     return quantize(canvas, palette, max(1, size // 64))
 
 
@@ -105,6 +112,15 @@ def png_bytes(image: Image.Image) -> bytes:
     out = io.BytesIO()
     image.save(out, 'PNG', optimize=True)
     return out.getvalue()
+
+
+def same_pixels(path: Path, image: Image.Image) -> bool:
+    # zlib output differs between macOS and Linux for the same pixels, so the
+    # check compares decoded RGBA like tools/build-map-city-markers.py does.
+    if not path.is_file():
+        return False
+    with Image.open(path) as exported:
+        return exported.size == image.size and exported.convert('RGBA').tobytes() == image.tobytes()
 
 
 def build(style: str, palette_path: Path, check: bool) -> None:
@@ -122,7 +138,7 @@ def build(style: str, palette_path: Path, check: bool) -> None:
                        for app in ('game', 'gateway')))
             for path in paths:
                 if check:
-                    if not path.is_file() or path.read_bytes() != data:
+                    if not same_pixels(path, image):
                         raise ValueError(f'export drift: {path}')
                 else:
                     path.parent.mkdir(parents=True, exist_ok=True)
