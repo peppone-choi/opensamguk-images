@@ -19,6 +19,10 @@
     { "path": "portraits", "classification": "owner-accepted", "notice": "portraits/LICENSE-NOTICE.md",
       "rights_holder": "Koei Tecmo Games Co., Ltd. (RTK14 character illustrations)",
       "accepted_by": "peppone-choi (repository owner)", "accepted_on": "2026-09-06",
-      "scope": "Use in the OpenSamguk product (CDN serving, web UI). No license is granted to third parties." }
+      "scope": "Use in the OpenSamguk product (CDN serving, web UI). No license is granted to third parties." },
+    { "path": "waryong", "classification": "owner-accepted", "notice": "waryong/LICENSE-NOTICE.md",
+      "rights_holder": "UNKNOWN (제갈공명 와룡전 original game art)",
+      "accepted_by": "peppone-choi (repository owner)", "accepted_on": "2026-09-26",
+      "scope": "Derived battle maps, unit sprites, and terrain catalog for OpenSamguk. No license is granted to third parties." }
   ]
 }

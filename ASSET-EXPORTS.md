@@ -1,5 +1,11 @@
 # OpenSamguk asset exports
 
+## 와룡전 전장·유닛 파생 export
+
+`waryong/battle/` is the owner-accepted source of derived 214 battlefield PNGs, red/blue unit sprites, and the five-category terrain catalog. Original `BATTLE.MAP`/`BATTLE.MDL`/`BATTLE.SCH` files stay outside Git. The catalog is generated from read-only local originals and its image paths are the only files copied to the app's `web/game/public/battle/` export boundary. Run `python3 tools/build-waryong-battle-assets.py --source-dir ~/.cache/waryongjeon/extract/Src --rendered-dir ~/.cache/waryongjeon/out/battle`, then repeat with `--check` for local drift verification. CI can verify the committed catalog's shape and image inventory without original binaries.
+
+`kind` is determined by the original tile record's wall cap. 188 boards have wall/stockade tiles; 26 do not. Boards 209–212 depict boats and are retained in the 214-board catalog but marked `landEligible=false` so land encounters do not select them. Terrain labels use the tile record's top piece and base palette, so detailed terrain balance should be checked against the source renderer before use in combat.
+
 이 저장소가 다음 자작 아이콘의 정본이다.
 
 - 생성기: `tools/assets/build_city_icons.py`, `tools/assets/build_status_icons.py`, `tools/assets/build_ui_icons.py`, `tools/assets/build_ui_illustrations.py`
