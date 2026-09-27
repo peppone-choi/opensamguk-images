@@ -114,6 +114,27 @@ def catalog(map_bytes: bytes, mdl: bytes, sch: bytes) -> dict:
     }
 
 
+def png_names(directory: Path) -> set[str]:
+    return {path.name for path in directory.glob("*.png") if path.is_file()}
+
+
+def required_unit_names(side: str, source_dir: Path) -> set[str]:
+    names = png_names(source_dir)
+    if not names:
+        raise SystemExit(f"rendered {side} units are empty: {source_dir}")
+    return names
+
+
+def require_names(label: str, actual: set[str], expected: set[str]) -> None:
+    missing = sorted(expected - actual)
+    extra = sorted(actual - expected)
+    if missing or extra:
+        raise SystemExit(
+            f"{label} inventory drift: "
+            f"missing={len(missing)} {missing[:5]}, extra={len(extra)} {extra[:5]}"
+        )
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--source-dir", type=Path, required=True, help="read-only folder containing BATTLE.MAP/MDL")
@@ -126,6 +147,27 @@ def main() -> None:
         (args.source_dir / "BATTLE.MDL").read_bytes(),
         (args.source_dir / "BATTLE.SCH").read_bytes(),
     )
+    expected_maps = {Path(board["image"]).name for board in result["boards"]}
+    source_maps = args.rendered_dir / "maps"
+    target_maps = output / "maps"
+    require_names("rendered maps", png_names(source_maps), expected_maps)
+    units = {}
+    for side in ("red", "blue"):
+        source_dir = args.rendered_dir / "units" / side / "sprites"
+        target_dir = output / "units" / side
+        names = required_unit_names(side, source_dir)
+        units[side] = (source_dir, target_dir, names)
+    if args.check:
+        require_names("committed maps", png_names(target_maps), expected_maps)
+        for side, (_, target_dir, names) in units.items():
+            require_names(f"committed {side} units", png_names(target_dir), names)
+    else:
+        for target_dir, names in [(target_maps, expected_maps)] + [
+            (target_dir, names) for _, target_dir, names in units.values()
+        ]:
+            for stale in target_dir.glob("*.png"):
+                if stale.name not in names:
+                    stale.unlink()
     encoded = (json.dumps(result, ensure_ascii=False, sort_keys=True, separators=(",", ":")) + "\n").encode()
     manifest = output / "catalog-v1.json"
     if args.check:
@@ -136,17 +178,18 @@ def main() -> None:
         manifest.write_bytes(encoded)
     for board in result["boards"]:
         name = Path(board["image"]).name
-        source = args.rendered_dir / "maps" / name
-        target = output / "maps" / name
+        source = source_maps / name
+        target = target_maps / name
         if args.check:
             if target.read_bytes() != source.read_bytes():
                 raise SystemExit(f"map export drift: {name}")
         else:
             target.parent.mkdir(parents=True, exist_ok=True)
             shutil.copyfile(source, target)
-    for side in ("red", "blue"):
-        for source in sorted((args.rendered_dir / "units" / side / "sprites").glob("*.png")):
-            target = output / "units" / side / source.name
+    for source_dir, target_dir, names in units.values():
+        for name in sorted(names):
+            source = source_dir / name
+            target = target_dir / name
             if args.check:
                 if target.read_bytes() != source.read_bytes():
                     raise SystemExit(f"unit export drift: {target.name}")
