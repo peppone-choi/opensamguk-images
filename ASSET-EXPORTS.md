@@ -2,7 +2,9 @@
 
 ## 와룡전 전장·유닛 파생 export
 
-`waryong/battle/` is the owner-accepted source of derived 214 battlefield PNGs, red/blue unit sprites, and the five-category terrain catalog. Original `BATTLE.MAP`/`BATTLE.MDL`/`BATTLE.SCH` files stay outside Git. The catalog is generated from read-only local originals and its image paths are the only files copied to the app's `web/game/public/battle/` export boundary. Run `python3 tools/build-waryong-battle-assets.py --source-dir ~/.cache/waryongjeon/extract/Src --rendered-dir ~/.cache/waryongjeon/out/battle`, then repeat with `--check` for local drift verification. CI can verify the committed catalog's shape and image inventory without original binaries.
+`waryong/battle/` is the owner-accepted source of derived 214 battlefield PNGs, red/blue unit sprites, and the five-category terrain catalog. Original `BATTLE.MAP`/`BATTLE.MDL`/`BATTLE.SCH` files stay outside Git. The catalog is generated from read-only local originals. Its referenced PNGs are exported to the app's `web/game/public/battle/` boundary. Run `python3 tools/build-waryong-battle-assets.py --source-dir ~/.cache/waryongjeon/extract/Src --rendered-dir ~/.cache/waryongjeon/out/battle`, then repeat with `--check` for local drift verification. CI can verify the committed catalog's shape and image inventory without original binaries.
+
+The game server also packages an **exact byte copy** of `waryong/battle/catalog-v1.json` at `opensamguk/data/battle/waryong/catalog-v1.json`. The frozen source is images main merge `9c890e453bb6036bc674ddfb93f2ee1e4f1efb60`: 954,038 bytes, SHA-256 `2eb021038ccf36178127247d25c18f03f538e6f139a2e699fdb40e5ed5f4bb27`. Do not reformat the JSON during export. The app checks this hash at build and runtime and carries a separate NOTICE at the destination describing the original-game derivative, owner-accepted/non-MIT boundary, and absence of third-party rights. Runtime combat never fetches this catalog from the images repository or CDN. Original `BATTLE.*`, the converter, and source PNGs are not server catalog exports.
 
 `kind` is determined by the original tile record's wall cap. 188 boards have wall/stockade tiles; 26 do not. Boards 209–212 depict boats and are retained in the 214-board catalog but marked `landEligible=false` so land encounters do not select them. Terrain labels use the tile record's top piece and base palette, so detailed terrain balance should be checked against the source renderer before use in combat.
 
@@ -17,8 +19,8 @@ UI 아이콘(`icons/`)은 손으로 그린 `assets/ui-icons/source/*.svg`(20×20
 빌더가 개별 SVG 와 sprite `icons.svg`(`<symbol id="ico-<name>">`), `assets/ui-icons/manifest.json` 을 결정적으로 만든다.
 `--check` 로 드리프트를 검사하며 CI 에서 돈다.
 
-생성기는 저장소 루트에서 실행한다. `opensamguk`에는 `web/` 아래 export만 같은
-상대 경로로 전달한다. 생성기와 preview를 `opensamguk`에 복제하지 않는다.
+생성기는 저장소 루트에서 실행한다. 이 절의 자작 아이콘은 `opensamguk`의 `web/` 아래
+export만 같은 상대 경로로 전달한다. 생성기와 preview를 `opensamguk`에 복제하지 않는다.
 
 ```bash
 python3 tools/assets/build_city_icons.py      # --check 로 드리프트 검사
