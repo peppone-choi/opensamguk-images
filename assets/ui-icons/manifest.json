@@ -3,6 +3,11 @@
   "stroke": 1.5,
   "icons": [
     {
+      "name": "admin",
+      "label": "관리",
+      "sha256": "2959b8c66feed6aa9891c0191de1b06d80df277522c634444b7705e0c7cdcb61"
+    },
+    {
       "name": "alert",
       "label": "경고",
       "sha256": "3ab223ca079629e1d0e1df2ddc67178ab99c947aa9316cc02a463867dfbeab3c"
@@ -71,6 +76,16 @@
       "name": "copy",
       "label": "복사",
       "sha256": "30a6cd533f861502d14f478252efac4a4ff996583cd8d2eb2eed11ff930afcf9"
+    },
+    {
+      "name": "corps",
+      "label": "군단",
+      "sha256": "71dd1cb8b13d8dda0735b278608ef28b50681c95a0955c8397b0c4c1b18751d8"
+    },
+    {
+      "name": "court",
+      "label": "조정",
+      "sha256": "570b7fc010c49c72ae24620f36da9964f9780bfa37450f75cc19c5a4378b894f"
     },
     {
       "name": "dept-info",
@@ -183,6 +198,11 @@
       "sha256": "e79151c4659b509bc4d79ad5869ea76dfdfd9b24030606423c2734342af34556"
     },
     {
+      "name": "menu",
+      "label": "전체 메뉴",
+      "sha256": "b9a8e90e93ce65643c1fc3991773759cde28a378e60125e9c9d2177bb720d8b7"
+    },
+    {
       "name": "pause",
       "label": "멈춤",
       "sha256": "4131d0fa2e28d4b3f14a192f8f684f14ca04e3067e28fdb07e2b0e1493bdd217"
@@ -191,6 +211,16 @@
       "name": "play",
       "label": "재생",
       "sha256": "795b6eff76f27f10a5f015e13379cf1d0d0ac590163b9ec3f60444d53fb4d62f"
+    },
+    {
+      "name": "plaza",
+      "label": "광장",
+      "sha256": "adf4da47155ce8189a10be9d7d1bd502e080955b8ac44ae3fcd2617cb4413a11"
+    },
+    {
+      "name": "records",
+      "label": "기록",
+      "sha256": "06a3050ce7e31c8221477840b93fc6052fd42648d8447db4e15706676216a1dd"
     },
     {
       "name": "refresh",
@@ -218,6 +248,11 @@
       "sha256": "38361ac9696e10ad293cc792721af19822e12c2a28a72573744a97ae9e1c4ae5"
     },
     {
+      "name": "retinue",
+      "label": "부",
+      "sha256": "4f426df37ec4b51815e285ebe4eec61454725dbc250ba5e0c90b91e7ade76bf4"
+    },
+    {
       "name": "search",
       "label": "검색",
       "sha256": "ad44dceecf6e9bde6995eff317e2ef6444772153cde467a997a0f3ea4f139d05"
@@ -233,9 +268,19 @@
       "sha256": "4cfba424a335c8a950da4a955f0c976fa98589a8abc28e63d2da355eefb778ec"
     },
     {
+      "name": "stratagem",
+      "label": "계책",
+      "sha256": "4308bc8c3a19d8fe8e8ea22c8b34af2838c5ab60dc1cefd45d8b15d5172aa6e2"
+    },
+    {
       "name": "target",
       "label": "대상 고르기",
       "sha256": "e0ad1a25dbfce4501d6cd2c5642e53be93bc4b04d92cc9391cc7e288411f5676"
+    },
+    {
+      "name": "territory",
+      "label": "영지",
+      "sha256": "5afa2b80da50e7bb3bcc1da53d614147bcbd63392c918747af1452211fb88786"
     },
     {
       "name": "tools",
@@ -246,6 +291,11 @@
       "name": "unplug",
       "label": "연결 끊김",
       "sha256": "e9d193e25e08458082a05f2a436d5a1040213a7acff056787bbb9e41697708b7"
+    },
+    {
+      "name": "war-room",
+      "label": "작전실",
+      "sha256": "c9fbafb321b97b0fffe5bb2a48dc6048968168caa04d4d97322478645924e4eb"
     }
   ]
 }
