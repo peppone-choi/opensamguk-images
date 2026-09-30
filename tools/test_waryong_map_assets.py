@@ -44,7 +44,7 @@ class WaryongMapAssetsTest(unittest.TestCase):
         packed = load("kit-index.png")
         self.assertEqual(788, kit["count"])
         self.assertEqual(list(range(kit["count"])), [entry["id"] for entry in kit["entries"]])
-        self.assertTrue(((packed & 15) < 16).all())
+        self.assertTrue(((packed >> 4) <= 2).all())  # 역할은 0 · 1 · 2뿐
         roofs = set(kit["lookup"]["roofTiles"])
         self.assertEqual({0xCD, 0xD0, 0xD3}, roofs)
         for entry in kit["entries"]:

@@ -286,7 +286,7 @@ def build_kit(tiles: np.ndarray) -> tuple[np.ndarray, np.ndarray, list[dict], di
             remap[src] = dst
         for base in range(base_count):
             if entries[base]["kind"] == "roof":
-                continue  # 성 칸은 팔레트를 바꾸지 않는다
+                continue  # 지붕 칸(세력색 역할)은 변형을 만들지 않는다. 성 칸에 변형을 쓸지는 굽기가 칸마다 정한다
             image = remap[images[base]]
             if (image == images[base]).all():
                 continue
@@ -363,7 +363,7 @@ def site_icons(tiles: np.ndarray, kit_roles: np.ndarray) -> dict[str, tuple[np.n
     image[1:15, 1:15] = house[1:15, 1:15]
     role = np.zeros((TILE, TILE), np.uint8)
     role[image == 8] = 1
-    role[(image == 1) & (np.arange(TILE)[None, :] > 0)] = 2
+    role[image == 1] = 2
     icons["county"] = (outlined(image), role, {"op": "crop", "tile": 0xFE, "rect": [1, 1, 15, 15], "roleColors": {"8": 1, "1": 2}, "outline": 0})
     # 수(나루): 작은 성 3×3을 1/4로 줄인 12×12 + 원작 다리 판자(B9) 아래 네 줄
     castle, castle_role = small_castle(tiles, kit_roles)
