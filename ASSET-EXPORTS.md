@@ -8,6 +8,22 @@ The game server also packages an **exact byte copy** of `waryong/battle/catalog-
 
 `kind` is determined by the original tile record's wall cap. 188 boards have wall/stockade tiles; 26 do not. Boards 209–212 depict boats and are retained in the 214-board catalog but marked `landEligible=false` so land encounters do not select them. Terrain labels use the tile record's top piece and base palette, so detailed terrain balance should be checked against the source renderer before use in combat.
 
+## 와룡전 전략 지도 키트
+
+`waryong/map/` is the owner-accepted source of the strategic-map kit for the opensamguk top-down renderer (user decision U3, 2026-09-30: use the extracted images as they are — no AI, no new drawing). Run `python3 tools/build-waryong-map-assets.py --source-dir ~/.cache/waryongjeon/extract/Src`, then repeat with `--check` (compares decoded pixels and JSON content). CI runs `python3 -m unittest tools.test_waryong_map_assets` without original binaries.
+
+| File | Content |
+| --- | --- |
+| `kit-index.png` | 788 tiles, 32 per row, L8. value = palette index + 16 × role (1 nation main, 2 nation shade). Ids 0–255 are the original tiles; river/road joins, a village, then desert and plateau palette variants follow (`catalog.json` `kit.entries`, `kit.lookup`) |
+| `kit.png`, `kit-mip{8,4,2,1}.png` | the same kit in day-palette RGB at 16, 8, 4, 2, 1 px per tile (box average) |
+| `markers.png` + `markers-roles.png` | all 269 map markers; army index = (shape × 6 + colour) × 5 + frame; recolour the red bundles |
+| `flags.png` + `flags-roles.png` | castle flag (fringe) and army flag (swallowtail) cloths from original marker 94 with its glyph erased; the app draws the first letter along the cloth slant |
+| `sites.png` + `sites-roles.png` | one-cell sites: county (장현), ferry (수), fort (진), tribe (이), assembled from original tiles only |
+| `synth-stats.json.gz` | neighbour-context tile frequencies learned from `MMAP.MAP`, input of the opensamguk bake tool |
+| `palettes.json` | all 8 GAMEPAL banks; day bank 1 |
+
+The app receives **exact byte copies** keyed by this repository's merge commit (`<kitId>`): `web/{game,gateway}/public/map/waryong/<kitId>/` gets the PNGs and `palettes.json`; `data/map/waryong/<kitId>/` gets `catalog.json` and `synth-stats.json.gz`. Each destination carries a NOTICE. Original `MMAP.*`/`GAMEPAL.BRG`, the converter and the contact sheets are not exported.
+
 이 저장소가 다음 자작 아이콘의 정본이다.
 
 - 생성기: `tools/assets/build_city_icons.py`, `tools/assets/build_status_icons.py`, `tools/assets/build_ui_icons.py`, `tools/assets/build_ui_illustrations.py`
