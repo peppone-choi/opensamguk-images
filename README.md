@@ -23,6 +23,7 @@ Assets are tagged with `v<YYYY.MM.DD>` for immutable CDN caching.
 ## Structure
 
 - `waryong/battle/` — owner-accepted 와룡전 전장 214판·유닛 파생 export와 지형 목록 (원작 바이너리 제외)
+- `waryong/battle/kit/` — owner-accepted 와룡전 전장 조각 키트(원작 조각 · 기록표 · 판 배치 · 유닛, 앱이 판을 직접 조립)
 - `waryong/map/` — owner-accepted 와룡전 전략 지도 타일 키트·표지·깃발 천·1칸 거점·합성 통계 (원작 바이너리 제외, 미리보기는 `waryong/previews/map/`)
 - `assets/brand/` — opensamguk 아이콘 preview 정본
 - `tools/assets/` — 자작 아이콘 생성기 정본

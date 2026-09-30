@@ -3,6 +3,7 @@
 `waryong/` is outside this repository's MIT license. Everything in it is derived from the original game **제갈공명 와룡전**:
 
 - `waryong/battle/` — battlefield images, unit sprites and a derived terrain catalog from `BATTLE.MAP`, `BATTLE.MDL`, `BATTLE.SCH`.
+  `waryong/battle/kit/` holds the same boards as original pieces (palette index + transparency), record tables, board layouts (record id per cell), unit pieces and unit role layers, so the app assembles boards itself instead of shipping pre-rendered images.
 - `waryong/map/` — the strategic-map tile kit and sprites from `MMAP.MDL` (terrain tiles), `MMAP.MCH` (map markers) and `GAMEPAL.BRG` (palettes), plus synthesis statistics learned from `MMAP.MAP` (map layout). Joined tiles, palette variants, flag cloths and one-cell site icons are assembled only from original tiles and markers (cropping, overlaying, palette remapping, mode-downscaling); no new artwork is drawn.
 - `waryong/previews/` — contact sheets of the above.
 

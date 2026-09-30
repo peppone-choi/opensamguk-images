@@ -47,7 +47,7 @@ for clarity.
 
 | Item | Detail |
 | --- | --- |
-| Paths | `waryong/battle/catalog-v1.json`, `maps/*.png`, `units/{red,blue}/*.png` |
+| Paths | `waryong/battle/catalog-v1.json`, `maps/*.png`, `units/{red,blue}/*.png`, `kit/` (`kit.json`, `pieces.bin.gz`, `records.bin`, `boards.bin.gz`, `units.bin.gz`, `unit-roles.bin.gz`) |
 | Original game | *제갈공명 와룡전*; source files `BATTLE.MAP`, `BATTLE.MDL`, `BATTLE.SCH` |
 | Original rights holder | **UNKNOWN** in currently checked source material; no ownership claim is made |
 | Acquisition | Owner-provided local extraction at `~/.cache/waryongjeon/`, read only; source bytes are not committed |
