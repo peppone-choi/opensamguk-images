@@ -23,6 +23,6 @@
     { "path": "waryong", "classification": "owner-accepted", "notice": "waryong/LICENSE-NOTICE.md",
       "rights_holder": "UNKNOWN (제갈공명 와룡전 original game art)",
       "accepted_by": "peppone-choi (repository owner)", "accepted_on": "2026-09-26",
-      "scope": "Derived battle maps, unit sprites, and terrain catalog for OpenSamguk. No license is granted to third parties." }
+      "scope": "Derived battle maps, unit sprites, and terrain catalog (2026-09-26); strategic-map terrain tiles, palettes, map markers, flag cloths, one-cell site icons assembled from original parts, joined tile kit, and synthesis statistics (2026-09-30, owner decision U3: use the extracted images as they are). No license is granted to third parties." }
   ]
 }
