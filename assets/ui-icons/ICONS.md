@@ -40,3 +40,22 @@
 | `mail` | 서신 |
 | `tools` | 관리 |
 | `members` | 회원 |
+| `lock` | 잠김 |
+| `clock` | 시각 |
+| `target` | 대상 고르기 |
+| `play` | 재생 |
+| `pause` | 멈춤 |
+| `skip-back` | 이전 사건 |
+| `skip-forward` | 다음 사건 |
+| `copy` | 복사 |
+| `help` | 도움말 |
+| `list` | 목록 |
+| `alert` | 경고 |
+| `unplug` | 연결 끊김 |
+| `chevron-left` | 뒤로 |
+
+## v3.1 부품 아이콘(2026-09-30 승인)
+
+위 13개(`lock` … `chevron-left`)는 승인된 v3.1 디자인 시스템 `icon()`(오픈삼국 `docs/design/ui-v3/v3common.py` · `v31system.py` 의 `IC`,
+24 격자 · 선 1.8)을 새로 그리지 않고 옮긴 것이다. 좌표만 20/24 배(선 1.8 × 20/24 = 1.5 라 굵기도 같다)이고, `<circle>` · `<rect>` 는
+같은 모양의 경로로 적었다(이 빌더는 `<path d>` 만 읽는다). v3.1 키 → 이름: `skipb` → `skip-back`, `skipf` → `skip-forward`, `back` → `chevron-left`.

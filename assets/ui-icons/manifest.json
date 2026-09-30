@@ -3,6 +3,11 @@
   "stroke": 1.5,
   "icons": [
     {
+      "name": "alert",
+      "label": "경고",
+      "sha256": "3ab223ca079629e1d0e1df2ddc67178ab99c947aa9316cc02a463867dfbeab3c"
+    },
+    {
       "name": "arrow-down",
       "label": "아래",
       "sha256": "764ca1d347b4406ae7b8e24a3e53a68130207e77fa21236f10dde11865c93ecb"
@@ -28,6 +33,16 @@
       "sha256": "71269e985013babe1f13b26682e274da0ad91c5c4c22a7d57ea53673ae87fc10"
     },
     {
+      "name": "chevron-left",
+      "label": "뒤로",
+      "sha256": "76240043783fd616e3b7a68afc2090b4f182a5629938e22dde30bbab63678142"
+    },
+    {
+      "name": "clock",
+      "label": "시각",
+      "sha256": "ef259f4a8242b018ac4558e231cc4a4cdf2fcd9d7de9ae26550e43c7df6de2a3"
+    },
+    {
       "name": "close",
       "label": "닫기",
       "sha256": "b40604269434573e167b482fda9bbfbf7b1e21b471c1ab16abb18d05d6cf5bbb"
@@ -51,6 +66,11 @@
       "name": "cmd-sealed",
       "label": "봉인",
       "sha256": "fd1e3861d30e5ccade75aeb62bed3c8b8ba25785171839456af14049c33ca96a"
+    },
+    {
+      "name": "copy",
+      "label": "복사",
+      "sha256": "30a6cd533f861502d14f478252efac4a4ff996583cd8d2eb2eed11ff930afcf9"
     },
     {
       "name": "dept-info",
@@ -103,6 +123,11 @@
       "sha256": "181d8925a6c46eab6561e788ad4b421b7c7236d4401eba70aea00d21b341932b"
     },
     {
+      "name": "help",
+      "label": "도움말",
+      "sha256": "5ffe493e9c5a621069a6eec16ba10080969ef40886e6a8c0ff1a53b521481412"
+    },
+    {
       "name": "hub-best-generals",
       "label": "명장 순위",
       "sha256": "d09dfe38882acbb427d785f0cfd1d127e49dd229227c5243162a5e52f9d2b21a"
@@ -138,6 +163,16 @@
       "sha256": "150d1e48a480d4b65d541123cd9a5d126a2cdee9498e9b7a61899691c37cc45f"
     },
     {
+      "name": "list",
+      "label": "목록",
+      "sha256": "0c0a11a22a665bd245099c0f5b9517a98f6bc01de6c42d69d6e85c6d79b78020"
+    },
+    {
+      "name": "lock",
+      "label": "잠김",
+      "sha256": "f4b7446393e1a3de16aee497e99fa8c1d09d015097bbadbdab127110c891e32f"
+    },
+    {
       "name": "mail",
       "label": "서신",
       "sha256": "930a2ee8617ab42533e3be14ee35fee24333e7f7b8406e5dacb6ba3ea87982d0"
@@ -146,6 +181,16 @@
       "name": "members",
       "label": "회원",
       "sha256": "e79151c4659b509bc4d79ad5869ea76dfdfd9b24030606423c2734342af34556"
+    },
+    {
+      "name": "pause",
+      "label": "멈춤",
+      "sha256": "4131d0fa2e28d4b3f14a192f8f684f14ca04e3067e28fdb07e2b0e1493bdd217"
+    },
+    {
+      "name": "play",
+      "label": "재생",
+      "sha256": "795b6eff76f27f10a5f015e13379cf1d0d0ac590163b9ec3f60444d53fb4d62f"
     },
     {
       "name": "refresh",
@@ -178,9 +223,29 @@
       "sha256": "ad44dceecf6e9bde6995eff317e2ef6444772153cde467a997a0f3ea4f139d05"
     },
     {
+      "name": "skip-back",
+      "label": "이전 사건",
+      "sha256": "dd808292ef31896a340aadd2d894809051f9455e21b4ed556eb79df15cb729f6"
+    },
+    {
+      "name": "skip-forward",
+      "label": "다음 사건",
+      "sha256": "4cfba424a335c8a950da4a955f0c976fa98589a8abc28e63d2da355eefb778ec"
+    },
+    {
+      "name": "target",
+      "label": "대상 고르기",
+      "sha256": "e0ad1a25dbfce4501d6cd2c5642e53be93bc4b04d92cc9391cc7e288411f5676"
+    },
+    {
       "name": "tools",
       "label": "관리",
       "sha256": "14e94fd0cab6c2e3ca3f1128a354e7a35758767831a4154189f2389360dbc986"
+    },
+    {
+      "name": "unplug",
+      "label": "연결 끊김",
+      "sha256": "e9d193e25e08458082a05f2a436d5a1040213a7acff056787bbb9e41697708b7"
     }
   ]
 }
