@@ -18,6 +18,8 @@ from pathlib import Path
 
 import numpy as np
 
+import runpy
+
 ROOT = Path(__file__).resolve().parent.parent
 OUTPUT = ROOT / "waryong" / "battle" / "kit"
 SOURCE_FILES = ("BATTLE.MAP", "BATTLE.MDL", "BATTLE.SCH", "GAMEPAL.BRG")
@@ -110,6 +112,21 @@ def compose(records: np.ndarray, pieces: np.ndarray, tileset: int, grid: np.ndar
     return canvas
 
 
+def record_classes(mdl: bytes) -> list[str]:
+    """Per tileset, 256 letters P/F/M/R/W — the same rule the server catalog (catalog-v1.json terrainRows) uses."""
+    catalog_tool = runpy.run_path(str(ROOT / "tools" / "build-waryong-battle-assets.py"))
+    out = []
+    for ts in range(TILESETS):
+        base = 4096 + ts * TILESET_BYTES
+        table = [mdl[base + n * 8 : base + (n + 1) * 8] for n in range(PIECES)]
+        out.append("".join(catalog_tool["terrain_for_record"](mdl, ts, row) for row in table))
+    return out
+
+
+def classification_rows(classes: list[str], tileset: int, grid: np.ndarray) -> str:
+    return "".join(classes[tileset][rid] for rid in grid.ravel().tolist())
+
+
 def gz(data: bytes) -> bytes:
     buffer = io.BytesIO()
     with gzip.GzipFile(fileobj=buffer, mode="wb", compresslevel=9, mtime=0, filename="") as out:
@@ -128,6 +145,7 @@ def build(sources: dict[str, bytes]) -> dict[str, bytes]:
     roles = unit_roles(units)
     palette = np.frombuffer(sources["GAMEPAL.BRG"], np.uint8).reshape(8, 16, 3)
     day = (np.stack([palette[1, :, 1], palette[1, :, 2], palette[1, :, 0]], axis=-1) * 17).astype(int).tolist()
+    classes = record_classes(sources["BATTLE.MDL"])
     boards = []
     for n in range(BOARDS):
         ts = int(tilesets[n])
@@ -141,6 +159,7 @@ def build(sources: dict[str, bytes]) -> dict[str, bytes]:
             "tileset": ts,
             "layoutSha256": sha(bytes([ts]) + grid.tobytes()),
             "composedSha256": sha(compose(records, pieces, ts, grid).tobytes()),
+            "terrainSha256": sha(classification_rows(classes, ts, grid).encode("ascii")),
         })
     files = {
         "pieces.bin.gz": gz(pieces.tobytes()),
@@ -174,10 +193,13 @@ def build(sources: dict[str, bytes]) -> dict[str, bytes]:
             "unit-roles.bin.gz": {"shape": [180, PIECE_H, PIECE_W], "dtype": "uint8", "meaning": "red template roles: 1 main, 2 shade, 3 light, 4 flag rim", "contentSha256": sha(roles.tobytes())},
         },
         "palette": {"bank": "GAMEPAL.BRG set 0, second bank (day)", "rgb": day},
+        "recordClass": classes,
+        "terrainLegend": {"P": "plain", "F": "forest", "M": "mountain", "R": "river", "W": "wall"},
         "boards": boards,
         "hashes": {
             "layoutSha256": "sha256(tileset byte + 64x64 record ids)",
             "composedSha256": "sha256 of the composed canvas (uint8 palette index, 255 empty, canvas size)",
+            "terrainSha256": "sha256 of 4096 ASCII letters recordClass[tileset][record id], cells in row-major order (r = 0..63, then c = 0..63), no separators — the same letters as catalog-v1.json terrainRows joined",
         },
         "structures": {"status": "UNKNOWN", "note": "gate open/closed/broken, wall durability and ladder record ids are not identified yet"},
     }

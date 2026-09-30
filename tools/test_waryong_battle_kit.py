@@ -53,6 +53,17 @@ class WaryongBattleKitTest(unittest.TestCase):
             self.assertEqual(list(canvas.shape[::-1]), self.kit["layout"]["canvas"])
             self.assertEqual(board["composedSha256"], hashlib.sha256(canvas.tobytes()).hexdigest(), board_id)
 
+    def test_record_classes_match_server_catalog(self):
+        catalog = json.loads((ROOT / "waryong" / "battle" / "catalog-v1.json").read_text())
+        _, boards = load("boards.bin.gz", [214, 64, 64])
+        classes = self.kit["recordClass"]
+        self.assertEqual([256] * 3, [len(c) for c in classes])
+        for board in catalog["boards"]:
+            ts = board["tileset"]
+            rows = "".join(classes[ts][rid] for rid in boards[board["id"]].ravel().tolist())
+            self.assertEqual("".join(board["terrainRows"]), rows, board["id"])
+            self.assertEqual(self.kit["boards"][board["id"]]["terrainSha256"], hashlib.sha256(rows.encode("ascii")).hexdigest())
+
     def test_unit_roles_only_on_template_pixels(self):
         _, units = load("units.bin.gz", [360, 16, 32])
         _, roles = load("unit-roles.bin.gz", [180, 16, 32])
