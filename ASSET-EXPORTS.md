@@ -8,6 +8,10 @@ The game server also packages an **exact byte copy** of `waryong/battle/catalog-
 
 `kind` is determined by the original tile record's wall cap. 188 boards have wall/stockade tiles; 26 do not. Boards 209–212 depict boats and are retained in the 214-board catalog but marked `landEligible=false` so land encounters do not select them. Terrain labels use the tile record's top piece and base palette, so detailed terrain balance should be checked against the source renderer before use in combat.
 
+## 와룡전 전장 조각 키트
+
+`waryong/battle/kit/` carries the 214 battle boards as original pieces instead of images: `pieces.bin.gz` (3 tilesets × 256 pieces × 16 × 32, palette index, 255 transparent), `records.bin` (3 × 256 × [layer count, piece ids for layers 0–6]), `boards.bin.gz` (214 × 64 × 64 record ids), `units.bin.gz` (360 unit pieces) and `unit-roles.bin.gz` (red template roles). `kit.json` records the layout rules, the day palette, each board's tileset, `layoutSha256` and `composedSha256` (hash of the assembled canvas), and marks gate/wall/ladder record states UNKNOWN. About 0.3 MB against 69 MB of pre-rendered boards. Run `python3 tools/build-waryong-battle-kit.py --source-dir ~/.cache/waryongjeon/extract/Src`, then `--check`; CI runs `python3 -m unittest tools.test_waryong_battle_kit` (re-assembles sample boards from the kit and compares hashes). The app assembles boards with `web/shared` `battleBoard.ts`; exports go to `web/{game,gateway}/public/battle/waryong/<kitId>/` with a NOTICE.
+
 ## 와룡전 전략 지도 키트
 
 `waryong/map/` is the owner-accepted source of the strategic-map kit for the opensamguk top-down renderer (user decision U3, 2026-09-30: use the extracted images as they are — no AI, no new drawing). Run `python3 tools/build-waryong-map-assets.py --source-dir ~/.cache/waryongjeon/extract/Src`, then repeat with `--check` (compares decoded pixels and JSON content). CI runs `python3 -m unittest tools.test_waryong_map_assets` without original binaries.
