@@ -37,6 +37,7 @@ The app receives **exact byte copies** keyed by this repository's merge commit (
 이 저장소가 다음 자작 아이콘의 정본이다.
 
 - 생성기: `tools/assets/build_city_icons.py`, `tools/assets/build_status_icons.py`, `tools/assets/build_ui_icons.py`, `tools/assets/build_ui_illustrations.py`
+- 워드마크(MIT, 2026-10-01 D22): 정본 `assets/brand/logo-master.png`, 생성기 `tools/assets/build_wordmark.py` → `web/{game,gateway}/public/logo-wordmark{.webp,.png,-sm.png}`. 출처는 `assets/brand/WORDMARK.md`.
 - ImageGen 호출 기록(비결정적, 수동): `tools/assets/gen_status_icons_imagegen.py`
 - preview: `assets/brand/{city-icons,status-icons,ui-icons,ui-illustrations}/preview.png`
 - export: `web/{game,gateway}/public/{city,status,icons,illustrations}/`
