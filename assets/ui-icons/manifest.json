@@ -5,12 +5,12 @@
     {
       "name": "admin",
       "label": "관리",
-      "sha256": "2959b8c66feed6aa9891c0191de1b06d80df277522c634444b7705e0c7cdcb61"
+      "sha256": "a9943ae178efd4e9c16fcf7ca59a41a825f8f7d41639ece97b4212fd1e6385ec"
     },
     {
       "name": "alert",
       "label": "경고",
-      "sha256": "3ab223ca079629e1d0e1df2ddc67178ab99c947aa9316cc02a463867dfbeab3c"
+      "sha256": "a4f5476e387e77be16af420fa8e89fb8030c9bdc95a8474dae8f964afb07a952"
     },
     {
       "name": "arrow-down",
@@ -33,19 +33,34 @@
       "sha256": "2c53bda57e700018fd5880a9d6af045708cf5476ed7b9aaa564c71cdb6bb31e9"
     },
     {
+      "name": "arrow",
+      "label": "아래 화살표",
+      "sha256": "fcddbf39bc9ccf008f9e9fbe017cf8cfb6772ea6acd43b4428b9bfbdaa5dcdbd"
+    },
+    {
       "name": "auction",
       "label": "경매",
       "sha256": "71269e985013babe1f13b26682e274da0ad91c5c4c22a7d57ea53673ae87fc10"
     },
     {
+      "name": "check",
+      "label": "확인",
+      "sha256": "cc1aabac31736b65c7513469291b8a90c702702a7a77b56000d2c673e397601d"
+    },
+    {
       "name": "chevron-left",
       "label": "뒤로",
-      "sha256": "76240043783fd616e3b7a68afc2090b4f182a5629938e22dde30bbab63678142"
+      "sha256": "041b60ee7bfc00f3f6aab5e7777c312478dbaf5e03d602d905baa03a5051cc41"
+    },
+    {
+      "name": "clear",
+      "label": "지우기",
+      "sha256": "23126bd133f7b6392ca25f2b6e208c194a2b506e21278390309e9aa5435bf1fe"
     },
     {
       "name": "clock",
       "label": "시각",
-      "sha256": "ef259f4a8242b018ac4558e231cc4a4cdf2fcd9d7de9ae26550e43c7df6de2a3"
+      "sha256": "e63f3afcb24e2cc0f819b7c20a85652c3536901363a8f8074a09046597f050f0"
     },
     {
       "name": "close",
@@ -75,17 +90,22 @@
     {
       "name": "copy",
       "label": "복사",
-      "sha256": "30a6cd533f861502d14f478252efac4a4ff996583cd8d2eb2eed11ff930afcf9"
+      "sha256": "b583634f31bf51e083e865e84d8ec70b58ded0a3502ca68525f5ddee62984f0e"
     },
     {
       "name": "corps",
       "label": "군단",
-      "sha256": "71dd1cb8b13d8dda0735b278608ef28b50681c95a0955c8397b0c4c1b18751d8"
+      "sha256": "f610963859b8ceb0127b713ad230f5f91a26256ed2aa3ccce760fa1738f3f566"
     },
     {
       "name": "court",
       "label": "조정",
-      "sha256": "570b7fc010c49c72ae24620f36da9964f9780bfa37450f75cc19c5a4378b894f"
+      "sha256": "78635fa1e6437e8ccee4decf04c61d259362e6d0886317b4dd5ef8fdfbc02cd6"
+    },
+    {
+      "name": "crown",
+      "label": "황실",
+      "sha256": "4ec63d5fc34e6815b82dbed073f24e35e218f4029859804a0da81a87be1ab78a"
     },
     {
       "name": "dept-info",
@@ -140,7 +160,7 @@
     {
       "name": "help",
       "label": "도움말",
-      "sha256": "5ffe493e9c5a621069a6eec16ba10080969ef40886e6a8c0ff1a53b521481412"
+      "sha256": "e630b067a6b18c7daa0fb6499181b371aa5d16efdd2dfed76c026126363b669b"
     },
     {
       "name": "hub-best-generals",
@@ -178,14 +198,34 @@
       "sha256": "150d1e48a480d4b65d541123cd9a5d126a2cdee9498e9b7a61899691c37cc45f"
     },
     {
+      "name": "layers",
+      "label": "지도 층",
+      "sha256": "03189a33ef21584d6dd1b50a48e631cf007aa8228aa602b40ae2e2da981cbdfc"
+    },
+    {
+      "name": "legend",
+      "label": "범례",
+      "sha256": "f0f084684cdf6c624a37f1b8c862da25248f999957b17be32f7a4f7672751472"
+    },
+    {
       "name": "list",
       "label": "목록",
-      "sha256": "0c0a11a22a665bd245099c0f5b9517a98f6bc01de6c42d69d6e85c6d79b78020"
+      "sha256": "7b2e95f7c7cde456a63fc07a6eec656ab643b17034785e3023bde6fe99053ea8"
+    },
+    {
+      "name": "lobby",
+      "label": "로비로",
+      "sha256": "720c86ecd83f282eddb76e54c895b20b596367916c8a91777cd4a1c86aa89f0b"
     },
     {
       "name": "lock",
       "label": "잠김",
-      "sha256": "f4b7446393e1a3de16aee497e99fa8c1d09d015097bbadbdab127110c891e32f"
+      "sha256": "07c6e2bc376503d6cc7720a6f4b2c1ce4aa9ffc4d137daa680c472297a5bd478"
+    },
+    {
+      "name": "logout",
+      "label": "로그아웃",
+      "sha256": "2bdd47f7a1ae60e197d0a0113b133b1fe9b027737fc94e1b8422e4d9ad7a0239"
     },
     {
       "name": "mail",
@@ -200,27 +240,42 @@
     {
       "name": "menu",
       "label": "전체 메뉴",
-      "sha256": "b9a8e90e93ce65643c1fc3991773759cde28a378e60125e9c9d2177bb720d8b7"
+      "sha256": "8b06b11d932649fad22981c1361db4e84ab11aaee65ea3326658c2285db2747b"
+    },
+    {
+      "name": "next",
+      "label": "다음",
+      "sha256": "b85ae27b78ca3fe84a0874ea76b5f97c3d1fefdc4c74fd46ad0c8466075eb2ed"
+    },
+    {
+      "name": "pause-circle",
+      "label": "멈춤(원)",
+      "sha256": "e8a5e51b9dfd1b54597e794de0f4542425649898f3f8da4507a0907b231215cf"
     },
     {
       "name": "pause",
       "label": "멈춤",
-      "sha256": "4131d0fa2e28d4b3f14a192f8f684f14ca04e3067e28fdb07e2b0e1493bdd217"
+      "sha256": "19851a1de1b83b8c56ae8ec49ad0fb34f1aa999ad49019e6da4f7b83e08cb20a"
     },
     {
       "name": "play",
       "label": "재생",
-      "sha256": "795b6eff76f27f10a5f015e13379cf1d0d0ac590163b9ec3f60444d53fb4d62f"
+      "sha256": "4717ffed35f4c8c0ab3cdbbb237dd24157d4268760214825683cdfb72ba6dc18"
     },
     {
       "name": "plaza",
       "label": "광장",
-      "sha256": "adf4da47155ce8189a10be9d7d1bd502e080955b8ac44ae3fcd2617cb4413a11"
+      "sha256": "739c9140b37255f6cb6afb839eb919186f7a14f59ee8f02dda81aa8e52190dc8"
+    },
+    {
+      "name": "prev",
+      "label": "이전",
+      "sha256": "b24ee739e7482f0657e83e5310974992a5e09a7f4b263e682352dcaa6d60d94b"
     },
     {
       "name": "records",
       "label": "기록",
-      "sha256": "06a3050ce7e31c8221477840b93fc6052fd42648d8447db4e15706676216a1dd"
+      "sha256": "de63b6c1cd5f6ad071dc0c283a7985e8592f1c93498c174dd077fb740f866c9a"
     },
     {
       "name": "refresh",
@@ -250,7 +305,7 @@
     {
       "name": "retinue",
       "label": "부",
-      "sha256": "4f426df37ec4b51815e285ebe4eec61454725dbc250ba5e0c90b91e7ade76bf4"
+      "sha256": "25e374bf695a94d6fe843c2bf2fc979423e0250405274b39d2e2bd26376e058e"
     },
     {
       "name": "search",
@@ -258,29 +313,39 @@
       "sha256": "ad44dceecf6e9bde6995eff317e2ef6444772153cde467a997a0f3ea4f139d05"
     },
     {
+      "name": "season",
+      "label": "계절",
+      "sha256": "e6bf1b906340bda1830a0d34cff9801e4ec7d0d403a8d9a2dcfd55b24b0fb75f"
+    },
+    {
       "name": "skip-back",
       "label": "이전 사건",
-      "sha256": "dd808292ef31896a340aadd2d894809051f9455e21b4ed556eb79df15cb729f6"
+      "sha256": "527532f2978e6fe6f7b8d15df1e7db45b8d744bc9050b9bfab50f28b04a5cd9c"
     },
     {
       "name": "skip-forward",
       "label": "다음 사건",
-      "sha256": "4cfba424a335c8a950da4a955f0c976fa98589a8abc28e63d2da355eefb778ec"
+      "sha256": "d012e28d6d52931db30a57f2c9edd7cd5f05ed45c1fa02de7b9f4c4d1d205e4d"
     },
     {
       "name": "stratagem",
       "label": "계책",
-      "sha256": "4308bc8c3a19d8fe8e8ea22c8b34af2838c5ab60dc1cefd45d8b15d5172aa6e2"
+      "sha256": "9f55d479a28b7f79d2c12082313b32547f0e83715270756a8524e21515280302"
+    },
+    {
+      "name": "swap",
+      "label": "바꾸기",
+      "sha256": "2f50a612862760378570792f9dfb39f0aafc742e2f448332db75e07a84047d1a"
     },
     {
       "name": "target",
       "label": "대상 고르기",
-      "sha256": "e0ad1a25dbfce4501d6cd2c5642e53be93bc4b04d92cc9391cc7e288411f5676"
+      "sha256": "deacdde5e167c578953364f43982881baf9feb49e40e8a3868e3f5d9eefaef55"
     },
     {
       "name": "territory",
       "label": "영지",
-      "sha256": "5afa2b80da50e7bb3bcc1da53d614147bcbd63392c918747af1452211fb88786"
+      "sha256": "73002905218e239d072b5df9d31120269597c6545130ee977275f1ea46c97782"
     },
     {
       "name": "tools",
@@ -290,12 +355,17 @@
     {
       "name": "unplug",
       "label": "연결 끊김",
-      "sha256": "e9d193e25e08458082a05f2a436d5a1040213a7acff056787bbb9e41697708b7"
+      "sha256": "8c9ad02a0a6cc8d731993debf430df80cad3649aefab6e86f50a06a8650c3c99"
+    },
+    {
+      "name": "up",
+      "label": "위로",
+      "sha256": "ffd0dccbfaa463b14693f601c6d15c7b02f5de072e88cbf7f1ffcea689aeb587"
     },
     {
       "name": "war-room",
       "label": "작전실",
-      "sha256": "c9fbafb321b97b0fffe5bb2a48dc6048968168caa04d4d97322478645924e4eb"
+      "sha256": "2f80c42077ab96f0def68045d88ade8fad0edd663570cfeda07a835ac298af71"
     }
   ]
 }
