@@ -16,7 +16,8 @@
     python3 tools/assets/build_wordmark.py --check   # 디스크의 사본이 정본에서 나온 것인지 본다(CI)
 
 --check 는 바이트가 아니라 푼 그림으로 본다(OS · 인코더 빌드마다 압축 바이트가 다를 수 있다).
-PNG 는 다시 만든 것과 픽셀이 같아야 하고, WebP 는 크기가 같고 원본 축소와의 PSNR 이 MIN_PSNR 이상이어야 한다.
+PNG 는 다시 양자화한 그림과 RGBA PSNR 이 MIN_PNG_PSNR 이상이어야 한다(플랫폼별 미세 차이 허용, 알파 포함).
+WebP 는 화면 바탕에 합성한 원본 축소와의 PSNR 이 MIN_PSNR 이상이어야 한다. 크기는 모두 같아야 한다.
 바이트 상한(MAX_BYTES)도 본다 — 로고가 다시 무거워지면 빨개진다.
 """
 from __future__ import annotations
@@ -34,6 +35,7 @@ APPS = ("game", "gateway")
 BACKGROUND = (12, 15, 14, 255)  # 화면 바탕(다크 테마) — 알파 합성 비교용
 WEBP_QUALITY = 88
 MIN_PSNR = 34.0
+MIN_PNG_PSNR = 50.0  # RGBA 채널 RMS 약 0.81 이하: 양자화의 미세 차이만 허용
 MAX_BYTES = 100_000
 # 이름 → (폭 px, 형식들). 높이는 정본 비율을 따른다.
 WORDMARKS = {"logo-wordmark": (840, ("webp", "png")), "logo-wordmark-sm": (172, ("png",))}
@@ -63,8 +65,8 @@ def on_background(image: Image.Image) -> Image.Image:
 
 
 def psnr(a: Image.Image, b: Image.Image) -> float:
-    stat = ImageStat.Stat(ImageChops.difference(on_background(a), on_background(b)))
-    mse = sum(x * x for x in stat.rms) / 3
+    stat = ImageStat.Stat(ImageChops.difference(a, b))
+    mse = sum(x * x for x in stat.rms) / len(stat.rms)
     return 99.0 if mse == 0 else 10 * math.log10(255 * 255 / mse)
 
 
@@ -98,9 +100,10 @@ def main() -> int:
                 problems.append(f"{rel}: 크기 {shown.size} ≠ {image.size}")
                 continue
             if fmt == "png":
-                if shown.convert("RGBA").tobytes() != quantized(image).convert("RGBA").tobytes():
-                    problems.append(f"{rel}: 정본에서 다시 만든 256색 그림과 픽셀이 다르다")
-            elif (score := psnr(image, shown)) < MIN_PSNR:
+                score = psnr(quantized(image).convert("RGBA"), shown.convert("RGBA"))
+                if score < MIN_PNG_PSNR:
+                    problems.append(f"{rel}: RGBA PSNR {score:.1f} < {MIN_PNG_PSNR}")
+            elif (score := psnr(on_background(image), on_background(shown))) < MIN_PSNR:
                 problems.append(f"{rel}: PSNR {score:.1f} < {MIN_PSNR}")
         if problems:
             for line in problems:
