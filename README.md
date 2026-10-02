@@ -28,6 +28,7 @@ Assets are tagged with `v<YYYY.MM.DD>` for immutable CDN caching.
 - `assets/brand/` — opensamguk 아이콘 preview 정본
 - `tools/assets/` — 자작 아이콘 생성기 정본
 - `web/{game,gateway}/public/` — opensamguk에 전달하는 배포용 export
+- `web/{game,gateway}/app/` — opensamguk 앱 아이콘 export(`icon.png` · `apple-icon.png` · `favicon.ico`, `tools/assets/build_seal_icons.py`)
 - `originals/` — project-authored source specifications
 - `exports/` — generated, deployment-ready project assets
 - `previews/` — generated visual QA sheets

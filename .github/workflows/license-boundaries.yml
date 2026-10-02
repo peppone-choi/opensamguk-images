@@ -24,6 +24,8 @@ jobs:
       - run: python3 tools/assets/build_ui_icons.py --check
       - run: python3 tools/assets/build_wordmark.py --check
       - run: python3 -m unittest tools.assets.test_build_wordmark
+      - run: python3 tools/assets/build_seal_icons.py --check
+      - run: python3 -m unittest tools.assets.test_build_seal_icons
       - run: python3 tools/cards/build_card_display.py --check
       - run: python3 -m unittest tools.assets.test_build_ui_icons
       - run: python3 tools/assets/build_ui_illustrations.py --check
