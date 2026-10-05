@@ -92,5 +92,5 @@ bronze guards and a small bright spark where the blades meet"였다.
 
 `imperial-residence-imagegen.png`는 황제 거처 표식의 별도 원화다. 삼국지 7 전국지도의
 `献帝` 필터에 쓰인 16×16 황제 흉상을 구도 참조로 삼고, 상태 세트의 팔레트·갈흑색
-외곽선·픽셀 밀도에 맞게 ImageGen으로 재작성했다. 추출한 구도 참조는
-`reference/rtk7-emperor-filter-icon.png`이며 웹 산출물에는 직접 내보내지 않는다.
+외곽선·픽셀 밀도에 맞게 ImageGen으로 재작성했다. 구도 참조로 쓴 제3자 그림은 이 저장소에
+두지 않는다(2026-10-05 D117에서 지움, git 이력에만 있다).
