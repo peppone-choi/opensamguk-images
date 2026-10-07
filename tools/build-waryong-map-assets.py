@@ -114,7 +114,8 @@ def decode_markers(mch: bytes) -> np.ndarray:
     for n in range(count):
         block = mch[n * 160 : (n + 1) * 160]
         mask = np.unpackbits(np.frombuffer(block[:32], np.uint8).reshape(TILE, 2), axis=1).astype(bool)
-        markers[n] = np.where(mask, decode_planes(block[32:]), -1)
+        # NumPy 2 keeps uint8 here; cast before selecting the signed transparent sentinel.
+        markers[n] = np.where(mask, decode_planes(block[32:]).astype(np.int16), -1)
     return markers
 
 

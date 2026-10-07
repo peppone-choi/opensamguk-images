@@ -3,6 +3,7 @@
 
 import gzip
 import hashlib
+import importlib.util
 import json
 import os
 import unittest
@@ -13,6 +14,10 @@ from PIL import Image
 
 ROOT = Path(__file__).resolve().parent.parent
 BASE = ROOT / "waryong" / "map"
+
+SPEC = importlib.util.spec_from_file_location("waryong_map_builder", ROOT / "tools" / "build-waryong-map-assets.py")
+BUILDER = importlib.util.module_from_spec(SPEC)
+SPEC.loader.exec_module(BUILDER)
 
 
 def load(name):
@@ -104,6 +109,40 @@ class WaryongMapAssetsTest(unittest.TestCase):
             cell_roles = site_roles[:, n * 16 : (n + 1) * 16]
             self.assertTrue((cell_roles == 1).any(), f"site {n} has no nation colour")
             self.assertTrue((cell_roles[sites[:, n * 16 : (n + 1) * 16, 3] == 0] == 0).all())
+
+    def test_marker_mask_keeps_transparency_without_removing_white_art(self):
+        # A transparent white pixel and a visible white pixel share palette 15.
+        # Only the source mask may remove the background, not its RGB colour.
+        mask = np.zeros((16, 16), np.uint8)
+        mask[1, 3] = mask[2, 4] = 1
+        indexed = np.zeros((16, 16), np.uint8)
+        indexed[0, 0] = indexed[1, 3] = 15
+        indexed[2, 4] = 10
+        block = np.packbits(mask, axis=1).tobytes()
+        block += b"".join(np.packbits((indexed >> plane) & 1, axis=1).tobytes() for plane in range(4))
+        markers = BUILDER.decode_markers(block + bytes(160 * 268))
+
+        self.assertEqual(-1, markers[0, 0, 0])
+        self.assertEqual(15, markers[0, 1, 3])
+        self.assertEqual(10, markers[0, 2, 4])
+        self.assertTrue((markers[1:] == -1).all())
+
+        palette = np.zeros((16, 3), np.uint8)
+        palette[15] = [255, 255, 255]
+        palette[10] = [221, 0, 0]
+        pixels = BUILDER.rgba(markers[0], palette)
+        np.testing.assert_array_equal(pixels[0, 0], [0, 0, 0, 0])
+        np.testing.assert_array_equal(pixels[1, 3], [255, 255, 255, 255])
+        np.testing.assert_array_equal(pixels[2, 4], [221, 0, 0, 255])
+
+    def test_flag_export_has_transparent_surrounding_and_white_pole_details(self):
+        flags = load("flags.png")
+        for cell in range(2):
+            with self.subTest(cell=cell):
+                x = cell * 16
+                np.testing.assert_array_equal(flags[0, x], [0, 0, 0, 0])
+                np.testing.assert_array_equal(flags[15, x + 15], [0, 0, 0, 0])
+                np.testing.assert_array_equal(flags[1, x + 3], [255, 255, 255, 255])
 
     def test_original_boundary(self):
         originals = {"MMAP.MDL", "MMAP.MAP", "MMAP.MCH", "GAMEPAL.BRG"}
