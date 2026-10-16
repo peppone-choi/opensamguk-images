@@ -1,0 +1,252 @@
+[
+  {
+    "name": "grass",
+    "file": "grass-master.png",
+    "sha256": "1d12b388aa1b24e958ed4be555ce2678ba22052ca767c2c93b98da6f453c4981",
+    "size": [
+      1254,
+      1254
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "alpha_zero_pixels": 1158120,
+    "alpha_255_pixels": 721,
+    "alpha_ge128_bbox": [
+      3,
+      342,
+      1249,
+      981
+    ],
+    "alpha_ge128_bbox_ratio": 1.9499,
+    "estimated_corners_top_right_bottom_left": [
+      [
+        626.0,
+        344.0
+      ],
+      [
+        1246.5,
+        660.0
+      ],
+      [
+        626.0,
+        978.0
+      ],
+      [
+        4.0,
+        661.0
+      ]
+    ],
+    "intended_destination_size": [
+      128,
+      64
+    ],
+    "intended_destination_center_anchor": [
+      64,
+      32
+    ],
+    "status": "candidate-needs-normalization-and-in-engine-seam-validation"
+  },
+  {
+    "name": "forest",
+    "file": "forest-master.png",
+    "sha256": "ab38ef5716b82f0969ab1b07ef013508a5635cf9cb7225693df13e7ff5762f76",
+    "size": [
+      1774,
+      887
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "alpha_zero_pixels": 996560,
+    "alpha_255_pixels": 889,
+    "alpha_ge128_bbox": [
+      97,
+      99,
+      1677,
+      810
+    ],
+    "alpha_ge128_bbox_ratio": 2.2222,
+    "estimated_corners_top_right_bottom_left": [
+      [
+        887.0,
+        101.0
+      ],
+      [
+        1674.0,
+        452.0
+      ],
+      [
+        886.0,
+        807.0
+      ],
+      [
+        98.5,
+        452.0
+      ]
+    ],
+    "intended_destination_size": [
+      128,
+      64
+    ],
+    "intended_destination_center_anchor": [
+      64,
+      32
+    ],
+    "status": "candidate-needs-normalization-and-in-engine-seam-validation"
+  },
+  {
+    "name": "mountain",
+    "file": "mountain-master.png",
+    "sha256": "a3caa9fa0e34711362edb8256e79899a1704bd212c5d7ab3bdc77039c4ecb8e5",
+    "size": [
+      1774,
+      887
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "alpha_zero_pixels": 857930,
+    "alpha_255_pixels": 682,
+    "alpha_ge128_bbox": [
+      60,
+      24,
+      1710,
+      863
+    ],
+    "alpha_ge128_bbox_ratio": 1.9666,
+    "estimated_corners_top_right_bottom_left": [
+      [
+        889.0,
+        26.0
+      ],
+      [
+        1707.5,
+        443.0
+      ],
+      [
+        875.0,
+        860.5
+      ],
+      [
+        61.5,
+        440.0
+      ]
+    ],
+    "intended_destination_size": [
+      128,
+      64
+    ],
+    "intended_destination_center_anchor": [
+      64,
+      32
+    ],
+    "status": "candidate-needs-normalization-and-in-engine-seam-validation"
+  },
+  {
+    "name": "river",
+    "file": "river-master.png",
+    "sha256": "4654d5867f3a1e1cec81a792be1678fedf5c03087ea58ceb87e1e0a9e134ff21",
+    "size": [
+      1774,
+      887
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "alpha_zero_pixels": 903844,
+    "alpha_255_pixels": 652,
+    "alpha_ge128_bbox": [
+      63,
+      49,
+      1711,
+      841
+    ],
+    "alpha_ge128_bbox_ratio": 2.0808,
+    "estimated_corners_top_right_bottom_left": [
+      [
+        887.0,
+        51.0
+      ],
+      [
+        1708.5,
+        443.0
+      ],
+      [
+        887.0,
+        838.0
+      ],
+      [
+        64.5,
+        443.5
+      ]
+    ],
+    "intended_destination_size": [
+      128,
+      64
+    ],
+    "intended_destination_center_anchor": [
+      64,
+      32
+    ],
+    "status": "candidate-needs-normalization-and-in-engine-seam-validation"
+  },
+  {
+    "name": "deepwater",
+    "file": "deepwater-master.png",
+    "sha256": "3c430dd0692221e143e210b94e66bca753b0940b37dac6a3f7d58625ce2aa106",
+    "size": [
+      1774,
+      887
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "alpha_zero_pixels": 892472,
+    "alpha_255_pixels": 788,
+    "alpha_ge128_bbox": [
+      73,
+      44,
+      1701,
+      863
+    ],
+    "alpha_ge128_bbox_ratio": 1.9878,
+    "estimated_corners_top_right_bottom_left": [
+      [
+        887.0,
+        46.0
+      ],
+      [
+        1698.5,
+        453.5
+      ],
+      [
+        887.0,
+        860.0
+      ],
+      [
+        74.5,
+        453.0
+      ]
+    ],
+    "intended_destination_size": [
+      128,
+      64
+    ],
+    "intended_destination_center_anchor": [
+      64,
+      32
+    ],
+    "status": "candidate-needs-normalization-and-in-engine-seam-validation"
+  }
+]

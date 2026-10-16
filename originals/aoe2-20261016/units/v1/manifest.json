@@ -1,0 +1,132 @@
+{
+  "status": "generated_master_not_engine_ready",
+  "tool": "built-in image_gen.imagegen",
+  "generated_utc": "2026-10-16T14:04:00Z",
+  "master": "han-infantry-archer-sw-nw-master.png",
+  "sha256": "3667ea086f6134691c23369e863e983c5c4fc0b09b40c8bcbfb0ed64f6f1acd3",
+  "size": [
+    1254,
+    1254
+  ],
+  "mode": "RGBA",
+  "reference_inspected": "../../concepts/tactical-battle-concept.png",
+  "reference_usage": "Visually inspected then described in prompt; not submitted as edit target.",
+  "prompt_file": "prompt.txt",
+  "alpha": {
+    "range": [
+      0,
+      255
+    ],
+    "zero_pixels": 1299618,
+    "total_pixels": 1572516,
+    "warning": "Very faint alpha below 8 appears outside visible silhouettes. Master preserved unchanged. Threshold cleanup requires validation."
+  },
+  "cells": [
+    {
+      "id": "infantry_SW",
+      "rect_xyxy_exclusive": [
+        0,
+        0,
+        627,
+        627
+      ],
+      "visible_bounds_local_xyxy_alpha_ge_8": [
+        225,
+        29,
+        458,
+        600
+      ],
+      "foot_anchor_local_xy_approximate": [
+        332,
+        557
+      ],
+      "foot_anchor_status": "Visual estimate of midpoint of foot contact positions, needs engine/overlay validation."
+    },
+    {
+      "id": "infantry_NW",
+      "rect_xyxy_exclusive": [
+        627,
+        0,
+        1254,
+        627
+      ],
+      "visible_bounds_local_xyxy_alpha_ge_8": [
+        195,
+        20,
+        420,
+        609
+      ],
+      "foot_anchor_local_xy_approximate": [
+        315,
+        568
+      ],
+      "foot_anchor_status": "Visual estimate of midpoint of foot contact positions, needs engine/overlay validation."
+    },
+    {
+      "id": "archer_SW",
+      "rect_xyxy_exclusive": [
+        0,
+        627,
+        627,
+        1254
+      ],
+      "visible_bounds_local_xyxy_alpha_ge_8": [
+        244,
+        102,
+        486,
+        566
+      ],
+      "foot_anchor_local_xy_approximate": [
+        345,
+        526
+      ],
+      "foot_anchor_status": "Visual estimate of midpoint of foot contact positions, needs engine/overlay validation."
+    },
+    {
+      "id": "archer_NW",
+      "rect_xyxy_exclusive": [
+        627,
+        627,
+        1254,
+        1254
+      ],
+      "visible_bounds_local_xyxy_alpha_ge_8": [
+        190,
+        119,
+        433,
+        577
+      ],
+      "foot_anchor_local_xy_approximate": [
+        319,
+        539
+      ],
+      "foot_anchor_status": "Visual estimate of midpoint of foot contact positions, needs engine/overlay validation."
+    }
+  ],
+  "target": {
+    "frame_size": [
+      96,
+      96
+    ],
+    "suggested_foot_anchor": [
+      48,
+      84
+    ],
+    "suggested_common_scale": 0.14,
+    "status": "Proposal only; no 96px export generated or verified."
+  },
+  "validation": {
+    "inspected_full_size": true,
+    "directions": "SW/front and NW/rear are directly generated, not mirrored.",
+    "silhouettes": "Four separated complete figures, visible tips and feet within quadrant boundaries.",
+    "needs": [
+      "Normalize foot placement and confirm contact anchors.",
+      "Confirm matching perceived body scale across directions.",
+      "Validate silhouettes, weapon legibility and faction color at native 96px.",
+      "Review shield anatomy and period styling.",
+      "Create faction-color masks.",
+      "Remove low-alpha background specks using approved asset-prep workflow.",
+      "Additional directions and animation frames required."
+    ]
+  }
+}
