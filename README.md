@@ -27,6 +27,7 @@ Assets are tagged with `v<YYYY.MM.DD>` for immutable CDN caching.
 - `waryong/map/` — owner-accepted 와룡전 전략 지도 타일 키트·표지·깃발 천·1칸 거점·합성 통계 (원작 바이너리 제외, 미리보기는 `waryong/previews/map/`)
 - `assets/brand/` — opensamguk 아이콘 preview 정본
 - `tools/assets/` — 자작 아이콘 생성기 정본
+- `tools/assets/bake3d/` — 3D 원본 → 방향별 스프라이트 굽기 도구(BAKE-0, PROVISIONAL). 원본 모델은 `originals/<세트>/models/`, 검수 시트는 `previews/bake3d/`
 - `web/{game,gateway}/public/` — opensamguk에 전달하는 배포용 export
 - `web/{game,gateway}/app/` — opensamguk 앱 아이콘 export(`icon.png` · `apple-icon.png` · `favicon.ico`, `tools/assets/build_seal_icons.py`)
 - `originals/` — project-authored source specifications
