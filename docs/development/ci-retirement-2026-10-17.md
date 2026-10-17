@@ -34,6 +34,12 @@ re-enable the corresponding workflow IDs after authorization. For example:
 git restore --source=af99e5bfd9dcda1fdbaec324fb21d0e5671102d3 -- .github/workflows/license-boundaries.yml
 ```
 
+Restoring `.github/` brings a top-level entry back, so the same change must
+re-declare it in `.license-boundaries.json` (`{ "path": ".github", "classification": "mit" }`,
+README “License”: the tooling under `.github/` is MIT). The declaration was removed
+with the retirement because `tools/check-license-boundaries.py` rejects entries that
+are not tracked in Git.
+
 Workflow state snapshots, original Git blob identities and cancellation results
 are retained in the execution handoff. Re-enabling workflows does not recreate
 previously cancelled runs. No run, log, artifact or repository history is deleted.
