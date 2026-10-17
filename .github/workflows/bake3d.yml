@@ -1,0 +1,97 @@
+name: bake3d
+
+# BAKE-0: real headless-Chromium bakes of the primitive test fixtures in tools/assets/bake3d.
+# Render dependencies come from the public opensamguk app at a fixed commit: its web/game lockfile
+# (three 0.171.0, @playwright/test 1.55.1) and `playwright install chromium`, the same steps as the
+# app's own CI. Read-only, no secrets. Produces review evidence only; nothing is exported or deployed.
+on:
+  pull_request:
+    paths:
+      - tools/assets/bake3d/**
+      - previews/bake3d/**
+      - .github/workflows/bake3d.yml
+  push:
+    branches: [main]
+    paths:
+      - tools/assets/bake3d/**
+      - previews/bake3d/**
+      - .github/workflows/bake3d.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: bake3d-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  # opensamguk main; changing it can change the Chromium build, so re-check preview bytes.
+  APP_SHA: 5aea9ba584ecb29d1723d1331fb5c8bb9642fa17
+
+jobs:
+  bake3d:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - name: Validate pinned app commit
+        run: '[[ "$APP_SHA" =~ ^[0-9a-f]{40}$ ]]'
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - name: Check out opensamguk app (render dependencies only)
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          repository: peppone-choi/opensamguk
+          ref: ${{ env.APP_SHA }}
+          path: app
+          fetch-depth: 1
+          persist-credentials: false
+      - name: Confirm app checkout commit
+        run: test "$(git -C app rev-parse HEAD)" = "$APP_SHA"
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version: '22.23.3'
+      - run: corepack enable
+      - name: Install app web/game dependencies (frozen lockfile)
+        working-directory: app/web
+        run: corepack pnpm install --frozen-lockfile --filter "@opensamguk/web-game..."
+      - name: Install Playwright Chromium (version pinned by the app lockfile)
+        working-directory: app/web/game
+        run: corepack pnpm exec playwright install chromium
+      - name: Bake3D tests (render required)
+        env:
+          BAKE3D_REQUIRE_RENDER: '1'
+          BAKE3D_DEPS_ROOT: ${{ github.workspace }}/app/web/game
+          BAKE3D_EVIDENCE_DIR: ${{ runner.temp }}/bake3d-evidence/tests
+        run: |
+          set -o pipefail
+          mkdir -p "$RUNNER_TEMP/bake3d-evidence"
+          node --test --test-reporter=spec tools/assets/bake3d/test/*.test.mjs 2>&1 | tee "$RUNNER_TEMP/bake3d-evidence/test-log.txt"
+      - name: Committed preview sheets match a fresh bake
+        env:
+          BAKE3D_DEPS_ROOT: ${{ github.workspace }}/app/web/game
+        run: |
+          set -o pipefail
+          node tools/assets/bake3d/preview.mjs --check 2>&1 | tee "$RUNNER_TEMP/bake3d-evidence/preview-check-log.txt"
+      - name: Bake the primitive fixture with the CLI
+        env:
+          BAKE3D_DEPS_ROOT: ${{ github.workspace }}/app/web/game
+        run: |
+          set -o pipefail
+          EVIDENCE="$RUNNER_TEMP/bake3d-evidence"
+          node tools/assets/bake3d/bake.mjs \
+            --config tools/assets/bake3d/config.provisional.json \
+            --model tools/assets/bake3d/fixtures/primitive-building.json \
+            --out "$EVIDENCE/cli-building" 2>&1 | tee "$EVIDENCE/cli-log.txt"
+          echo "app=$APP_SHA images=$GITHUB_SHA" > "$EVIDENCE/commits.txt"
+          (cd "$EVIDENCE" && find . -type f \( -name '*.png' -o -name '*.json' \) | sort | xargs sha256sum) > "$RUNNER_TEMP/SHA256SUMS"
+          mv "$RUNNER_TEMP/SHA256SUMS" "$EVIDENCE/SHA256SUMS"
+      - name: Upload bake evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: bake3d-evidence-${{ github.run_attempt }}
+          path: ${{ runner.temp }}/bake3d-evidence
+          if-no-files-found: error
+          retention-days: 14
