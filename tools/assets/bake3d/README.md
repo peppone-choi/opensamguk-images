@@ -27,9 +27,16 @@ node --test tools/assets/bake3d/test/*.test.mjs
 node tools/assets/bake3d/preview.mjs --check   # 인자 없이 실행하면 시트를 다시 쓴다
 ```
 
-`--deps`가 `BAKE3D_DEPS_ROOT` 대신 쓰인다. `--chromium <실행파일>` 또는 `BAKE3D_CHROMIUM_PATH`로 다른 Chromium을 지정할 수 있다. 렌더 시험은 의존성·Chromium을 찾지 못하면 이유를 적고 건너뛴다. `BAKE3D_REQUIRE_RENDER=1`이면 실패한다(CI). `BAKE3D_EVIDENCE_DIR`를 주면 출력·대조 시트·결정성 통계(`render-evidence.json`)를 남긴다.
+`--deps`가 `BAKE3D_DEPS_ROOT` 대신 쓰인다. `--chromium <실행파일>` 또는 `BAKE3D_CHROMIUM_PATH`로 다른 Chromium을 지정할 수 있다. 렌더 시험은 의존성·Chromium을 찾지 못하면 이유를 적고 건너뛴다. 실제 검증에는 `BAKE3D_REQUIRE_RENDER=1`을 지정하여 누락을 실패로 처리한다. `BAKE3D_EVIDENCE_DIR`를 주면 출력·대조 시트·결정성 통계(`render-evidence.json`)를 남긴다.
 
-CI `.github/workflows/bake3d.yml`은 읽기 권한만 쓰고 비밀값이 필요 없다. 앱 commit(`APP_SHA`), action commit, Node 버전을 고정하고, 앱 lockfile로 설치한 Playwright가 고정한 Chromium 빌드에서 시험·`preview.mjs --check`·CLI 굽기를 실행한다. 앱 commit을 바꾸면 Chromium 빌드가 바뀔 수 있으므로 preview 해시를 다시 확인한다.
+자동 CI는 2026-10-17 사용자 지시에 따라 중지되어 있다. 검증 담당자가 앱 commit과 Node·Chromium 버전을 고정하고, 그 앱의 `web/game` 의존성을 `BAKE3D_DEPS_ROOT`로 지정해 로컬에서 실행한다.
+
+```sh
+BAKE3D_REQUIRE_RENDER=1 node --test tools/assets/bake3d/test/*.test.mjs
+node tools/assets/bake3d/preview.mjs --check
+```
+
+명령·앱 commit·브라우저 버전·실제 시험 결과를 함께 보존한다. 앱 commit이나 Chromium 빌드를 바꾸면 preview 해시를 다시 확인한다. 자동 검증이 수행됐다고 가정하지 않는다.
 
 ## 입력
 
