@@ -36,6 +36,9 @@ opensamguk 장수 초상 에셋. 삼국지14(RTK14) 인물 일러스트를 원�
   - `serving/portrait/<id>.png` — face-crop-148x210(v3) 사본
   - `serving/icon/<id>.png` — face-icon-96 사본
   - `serving/original/<id>.jpg` — 원본 JPEG 무변환 바이트 사본(원본이 JPEG 소스라 PNG 변환 없이 보존)
+  - `serving/thumb/<id>.webp` — 48×68 WebP(목록용, 2026-10-18 D176). `serving/portrait/<id>.png` 를 LANCZOS 로 축소, q80 · method 4. 평균 1.2KB
+  - `serving/icon/<id>.webp` — 96×96 WebP(D176). `serving/icon/<id>.png` 를 크기 그대로 q80. 평균 2.4KB
+  - WebP 두 변형은 images 저장소 `tools/build_rtk14_serving_webp.py` 가 serving PNG 에서 만든다(`--check` 로 드리프트 검사). 파일별 해시 · 원본 해시 · 크기는 `manifest/serving-webp.json`. 기존 png/jpg 경로는 그대로다
   - id 범위 **10001-11000**(레거시 0-9xxx 아이콘 풀과 분리). 라이브 컷오버 시 고정.
 - **`officer-id-registry.tsv`** — id ↔ name_kanji ↔ reading ↔ face_crop/full_frame/original
   파일 조인키(파생 문서, 원천층 아님). id는 name_kanji 유니코드 코드포인트 정렬로 10001부터 부여.
