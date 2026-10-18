@@ -1,6 +1,6 @@
 # OpenSamguk asset exports
 
-> 2026-10-18: 이 문서의 「CI」 점검은 2026-10-17 CI 은퇴 뒤 로컬 실행으로 바뀌었다([docs/development/ci-retirement-2026-10-17.md](docs/development/ci-retirement-2026-10-17.md)). 앱이 지금 쓰지 않는 export(`state-*` 상태 아이콘 · iso2d)는 [docs/asset-status.md](docs/asset-status.md)에 표시했다. 도시 아이콘 `city/cast_*` 과 자작 城 표지는 2026-10-18 D175 로 지웠다(복원은 [docs/asset-status.md](docs/asset-status.md) 「삭제됨」). 문서 색인은 [docs/index.md](docs/index.md).
+> 2026-10-18: 이 문서의 「CI」 점검은 2026-10-17 CI 은퇴 뒤 로컬 실행으로 바뀌었다([docs/development/ci-retirement-2026-10-17.md](docs/development/ci-retirement-2026-10-17.md)). 앱이 지금 쓰지 않는 export(`state-*` 상태 아이콘)는 [docs/asset-status.md](docs/asset-status.md)에 표시했다. 도시 아이콘 `city/cast_*` · 자작 城 표지 · 아이소 2D(iso2d) 에셋은 2026-10-18 D175 로 지웠다(복원은 [docs/asset-status.md](docs/asset-status.md) 「삭제됨」). 문서 색인은 [docs/index.md](docs/index.md).
 
 ## 와룡전 전장·유닛 파생 export
 
@@ -78,23 +78,3 @@ python3 -m unittest tools.assets.test_build_status_icons
 
 빈 상태 일러스트(`illustrations/`)는 `assets/ui-illustrations/source/*.svg`(96×96, 청동·이끼 2색 고정)가 원본이고 빌더가 개별 SVG 와
 `assets/ui-illustrations/manifest.json` 을 결정적으로 만든다. `<img>` 로 소비하므로 고정색이다. `--check` 로 드리프트를 검사한다(로컬 점검 — CI 은퇴, [docs/development/ci-retirement-2026-10-17.md](docs/development/ci-retirement-2026-10-17.md)).
-
-## AI 2D 아이소메트릭 에셋
-
-> **폐기(2026-10-18 표시):** 아이소 지도는 폐기됐고 앱 참조는 0이다. 파일은 아직 지우지 않았다([docs/asset-status.md](docs/asset-status.md)).
-
-- 원본·프롬프트·큐레이션: `originals/iso2d/` (제작 규약은 해당 README)
-- 추출·검증·내보내기: `tools/assets/*iso2d*.py`
-- 조립 검증 이미지: `previews/iso2d/`
-- 배포 export: `web/game/public/sprites/iso2d/`
-- 고정 태그: `v2026.09.10-iso2d-v2`(`tools/assets/export_iso2d_assets.py` 의 `TAG`, `manifest.json` 의 `sourceTag`). 예전에 적힌 `v2026.09.08-iso2d-v1` 은 원격 저장소에 없다.
-
-115 PNG(지형 93 · 오브젝트 20 · 스커트 2)를 내보낸다. 승인 기록은
-`originals/iso2d/curation/<group>/curated`, 실제 배포 바이트는 그것을 픽셀아트로 변환한
-`originals/iso2d/pixel/<group>`이다(`pixelize_iso2d.py`). 원본 시트나 `frames/`를 직접
-설치하지 않는다. `export_iso2d_assets.py --check`로 명세와 바이트 동일성을 검사한다.
-
-도시 아이콘 11종은 기하 가이드(`build_iso2d_buildings.py`)를 그려 놓고 그 위에 칠하며,
-export 가 타일 마름모 밖으로 흘러내리는지(no-spill) 검사해 통과한 것만 나간다.
-성 등급 대응표는 1:1 이고 정본은 `sprites/iso2d/manifest.json` 의 `cityLevelTiers` 다.
-지도 높이 데이터와 게임 렌더러 구현은 이 에셋 export에 포함되지 않는다.

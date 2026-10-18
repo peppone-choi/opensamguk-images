@@ -1,4 +1,4 @@
-# 자산 상태 — 앱 사용 · 폐기 · 미사용
+# 자산 상태 — 앱 사용 · 미사용 · 삭제됨
 
 기준: 2026-10-18, 이 저장소 main `4b74765` · 앱 main `2ebffe8f2`. 앱 저장소의 `git ls-tree` 와 `git grep` 으로 대조했다. 화면 실행으로 확인한 표는 아니다.
 
@@ -11,7 +11,7 @@
 | 사용 | 앱 main 에 바이트 사본이 있거나 CDN 으로 부른다 |
 | 원천 | 앱이 직접 쓰지 않지만 사용 중인 export 를 다시 만드는 출발점이다 |
 | 미사용 | 쓸 수 있는 상태지만 앱 참조가 0이다 |
-| 폐기 | 제품 결정으로 쓰지 않기로 했다 |
+| 삭제됨 | 지웠다. 표의 방법으로 되돌릴 수 있다 |
 
 ## 사용
 
@@ -44,21 +44,13 @@
 | 전투 말 시안 `originals/battle-tokens/` · `previews/battle-tokens/` | 0.3 MB | 채택되지 않았다. 앱 참조 0 |
 | 3D 굽기 `tools/assets/bake3d/` · `previews/bake3d/` | 0.1 MB | PROVISIONAL, 앱 export 없음 |
 
-## 폐기
-
-| 자산 | 크기 | 근거 |
-| --- | ---: | --- |
-| 아이소 2D `originals/iso2d/` | 59.6 MB | 아이소 지도 폐기(지도는 와룡전 탑다운 타일, 원작 추출 이미지 그대로) |
-| `previews/iso2d/` | 38.0 MB | 같음 |
-| `web/game/public/sprites/iso2d/` | 0.7 MB | 같음. 앱 참조 0. 그 README 의 태그 `v2026.09.08-iso2d-v1` 은 원격에 없다 — 원격 태그는 `v2026.09.10-iso2d-v2`(`manifest.json` `sourceTag`) |
-| `tools/assets/*iso2d*`(시험 포함 9개) | 소 | 같음. `test_iso2d_geometry` 는 외부 `sprite_gen` 모듈 없이는 돌지 않는다 |
-
 ## 삭제됨
 
 | 자산 | 지운 날 · 근거 | 되돌리는 법 |
 | --- | --- | --- |
 | 도시 아이콘 `assets/city-icons/` · `assets/brand/city-icons/` · `web/{game,gateway}/public/city/` · `tools/assets/{build,test_build}_city_icons.py` · `{build,test_build}_regional_city_icons.py` | 2026-10-18 D175(앱 사본 · 참조 0, 와룡전 거점으로 대체). 황제 NPC 표지가 쓰던 도우미는 `build_status_icons.py` 로 옮겼다 | 삭제 커밋을 `git revert` 하거나 그 부모에서 `git restore --source=<부모> -- <경로>` |
 | 자작 城 표지 `exports/map/markers/` · `originals/map-city-markers/` · `tools/{build,test}-map-city-markers.py` · `tools/requirements-map-markers.txt` | 2026-10-18 D175(와룡전 `sites.png` 로 대체) | 같음 |
+| 아이소 2D `originals/iso2d/` · `previews/iso2d/` · `web/game/public/sprites/iso2d/` · `tools/assets/*iso2d*`(시험 포함 9) | 2026-10-18 D175(아이소 지도 폐기, 앱 참조 0) | 태그 `v2026.09.10-iso2d-v2`(export 판) 또는 삭제 커밋 부모에서 `git restore --source` |
 
 ## 앱이 부르지만 이 저장소에 없는 경로
 
