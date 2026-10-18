@@ -7,7 +7,7 @@
 | 문서 | 내용 |
 | --- | --- |
 | [README](../README.md) | 정본 범위 · 앱에 가는 길 · 폴더 지도 · 로컬 점검 · 라이선스 |
-| [asset-status.md](asset-status.md) | 폴더별 앱 사용 · 폐기 · 미사용 표시(2026-10-18 기준) |
+| [asset-status.md](asset-status.md) | 폴더별 앱 사용 · 미사용 · 삭제됨(2026-10-18 기준) |
 | [ASSET-EXPORTS.md](../ASSET-EXPORTS.md) | export 규칙: 와룡전 지도 · 전장 키트, 자작 아이콘, 배율 폴더 |
 | [THIRD-PARTY-NOTICES.md](../THIRD-PARTY-NOTICES.md) | 제3자 · owner-accepted 자산 고지 |
 | [development/ci-retirement-2026-10-17.md](development/ci-retirement-2026-10-17.md) | CI 은퇴와 복원 방법 |
@@ -38,11 +38,9 @@
 | [assets/status-icons/source/README.md](../assets/status-icons/source/README.md) | 상태 아이콘 원화 |
 | [exports/stratagem-cards/README.md](../exports/stratagem-cards/README.md) | 계책 카드 그림 32장 · 표시용 export |
 
-## 도구 · 폐기 자산
+## 도구
 
 | 문서 | 내용 |
 | --- | --- |
 | [tools/assets/bake3d/README.md](../tools/assets/bake3d/README.md) | 3D → 방향별 스프라이트 굽기(PROVISIONAL) |
 | [previews/bake3d/README.md](../previews/bake3d/README.md) | 굽기 검수 시트 |
-| [originals/iso2d/README.md](../originals/iso2d/README.md) · [PLAN.md](../originals/iso2d/PLAN.md) | 아이소 2D 제작 규약(폐기) |
-| [web/game/public/sprites/iso2d/README.md](../web/game/public/sprites/iso2d/README.md) | 아이소 2D export(폐기) |
