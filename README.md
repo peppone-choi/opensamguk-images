@@ -37,14 +37,14 @@ https://cdn.jsdelivr.net/gh/peppone-choi/opensamguk-images/portraits/rtk14/servi
 | `portraits/rtk14/` 나머지 | 원본 · 축소 · 얼굴 자르기 · 목록 · 조사 기록 | 원천 |
 | `assets/` | 자작 아이콘 · 그림 · 워드마크의 원화와 preview | 정본 |
 | `web/{game,gateway}/` | 앱으로 보내는 export(같은 상대 경로) | export · 일부 미사용 |
-| `exports/` | 계책 카드 · 자작 城 표지 export | export · 일부 미사용 |
+| `exports/` | 계책 카드 export | export · 일부 미사용 |
 | `originals/` | 사람이 쓴 명세 · 프롬프트 · 원본 | 원천 · 일부 폐기 |
 | `previews/` | 생성 결과 검수 시트 | 검수 · 일부 폐기 |
 | `portraits-original/` | 자작 한대 인물 원형 초상 | 앱 미사용 |
 | `tools/` | 생성기 · 점검 도구 | 도구 |
 | `docs/` | 저장소 문서 | 문서 |
 
-폐기 · 미사용 판정과 근거는 [docs/asset-status.md](docs/asset-status.md)에 있다. 아이소 지도는 폐기됐고(지도는 와룡전 탑다운 타일), 도시 아이콘 · 자작 城 표지는 와룡전 거점으로 대체됐다. 파일은 아직 지우지 않았다.
+폐기 · 미사용 판정과 근거는 [docs/asset-status.md](docs/asset-status.md)에 있다. 아이소 지도는 폐기됐다(지도는 와룡전 탑다운 타일). 와룡전 거점으로 대체된 도시 아이콘 · 자작 城 표지는 2026-10-18 D175 로 지웠다.
 
 ## 로컬 점검
 
