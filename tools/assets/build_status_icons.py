@@ -25,7 +25,7 @@
 배지는 지도에서 성 건물 좌상단에 붙는다. 건물이 발자국을 채우도록 커지면서 배지가
 약 15–64 CSS px 로 그려지므로, 한 변 16px 을 1x 로 두고 2x=32 · 4x=64 · 8x=128 을
 원화에서 각각 독립 축소·픽셀 힌트한다(최근접 확대본이 아니다). 알파는 이진이고
-팔레트는 `_pixel_hint`(build_city_icons)의 48색 양자화를 따른다. 황제 거처는 기존
+팔레트는 `_pixel_hint`(옛 도시 아이콘 빌더에서 옮긴 도우미)의 48색 양자화를 따른다. 황제 거처는 기존
 24px 1x 규약(2x=48, 4x=96), 황제 NPC 이름 배지는 16px 1x(2x=32) 그대로다.
 
 ## state 코드 조사 (추측 아님, 코드 근거)
@@ -54,12 +54,7 @@ from collections import deque
 from functools import lru_cache
 from pathlib import Path
 
-from PIL import Image, ImageDraw
-
-try:
-    from tools.assets.build_city_icons import _pixel_hint, remove_checkerboard_background
-except ModuleNotFoundError:  # `python tools/assets/build_status_icons.py`
-    from build_city_icons import _pixel_hint, remove_checkerboard_background
+from PIL import Image, ImageChops, ImageDraw, ImageEnhance, ImageFilter
 
 ROOT = Path(__file__).resolve().parents[2]
 APPS = ("gateway", "game")
@@ -90,6 +85,80 @@ CELLS: dict[str, tuple[Path, int, int]] = {
 
 # 평면 경로(`status/<name>.png`)는 앱이 쓰던 옛 이름만 1x 사본으로 남긴다.
 LEGACY_FLAT = {*(str(code) for code in STATE_CODES), "capital", "imperial", "imperialNpc"}
+
+
+# 배경 제거 · 픽셀 힌트 도우미. 옛 도시 아이콘 빌더(build_city_icons.py, 2026-10-18 D175 로 삭제)에서
+# 판정식 · 상수 그대로 옮겨 왔다. 이 빌더가 유일한 사용처다.
+
+def _background_candidate(pixel: tuple[int, int, int]) -> bool:
+    """ImageGen이 구운 흰색/회색 체크무늬 한 픽셀인지 판별한다."""
+    lo, hi = min(pixel), max(pixel)
+    return lo >= 226 and hi - lo <= 22
+
+
+def remove_checkerboard_background(source: Image.Image) -> Image.Image:
+    """가장자리와 이어진 밝은 무채색 배경만 투명하게 만든다.
+
+    단순 색상 키가 아니라 flood fill을 쓰므로, 검은 외곽선 안쪽의 밝은 석벽과
+    흰 돛은 보존된다. 이 입력은 픽셀아트 원화이므로 이진 알파가 가장 선명하다.
+    """
+    if source.mode == "RGBA" and source.getchannel("A").getextrema()[0] == 0:
+        return source.copy()
+
+    rgb = source.convert("RGB")
+    width, height = rgb.size
+    pixels = rgb.load()
+    background = bytearray(width * height)
+    queue: deque[tuple[int, int]] = deque()
+
+    def add(x: int, y: int) -> None:
+        idx = y * width + x
+        if background[idx] or not _background_candidate(pixels[x, y]):
+            return
+        background[idx] = 1
+        queue.append((x, y))
+
+    for x in range(width):
+        add(x, 0)
+        add(x, height - 1)
+    for y in range(height):
+        add(0, y)
+        add(width - 1, y)
+
+    while queue:
+        x, y = queue.popleft()
+        if x:
+            add(x - 1, y)
+        if x + 1 < width:
+            add(x + 1, y)
+        if y:
+            add(x, y - 1)
+        if y + 1 < height:
+            add(x, y + 1)
+
+    out = rgb.convert("RGBA")
+    alpha = Image.new("L", (width, height), 255)
+    alpha.putdata([0 if flag else 255 for flag in background])
+    out.putalpha(alpha)
+    return out
+
+
+def _pixel_hint(image: Image.Image) -> Image.Image:
+    """작은 크기에서 고전 전략게임식 계단과 명암을 남긴다."""
+    alpha = image.getchannel("A").point(lambda value: 255 if value >= 96 else 0)
+    rgb = Image.new("RGB", image.size, (20, 18, 16))
+    rgb.paste(image.convert("RGB"), mask=alpha)
+    rgb = ImageEnhance.Contrast(rgb).enhance(1.08)
+    rgb = ImageEnhance.Color(rgb).enhance(1.06)
+    rgb = rgb.filter(ImageFilter.UnsharpMask(radius=0.7, percent=190, threshold=2))
+    rgb = rgb.quantize(colors=48, method=Image.Quantize.MEDIANCUT, dither=Image.Dither.NONE).convert("RGBA")
+    rgb.putalpha(alpha)
+
+    outline_alpha = ImageChops.subtract(alpha.filter(ImageFilter.MaxFilter(3)), alpha)
+    outlined = Image.new("RGBA", image.size, (20, 17, 14, 0))
+    outlined.putalpha(outline_alpha)
+    outlined.alpha_composite(rgb)
+    return outlined
 
 
 def file_name(key: str) -> str:

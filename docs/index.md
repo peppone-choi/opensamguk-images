@@ -36,7 +36,6 @@
 | [assets/brand/WORDMARK.md](../assets/brand/WORDMARK.md) | 워드마크 · 인장 앱 아이콘 |
 | [assets/brand/status-icons/README.md](../assets/brand/status-icons/README.md) | 상태 아이콘 preview |
 | [assets/status-icons/source/README.md](../assets/status-icons/source/README.md) | 상태 아이콘 원화 |
-| [assets/city-icons/source/regional/README.md](../assets/city-icons/source/regional/README.md) | 도시 아이콘 지역 원화(미사용) |
 | [exports/stratagem-cards/README.md](../exports/stratagem-cards/README.md) | 계책 카드 그림 32장 · 표시용 export |
 
 ## 도구 · 폐기 자산

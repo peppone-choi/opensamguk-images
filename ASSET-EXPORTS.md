@@ -1,6 +1,6 @@
 # OpenSamguk asset exports
 
-> 2026-10-18: 이 문서의 「CI」 점검은 2026-10-17 CI 은퇴 뒤 로컬 실행으로 바뀌었다([docs/development/ci-retirement-2026-10-17.md](docs/development/ci-retirement-2026-10-17.md)). 앱이 지금 쓰지 않는 export(도시 아이콘 · `state-*` 상태 아이콘 · iso2d · 자작 城 표지)는 [docs/asset-status.md](docs/asset-status.md)에 표시했다. 문서 색인은 [docs/index.md](docs/index.md).
+> 2026-10-18: 이 문서의 「CI」 점검은 2026-10-17 CI 은퇴 뒤 로컬 실행으로 바뀌었다([docs/development/ci-retirement-2026-10-17.md](docs/development/ci-retirement-2026-10-17.md)). 앱이 지금 쓰지 않는 export(`state-*` 상태 아이콘 · iso2d)는 [docs/asset-status.md](docs/asset-status.md)에 표시했다. 도시 아이콘 `city/cast_*` 과 자작 城 표지는 2026-10-18 D175 로 지웠다(복원은 [docs/asset-status.md](docs/asset-status.md) 「삭제됨」). 문서 색인은 [docs/index.md](docs/index.md).
 
 ## 와룡전 전장·유닛 파생 export
 
@@ -38,11 +38,11 @@ The app receives **exact byte copies** keyed by this repository's merge commit (
 
 이 저장소가 다음 자작 아이콘의 정본이다.
 
-- 생성기: `tools/assets/build_city_icons.py`, `tools/assets/build_status_icons.py`, `tools/assets/build_ui_icons.py`, `tools/assets/build_ui_illustrations.py`
+- 생성기: `tools/assets/build_status_icons.py`, `tools/assets/build_ui_icons.py`, `tools/assets/build_ui_illustrations.py`
 - 워드마크(MIT, 2026-10-01 D22): 정본 `assets/brand/logo-master.png`, 생성기 `tools/assets/build_wordmark.py` → `web/{game,gateway}/public/logo-wordmark{.webp,.png,-sm.png}`. 출처는 `assets/brand/WORDMARK.md`.
 - ImageGen 호출 기록(비결정적, 수동): `tools/assets/gen_status_icons_imagegen.py`
-- preview: `assets/brand/{city-icons,status-icons,ui-icons,ui-illustrations}/preview.png`
-- export: `web/{game,gateway}/public/{city,status,icons,illustrations}/`
+- preview: `assets/brand/{status-icons,ui-icons,ui-illustrations}/preview.png`
+- export: `web/{game,gateway}/public/{status,icons,illustrations}/`
 
 UI 아이콘(`icons/`)은 손으로 그린 `assets/ui-icons/source/*.svg`(20×20, `currentColor` 선 1.5px)가 원본이고,
 빌더가 개별 SVG 와 sprite `icons.svg`(`<symbol id="ico-<name>">`), `assets/ui-icons/manifest.json` 을 결정적으로 만든다.
@@ -52,32 +52,12 @@ UI 아이콘(`icons/`)은 손으로 그린 `assets/ui-icons/source/*.svg`(20×20
 export만 같은 상대 경로로 전달한다. 생성기와 preview를 `opensamguk`에 복제하지 않는다.
 
 ```bash
-python3 tools/assets/build_city_icons.py      # --check 로 드리프트 검사
 python3 tools/assets/build_status_icons.py    # --check 로 드리프트 검사
-python3 -m unittest tools.assets.test_build_city_icons tools.assets.test_build_status_icons
+python3 -m unittest tools.assets.test_build_status_icons
 ```
 
 배율 폴더 `<N>x/`는 각 자산의 1x 한 변에 N을 곱한 크기다. 앱은
-`/city/${scale}x/…`처럼 배율로 경로를 만든다.
-
-## 도시 아이콘 `web/{game,gateway}/public/city/`
-
-> **미사용(2026-10-18):** 앱 main 에 `city/` 사본이 없고 참조도 0이다. 지도는 와룡전 거점(U3)으로 바뀌었다. 자세한 근거는 [docs/asset-status.md](docs/asset-status.md).
-
-`cast_<level>.png`, level 1–11. 정사각 캔버스, 앵커는 하단 중앙
-(64px 규격 anchorX 32/64 · anchorY 63/64 — 하단 여백이 캔버스에 비례: 32·64→1px,
-128→2px, 256→4px).
-
-| 경로 | 한 변(px) | 비고 |
-| --- | ---: | --- |
-| `1x/cast_<level>.png` | 32 | |
-| `2x/cast_<level>.png` | 64 | |
-| `4x/cast_<level>.png` | 128 | 2026-09-23 추가 — 발자국을 채우는 건물(48–96 CSS px) |
-| `8x/cast_<level>.png` | 256 | 2026-09-23 추가 — 경 5×5 근접 확대(최대 약 240 CSS px) |
-| `cast_<level>.png` | 64 | 옛 평면 경로(2x 사본) |
-
-배율마다 원화(`assets/city-icons/source/central-plains/`)에서 따로 축소하며,
-거점 간 시각 위계(`VISUAL_EXTENT`)는 캔버스에 비례해 유지된다.
+`/status/${scale}x/…`처럼 배율로 경로를 만든다.
 
 ## 상태 아이콘 `web/{game,gateway}/public/status/`
 
