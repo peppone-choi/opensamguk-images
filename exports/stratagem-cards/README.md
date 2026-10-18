@@ -8,5 +8,5 @@
 
 앱은 카드를 154×231 로 그린다. `display/<id>.webp` 는 채택본을 그 2배(308×462)로 줄인 WebP(손실 q85)다 — 장당 약 20 KB(채택본 40–53 KB), 채택본을 다시 줄인 것과의 PSNR 37 dB 안팎. 앱 `public/stratagem-cards/` 에는 이것을 export 로 둔다.
 
-- 다시 만들 때: `python3 tools/cards/build_card_display.py`, 확인: `--check`(CI). 확인은 바이트가 아니라 푼 그림으로 한다 — 이름 집합 · 크기 · PSNR ≥ 34 dB.
+- 다시 만들 때: `python3 tools/cards/build_card_display.py`, 확인: `--check`(로컬 점검 — CI 은퇴). 확인은 바이트가 아니라 푼 그림으로 한다 — 이름 집합 · 크기 · PSNR ≥ 34 dB.
 - 채택본을 바꾸면 display 도 다시 만든다(`--check` 가 빨개진다).
