@@ -2,7 +2,8 @@
 
 This directory contains original, project-generated portrait assets covered by
 the repository root MIT license. It is deliberately separate from the
-third-party `portraits/` and legacy `icons/` trees.
+third-party `portraits/` tree and from the legacy `icons/` tree (no longer in
+this repository). App use: none as of 2026-10-18 (see `docs/asset-status.md`).
 
 `han-archetypes/source/` is the immutable generated master. The build script
 derives three runtime variants from each grid cell:

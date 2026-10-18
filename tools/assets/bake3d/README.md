@@ -2,7 +2,7 @@
 
 단순 도형으로 조립한 3D 모델을 고정 정사영 카메라·고정 광원으로 방향마다 렌더해 투명 PNG와 manifest를 만든다. 이 저장소에는 생성기·시험용 fixture·시험만 둔다. 렌더 의존성(`three` 0.171.0, `@playwright/test` Chromium·SwiftShader WebGL)은 새로 설치하지 않고 **opensamguk 앱의 고정 commit `web/game`** 을 그 lockfile 그대로 설치해 빌려 쓴다.
 
-**상태: PROVISIONAL.** 카메라 각도·광원 방향·타일 배율·칸 크기는 동작 확인용 임시값이다. 아트 일관성 가이드(`originals/aoe2-20261016/docs/art-consistency-guide.md`)의 기준 화면 승인 전에는 정본이 아니다. `fixtures/`의 모델은 `kind: "test-fixture"` 단순 도형이며 제품 그림이 아니다.
+**상태: PROVISIONAL.** 카메라 각도·광원 방향·타일 배율·칸 크기는 동작 확인용 임시값이다. 아트 일관성 가이드(`originals/aoe2-20261016/docs/art-consistency-guide.md` — main 에는 없고 미채택 브랜치 `dots/art-masters-20261016` 에만 있다)의 기준 화면 승인 전에는 정본이 아니다. `fixtures/`의 모델은 `kind: "test-fixture"` 단순 도형이며 제품 그림이 아니다.
 
 ## 경로
 

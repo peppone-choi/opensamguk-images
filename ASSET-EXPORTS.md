@@ -1,8 +1,10 @@
 # OpenSamguk asset exports
 
+> 2026-10-18: 이 문서의 「CI」 점검은 2026-10-17 CI 은퇴 뒤 로컬 실행으로 바뀌었다([docs/development/ci-retirement-2026-10-17.md](docs/development/ci-retirement-2026-10-17.md)). 앱이 지금 쓰지 않는 export(도시 아이콘 · `state-*` 상태 아이콘 · iso2d · 자작 城 표지)는 [docs/asset-status.md](docs/asset-status.md)에 표시했다. 문서 색인은 [docs/index.md](docs/index.md).
+
 ## 와룡전 전장·유닛 파생 export
 
-`waryong/battle/` is the owner-accepted source of derived 214 battlefield PNGs, red/blue unit sprites, and the five-category terrain catalog. Original `BATTLE.MAP`/`BATTLE.MDL`/`BATTLE.SCH` files stay outside Git. The catalog is generated from read-only local originals. Its referenced PNGs are exported to the app's `web/game/public/battle/` boundary. Run `python3 tools/build-waryong-battle-assets.py --source-dir ~/.cache/waryongjeon/extract/Src --rendered-dir ~/.cache/waryongjeon/out/battle`, then repeat with `--check` for local drift verification. CI can verify the committed catalog's shape and image inventory without original binaries.
+`waryong/battle/` is the owner-accepted source of derived 214 battlefield PNGs, red/blue unit sprites, and the five-category terrain catalog. Original `BATTLE.MAP`/`BATTLE.MDL`/`BATTLE.SCH` files stay outside Git. The catalog is generated from read-only local originals. Its referenced PNGs are exported to the app's `web/game/public/battle/` boundary. Run `python3 tools/build-waryong-battle-assets.py --source-dir ~/.cache/waryongjeon/extract/Src --rendered-dir ~/.cache/waryongjeon/out/battle`, then repeat with `--check` for local drift verification. `python3 -m unittest tools.test_waryong_battle_assets` can verify the committed catalog's shape and image inventory without original binaries.
 
 The game server also packages an **exact byte copy** of `waryong/battle/catalog-v1.json` at `opensamguk/data/battle/waryong/catalog-v1.json`. The frozen source is images main merge `9c890e453bb6036bc674ddfb93f2ee1e4f1efb60`: 954,038 bytes, SHA-256 `2eb021038ccf36178127247d25c18f03f538e6f139a2e699fdb40e5ed5f4bb27`. Do not reformat the JSON during export. The app checks this hash at build and runtime and carries a separate NOTICE at the destination describing the original-game derivative, owner-accepted/non-MIT boundary, and that it grants no rights to third parties. Runtime combat never fetches this catalog from the images repository or CDN. Original `BATTLE.*`, the converter, and source PNGs are not server catalog exports.
 
@@ -10,17 +12,17 @@ The game server also packages an **exact byte copy** of `waryong/battle/catalog-
 
 ## 와룡전 전장 조각 키트
 
-`waryong/battle/kit/` carries the 214 battle boards as original pieces instead of images: `pieces.bin.gz` (3 tilesets × 256 pieces × 16 × 32, palette index, 255 transparent), `records.bin` (3 × 256 × [layer count, piece ids for layers 0–6]), `boards.bin.gz` (214 × 64 × 64 record ids), `units.bin.gz` (360 unit pieces) and `unit-roles.bin.gz` (red template roles). `kit.json` records the layout rules, the day palette, each board's tileset, `layoutSha256` and `composedSha256` (hash of the assembled canvas), and marks gate/wall/ladder record states UNKNOWN. About 0.3 MB against 69 MB of pre-rendered boards. Run `python3 tools/build-waryong-battle-kit.py --source-dir ~/.cache/waryongjeon/extract/Src`, then `--check`; CI runs `python3 -m unittest tools.test_waryong_battle_kit` (re-assembles sample boards from the kit and compares hashes). The app assembles boards with `web/shared` `battleBoard.ts`; exports go to `web/{game,gateway}/public/battle/waryong/<kitId>/` with a NOTICE.
+`waryong/battle/kit/` carries the 214 battle boards as original pieces instead of images: `pieces.bin.gz` (3 tilesets × 256 pieces × 16 × 32, palette index, 255 transparent), `records.bin` (3 × 256 × [layer count, piece ids for layers 0–6]), `boards.bin.gz` (214 × 64 × 64 record ids), `units.bin.gz` (360 unit pieces) and `unit-roles.bin.gz` (red template roles). `kit.json` records the layout rules, the day palette, each board's tileset, `layoutSha256` and `composedSha256` (hash of the assembled canvas), and marks gate/wall/ladder record states UNKNOWN. About 0.3 MB against 69 MB of pre-rendered boards. Run `python3 tools/build-waryong-battle-kit.py --source-dir ~/.cache/waryongjeon/extract/Src`, then `--check`; verify locally with `python3 -m unittest tools.test_waryong_battle_kit` (re-assembles sample boards from the kit and compares hashes). The app assembles boards with `web/shared` `battleBoard.ts`; exports go to `web/{game,gateway}/public/battle/waryong/<kitId>/` with a NOTICE.
 
 ### 전장 분류 해시(`terrainSha256`)
 
 - `kit.json` `recordClass[tileset]` is a 256-letter string: the terrain class of every record (`P` plain, `F` forest, `M` mountain, `R` river, `W` wall), computed by the **same** `terrain_for_record` that builds `catalog-v1.json`.
-- A board's classification is the 4096 letters `recordClass[tileset][record id]` for its cells in **row-major order** (r = 0…63, and within a row c = 0…63), no separators. It equals `"".join(catalog-v1.json boards[n].terrainRows)`; CI checks this for all 214 boards.
+- A board's classification is the 4096 letters `recordClass[tileset][record id]` for its cells in **row-major order** (r = 0…63, and within a row c = 0…63), no separators. It equals `"".join(catalog-v1.json boards[n].terrainRows)`; `tools.test_waryong_battle_kit` checks this for all 214 boards.
 - `terrainSha256` = SHA-256 of those 4096 ASCII bytes (lower-case hex). The server can pin it for a battle ticket and the app recomputes it from the kit before drawing (`battleBoard.ts`).
 
 ## 와룡전 전략 지도 키트
 
-`waryong/map/` is the owner-accepted source of the strategic-map kit for the opensamguk top-down renderer (user decision U3, 2026-09-30: use the extracted images as they are — no AI, no new drawing). Run `python3 tools/build-waryong-map-assets.py --source-dir ~/.cache/waryongjeon/extract/Src`, then repeat with `--check` (compares decoded pixels and JSON content). CI runs `python3 -m unittest tools.test_waryong_map_assets` without original binaries.
+`waryong/map/` is the owner-accepted source of the strategic-map kit for the opensamguk top-down renderer (user decision U3, 2026-09-30: use the extracted images as they are — no AI, no new drawing). Run `python3 tools/build-waryong-map-assets.py --source-dir ~/.cache/waryongjeon/extract/Src`, then repeat with `--check` (compares decoded pixels and JSON content). Verify locally with `python3 -m unittest tools.test_waryong_map_assets` without original binaries.
 
 | File | Content |
 | --- | --- |
@@ -44,7 +46,7 @@ The app receives **exact byte copies** keyed by this repository's merge commit (
 
 UI 아이콘(`icons/`)은 손으로 그린 `assets/ui-icons/source/*.svg`(20×20, `currentColor` 선 1.5px)가 원본이고,
 빌더가 개별 SVG 와 sprite `icons.svg`(`<symbol id="ico-<name>">`), `assets/ui-icons/manifest.json` 을 결정적으로 만든다.
-`--check` 로 드리프트를 검사하며 CI 에서 돈다.
+`--check` 로 드리프트를 검사한다(로컬 점검 — CI 은퇴, [docs/development/ci-retirement-2026-10-17.md](docs/development/ci-retirement-2026-10-17.md)).
 
 생성기는 저장소 루트에서 실행한다. 이 절의 자작 아이콘은 `opensamguk`의 `web/` 아래
 export만 같은 상대 경로로 전달한다. 생성기와 preview를 `opensamguk`에 복제하지 않는다.
@@ -59,6 +61,8 @@ python3 -m unittest tools.assets.test_build_city_icons tools.assets.test_build_s
 `/city/${scale}x/…`처럼 배율로 경로를 만든다.
 
 ## 도시 아이콘 `web/{game,gateway}/public/city/`
+
+> **미사용(2026-10-18):** 앱 main 에 `city/` 사본이 없고 참조도 0이다. 지도는 와룡전 거점(U3)으로 바뀌었다. 자세한 근거는 [docs/asset-status.md](docs/asset-status.md).
 
 `cast_<level>.png`, level 1–11. 정사각 캔버스, 앵커는 하단 중앙
 (64px 규격 anchorX 32/64 · anchorY 63/64 — 하단 여백이 캔버스에 비례: 32·64→1px,
@@ -77,6 +81,8 @@ python3 -m unittest tools.assets.test_build_city_icons tools.assets.test_build_s
 
 ## 상태 아이콘 `web/{game,gateway}/public/status/`
 
+> **부분 사용(2026-10-18):** 앱은 `imperial-npc.png` 만 쓴다. `state-*` · `star-capital` · `imperial-residence` 는 참조 0([docs/asset-status.md](docs/asset-status.md)).
+
 | 파일 | 1x | 2x | 4x | 8x |
 | --- | ---: | ---: | ---: | ---: |
 | `state-{1,2,3,4,5,6,7,8,9,32,34,43}.png` | 16 | 32 | 64 | 128 |
@@ -91,15 +97,17 @@ python3 -m unittest tools.assets.test_build_city_icons tools.assets.test_build_s
 (`imperial-*`는 바이트 그대로).
 
 빈 상태 일러스트(`illustrations/`)는 `assets/ui-illustrations/source/*.svg`(96×96, 청동·이끼 2색 고정)가 원본이고 빌더가 개별 SVG 와
-`assets/ui-illustrations/manifest.json` 을 결정적으로 만든다. `<img>` 로 소비하므로 고정색이다. `--check` 가 CI 에서 돈다.
+`assets/ui-illustrations/manifest.json` 을 결정적으로 만든다. `<img>` 로 소비하므로 고정색이다. `--check` 로 드리프트를 검사한다(로컬 점검 — CI 은퇴, [docs/development/ci-retirement-2026-10-17.md](docs/development/ci-retirement-2026-10-17.md)).
 
 ## AI 2D 아이소메트릭 에셋
+
+> **폐기(2026-10-18 표시):** 아이소 지도는 폐기됐고 앱 참조는 0이다. 파일은 아직 지우지 않았다([docs/asset-status.md](docs/asset-status.md)).
 
 - 원본·프롬프트·큐레이션: `originals/iso2d/` (제작 규약은 해당 README)
 - 추출·검증·내보내기: `tools/assets/*iso2d*.py`
 - 조립 검증 이미지: `previews/iso2d/`
 - 배포 export: `web/game/public/sprites/iso2d/`
-- 고정 태그: `v2026.09.08-iso2d-v1`
+- 고정 태그: `v2026.09.10-iso2d-v2`(`tools/assets/export_iso2d_assets.py` 의 `TAG`, `manifest.json` 의 `sourceTag`). 예전에 적힌 `v2026.09.08-iso2d-v1` 은 원격 저장소에 없다.
 
 115 PNG(지형 93 · 오브젝트 20 · 스커트 2)를 내보낸다. 승인 기록은
 `originals/iso2d/curation/<group>/curated`, 실제 배포 바이트는 그것을 픽셀아트로 변환한

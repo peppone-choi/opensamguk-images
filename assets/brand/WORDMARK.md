@@ -16,7 +16,7 @@
 
 ## export
 
-`python3 tools/assets/build_wordmark.py`가 두 앱 `web/{game,gateway}/public/`에 같은 파일을 쓴다. 확인은 `--check`(CI)다.
+`python3 tools/assets/build_wordmark.py`가 두 앱 `web/{game,gateway}/public/`에 같은 파일을 쓴다. 확인은 `--check`(로컬 점검 — CI 은퇴)다.
 
 | 파일 | 크기 | 용도 |
 | --- | --- | --- |
@@ -32,7 +32,7 @@
 
 2026-10-02 오픈삼국 저장소 `tools/assets/build_brand_assets.py` 에서 옮겨 왔다(판정식 · 상수 그대로, 산출 바이트도 앱 사본과 같다).
 `python3 tools/assets/build_seal_icons.py` 가 정본 오른쪽의 붉은 三國 낙관(104×167)만 골라 평탄한 붉은색(198/32/38)으로 다시 칠해
-어두운 정사각 타일(15/13/12)에 올리고, 두 앱 `web/{game,gateway}/app/` 에 같은 파일을 쓴다. 확인은 `--check`(CI)다.
+어두운 정사각 타일(15/13/12)에 올리고, 두 앱 `web/{game,gateway}/app/` 에 같은 파일을 쓴다. 확인은 `--check`(로컬 점검 — CI 은퇴)다.
 
 | 파일 | 크기 | 용도 |
 | --- | --- | --- |
