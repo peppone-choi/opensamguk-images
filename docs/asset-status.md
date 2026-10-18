@@ -2,7 +2,7 @@
 
 기준: 2026-10-18, 이 저장소 main `4b74765` · 앱 main `2ebffe8f2`. 앱 저장소의 `git ls-tree` 와 `git grep` 으로 대조했다. 화면 실행으로 확인한 표는 아니다.
 
-**이 문서는 표시만 한다. 파일은 옮기거나 지우지 않았다.** 삭제 · 이동은 따로 승인받아 별도 변경으로 한다.
+**지운 자산은 아래 「삭제됨」 절에 복원법과 함께 적는다.** 그 밖의 삭제 · 이동은 따로 승인받아 별도 변경으로 한다(2026-10-18 D175 범위 밖은 보존).
 
 ## 상태 뜻
 
@@ -39,9 +39,7 @@
 
 | 자산 | 크기 | 근거 |
 | --- | ---: | --- |
-| 도시 아이콘 `assets/city-icons/` → `web/*/public/city/cast_*` | 34.3 MB → 9.7 MB | 앱에 `city/` 사본이 없고 참조 0. 지도는 와룡전 거점으로 바뀌었다. **`tools/assets/build_city_icons.py` 는 사용 중인 `build_status_icons.py` 가 import 하므로 도구는 살아 있어야 한다** |
 | 상태 아이콘 `state-*` · `star-capital` · `imperial-residence` | 약 0.8 MB | 앱 참조 0(같은 폴더의 `imperial-npc` 는 사용) |
-| 자작 城 표지 `exports/map/markers/` · `originals/map-city-markers/` | <0.1 MB | 와룡전 `sites.png` 로 대체. 점검 `python3 tools/test-map-city-markers.py` 는 여전히 돈다 |
 | 자작 원형 초상 `portraits-original/han-archetypes/` | 3.3 MB | 앱 참조 0 |
 | 전투 말 시안 `originals/battle-tokens/` · `previews/battle-tokens/` | 0.3 MB | 채택되지 않았다. 앱 참조 0 |
 | 3D 굽기 `tools/assets/bake3d/` · `previews/bake3d/` | 0.1 MB | PROVISIONAL, 앱 export 없음 |
@@ -54,6 +52,13 @@
 | `previews/iso2d/` | 38.0 MB | 같음 |
 | `web/game/public/sprites/iso2d/` | 0.7 MB | 같음. 앱 참조 0. 그 README 의 태그 `v2026.09.08-iso2d-v1` 은 원격에 없다 — 원격 태그는 `v2026.09.10-iso2d-v2`(`manifest.json` `sourceTag`) |
 | `tools/assets/*iso2d*`(시험 포함 9개) | 소 | 같음. `test_iso2d_geometry` 는 외부 `sprite_gen` 모듈 없이는 돌지 않는다 |
+
+## 삭제됨
+
+| 자산 | 지운 날 · 근거 | 되돌리는 법 |
+| --- | --- | --- |
+| 도시 아이콘 `assets/city-icons/` · `assets/brand/city-icons/` · `web/{game,gateway}/public/city/` · `tools/assets/{build,test_build}_city_icons.py` · `{build,test_build}_regional_city_icons.py` | 2026-10-18 D175(앱 사본 · 참조 0, 와룡전 거점으로 대체). 황제 NPC 표지가 쓰던 도우미는 `build_status_icons.py` 로 옮겼다 | 삭제 커밋을 `git revert` 하거나 그 부모에서 `git restore --source=<부모> -- <경로>` |
+| 자작 城 표지 `exports/map/markers/` · `originals/map-city-markers/` · `tools/{build,test}-map-city-markers.py` · `tools/requirements-map-markers.txt` | 2026-10-18 D175(와룡전 `sites.png` 로 대체) | 같음 |
 
 ## 앱이 부르지만 이 저장소에 없는 경로
 
