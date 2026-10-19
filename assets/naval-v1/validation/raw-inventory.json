@@ -1,0 +1,138 @@
+{
+  "files": [
+    {
+      "path": "all-assets/blender.log",
+      "bytes": 1936427,
+      "sha256": "0067a4d7863ef98d6ebc2faf9a9d9ff9f0623b76ee4b9edda4f61c8b5fbdf054"
+    },
+    {
+      "path": "all-assets/render-run.json",
+      "bytes": 8828,
+      "sha256": "e1092bb360508ee82fbda5e1d0ee95f337b2fdea8081162791878354b9b21bc0"
+    },
+    {
+      "path": "final-native-audit/render-run.json",
+      "bytes": 1219,
+      "sha256": "15c5f7df4994417fbd7f33775eba981df4743d9bddbe35cd55cfa8bb09bc9019"
+    },
+    {
+      "path": "license.log",
+      "bytes": 58,
+      "sha256": "884301461d5a08477ec3a9f4f14286aece0e8e31f26801e242895531e3e98fac"
+    },
+    {
+      "path": "manifest-final.log",
+      "bytes": 158,
+      "sha256": "f410a86d63c9aa45237f8bd73b9f2ec23c87ee42950acafff6e97ea7528be9fe"
+    },
+    {
+      "path": "native-source-audit/blender.log",
+      "bytes": 980,
+      "sha256": "86403f22c80060e53a4f7413c365bf0bd44f720288f7af55ba3c37be82b3d26c"
+    },
+    {
+      "path": "native-source-audit/render-run.json",
+      "bytes": 2265,
+      "sha256": "e58735e3150ca7b70aba5ce1f4d947ff6a809c75f0834453bafe0592956e1a64"
+    },
+    {
+      "path": "owned-timeout-probe/render-run.json",
+      "bytes": 1219,
+      "sha256": "a3ba9346432e01353241c59db22a5816d3aab0a464e1d9553b4e5893d854b6b8"
+    },
+    {
+      "path": "pack-final.log",
+      "bytes": 158,
+      "sha256": "f410a86d63c9aa45237f8bd73b9f2ec23c87ee42950acafff6e97ea7528be9fe"
+    },
+    {
+      "path": "pack.log",
+      "bytes": 158,
+      "sha256": "f410a86d63c9aa45237f8bd73b9f2ec23c87ee42950acafff6e97ea7528be9fe"
+    },
+    {
+      "path": "post-replay-check.log",
+      "bytes": 631,
+      "sha256": "ebf330c9d0a4c67e1e6a0fe9d2de80f70de05b7f42616b3b5e7efd7916520f1b"
+    },
+    {
+      "path": "pre-render-tests.log",
+      "bytes": 490,
+      "sha256": "e309c9d73c222d9fa76d09f6136415efed5bf63913e1fa12d8946a4d5d27b994"
+    },
+    {
+      "path": "pre-replay-hashes.json",
+      "bytes": 43594,
+      "sha256": "dce0d3259e805ec2559eb703c87955451277fa409a79d5facf724c2171d7c0aa"
+    },
+    {
+      "path": "replay-comparison.json",
+      "bytes": 27036,
+      "sha256": "58e5fea8e2fdb1d1b3678c462e08ba7810a22be84d4dd027de5a7e6fdd251bce"
+    },
+    {
+      "path": "replay-pixel-comparison.json",
+      "bytes": 27301,
+      "sha256": "b39b6f64d6d67172bd42436747bf3febcdacf31820310778d3a1dae5a7c7e194"
+    },
+    {
+      "path": "scout/render-run.json",
+      "bytes": 1275,
+      "sha256": "053b8b036f528cda7da2c973cdffac6fcba070173dfd6c129273dc6029c8e80d"
+    },
+    {
+      "path": "scout-attempt2/render-run.json",
+      "bytes": 1275,
+      "sha256": "75ed40278a6982dcbc9a931f1ddcf73eecdb947a3390ecb1f69ec4cd992492d0"
+    },
+    {
+      "path": "scout-attempt3/render-run.json",
+      "bytes": 1275,
+      "sha256": "aaf344143abc622df69b3b626eb98d9fd3c4be36585e674546a31d680dea3ec0"
+    },
+    {
+      "path": "scout-attempt4/blender.log",
+      "bytes": 601912,
+      "sha256": "eef4887fbfba565b9ba67b352292a334720766aae3cbbe5baee98d20c2c44aaf"
+    },
+    {
+      "path": "scout-attempt4/render-run.json",
+      "bytes": 4116,
+      "sha256": "25a04663fc6228c4edc13a15b26ee3b28c30cd3c9af5d0e1d12e0e20f0504f8a"
+    },
+    {
+      "path": "scout-first-render-pixel-hashes.json",
+      "bytes": 5730,
+      "sha256": "2314917fe1ce79c618839acb5d0530774322e6d45f045856c79682c2afbaa34c"
+    },
+    {
+      "path": "source-replay/blender.log",
+      "bytes": 1937729,
+      "sha256": "a9688121df5e82a7c33afe944c3212d403ffd887eff2a0f1ffbb5cf7915f9c18"
+    },
+    {
+      "path": "source-replay/render-run.json",
+      "bytes": 12688,
+      "sha256": "859e5bef5fcdd04a6900a7da895ceabc36ff6c78c3ddac89837524601eb686d4"
+    },
+    {
+      "path": "tests-final.log",
+      "bytes": 4024,
+      "sha256": "abb3f5877174ab5624b4f459c4f31e120f6fa9a905de79cb2cb09c607f5d20df"
+    },
+    {
+      "path": "tests-repacked.log",
+      "bytes": 2959,
+      "sha256": "eaf131e87c93053407897db6899f8893635940006385edbda8fbadf64b7ce27f"
+    },
+    {
+      "path": "tests.log",
+      "bytes": 2751,
+      "sha256": "7b579097b75d003dff283945a148cb72da73558bbb5d219895ca00e004e0c4bb"
+    }
+  ],
+  "archiveSHA256": "7096406082cba743dcdf57857f518eb05426269ff428fb219ebed395d0c64eed",
+  "archiveBytes": 191578,
+  "gamePNGCount": 0,
+  "productQA": "NOT_RUN"
+}

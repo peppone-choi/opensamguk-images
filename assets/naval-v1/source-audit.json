@@ -1,0 +1,68 @@
+{
+  "status": "PASS",
+  "blenderVersion": "4.0.2",
+  "assets": [
+    {
+      "id": "scout",
+      "meshCount": 58,
+      "textures": [
+        "originals/naval-v1/textures/sail.png",
+        "originals/naval-v1/textures/wood.png"
+      ],
+      "cameraMatchesRenderedMetadata": true,
+      "nativeSourceReopened": true
+    },
+    {
+      "id": "warship",
+      "meshCount": 64,
+      "textures": [
+        "originals/naval-v1/textures/sail.png",
+        "originals/naval-v1/textures/wood.png"
+      ],
+      "cameraMatchesRenderedMetadata": true,
+      "nativeSourceReopened": true
+    },
+    {
+      "id": "transport",
+      "meshCount": 64,
+      "textures": [
+        "originals/naval-v1/textures/sail.png",
+        "originals/naval-v1/textures/wood.png"
+      ],
+      "cameraMatchesRenderedMetadata": true,
+      "nativeSourceReopened": true
+    },
+    {
+      "id": "river-narrow",
+      "meshCount": 20,
+      "textures": [],
+      "cameraMatchesRenderedMetadata": true,
+      "nativeSourceReopened": true
+    },
+    {
+      "id": "estuary",
+      "meshCount": 12,
+      "textures": [],
+      "cameraMatchesRenderedMetadata": true,
+      "nativeSourceReopened": true
+    },
+    {
+      "id": "lake",
+      "meshCount": 14,
+      "textures": [],
+      "cameraMatchesRenderedMetadata": true,
+      "nativeSourceReopened": true
+    },
+    {
+      "id": "coastal-port",
+      "meshCount": 19,
+      "textures": [
+        "originals/naval-v1/textures/wood.png"
+      ],
+      "cameraMatchesRenderedMetadata": true,
+      "nativeSourceReopened": true
+    }
+  ],
+  "gamePNGCount": 0,
+  "productQA": "NOT_RUN"
+}
