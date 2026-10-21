@@ -1,0 +1,48 @@
+{
+  "camera": {
+    "type": "ORTHO",
+    "location": [
+      7.0,
+      -7.0,
+      7.800000190734863
+    ],
+    "rotationEuler": [
+      0.9553165435791016,
+      -9.056460470446837e-08,
+      0.7853982448577881
+    ],
+    "orthoScale": 9.0,
+    "resolution": [
+      160,
+      160
+    ]
+  },
+  "lighting": {
+    "worldColor": [
+      0.44999998807907104,
+      0.5099999904632568,
+      0.550000011920929
+    ],
+    "worldStrength": 0.6499999761581421,
+    "key": {
+      "type": "SUN",
+      "energy": 2.0999999046325684,
+      "angleRadians": 0.20943951606750488,
+      "rotationEuler": [
+        0.41887903213500977,
+        -0.45378559827804565,
+        -0.6108652353286743
+      ]
+    },
+    "engine": "CYCLES",
+    "device": "CPU",
+    "samples": 8,
+    "threads": 1,
+    "viewTransform": "Standard"
+  },
+  "pivot": {
+    "x": 80.00001,
+    "y": 91.612377
+  },
+  "id": "warship"
+}
